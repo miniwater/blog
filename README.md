@@ -52,3 +52,9 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 - TypeScript
 - Tailwind CSS
 - Shadcn-ui
+
+升级
+
+```shell
+npx @astrojs/upgrade
+```

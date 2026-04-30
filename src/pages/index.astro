@@ -1,11 +1,37 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Welcome from "../components/Welcome.astro";
+import Layout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+// 1. 获取 blog 集合中的所有文章
+const allPosts = await getCollection("blog");
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+// 2. 处理 URL 逻辑（保持和你之前的需求一致：扁平化 URL）
+// 如果你的 [...slug].astro 逻辑是取最后一段，这里生成的链接也要对应
+const posts = allPosts.map((post) => {
+  const slug = post.id.split("/").pop();
+  return {
+    ...post,
+    customSlug: slug,
+  };
+});
 ---
 
 <Layout>
-	<Welcome />
+  <Welcome />
+  <ul>
+    {
+      posts.map((post) => (
+        <li>
+          {/* 生成的链接指向：http://localhost:4321/文章文件夹名 */}
+          <a href={`/${post.customSlug}`}>{post.data.title}</a>
+        </li>
+      ))
+    }
+  </ul>
+
+  {
+    posts.length === 0 && (
+      <p>暂无文章，请检查 src/content/blog 目录下是否有 Markdown 文件。</p>
+    )
+  }
 </Layout>
