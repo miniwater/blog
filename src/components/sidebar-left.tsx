@@ -2,6 +2,7 @@
 
 import * as React from "react"
 
+import Logo from "@/assets/毛毛虫.avif";
 import { NavFavorites } from "@/components/nav-favorites"
 import { NavMain } from "@/components/nav-main"
 import { NavSecondary } from "@/components/nav-secondary"
@@ -19,9 +20,9 @@ import { NavUser } from "./nav-user"
 // This is sample data.
 const data = {
   user: {
-    name: "shadcn",
-    email: "m@example.com",
-    avatar: import.meta.env.BASE_URL + "/avatars/shadcn.jpg",
+    name: "手里有只毛毛虫",
+    email: "admin@krjojo.com",
+    avatar: Logo.src,
   },
   teams: [
     {
@@ -127,18 +128,7 @@ const data = {
       ),
     },
   ],
-  favorites: [
-    {
-      name: "Project Management & Task Tracking",
-      url: "#",
-      emoji: "📊",
-    },
-    {
-      name: "Family Recipe Collection & Meal Planning",
-      url: "#",
-      emoji: "🍳",
-    },
-  ],
+  favorites: [],
   workspaces: [
     {
       name: "Personal Life Management",
@@ -251,6 +241,21 @@ const data = {
 export function SidebarLeft({
   ...props
 }: React.ComponentProps<typeof Sidebar>) {
+
+  // 获取 blog 集合中的五篇文章
+  // const posts = allPosts
+  //   .sort((a, b) => b.data.published.valueOf() - a.data.published.valueOf())
+  //   .slice(0, 5)
+  //   .map((post) => ({
+  //     ...post,
+  //     customSlug: post.id.split("/").pop(),
+  //   }));
+  // const favoritePosts = posts.map((post) => ({
+  //   name: post.data.title,           // 对应文章标题
+  //   url: `${post.customSlug}`, // 对应你扁平化后的 URL 路径
+  //   emoji: "📊",  // 如果 Frontmatter 有 emoji 就用，没有就给个默认的
+  // }));
+
   return (
     <Sidebar className="border-r-0" {...props}>
       <SidebarHeader>
