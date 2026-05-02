@@ -9,8 +9,8 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   site: 'https://blog.krjojo.com',
 
-  // trailingSlash: "always",        // always强制所有 URL 末尾带斜杠 never不带斜杠
-  base: '/',
+  // trailingSlash: "never",        // always强制所有 URL 末尾带斜杠 never不带斜杠
+  base: '/',            // 加上前后的斜杠
 
   integrations: [react()],
 

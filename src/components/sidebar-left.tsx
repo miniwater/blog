@@ -97,7 +97,7 @@ const data = {
     },
     {
       title: "设置",
-      url: "#",
+      url: `${import.meta.env.BASE_URL}settings/`,
       icon: (
         <Settings2Icon
         />
