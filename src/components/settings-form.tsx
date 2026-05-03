@@ -6,6 +6,8 @@ import {
     ToggleGroup,
     ToggleGroupItem,
 } from "@/components/ui/toggle-group"
+import { toast } from "sonner"
+import { Button } from "@/components/ui/button"
 
 export function SettingsForm() {
     return (
@@ -89,6 +91,13 @@ export function SettingsForm() {
                     </FieldDescription>
                 </Field>
             </FieldGroup>
+            <Button
+                variant="outline"
+                onClick={() => toast.success("Event has been created")}
+            >
+                Success
+            </Button>
         </FieldSet>
+
     );
 }

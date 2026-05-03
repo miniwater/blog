@@ -1,23 +1,27 @@
 ---
 import Head from "../components/Head.astro";
-import '../styles/global.css' 
+import "../styles/global.css";
+import { Toaster } from "@/components/ui/sonner";
 ---
 
 <!doctype html>
 <html lang="zh-CN" dir="ltr">
-	<head>
-		<Head />
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <Head />
+  </head>
+  <body>
+    <main>
+      <slot />
+    </main>
+    <Toaster client:load />
+  </body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
 </style>
