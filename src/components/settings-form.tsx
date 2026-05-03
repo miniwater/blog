@@ -127,12 +127,7 @@ export function SettingsForm() {
                                 <div
                                     className="h-4 w-full rounded-full border shadow-sm"
                                     style={{
-                                        background: `linear-gradient(to right, 
-      oklch(0.6 0.15 0), 
-      oklch(0.6 0.15 90), 
-      oklch(0.6 0.15 180), 
-      oklch(0.6 0.15 270), 
-      oklch(0.6 0.15 360))`
+                                        background: `linear-gradient(to right, oklch(0.6 0.15 0), oklch(0.6 0.15 90), oklch(0.6 0.15 180), oklch(0.6 0.15 270), oklch(0.6 0.15 360))`
                                     }}
                                 />
                                 <Button
