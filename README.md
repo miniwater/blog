@@ -53,6 +53,8 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 - Tailwind CSS
 - Shadcn-ui
 
+图标：<https://lucide.dev/>
+
 升级
 
 ```shell
