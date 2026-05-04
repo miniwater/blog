@@ -1,37 +1,57 @@
 <script is:inline>
-  (function() {
+  (function () {
     // 1. 定义所有的设置项及其逻辑
     const settings = [
       {
-        key: 'theme',
-        default: () => window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light",
+        key: "theme",
+        default: () =>
+          window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light",
         apply: (val) => {
           document.documentElement.classList.toggle("dark", val === "dark");
-        }
+        },
       },
       {
-        key: 'grayscale-mode',
-        default: 'false',
+        key: "grayscale-mode",
+        default: "false",
         apply: (val) => {
-          const enabled = val === 'true';
-          document.documentElement.style.filter = enabled ? "grayscale(100%)" : "none";
+          const enabled = val === "true";
+          document.documentElement.style.filter = enabled
+            ? "grayscale(100%)"
+            : "none";
           document.documentElement.classList.toggle("grayscale-mode", enabled);
-        }
+        },
       },
-    //   {
-    //     key: 'rtl-mode',
-    //     default: 'false',
-    //     apply: (val) => {
-    //       document.documentElement.dir = val === 'true' ? "rtl" : "ltr";
-    //     }
-    //   }
+      //   {
+      //     key: 'rtl-mode',
+      //     default: 'false',
+      //     apply: (val) => {
+      //       document.documentElement.dir = val === 'true' ? "rtl" : "ltr";
+      //     }
+      //   }
+      {
+        key: "hue-mode",
+        default: null,
+        apply: (val) => {
+          if (val !== null) {
+            const oklchValue = `oklch(0.6 0.15 ${val})`;
+            document.documentElement.style.setProperty("--primary", oklchValue);
+          }
+        },
+      },
     ];
 
     // 2. 统一初始化函数
     function initSettings() {
-      settings.forEach(setting => {
+      settings.forEach((setting) => {
         const stored = localStorage.getItem(setting.key);
-        const value = stored !== null ? stored : (typeof setting.default === 'function' ? setting.default() : setting.default);
+        const value =
+          stored !== null
+            ? stored
+            : typeof setting.default === "function"
+              ? setting.default()
+              : setting.default;
         setting.apply(value);
       });
     }
@@ -41,7 +61,7 @@
 
     // 3. 统一监听跨标签页同步
     window.addEventListener("storage", (e) => {
-      const setting = settings.find(s => s.key === e.key);
+      const setting = settings.find((s) => s.key === e.key);
       if (setting) {
         setting.apply(e.newValue);
       }
@@ -52,6 +72,9 @@
       const isDark = document.documentElement.classList.contains("dark");
       localStorage.setItem("theme", isDark ? "dark" : "light");
     });
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
   })();
 </script>

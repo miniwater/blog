@@ -11,6 +11,8 @@ import { InputGroup, InputGroupAddon, InputGroupInput, } from "@/components/ui/i
 import { LinkIcon, MailIcon } from "lucide-react"
 import { Slider } from "@/components/ui/slider"
 import { Popover, PopoverContent, PopoverTrigger, } from "@/components/ui/popover"
+import { Label } from "@/components/ui/label"
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger, } from "@/components/ui/alert-dialog"
 
 export function SettingsForm() {
     // 1. 统一管理所有状态
@@ -28,7 +30,7 @@ export function SettingsForm() {
         const grayscale = localStorage.getItem("grayscale-mode") === "true";
         const rtl = localStorage.getItem("rtl-mode") === "true";
         const cookies = localStorage.getItem("cookies-mode") === "true";
-        const hue = parseInt(localStorage.getItem("hue") || "220");
+        const hue = parseInt(localStorage.getItem("hue-mode") || "220");
 
         setSettings({ theme, grayscale, rtl, cookies, hue });
     }, []);
@@ -49,17 +51,6 @@ export function SettingsForm() {
             newValue: value.toString()
         }));
 
-        // 针对主题的特殊处理（如果是系统模式，需要额外判断）
-        if (key === 'theme') {
-            const isDark = value === 'dark' || (value === 'system' && window.matchMedia("(prefers-color-scheme: dark)").matches);
-            document.documentElement.classList.toggle("dark", isDark);
-        }
-
-        // 3. 立即应用到 DOM
-        if (key === 'hue') {
-            const oklchValue = `oklch(0.6 0.15 ${value})`;
-            document.documentElement.style.setProperty("--primary", oklchValue);
-        }
     };
 
     return (
@@ -132,7 +123,11 @@ export function SettingsForm() {
                                 />
                                 <Button
                                     variant="outline"
-                                    onClick={() => toast.success("成功重置颜色")}
+                                    onClick={() => {
+                                        localStorage.removeItem("hue-mode");
+                                        document.documentElement.style.removeProperty("--primary");
+                                        toast.success("成功重置颜色")
+                                    }}
                                 >
                                     重置颜色
                                 </Button>
@@ -233,12 +228,63 @@ export function SettingsForm() {
                     </Button>
                 </Field>
             </FieldGroup>
-            <Button
-                variant="outline"
-                onClick={() => toast.success("Event has been created")}
-            >
-                重置设置
-            </Button>
+
+            <FieldLegend>开发选项</FieldLegend>
+            <FieldDescription>图一乐</FieldDescription>
+            <FieldGroup>
+                <Field orientation="horizontal">
+                    <Checkbox id="terms-checkbox" name="terms-checkbox" />
+                    <Label htmlFor="terms-checkbox">显示帧率</Label>
+                </Field>
+                <Field orientation="horizontal">
+                    <Checkbox
+                        id="terms-checkbox-2"
+                        name="terms-checkbox-2"
+                        defaultChecked
+                    />
+                    <FieldContent>
+                        <FieldLabel htmlFor="terms-checkbox-2">
+                            Accept terms and conditions
+                        </FieldLabel>
+                        <FieldDescription>
+                            By clicking this checkbox, you agree to the terms.
+                        </FieldDescription>
+                    </FieldContent>
+                </Field>
+                <FieldLabel>
+                    <Field orientation="horizontal">
+                        <Checkbox id="toggle-checkbox-2" name="toggle-checkbox-2" />
+                        <FieldContent>
+                            <FieldTitle>Enable notifications</FieldTitle>
+                            <FieldDescription>
+                                You can enable or disable notifications at any time.
+                            </FieldDescription>
+                        </FieldContent>
+                    </Field>
+                </FieldLabel>
+            </FieldGroup>
+            <AlertDialog>
+                <AlertDialogTrigger asChild>
+                    <Button variant="outline">重置设置</Button>
+                </AlertDialogTrigger>
+                <AlertDialogContent>
+                    <AlertDialogHeader>
+                        <AlertDialogTitle>你确定要还原设置吗？</AlertDialogTitle>
+                        <AlertDialogDescription>
+                            此操作无法撤消。这将重置所有设置为默认值，并删除本地存储中的相关数据。请确保你已经备份了重要的设置或数据，以免丢失。
+                        </AlertDialogDescription>
+                    </AlertDialogHeader>
+                    <AlertDialogFooter>
+                        <AlertDialogCancel>关闭</AlertDialogCancel>
+                        <AlertDialogAction onClick={() => {
+                            localStorage.clear();
+                            window.location.reload();
+                        }}>
+                            继续
+                        </AlertDialogAction>
+                    </AlertDialogFooter>
+                </AlertDialogContent>
+            </AlertDialog>
         </FieldSet>
 
     );
