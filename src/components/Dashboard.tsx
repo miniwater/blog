@@ -14,11 +14,11 @@ import {
 } from "@/components/ui/sidebar"
 import { TooltipProvider } from "./ui/tooltip"
 
-export function Dashboard({ children }: { children: React.ReactNode }) {
+export function Dashboard({ children, favoritePosts }: { children: React.ReactNode; favoritePosts: any[] }) {
     return (
         <TooltipProvider delayDuration={0}> {/* 包裹在最外层 */}
             <SidebarProvider>
-                <SidebarLeft />
+                <SidebarLeft favoritePosts={favoritePosts} />
                 <SidebarInset>
                     <header className="sticky top-0 flex h-14 shrink-0 items-center gap-2 bg-background">
                         <div className="flex flex-1 items-center gap-2 px-3">

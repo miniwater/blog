@@ -1,11 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { Dashboard } from "@/components/Dashboard";
 import { SettingsForm } from "@/components/settings-form";
 ---
 
 <Layout>
-  <Dashboard client:load>
-    <SettingsForm client:load/>
-  </Dashboard>
+  <SettingsForm client:load />
 </Layout>;

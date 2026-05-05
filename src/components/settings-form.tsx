@@ -22,17 +22,23 @@ export function SettingsForm() {
         rtl: false,
         cookies: false,
         hue: 220, // 默认主题色调
+        author: "",
+        email: "",
+        url: "",
     });
 
     // 2. 初始化：从本地存储读取
     useEffect(() => {
         const theme = localStorage.getItem("theme") || "system";
-        const grayscale = localStorage.getItem("grayscale-mode") === "true";
-        const rtl = localStorage.getItem("rtl-mode") === "true";
-        const cookies = localStorage.getItem("cookies-mode") === "true";
-        const hue = parseInt(localStorage.getItem("hue-mode") || "220");
+        const grayscale = localStorage.getItem("grayscale") === "true";
+        const rtl = localStorage.getItem("rtl") === "true";
+        const cookies = localStorage.getItem("cookies") === "true";
+        const hue = parseInt(localStorage.getItem("hue") || "220");
+        const author = localStorage.getItem("author") || "";
+        const email = localStorage.getItem("email") || "";
+        const url = localStorage.getItem("url") || "";
 
-        setSettings({ theme, grayscale, rtl, cookies, hue });
+        setSettings({ theme, grayscale, rtl, cookies, hue, author, email, url });
     }, []);
 
     // 3. 核心：统一更新函数
@@ -41,7 +47,7 @@ export function SettingsForm() {
         setSettings(prev => ({ ...prev, [key]: value }));
 
         // 同步到 localStorage
-        const storageKey = key === 'theme' ? 'theme' : `${key}-mode`;
+        const storageKey = key;
         localStorage.setItem(storageKey, value.toString());
 
         // 立即应用到 DOM（触发全局 Layout 里的逻辑）
@@ -188,7 +194,7 @@ export function SettingsForm() {
             <FieldGroup>
                 <Field>
                     <FieldLabel htmlFor="author">昵称</FieldLabel>
-                    <Input id="author" name="author" autoComplete="off" placeholder="游客001" />
+                    <Input id="author" name="author" autoComplete="off" value={settings.author} onChange={(e) => handleUpdate('author', e.target.value)} placeholder="游客001" />
                     <FieldDescription>
                         如果你想在评论中显示昵称，请务必填写昵称
                     </FieldDescription>
@@ -196,7 +202,7 @@ export function SettingsForm() {
                 <Field>
                     <FieldLabel htmlFor="email">邮箱</FieldLabel>
                     <InputGroup>
-                        <InputGroupInput id="email" type="email" name="email" placeholder="name@example.com" />
+                        <InputGroupInput id="email" type="email" name="email" value={settings.email} onChange={(e) => handleUpdate('email', e.target.value)} placeholder="name@example.com" />
                         <InputGroupAddon>
                             <MailIcon />
                         </InputGroupAddon>
@@ -213,7 +219,7 @@ export function SettingsForm() {
                         <InputGroupAddon>
                             <LinkIcon />https://
                         </InputGroupAddon>
-                        <InputGroupInput id="url" type="url" name="url" placeholder="example.com/" />
+                        <InputGroupInput id="url" type="url" name="url" value={settings.url} onChange={(e) => handleUpdate('url', e.target.value)} placeholder="example.com/" />
 
                     </InputGroup>
                     <FieldDescription>

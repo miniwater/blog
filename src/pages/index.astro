@@ -1,9 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { Dashboard } from "@/components/Dashboard";
+
 import { getCollection } from "astro:content";
 import "../styles/global.css";
-import { ModeToggle } from "@/components/ModeToggle";
 
 // 1. 获取 blog 集合中的所有文章
 const allPosts = await getCollection("blog");
@@ -21,22 +20,19 @@ const posts = allPosts.map((post) => {
 ---
 
 <Layout>
-  <Dashboard client:load>
-    <ModeToggle client:load />
-    <ul>
-      {
-        posts.map((post) => (
-          <li>
-            {/* 生成的链接指向：http://localhost:4321/文章文件夹名 */}
-            <a href={`/${post.customSlug}`}>{post.data.title}</a>
-          </li>
-        ))
-      }
-    </ul>
+  <ul>
     {
-      posts.length === 0 && (
-        <p>暂无文章，请检查 src/content/blog 目录下是否有 Markdown 文件。</p>
-      )
+      posts.map((post) => (
+        <li>
+          {/* 生成的链接指向：http://localhost:4321/文章文件夹名 */}
+          <a href={`/${post.customSlug}`}>{post.data.title}</a>
+        </li>
+      ))
     }
-  </Dashboard>
+  </ul>
+  {
+    posts.length === 0 && (
+      <p>暂无文章，请检查 src/content/blog 目录下是否有 Markdown 文件。</p>
+    )
+  }
 </Layout>

@@ -1,8 +1,25 @@
 ---
+import { getCollection } from "astro:content";
 import Head from "../components/Head.astro";
 import HeadJS from "../components/HeadJS.astro";
 import "../styles/global.css";
+import { Dashboard } from "@/components/Dashboard";
 import { Toaster } from "@/components/ui/sonner";
+
+const allPosts = await getCollection("blog");
+// 获取 blog 集合中的五篇文章
+const posts = allPosts
+  .sort((a, b) => b.data.published.valueOf() - a.data.published.valueOf())
+  .slice(0, 5)
+  .map((post) => ({
+    ...post,
+    customSlug: post.id.split("/").pop(),
+  }));
+const favoritePosts = posts.map((post) => ({
+  name: post.data.title, // 对应文章标题
+  url: `${post.customSlug}`, // 对应你扁平化后的 URL 路径
+  emoji: "", // 如果 Frontmatter 有 emoji 就用，没有就给个默认的
+}));
 ---
 
 <!doctype html>
@@ -13,7 +30,9 @@ import { Toaster } from "@/components/ui/sonner";
   </head>
   <body>
     <main>
-      <slot />
+      <Dashboard client:load favoritePosts={favoritePosts}>
+        <slot />
+      </Dashboard>
     </main>
     <Toaster client:load />
   </body>

@@ -239,8 +239,9 @@ const data = {
 }
 
 export function SidebarLeft({
+  favoritePosts,
   ...props
-}: React.ComponentProps<typeof Sidebar>) {
+}: React.ComponentProps<typeof Sidebar> & { favoritePosts: any[] }) {
 
   // 获取 blog 集合中的五篇文章
   // const posts = allPosts
@@ -266,7 +267,7 @@ export function SidebarLeft({
         <NavMain items={data.navMain} />
       </SidebarHeader>
       <SidebarContent>
-        <NavFavorites favorites={data.favorites} />
+        <NavFavorites favorites={favoritePosts} />
         <NavWorkspaces workspaces={data.workspaces} />
         <NavSecondary items={data.navSecondary} className="mt-auto" />
       </SidebarContent>
