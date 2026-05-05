@@ -2,7 +2,7 @@
 
 import * as React from "react"
 
-import Logo from "@/assets/毛毛虫.avif";
+import { config } from "@/config";
 import { NavFavorites } from "@/components/nav-favorites"
 import { NavMain } from "@/components/nav-main"
 import { NavSecondary } from "@/components/nav-secondary"
@@ -14,15 +14,15 @@ import {
   SidebarHeader,
   SidebarRail,
 } from "@/components/ui/sidebar"
-import { TerminalIcon, AudioLinesIcon, SearchIcon, SparklesIcon, HomeIcon, InboxIcon, CalendarIcon, Settings2Icon, BlocksIcon, Trash2Icon, MessageCircleQuestionIcon } from "lucide-react"
+import { TerminalIcon, AudioLinesIcon, SearchIcon, SparklesIcon, HomeIcon, InboxIcon, CalendarIcon, Settings2Icon, BlocksIcon, RssIcon, MessageCircleQuestionIcon } from "lucide-react"
 import { NavUser } from "./nav-user"
 
 // This is sample data.
 const data = {
   user: {
-    name: "手里有只毛毛虫",
-    email: "admin@krjojo.com",
-    avatar: Logo.src,
+    name: config.title,
+    email: config.email,
+    avatar: config.avatar.src,
   },
   teams: [
     {
@@ -104,7 +104,7 @@ const data = {
       ),
     },
     {
-      title: "Templates",
+      title: "网站地图",
       url: "#",
       icon: (
         <BlocksIcon
@@ -112,10 +112,10 @@ const data = {
       ),
     },
     {
-      title: "Trash",
-      url: "#",
+      title: "RSS订阅",
+      url: `${import.meta.env.BASE_URL}feed.xml`,
       icon: (
-        <Trash2Icon
+        <RssIcon
         />
       ),
     },

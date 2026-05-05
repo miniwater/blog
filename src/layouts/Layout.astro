@@ -1,4 +1,5 @@
 ---
+import { config } from "@/config";
 import { getCollection } from "astro:content";
 import Head from "../components/Head.astro";
 import HeadJS from "../components/HeadJS.astro";
@@ -6,10 +7,8 @@ import "../styles/global.css";
 import { Dashboard } from "@/components/Dashboard";
 import { Toaster } from "@/components/ui/sonner";
 
-const { title = "手里有只毛毛虫" } = Astro.props;
-const displayTitle = title 
-  ? `${title} - 手里有只毛毛虫` 
-  : "手里有只毛毛虫";
+const { title = config.title } = Astro.props;
+const displayTitle = title ? `${title} - ${config.title}` : config.title;
 
 const allPosts = await getCollection("blog");
 // 获取 blog 集合中的五篇文章
@@ -22,7 +21,7 @@ const posts = allPosts
   }));
 const favoritePosts = posts.map((post) => ({
   name: post.data.title, // 对应文章标题
-  url: `${import.meta.env.BASE_URL}${post.customSlug}`, // 对应你扁平化后的 URL 路径
+  url: new URL(post.customSlug || "", Astro.url), // 对应你扁平化后的 URL 路径
   emoji: "", // 如果 Frontmatter 有 emoji 就用，没有就给个默认的
 }));
 ---

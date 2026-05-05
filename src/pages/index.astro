@@ -20,6 +20,11 @@ const posts = allPosts.map((post) => {
 ---
 
 <Layout>
+  {new URL("rss.xml", Astro.site)}
+  <br />
+  {Astro.url}
+  <br />
+  {new URL("rss.xml", Astro.url)}
   <ul>
     {
       posts.map((post) => (

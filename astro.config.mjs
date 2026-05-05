@@ -21,4 +21,9 @@ export default defineConfig({
   // devToolbar: {
   //   enabled: false
   // }
+
+  redirects: {
+    '/rss.xml': '/feed.xml',
+    '/feed': '/feed.xml',
+  },
 });
