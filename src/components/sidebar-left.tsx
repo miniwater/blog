@@ -14,7 +14,7 @@ import {
   SidebarHeader,
   SidebarRail,
 } from "@/components/ui/sidebar"
-import { TerminalIcon, AudioLinesIcon, SearchIcon, SparklesIcon, HomeIcon, InboxIcon, CalendarIcon, Settings2Icon, BlocksIcon, RssIcon, MessageCircleQuestionIcon } from "lucide-react"
+import { TerminalIcon, AudioLinesIcon, SearchIcon, SparklesIcon, HomeIcon, InboxIcon, CalendarIcon, Settings2Icon, MapIcon, RssIcon, MessageCircleQuestionIcon } from "lucide-react"
 import { NavUser } from "./nav-user"
 
 // This is sample data.
@@ -105,9 +105,9 @@ const data = {
     },
     {
       title: "网站地图",
-      url: "#",
+      url: `${import.meta.env.BASE_URL}sitemap-index.xml`,
       icon: (
-        <BlocksIcon
+        <MapIcon
         />
       ),
     },
