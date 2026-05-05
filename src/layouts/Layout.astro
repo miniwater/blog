@@ -6,6 +6,11 @@ import "../styles/global.css";
 import { Dashboard } from "@/components/Dashboard";
 import { Toaster } from "@/components/ui/sonner";
 
+const { title = "手里有只毛毛虫" } = Astro.props;
+const displayTitle = title 
+  ? `${title} - 手里有只毛毛虫` 
+  : "手里有只毛毛虫";
+
 const allPosts = await getCollection("blog");
 // 获取 blog 集合中的五篇文章
 const posts = allPosts
@@ -25,7 +30,7 @@ const favoritePosts = posts.map((post) => ({
 <!doctype html>
 <html lang="zh-CN" dir="ltr">
   <head>
-    <Head />
+    <Head title={displayTitle} />
     <HeadJS />
   </head>
   <body>
