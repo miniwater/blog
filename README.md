@@ -51,7 +51,7 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 - React
 - TypeScript
 - Tailwind CSS
-  - typography
+  - [typography](https://github.com/tailwindlabs/tailwindcss-typography)
 - Shadcn-ui
 
 图标：<https://lucide.dev/>
