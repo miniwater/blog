@@ -1,14 +1,14 @@
 ---
-import { getCollection, render } from 'astro:content';
+import { getCollection, render } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 
 export async function getStaticPaths() {
-  const posts = await getCollection('blog');
-  
-  return posts.map(post => {
+  const posts = await getCollection("blog");
+
+  return posts.map((post) => {
     // 处理 slug：由于 loader 的 base 设置在 src/content/blog
     // 你的 id 可能是 "2026/php-利用imagemagick..."
-    const finalSlug = post.id.split('/').pop(); 
+    const finalSlug = post.id.split("/").pop();
 
     return {
       params: { slug: finalSlug },
@@ -22,7 +22,8 @@ const { post } = Astro.props;
 // 新版渲染方式：使用导出的 render(post)
 const { Content } = await render(post);
 ---
+
 <Layout>
-<h1>{post.data.title}</h1>
-<Content />
+  <h1>{post.data.title}</h1>
+  <Content />
 </Layout>

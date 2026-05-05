@@ -17,7 +17,7 @@ const posts = allPosts
   }));
 const favoritePosts = posts.map((post) => ({
   name: post.data.title, // 对应文章标题
-  url: `${post.customSlug}`, // 对应你扁平化后的 URL 路径
+  url: `${import.meta.env.BASE_URL}${post.customSlug}`, // 对应你扁平化后的 URL 路径
   emoji: "", // 如果 Frontmatter 有 emoji 就用，没有就给个默认的
 }));
 ---

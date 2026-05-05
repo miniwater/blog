@@ -227,12 +227,12 @@ export function SettingsForm() {
                     </FieldDescription>
                 </Field>
 
-                <Field orientation="horizontal">
+                {/* <Field orientation="horizontal">
                     <Button type="submit">保存设置</Button>
                     <Button variant="outline" type="button">
                         Cancel
                     </Button>
-                </Field>
+                </Field> */}
             </FieldGroup>
 
             <FieldLegend>开发选项</FieldLegend>
