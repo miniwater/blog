@@ -23,13 +23,13 @@
           document.documentElement.classList.toggle("grayscale-mode", enabled);
         },
       },
-      //   {
-      //     key: 'rtl',
-      //     default: 'false',
-      //     apply: (val) => {
-      //       document.documentElement.dir = val === 'true' ? "rtl" : "ltr";
-      //     }
-      //   }
+      {
+        key: "rtl",
+        default: "false",
+        apply: (val) => {
+          document.documentElement.dir = val === "true" ? "rtl" : "ltr";
+        },
+      },
       {
         key: "hue",
         default: null,

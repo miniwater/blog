@@ -1,6 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-
 import { getCollection } from "astro:content";
 import "../styles/global.css";
 
@@ -20,11 +19,10 @@ const posts = allPosts.map((post) => {
 ---
 
 <Layout>
-  {new URL("rss.xml", Astro.site)}
+  {new URL("rss.xml", Astro.url)}
   <br />
   {Astro.url}
   <br />
-  {new URL("rss.xml", Astro.url)}
   <ul>
     {
       posts.map((post) => (
