@@ -1,0 +1,47 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import {
+  Card,
+} from "@/components/ui/card";
+import logoImage from "@/assets/毛毛虫.avif";
+
+// 1. 获取 blog 集合中的所有文章
+const allPosts = await getCollection("blog");
+
+// 2. 处理 URL 逻辑（保持和你之前的需求一致：扁平化 URL）
+// 如果你的 [...slug].astro 逻辑是取最后一段，这里生成的链接也要对应
+const posts = allPosts
+  .sort((a, b) => b.data.published.valueOf() - a.data.published.valueOf())
+  .map((post) => {
+    const slug = post.id.split("/").pop();
+    return {
+      ...post,
+      customSlug: slug,
+    };
+  });
+---
+
+<Layout>
+  {
+    posts.map((post) => (
+      <Card className="flex flex-row overflow-hidden">
+        <div class="flex-1 p-6">
+          <h3 class="text-xl font-bold">{post.data.title}</h3>
+          <p class="text-muted-foreground mt-2 line-clamp-2">文章摘要...</p>
+        </div>
+        {logoImage ? (
+          <div class="w-32 h-32 md:w-48 md:h-auto relative shrink-0">
+            <img src={logoImage.src} class="object-cover w-full h-full" />
+          </div>
+        ) : null}
+      </Card>
+    ))
+  }
+
+  {
+    posts.length === 0 && (
+      <p>暂无文章，请检查 src/content/blog 目录下是否有 Markdown 文件。</p>
+    )
+  }
+</Layout>
