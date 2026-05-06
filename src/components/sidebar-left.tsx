@@ -18,7 +18,7 @@ import {
   SidebarMenuButton,
   SidebarSeparator,
 } from "@/components/ui/sidebar"
-import { SearchIcon, SparklesIcon, HomeIcon, Settings2Icon, MapIcon, RssIcon, MessageCircleQuestionIcon } from "lucide-react"
+import { SearchIcon, BookIcon, HomeIcon, Settings2Icon, MapIcon, RssIcon, MessageCircleQuestionIcon } from "lucide-react"
 import { NavUser } from "./nav-user"
 
 // This is sample data.
@@ -41,7 +41,7 @@ const data = {
       title: "Ask AI",
       url: "#",
       icon: (
-        <SparklesIcon
+        <BookIcon
         />
       ),
     },
@@ -81,8 +81,8 @@ const data = {
       ),
     },
     {
-      title: "帮助",
-      url: "#",
+      title: "关于我们",
+      url: new URL("/about/", config.url).href,
       icon: (
         <MessageCircleQuestionIcon
         />
@@ -151,14 +151,6 @@ export function SidebarLeft({
       ),
     },
     {
-      title: "Ask AI",
-      url: "#",
-      icon: (
-        <SparklesIcon
-        />
-      ),
-    },
-    {
       title: "主页",
       url: config.url,
       icon: (
@@ -166,6 +158,14 @@ export function SidebarLeft({
         />
       ),
       isActive: config.url === url.href,
+    },
+    {
+      title: "文档",
+      url: new URL("/docs/", config.url).href,
+      icon: (
+        <BookIcon
+        />
+      ),
     },
   ];
   return (
