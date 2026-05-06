@@ -90,14 +90,6 @@ const data = {
   ],
   navSecondary: [
     {
-      title: "日历",
-      url: "#",
-      icon: (
-        <CalendarIcon
-        />
-      ),
-    },
-    {
       title: "设置",
       url: `${import.meta.env.BASE_URL}settings/`,
       icon: (

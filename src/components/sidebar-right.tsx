@@ -1,7 +1,6 @@
 import * as React from "react"
 
 import { Calendars } from "@/components/calendars"
-import { DatePicker } from "@/components/date-picker"
 import { NavUser } from "@/components/nav-user"
 import {
   Sidebar,
@@ -52,7 +51,7 @@ export function SidebarRight({
         <NavUser user={data.user} />
       </SidebarHeader>
       <SidebarContent>
-        <DatePicker />
+
         <SidebarSeparator className="mx-0" />
         <Calendars calendars={data.calendars} />
       </SidebarContent>
