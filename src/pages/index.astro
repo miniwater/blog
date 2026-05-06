@@ -3,20 +3,32 @@ import { config } from "@/config";
 import Layout from "../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 import "../styles/global.css";
+import {
+  Card,
+  CardAction,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 // 1. 获取 blog 集合中的所有文章
 const allPosts = await getCollection("blog");
 
 // 2. 处理 URL 逻辑（保持和你之前的需求一致：扁平化 URL）
 // 如果你的 [...slug].astro 逻辑是取最后一段，这里生成的链接也要对应
-const posts = allPosts.map((post) => {
-  const slug = post.id.split("/").pop();
-  return {
-    ...post,
-    customSlug: slug,
-  };
-});
-console.log(import.meta.env);
+const posts = allPosts
+  .sort((a, b) => b.data.published.valueOf() - a.data.published.valueOf())
+  .map((post) => {
+    const slug = post.id.split("/").pop();
+    return {
+      ...post,
+      customSlug: slug,
+    };
+  });
+// console.log(import.meta.env);
 ---
 
 <Layout>
@@ -25,16 +37,25 @@ console.log(import.meta.env);
   {Astro.url}
   <br />
   {config.url}
-  <ul>
-    {
-      posts.map((post) => (
-        <li>
-          {/* 生成的链接指向：http://localhost:4321/文章文件夹名 */}
-          <a href={`/${post.customSlug}`}>{post.data.title}</a>
-        </li>
-      ))
-    }
-  </ul>
+
+  {
+    posts.map((post) => (
+      <Card className="w-full max-w-sm">
+        <CardHeader>
+          <CardTitle>{post.data.title}</CardTitle>
+          <CardDescription>
+            发布于 {post.data.published.toLocaleDateString()}
+          </CardDescription>
+          <CardAction>
+            <Badge variant="secondary">Featured</Badge>
+          </CardAction>
+        </CardHeader>
+        <CardContent>1123</CardContent>
+        <CardFooter className="flex-col gap-2"> hhhh </CardFooter>
+      </Card>
+    ))
+  }
+
   {
     posts.length === 0 && (
       <p>暂无文章，请检查 src/content/blog 目录下是否有 Markdown 文件。</p>

@@ -7,12 +7,14 @@ import { NavFavorites } from "@/components/nav-favorites"
 import { NavMain } from "@/components/nav-main"
 import { NavSecondary } from "@/components/nav-secondary"
 import { NavWorkspaces } from "@/components/nav-workspaces"
-import { TeamSwitcher } from "@/components/team-switcher"
 import {
   Sidebar,
   SidebarContent,
   SidebarHeader,
   SidebarRail,
+  SidebarMenu,
+  SidebarMenuItem,
+  SidebarMenuButton,
 } from "@/components/ui/sidebar"
 import { TerminalIcon, AudioLinesIcon, SearchIcon, SparklesIcon, HomeIcon, InboxIcon, CalendarIcon, Settings2Icon, MapIcon, RssIcon, MessageCircleQuestionIcon } from "lucide-react"
 import { NavUser } from "./nav-user"
@@ -242,28 +244,27 @@ export function SidebarLeft({
   favoritePosts,
   ...props
 }: React.ComponentProps<typeof Sidebar> & { favoritePosts: any[] }) {
-
-  // 获取 blog 集合中的五篇文章
-  // const posts = allPosts
-  //   .sort((a, b) => b.data.published.valueOf() - a.data.published.valueOf())
-  //   .slice(0, 5)
-  //   .map((post) => ({
-  //     ...post,
-  //     customSlug: post.id.split("/").pop(),
-  //   }));
-  // const favoritePosts = posts.map((post) => ({
-  //   name: post.data.title,           // 对应文章标题
-  //   url: `${post.customSlug}`, // 对应你扁平化后的 URL 路径
-  //   emoji: "📊",  // 如果 Frontmatter 有 emoji 就用，没有就给个默认的
-  // }));
-
   return (
     <Sidebar className="border-r-0" {...props}>
       <SidebarHeader>
+        <SidebarMenu>
+          <SidebarMenuItem>
+            <SidebarMenuButton size="lg" asChild>
+              <a href={config.url}>
+                <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
+                  
+                </div>
+                <div className="flex flex-col gap-0.5 leading-none">
+                  <span className="font-medium">{config.title}</span>
+                  <span className="">{config.description}</span>
+                </div>
+              </a>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+        </SidebarMenu>
         <SidebarHeader className="h-16 border-b border-sidebar-border">
           <NavUser user={data.user} />
         </SidebarHeader>
-        <TeamSwitcher teams={data.teams} />
         <NavMain items={data.navMain} />
       </SidebarHeader>
       <SidebarContent>
