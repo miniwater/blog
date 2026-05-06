@@ -11,12 +11,13 @@ import {
   Sidebar,
   SidebarContent,
   SidebarHeader,
+  SidebarFooter,
   SidebarRail,
   SidebarMenu,
   SidebarMenuItem,
   SidebarMenuButton,
 } from "@/components/ui/sidebar"
-import { TerminalIcon, AudioLinesIcon, SearchIcon, SparklesIcon, HomeIcon, InboxIcon, CalendarIcon, Settings2Icon, MapIcon, RssIcon, MessageCircleQuestionIcon } from "lucide-react"
+import { SearchIcon, SparklesIcon, HomeIcon, Settings2Icon, MapIcon, RssIcon, MessageCircleQuestionIcon } from "lucide-react"
 import { NavUser } from "./nav-user"
 
 // This is sample data.
@@ -26,36 +27,10 @@ const data = {
     email: config.email,
     avatar: config.avatar.src,
   },
-  teams: [
-    {
-      name: "Acme Inc",
-      logo: (
-        <TerminalIcon
-        />
-      ),
-      plan: "Enterprise",
-    },
-    {
-      name: "Acme Corp.",
-      logo: (
-        <AudioLinesIcon
-        />
-      ),
-      plan: "Startup",
-    },
-    {
-      name: "Evil Corp.",
-      logo: (
-        <TerminalIcon
-        />
-      ),
-      plan: "Free",
-    },
-  ],
   navMain: [
     {
       title: "搜索",
-      url: "#",
+      url: new URL("/search/", config.url).href,
       icon: (
         <SearchIcon
         />
@@ -71,27 +46,18 @@ const data = {
     },
     {
       title: "主页",
-      url: import.meta.env.BASE_URL,
+      url: config.url,
       icon: (
         <HomeIcon
         />
       ),
-      isActive: true,
-    },
-    {
-      title: "Inbox",
-      url: "#",
-      icon: (
-        <InboxIcon
-        />
-      ),
-      badge: "10",
+      isActive: false,
     },
   ],
   navSecondary: [
     {
       title: "设置",
-      url: `${import.meta.env.BASE_URL}settings/`,
+      url: new URL("/settings/", config.url).href,
       icon: (
         <Settings2Icon
         />
@@ -99,7 +65,7 @@ const data = {
     },
     {
       title: "网站地图",
-      url: `${import.meta.env.BASE_URL}sitemap-index.xml`,
+      url: new URL("/sitemap-index.xml", config.url).href,
       icon: (
         <MapIcon
         />
@@ -107,7 +73,7 @@ const data = {
     },
     {
       title: "RSS订阅",
-      url: `${import.meta.env.BASE_URL}feed.xml`,
+      url: new URL("/feed.xml", config.url).href,
       icon: (
         <RssIcon
         />
@@ -166,85 +132,50 @@ const data = {
         },
       ],
     },
-    {
-      name: "Creative Projects",
-      emoji: "🎨",
-      pages: [
-        {
-          name: "Writing Ideas & Story Outlines",
-          url: "#",
-          emoji: "✍️",
-        },
-        {
-          name: "Art & Design Portfolio",
-          url: "#",
-          emoji: "🖼️",
-        },
-        {
-          name: "Music Composition & Practice Log",
-          url: "#",
-          emoji: "🎵",
-        },
-      ],
-    },
-    {
-      name: "Home Management",
-      emoji: "🏡",
-      pages: [
-        {
-          name: "Household Budget & Expense Tracking",
-          url: "#",
-          emoji: "💰",
-        },
-        {
-          name: "Home Maintenance Schedule & Tasks",
-          url: "#",
-          emoji: "🔧",
-        },
-        {
-          name: "Family Calendar & Event Planning",
-          url: "#",
-          emoji: "📅",
-        },
-      ],
-    },
-    {
-      name: "Travel & Adventure",
-      emoji: "🧳",
-      pages: [
-        {
-          name: "Trip Planning & Itineraries",
-          url: "#",
-          emoji: "🗺️",
-        },
-        {
-          name: "Travel Bucket List & Inspiration",
-          url: "#",
-          emoji: "🌎",
-        },
-        {
-          name: "Travel Journal & Photo Gallery",
-          url: "#",
-          emoji: "📸",
-        },
-      ],
-    },
   ],
 }
 
 export function SidebarLeft({
   favoritePosts,
+  url,
   ...props
-}: React.ComponentProps<typeof Sidebar> & { favoritePosts: any[] }) {
+}: React.ComponentProps<typeof Sidebar> & { favoritePosts: any[]; url: URL }) {
+  const navMain = [
+    {
+      title: "搜索",
+      url: new URL("/search/", config.url).href,
+      icon: (
+        <SearchIcon
+        />
+      ),
+    },
+    {
+      title: "Ask AI",
+      url: "#",
+      icon: (
+        <SparklesIcon
+        />
+      ),
+    },
+    {
+      title: "主页",
+      url: config.url,
+      icon: (
+        <HomeIcon
+        />
+      ),
+      isActive: config.url === url.href,
+    },
+  ];
   return (
     <Sidebar className="border-r-0" {...props}>
-      <SidebarHeader>
+      <SidebarHeader className="border-b border-sidebar-border">
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton size="lg" asChild>
               <a href={config.url}>
-                <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
-                  
+                <div className="flex aspect-square size-8 items-center justify-center rounded-lg text-sidebar-primary-foreground">
+                  <img src={config.logo.src} alt={config.title} />
                 </div>
                 <div className="flex flex-col gap-0.5 leading-none">
                   <span className="font-medium">{config.title}</span>
@@ -254,10 +185,7 @@ export function SidebarLeft({
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>
-        <SidebarHeader className="h-16 border-b border-sidebar-border">
-          <NavUser user={data.user} />
-        </SidebarHeader>
-        <NavMain items={data.navMain} />
+        <NavMain items={navMain} />
       </SidebarHeader>
       <SidebarContent>
         <NavFavorites favorites={favoritePosts} />
@@ -265,6 +193,9 @@ export function SidebarLeft({
         <NavSecondary items={data.navSecondary} className="mt-auto" />
       </SidebarContent>
       <SidebarRail />
+      <SidebarFooter>
+        <NavUser user={data.user} />
+      </SidebarFooter>
     </Sidebar>
   )
 }
