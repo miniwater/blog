@@ -16,6 +16,7 @@ import {
   SidebarMenu,
   SidebarMenuItem,
   SidebarMenuButton,
+  SidebarSeparator,
 } from "@/components/ui/sidebar"
 import { SearchIcon, SparklesIcon, HomeIcon, Settings2Icon, MapIcon, RssIcon, MessageCircleQuestionIcon } from "lucide-react"
 import { NavUser } from "./nav-user"
@@ -185,6 +186,7 @@ export function SidebarLeft({
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>
+        <SidebarSeparator className="mx-0" />
         <NavMain items={navMain} />
       </SidebarHeader>
       <SidebarContent>
