@@ -10,7 +10,6 @@
             : "light",
         apply: (val) => {
           if (val === "system") {
-            console.log(val);
             val = window.matchMedia("(prefers-color-scheme: dark)").matches
               ? "dark"
               : "light";

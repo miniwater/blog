@@ -130,7 +130,7 @@ export function SettingsForm() {
                                 <Button
                                     variant="outline"
                                     onClick={() => {
-                                        localStorage.removeItem("hue-mode");
+                                        localStorage.removeItem("hue");
                                         document.documentElement.style.removeProperty("--primary");
                                         toast.success("成功重置颜色")
                                     }}
