@@ -1,7 +1,7 @@
 ---
 import { config } from "@/config";
 const { title } = Astro.props;
-// import { ClientRouter } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 ---
 
 <meta charset="UTF-8" />
@@ -27,7 +27,7 @@ const { title } = Astro.props;
 <meta property="og:description" content={config.description} />
 <meta property="og:image" content={config.avatar.src} />
 <meta property="og:image:alt" content="" />
-<!-- <ClientRouter /> -->
+<ClientRouter />
 
 <link
   rel="alternate"

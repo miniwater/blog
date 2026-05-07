@@ -29,13 +29,15 @@ const favoritePosts = posts.map((post) => ({
 <!doctype html>
 <html lang="zh-CN" dir="ltr">
   <head>
-    <Head title={displayTitle} />
     <HeadJS />
+    <Head title={displayTitle} />
   </head>
   <body>
     <main>
       <Dashboard client:load favoritePosts={favoritePosts} url={Astro.url}>
-        <slot />
+        <div transition:animate="slide">
+          <slot />
+        </div>
       </Dashboard>
     </main>
     <Toaster client:load />

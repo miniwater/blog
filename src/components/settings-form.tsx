@@ -246,11 +246,10 @@ export function SettingsForm() {
                     <Checkbox
                         id="terms-checkbox-2"
                         name="terms-checkbox-2"
-                        defaultChecked
                     />
                     <FieldContent>
                         <FieldLabel htmlFor="terms-checkbox-2">
-                            Accept terms and conditions
+                            文本编辑
                         </FieldLabel>
                         <FieldDescription>
                             By clicking this checkbox, you agree to the terms.

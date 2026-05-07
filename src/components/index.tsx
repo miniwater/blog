@@ -9,17 +9,13 @@ import {
 
 export function CarouselDemo() {
     return (
-        <Carousel className="w-full"
-            opts={{
-                align: "start",
-                loop: true,
-            }}>
-            <CarouselContent>
+        <Carousel className="w-md">
+            <CarouselContent className="**:data-[slot=carousel-content]:overflow-visible">
                 {Array.from({ length: 5 }).map((_, index) => (
-                    <CarouselItem key={index}>
+                    <CarouselItem key={index}  className="basis-1/2 lg:basis-1/3">
                         <div className="p-1">
                             <Card>
-                                <CardContent className="flex aspect-square items-center justify-center p-6 h-[12rem]">
+                                <CardContent className="flex aspect-square items-center justify-center p-6 h-48">
                                     <span className="text-4xl font-semibold">{index + 1}</span>
                                 </CardContent>
                             </Card>
@@ -27,8 +23,8 @@ export function CarouselDemo() {
                     </CarouselItem>
                 ))}
             </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
+            {/* <CarouselPrevious /> */}
+            {/* <CarouselNext /> */}
         </Carousel>
     )
 }

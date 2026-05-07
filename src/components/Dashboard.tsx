@@ -47,23 +47,22 @@ export function Dashboard({ children, favoritePosts, url }: { children: React.Re
                             <NavigationMenu>
                                 <NavigationMenuList>
                                     <NavigationMenuItem>
-                                        <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
+                                        <NavigationMenuTrigger>足迹</NavigationMenuTrigger>
                                         <NavigationMenuContent>
                                             <ul className="w-96">
-                                                
-                                                    Re-usable components built with Tailwind CSS.
-                                                  How to install dependencies and structure your app.
-                                            
-                                                    Styles for headings, paragraphs, lists...etc
-                                                
+                                                <li>Re-usable components built with Tailwind CSS.</li>
+                                                <li>How to install dependencies and structure your app.</li>
+                                                <li>Styles for headings, paragraphs, lists...etc</li>
                                             </ul>
                                         </NavigationMenuContent>
                                     </NavigationMenuItem>
                                     <NavigationMenuItem className="hidden md:flex">
-                                        <NavigationMenuTrigger>Components</NavigationMenuTrigger>
+                                        <NavigationMenuTrigger>专区</NavigationMenuTrigger>
                                         <NavigationMenuContent>
-                                            <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                                                
+                                            <ul className="grid w-100 gap-2 md:w-125 md:grid-cols-2 lg:w-150">
+                                                <li>Re-usable components built with Tailwind CSS.</li>
+                                                <li>How to install dependencies and structure your app.</li>
+                                                <li>Styles for headings, paragraphs, lists...etc</li>
                                             </ul>
                                         </NavigationMenuContent>
                                     </NavigationMenuItem>
