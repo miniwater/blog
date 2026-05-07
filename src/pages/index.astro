@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 import "../styles/global.css";
+import { CarouselDemo } from "@/components/index";
 import {
   Card,
   CardAction,
@@ -28,10 +29,10 @@ const posts = allPosts
       customSlug: slug,
     };
   });
-
 ---
 
 <Layout>
+  <CarouselDemo  client:load/>
   {
     posts.map((post) => (
       <Card className="w-full max-w-sm">
