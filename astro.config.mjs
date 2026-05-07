@@ -20,9 +20,9 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
 
-  // devToolbar: {
-  //   enabled: false
-  // }
+  devToolbar: {
+    enabled: false
+  },
 
   redirects: {
     '/rss.xml': '/feed.xml',

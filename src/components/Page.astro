@@ -1,0 +1,86 @@
+---
+import {
+    Pagination,
+    PaginationContent,
+    PaginationEllipsis,
+    PaginationItem,
+    PaginationLink,
+    PaginationNext,
+    PaginationPrevious,
+} from "@/components/ui/pagination";
+
+const { page } = Astro.props;
+
+const start_page = page.currentPage - 2 > 0 ? page.currentPage - 2 : 1;
+const end_page =
+  page.currentPage + 2 <= page.lastPage ? page.currentPage + 2 : page.lastPage;
+---
+
+<Pagination>
+    <PaginationContent>
+        <PaginationItem>
+            <PaginationPrevious
+                href={page.url.prev}
+                text="上一页"
+                className={!page.url.prev
+                    ? "pointer-events-none opacity-50"
+                    : ""}
+            />
+        </PaginationItem>
+        <!-- 动态页码生成 -->
+        {
+            start_page > 1 && (
+                <PaginationItem>
+                    <PaginationLink href="/post">1</PaginationLink>
+                </PaginationItem>
+            )
+        }
+        {
+            start_page > 2 && (
+                <PaginationItem>
+                    <PaginationEllipsis />
+                </PaginationItem>
+            )
+        }
+        {
+            Array.from(
+                { length: end_page - start_page + 1 },
+                (_, i) => i + start_page,
+            ).map((num) => (
+                <PaginationItem>
+                    <PaginationLink
+                        href={num === 1 ? "/post" : `/post/${num}`}
+                        isActive={page.currentPage === num}
+                    >
+                        {num}
+                    </PaginationLink>
+                </PaginationItem>
+            ))
+        }
+        {
+            end_page < page.lastPage - 1 && (
+                <PaginationItem>
+                    <PaginationEllipsis />
+                </PaginationItem>
+            )
+        }
+        {
+            end_page < page.lastPage && (
+                <PaginationItem>
+                    <PaginationLink href={`/post/${page.lastPage}`}>
+                        {page.lastPage}
+                    </PaginationLink>
+                </PaginationItem>
+            )
+        }
+        <PaginationItem>
+            <PaginationNext
+                href={page.url.next}
+                text="下一页"
+                className={!page.url.next
+                    ? "pointer-events-none opacity-50"
+                    : ""}
+            />
+        </PaginationItem>
+    </PaginationContent>
+</Pagination>

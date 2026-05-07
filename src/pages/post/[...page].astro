@@ -1,0 +1,57 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Page from "@/components/Page.astro";
+import { getCollection } from "astro:content";
+import type { GetStaticPathsOptions } from "astro"; // 导入 Astro 内置类型
+import { Card } from "@/components/ui/card";
+// import logoImage from "@/assets/毛毛虫.avif";
+
+export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
+  const allPosts = await getCollection("blog");
+
+  // 按照日期排序
+  allPosts.sort(
+    (a, b) => b.data.published.valueOf() - a.data.published.valueOf(),
+  );
+
+  // 返回分页结果，pageSize 定义每页显示多少条
+  return paginate(allPosts, { pageSize: 5 });
+}
+
+// 分页数据会通过 props 传递给页面
+const { page } = Astro.props;
+
+const posts = page.data.map((post) => {
+  const slug = post.id.split("/").pop();
+  return {
+    ...post,
+    customSlug: slug,
+  };
+});
+---
+
+<Layout>
+  {
+    posts.map((post) => (
+      <Card className="flex flex-row overflow-hidden">
+        <div class="flex-1 p-6">
+          <h3 class="text-xl font-bold">{post.data.title}</h3>
+          <p class="text-muted-foreground mt-2 line-clamp-2">文章摘要...</p>
+        </div>
+        {/* {logoImage ? (
+          <div class="w-32 h-32 md:w-48 md:h-auto relative shrink-0">
+            <img src={logoImage.src} class="object-cover w-full h-full" />
+          </div>
+        ) : null} */}
+      </Card>
+    ))
+  }
+
+  {
+    posts.length === 0 && (
+      <p>暂无文章，请检查 src/content/blog 目录下是否有 Markdown 文件。</p>
+    )
+  }
+
+  <Page page={page} />
+</Layout>

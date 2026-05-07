@@ -32,27 +32,28 @@ const { Content, headings } = await render(post);
       <Content />
     </div>
     <div>
-      <div class="no-scrollbar flex flex-col gap-8 overflow-y-auto px-8">
-        <div class="flex flex-col gap-2 p-4 pt-0 text-sm">
-          <p
-            class="sticky top-0 h-6 bg-background text-xs font-medium text-muted-foreground"
-          >
-            本页内容
-          </p>
-          {
-            headings.map((heading) => (
-              <a
-                href={`#${heading.slug}`}
-                class="text-[0.8rem] text-muted-foreground no-underline transition-colors hover:text-foreground data-[active=true]:font-medium data-[active=true]:text-foreground data-[depth=3]:pl-4 data-[depth=4]:pl-6"
-                data-active="false"
-                data-depth={heading.depth}
-              >
-                {heading.text}
-              </a>
-            ))
-          }
+        <div class="no-scrollbar flex flex-col gap-8 overflow-y-auto px-8">
+          <div class="flex flex-col gap-2 p-4 pt-0 text-sm">
+            <p
+              class="sticky top-0 h-6 bg-background text-xs font-medium text-muted-foreground"
+            >
+              本页内容
+            </p>
+            {
+              headings.map((heading) => (
+                <a
+                  href={`#${heading.slug}`}
+                  class="text-[0.8rem] text-muted-foreground no-underline transition-colors hover:text-foreground data-[active=true]:font-medium data-[active=true]:text-foreground data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+                  data-active="false"
+                  data-depth={heading.depth}
+                >
+                  {heading.text}
+                </a>
+              ))
+            }
+          </div>
         </div>
-      </div>
+
     </div>
   </div>
 </Layout>

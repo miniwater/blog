@@ -1,5 +1,4 @@
 ---
-import { config } from "@/config";
 import Layout from "../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 import "../styles/global.css";
@@ -21,6 +20,7 @@ const allPosts = await getCollection("blog");
 // 如果你的 [...slug].astro 逻辑是取最后一段，这里生成的链接也要对应
 const posts = allPosts
   .sort((a, b) => b.data.published.valueOf() - a.data.published.valueOf())
+  .slice(0, 6)
   .map((post) => {
     const slug = post.id.split("/").pop();
     return {
@@ -28,18 +28,10 @@ const posts = allPosts
       customSlug: slug,
     };
   });
-// console.log(import.meta.env);
+
 ---
 
 <Layout>
-  {new URL("rss.xml", Astro.url)}
-  <br />
-  {Astro.url}
-  <br />
-  {config.url}
-  <br />
-  {Astro.url.pathname}
-
   {
     posts.map((post) => (
       <Card className="w-full max-w-sm">
