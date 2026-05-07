@@ -180,7 +180,7 @@ export function SidebarLeft({
                 </div>
                 <div className="flex flex-col gap-0.5 leading-none">
                   <span className="font-medium">{config.title}</span>
-                  <span className="">{config.description}</span>
+                  {/* <span className="">{config.description}</span> */}
                 </div>
               </a>
             </SidebarMenuButton>

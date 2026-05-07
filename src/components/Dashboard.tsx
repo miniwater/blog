@@ -39,9 +39,10 @@ export function Dashboard({ children, favoritePosts, url }: { children: React.Re
                     </header>
                     <div className="flex flex-1 flex-col gap-4 p-4">
                         {/* <div className="mx-auto h-24 w-full max-w-3xl rounded-xl bg-muted/50" /> */}
-                        <div className="mx-auto w-full max-w-3xl rounded-xl" >
-                            {children}
-                        </div>
+                        {children}
+                        {/* <div className="mx-auto w-full max-w-3xl rounded-xl" > */}
+                            
+                        {/* </div> */}
                     </div>
                 </SidebarInset>
             </SidebarProvider>
