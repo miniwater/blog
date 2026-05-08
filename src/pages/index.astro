@@ -7,20 +7,19 @@ import { CarouselDemo } from "@/components/index";
 import {
   Card,
   CardAction,
-  CardContent,
+  // CardContent,
   CardDescription,
-  CardFooter,
+  // CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { config } from "@/config";
 
-// 1. 获取 blog 集合中的所有文章
+// 获取 blog 集合中的所有文章
 const allPosts = await getCollection("blog");
 
-// 2. 处理 URL 逻辑（保持和你之前的需求一致：扁平化 URL）
-// 如果你的 [...slug].astro 逻辑是取最后一段，这里生成的链接也要对应
 const posts = allPosts
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, 6)
@@ -31,48 +30,63 @@ const posts = allPosts
       customSlug: slug,
     };
   });
+
+// 文章摘要
+function getSummary(body: string, length = 60) {
+  const cleanBody = body.replace(/[#*`]/g, "");
+  return cleanBody.slice(0, length) + (cleanBody.length > length ? "..." : "");
+}
 ---
 
 <Layout>
   <div class="mx-auto w-full max-w-7xl">
     <CarouselDemo client:load />
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 lg:gap-y-10 gap-6">
-      {
-        posts.map((post) => (
-          <Card className="relative mx-auto w-full max-w-sm pt-0">
-            <div class="absolute inset-0 z-30 aspect-video bg-black/35" />
-            {/* ✅ 正确写法：必须使用 Image 组件 */}
-            {post.data.cover && (
-              <Image
-                src={post.data.cover}
-                alt={post.data.title}
-                width={800}
-                height={800}
-                class="relative z-20 aspect-video w-full object-cover brightness-60 grayscale dark:brightness-40"
-              />
-            )}
-            <CardHeader>
-              <CardTitle>{post.data.title}</CardTitle>
-              <CardDescription>
-                发布于 {post.data.date.toLocaleDateString()}
-              </CardDescription>
-              <CardAction>
-                <Badge variant="secondary">Featured</Badge>
-              </CardAction>
-            </CardHeader>
-            <CardContent>1123</CardContent>
-            <CardFooter>
+    <section class="max-w-screen-xl px-4 py-10 lg:py-14 mx-auto">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 lg:gap-y-10 gap-6">
+        {
+          posts.map((post) => (
+            <Card className="relative mx-auto w-full max-w-sm pt-0">
+              <div class="absolute inset-0 z-30 aspect-video bg-black/35" />
+              {/* ✅ 正确写法：必须使用 Image 组件 */}
+              {post.data.cover ? (
+                <Image
+                  src={post.data.cover}
+                  alt={post.data.title}
+                  width={800}
+                  height={800}
+                  class="relative z-20 aspect-video w-full object-cover brightness-60 grayscale dark:brightness-40"
+                />
+              ) : (
+                <img
+                  src="https://avatar.vercel.sh/shadcn1"
+                  alt="Event cover"
+                  class="relative z-20 aspect-video w-full object-cover brightness-60 grayscale dark:brightness-40"
+                />
+              )}
+              <CardHeader>
+                <CardDescription>
+                  {post.data.date.toLocaleDateString()}
+                </CardDescription>
+                <CardTitle>{post.data.title}</CardTitle>
+                <CardDescription>{getSummary(post.body ?? "")}</CardDescription>
+                <CardAction>
+                  <Badge variant="secondary">Featured</Badge>
+                </CardAction>
+              </CardHeader>
+              {/* <CardContent>1123</CardContent> */}
+              {/* <CardFooter>
               <Button className="w-full">View Event</Button>
-            </CardFooter>
-          </Card>
-        ))
-      }
-    </div>
+            </CardFooter> */}
+            </Card>
+          ))
+        }
+      </div>
 
-    {
-      posts.length === 0 && (
-        <p>暂无文章，请检查 src/content/blog 目录下是否有 Markdown 文件。</p>
-      )
-    }
+      <div class="mt-10 flex justify-center">
+        <Button className="" variant="outline">
+          <a href={new URL("/post", config.url).href}> 更多文章 </a>
+        </Button>
+      </div>
+    </section>
   </div>
 </Layout>

@@ -1,20 +1,13 @@
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+import { config } from "@/config";
 import {
   SidebarGroup,
   SidebarGroupLabel,
   SidebarMenu,
-  SidebarMenuAction,
   SidebarMenuButton,
   SidebarMenuItem,
-  useSidebar,
+  // useSidebar,
 } from "@/components/ui/sidebar"
-import { MoreHorizontalIcon, StarOffIcon, LinkIcon, ArrowUpRightIcon, Trash2Icon } from "lucide-react"
+import { MoreHorizontalIcon } from "lucide-react"
 
 export function NavFavorites({
   favorites,
@@ -25,7 +18,7 @@ export function NavFavorites({
     emoji: string
   }[]
 }) {
-  const { isMobile } = useSidebar()
+  // const { isMobile } = useSidebar()
 
   return (
     <SidebarGroup className="group-data-[collapsible=icon]:hidden">
@@ -39,49 +32,16 @@ export function NavFavorites({
                 <span>{item.name}</span>
               </a>
             </SidebarMenuButton>
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <SidebarMenuAction
-                  showOnHover
-                  className="aria-expanded:bg-muted"
-                >
-                  <MoreHorizontalIcon
-                  />
-                  <span className="sr-only">更多文章</span>
-                </SidebarMenuAction>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent
-                className="w-56 rounded-lg"
-                side={isMobile ? "bottom" : "right"}
-                align={isMobile ? "end" : "start"}
-              >
-                <DropdownMenuItem>
-                  <StarOffIcon className="text-muted-foreground" />
-                  <span>Remove from Favorites</span>
-                </DropdownMenuItem>
-                <DropdownMenuSeparator />
-                <DropdownMenuItem>
-                  <LinkIcon className="text-muted-foreground" />
-                  <span>Copy Link</span>
-                </DropdownMenuItem>
-                <DropdownMenuItem>
-                  <ArrowUpRightIcon className="text-muted-foreground" />
-                  <span>Open in New Tab</span>
-                </DropdownMenuItem>
-                <DropdownMenuSeparator />
-                <DropdownMenuItem>
-                  <Trash2Icon className="text-muted-foreground" />
-                  <span>Delete</span>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
           </SidebarMenuItem>
         ))}
         <SidebarMenuItem>
-          <SidebarMenuButton className="text-sidebar-foreground/70">
-            <MoreHorizontalIcon
-            />
-            <span>More</span>
+          <SidebarMenuButton className="text-sidebar-foreground/70" asChild>
+            <a href={new URL("/post", config.url).href} title="更多文章">
+              <span>
+                <MoreHorizontalIcon />
+              </span>
+              <span>更多文章</span>
+            </a>
           </SidebarMenuButton>
         </SidebarMenuItem>
       </SidebarMenu>
