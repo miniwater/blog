@@ -1,21 +1,22 @@
 ---
 categories:
-- 信息技术
 - Linux
 - Ubuntu
-category: Ubuntu
+- 信息技术
+cover: ''
+date: '2024-05-09T22:55:05+08:00'
 draft: false
-published: 2024-05-09 22:55:05
 slug: ubuntu-使用ssmtp发送邮件
 tags:
+- Email
 - Linux
 - smtp
-- 邮件
-- Ubuntu
 - ssmtp
-- Email
+- Ubuntu
+- 邮件
 title: Ubuntu 使用ssmtp发送邮件
-updated: 2024-05-09 22:55:05
+updated: '2024-05-09T22:55:05+08:00'
+wp_id: 9376
 ---
 
 我在ubuntu系统中需要用到smtp来发送邮件进行数据库的备件，以前在centos下安装mailx简单配置一下smtp就能正常发送邮件，但是现在使用了Ubuntu 20.04，不能照搬Centos中的配置方法了。

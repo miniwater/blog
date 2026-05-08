@@ -1,17 +1,18 @@
 ---
 categories:
-- 信息技术
 - HTML
-category: HTML
+- 信息技术
+cover: ''
+date: '2024-03-01T13:24:54+08:00'
 draft: false
-published: 2024-03-01 13:24:54
 slug: code-server-提示-this-is-likely-because-the-editor-is-not-running-in-a-secure-context
 tags:
-- HTML
 - chrome
+- HTML
 title: Code-Server 提示 This is likely because the editor is not running in a secure
   context
-updated: 2024-03-01 18:00:48
+updated: '2024-03-01T18:00:48+08:00'
+wp_id: 1319
 ---
 
 今天在code-server遇到一个错误提示

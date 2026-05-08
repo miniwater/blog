@@ -13,7 +13,7 @@ const displayTitle = title ? `${title} - ${config.title}` : config.title;
 const allPosts = await getCollection("blog");
 // 获取 blog 集合中的五篇文章
 const posts = allPosts
-  .sort((a, b) => b.data.published.valueOf() - a.data.published.valueOf())
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, 5)
   .map((post) => ({
     ...post,

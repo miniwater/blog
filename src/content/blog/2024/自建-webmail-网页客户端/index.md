@@ -1,16 +1,17 @@
 ---
 categories:
 - 信息技术
-category: 信息技术
+cover: ''
+date: '2024-05-10T12:22:30+08:00'
 draft: false
-published: 2024-05-10 12:22:30
 slug: 自建-webmail-网页客户端
 tags:
+- Mail
 - VPS
 - 邮箱
-- Mail
 title: 自建 webmail 网页客户端
-updated: 2024-09-18 11:18:25
+updated: '2024-09-18T11:18:25+08:00'
+wp_id: 9416
 ---
 
 如果你有一个vps，也有不同厂家的邮箱，想归于一个web页面登录，那你可以尝试自建一个Webmail的网页客户端。

@@ -1,18 +1,19 @@
 ---
 categories:
-- 信息技术
 - PHP
-category: PHP
+- 信息技术
+cover: ''
+date: '2024-04-17T10:37:22+08:00'
 draft: false
-published: 2024-04-17 10:37:22
 slug: php生命周期内让函数只运行一遍
 tags:
-- PHP
 - function
-- 静态变量
+- PHP
 - 全局变量
+- 静态变量
 title: PHP生命周期内让函数只运行一遍
-updated: 2024-04-17 10:37:23
+updated: '2024-04-17T10:37:23+08:00'
+wp_id: 9059
 ---
 
 ## 静态变量

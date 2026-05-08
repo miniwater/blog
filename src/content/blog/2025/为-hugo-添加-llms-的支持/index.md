@@ -1,19 +1,20 @@
 ---
 categories:
-- 信息技术
-- HTML
 - AI
+- HTML
 - LLM
-category: LLM
+- 信息技术
+cover: ./输出md文件.avif
+date: '2025-08-20T21:39:56+08:00'
 draft: false
-published: 2025-08-20 21:39:56
 slug: 为-hugo-添加-llms-的支持
 tags:
 - AI
 - Hugo
 - LLMS
 title: 为 Hugo 添加 LLMS 的支持
-updated: 2025-08-20 23:48:59
+updated: '2025-08-20T23:48:59+08:00'
+wp_id: 12092
 ---
 
 首先表明观点：

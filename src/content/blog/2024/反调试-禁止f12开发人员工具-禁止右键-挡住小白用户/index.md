@@ -1,18 +1,19 @@
 ---
 categories:
-- 信息技术
 - HTML
 - PHP
 - WordPress
-category: WordPress
+- 信息技术
+cover: ./开发人员工具.avif
+date: '2024-10-27T21:47:44+08:00'
 draft: false
-published: 2024-10-27 21:47:44
 slug: 反调试-禁止f12开发人员工具-禁止右键-挡住小白用户
 tags:
 - F12
 - 开发人员工具
 title: 反调试 禁止F12开发人员工具 禁止右键 挡住小白用户 让专业绕路
-updated: 2025-11-25 11:36:43
+updated: '2025-11-25T11:36:43+08:00'
+wp_id: 10190
 ---
 
 今天在网上冲浪时发现一个有趣的功能，

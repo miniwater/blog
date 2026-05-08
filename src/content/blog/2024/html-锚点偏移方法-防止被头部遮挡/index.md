@@ -1,20 +1,21 @@
 ---
 categories:
-- 信息技术
-- HTML
 - css
-category: css
+- HTML
+- 信息技术
+cover: ''
+date: '2024-10-12T20:10:51+08:00'
 draft: false
-published: 2024-10-12 20:10:51
 slug: html-锚点偏移方法-防止被头部遮挡
 tags:
-- HTML
 - CSS
+- HTML
 - HTML5
 - 菜单
 - 锚点
 title: HTML 锚点偏移方法 防止被头部遮挡
-updated: 2025-01-10 18:43:15
+updated: '2025-01-10T18:43:15+08:00'
+wp_id: 10037
 ---
 
 由于顶部菜单存在 `position:fixed` ，而引起的的锚点位置偏移。

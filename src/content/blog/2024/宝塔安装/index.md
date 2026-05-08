@@ -1,15 +1,16 @@
 ---
 categories:
 - 信息技术
-category: 信息技术
+cover: ''
+date: '2024-06-16T11:24:51+08:00'
 draft: false
-published: 2024-06-16 11:24:51
 slug: 宝塔安装
 tags:
-- 宝塔
 - BT
+- 宝塔
 title: 宝塔安装
-updated: 2024-07-11 17:40:45
+updated: '2024-07-11T17:40:45+08:00'
+wp_id: 9577
 ---
 
 ## 官网

@@ -1,17 +1,18 @@
 ---
 categories:
-- 信息技术
 - Linux
-category: Linux
+- 信息技术
+cover: ''
+date: '2024-05-09T22:28:59+08:00'
 draft: false
-published: 2024-05-09 22:28:59
 slug: linux下如何查看uid和gid
 tags:
+- GID
 - Linux
 - UID
-- GID
 title: Linux下如何查看UID和GID
-updated: 2024-05-09 22:28:59
+updated: '2024-05-09T22:28:59+08:00'
+wp_id: 9358
 ---
 
 有时候我们在设定应用程序的权限的时候，需要使用UID和GID，但这个UID和GID如何查看呢，其实很简单，先要知道要以什么用户来运行，之后就可以根据用户来查询UID和GID了，具体如下。

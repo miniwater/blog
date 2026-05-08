@@ -1,16 +1,17 @@
 ---
 categories:
-- 信息技术
 - Linux
-category: Linux
+- 信息技术
+cover: ''
+date: '2023-11-29T20:18:25+08:00'
 draft: false
-published: 2023-11-29 20:18:25
 slug: 新服务器到手后设置swap虚拟内存那些事
 tags:
 - Linux
 - swap
 title: 新服务器到手后设置扩展内存那些事-Swap
-updated: 2023-11-29 21:17:01
+updated: '2023-11-29T21:17:01+08:00'
+wp_id: 947
 ---
 
 ## 检查swap

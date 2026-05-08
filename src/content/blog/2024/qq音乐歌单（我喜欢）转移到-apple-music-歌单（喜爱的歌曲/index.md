@@ -1,18 +1,19 @@
 ---
 categories:
 - 音乐
-category: 音乐
+cover: https://www.krjojo.com/wp-content/uploads/2024/03/听音乐-1.webp
+date: '2024-06-11T18:50:03+08:00'
 draft: false
-published: 2024-06-11 18:50:03
 slug: qq音乐歌单（我喜欢）转移到-apple-music-歌单（喜爱的歌曲
 tags:
-- 音乐
-- QQ音乐
 - Apple Music
+- QQ音乐
 - 歌单
 - 转移
+- 音乐
 title: QQ音乐歌单（我喜欢）转移到 Apple Music 歌单（喜爱的歌曲）
-updated: 2024-09-18 11:09:32
+updated: '2024-09-18T11:09:32+08:00'
+wp_id: 9560
 ---
 
 ![](./听音乐-1.webp)

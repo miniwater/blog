@@ -1,17 +1,18 @@
 ---
 categories:
-- 信息技术
 - HTML
 - js
-category: js
+- 信息技术
+cover: ./公告.avif
+date: '2024-04-12T11:16:03+08:00'
 draft: false
-published: 2024-04-12 11:16:03
 slug: 原生js实现文字从下到上无缝轮播效果-公告轮播效
 tags:
 - js
 - 公告轮播
 title: 原生JS实现文字从下到上无缝轮播效果 公告轮播效果
-updated: 2024-04-12 21:37:36
+updated: '2024-04-12T21:37:36+08:00'
+wp_id: 8937
 ---
 
 多说无益，先看效果

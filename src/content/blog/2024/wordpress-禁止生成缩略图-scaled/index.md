@@ -1,17 +1,18 @@
 ---
 categories:
-- 信息技术
 - WordPress
-category: WordPress
+- 信息技术
+cover: ''
+date: '2024-07-28T12:34:51+08:00'
 draft: false
-published: 2024-07-28 12:34:51
 slug: wordpress-禁止生成缩略图-scaled
 tags:
+- scaled
 - WordPress
 - 缩略图
-- scaled
 title: WordPress 禁止生成缩略图 scaled
-updated: 2024-09-18 11:05:03
+updated: '2024-09-18T11:05:03+08:00'
+wp_id: 9765
 ---
 
 如果我们通过 WordPress 后台-设置-媒体中设置图片大小都为 0

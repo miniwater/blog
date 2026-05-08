@@ -1,19 +1,20 @@
 ---
 categories:
-- 信息技术
-- HTML
 - css
-category: css
+- HTML
+- 信息技术
+cover: https://www.krjojo.com/wp-content/uploads/2025/10/demo2.gif
+date: '2025-10-21T11:26:45+08:00'
 draft: false
-published: 2025-10-21 11:26:45
 slug: 网页利用-view-transition-仿-appstore-转场动画
 tags:
+- AppStore
 - HTML
 - HTML5
 - view-transition
-- AppStore
 title: 网页利用 view-transition 仿 AppStore 转场动画
-updated: 2025-10-21 11:29:50
+updated: '2025-10-21T11:29:50+08:00'
+wp_id: 12288
 ---
 
 其实上个月为了体验这功能就做了这个demo项目，碍于后面有些事忙起来遗忘了，这次补发文章出来。

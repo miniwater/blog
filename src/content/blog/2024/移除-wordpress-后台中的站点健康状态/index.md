@@ -1,18 +1,19 @@
 ---
 categories:
-- 信息技术
 - PHP
 - WordPress
-category: WordPress
+- 信息技术
+cover: ''
+date: '2024-05-09T23:29:00+08:00'
 draft: false
-published: 2024-05-09 23:29:00
 slug: 移除-wordpress-后台中的站点健康状态
 tags:
 - WordPress
 - 后台
 - 站点健康状态
 title: 移除 Wordpress 后台中的“站点健康状态”
-updated: 2024-05-09 23:29:00
+updated: '2024-05-09T23:29:00+08:00'
+wp_id: 9382
 ---
 
 wordpress5.0+的后台中多了一个“站点健康状态”模块，基本用不上，比较碍眼，可以使用以下方法把它去除。

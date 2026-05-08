@@ -1,18 +1,19 @@
 ---
 categories:
-- 信息技术
 - Linux
 - Ubuntu
-category: Ubuntu
+- 信息技术
+cover: ''
+date: '2024-05-09T23:55:46+08:00'
 draft: false
-published: 2024-05-09 23:55:46
 slug: ubuntu-开启samba服务并进行配置
 tags:
 - Linux
-- Ubuntu
 - samba
+- Ubuntu
 title: Ubuntu 开启samba服务并进行配置
-updated: 2024-05-09 23:55:46
+updated: '2024-05-09T23:55:46+08:00'
+wp_id: 9392
 ---
 
 在linux环境中，为了方便与其它设备共享文件，可以创建一个Samba服务，其它平台就都可以通过网络访问你在linux中指定的共享文件夹了。这里以ubuntu系统为例子，简要说一下安装过程。

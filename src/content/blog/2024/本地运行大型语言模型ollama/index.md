@@ -1,22 +1,23 @@
 ---
 categories:
-- 信息技术
 - AI
 - LLM
-category: LLM
+- 信息技术
+cover: ''
+date: '2024-02-04T00:16:08+08:00'
 draft: false
-published: 2024-02-04 00:16:08
 slug: 本地运行大型语言模型ollama
 tags:
 - AI
-- ollama
+- Docker
 - Llama
 - Llama2
 - LLM
+- ollama
 - 大语言模型
-- Docker
 title: 本地运行大型语言模型ollama
-updated: 2024-02-04 00:27:20
+updated: '2024-02-04T00:27:20+08:00'
+wp_id: 1278
 ---
 
 ## ollama

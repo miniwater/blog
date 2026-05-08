@@ -1,18 +1,19 @@
 ---
 categories:
-- 信息技术
 - Rust
-category: Rust
+- 信息技术
+cover: ./rust.avif
+date: '2024-12-23T13:22:21+08:00'
 draft: false
-published: 2024-12-23 13:22:21
 slug: 【rust敲门砖】-windows环境下配置及安装环境
 tags:
-- windows
 - Rust
-- 安装环境
+- windows
 - 入门
+- 安装环境
 title: 【Rust敲门砖】 Windows环境下配置及安装环境
-updated: 2024-12-25 13:12:10
+updated: '2024-12-25T13:12:10+08:00'
+wp_id: 10440
 ---
 
 ![](./rust.avif)

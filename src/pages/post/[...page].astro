@@ -11,7 +11,7 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
 
   // 按照日期排序
   allPosts.sort(
-    (a, b) => b.data.published.valueOf() - a.data.published.valueOf(),
+    (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
   );
 
   // 返回分页结果，pageSize 定义每页显示多少条

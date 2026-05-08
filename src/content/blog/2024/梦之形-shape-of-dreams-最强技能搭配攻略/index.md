@@ -1,19 +1,20 @@
 ---
 categories:
-- 游戏
 - 攻略
-category: 攻略
+- 游戏
+cover: ./梦之形.avif
+date: '2024-11-24T11:13:36+08:00'
 draft: false
-published: 2024-11-24 11:13:36
 slug: 梦之形-shape-of-dreams-最强技能搭配攻略
 tags:
-- 攻略
-- 梦之形
 - Shape of Dreams
 - 技能搭配
+- 攻略
+- 梦之形
 - 法师
 title: 梦之形 Shape of Dreams Steam游戏 攻略 最强技能搭配
-updated: 2024-11-24 22:11:50
+updated: '2024-11-24T22:11:50+08:00'
+wp_id: 10360
 ---
 
 ![](./梦之形.avif)

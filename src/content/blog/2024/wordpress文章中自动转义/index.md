@@ -1,22 +1,23 @@
 ---
 categories:
-- 信息技术
 - HTML
+- js
 - PHP
 - WordPress
-- js
-category: js
+- 信息技术
+cover: ''
+date: '2024-03-22T00:43:25+08:00'
 draft: false
-published: 2024-03-22 00:43:25
 slug: wordpress文章中自动转义
 tags:
-- WordPress
+- '&amp;'
+- '&amp;038;'
 - HTML
 - js
-- '&amp;038;'
-- '&amp;'
+- WordPress
 title: WordPress文章中自动转义"&"成"&038;"
-updated: 2024-03-26 00:27:46
+updated: '2024-03-26T00:27:46+08:00'
+wp_id: 1458
 ---
 
 今天发现在文章内用自定义html写js时，`&`号会被自动转义成 `&038;` 。

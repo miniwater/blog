@@ -1,20 +1,21 @@
 ---
 categories:
-- 信息技术
-- Windows
 - PowerShell
-category: PowerShell
+- Windows
+- 信息技术
+cover: ''
+date: '2025-02-18T09:20:02+08:00'
 draft: false
-published: 2025-02-18 09:20:02
 slug: 一句cmd命令将多个csv文件合并成一个csv文件
 tags:
-- windows
+- .csv
 - CMD
 - CSV
-- .csv
+- windows
 - 合并
 title: 一句CMD命令将多个CSV文件合并成一个CSV文件
-updated: 2025-02-18 09:20:03
+updated: '2025-02-18T09:20:03+08:00'
+wp_id: 10674
 ---
 
 第一步：把要合并的csv文件全部放到同一个目录；

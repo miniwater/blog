@@ -1,17 +1,18 @@
 ---
 categories:
-- 信息技术
 - PHP
 - Typecho
-category: Typecho
+- 信息技术
+cover: ''
+date: '2024-05-10T12:10:46+08:00'
 draft: false
-published: 2024-05-10 12:10:46
 slug: 修改typecho的搜索功能仅检索标题
 tags:
 - Typecho
 - 搜索
 title: 修改typecho的搜索功能仅检索标题
-updated: 2024-05-10 12:10:47
+updated: '2024-05-10T12:10:47+08:00'
+wp_id: 9406
 ---
 
 使用typecho的搜索功能时，你会发现，搜索时默认检索标题和全文，如果检索全文，会搜索出很多根本不相干的文章出来，这仅仅是因为该文章出现了这个搜索词导致的，如果仅搜索标题的话，含有关键词，搜索的准确度就大大增加了。

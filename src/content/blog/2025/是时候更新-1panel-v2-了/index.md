@@ -1,23 +1,24 @@
 ---
 categories:
-- 信息技术
 - 1Panel
-category: 1Panel
+- 信息技术
+cover: ''
+date: '2025-06-23T19:25:10+08:00'
 draft: false
-published: 2025-06-23 19:25:10
 slug: 是时候更新-1panel-v2-了
 tags:
 - 1Panel
 - Docker
+- H3
 - HTTP/3
 - openresty
 - VPS
-- 迁移
 - 服务器
+- 迁移
 - 面板
-- H3
 title: 是时候更新 1Panel V2 了
-updated: 2025-07-16 17:42:34
+updated: '2025-07-16T17:42:34+08:00'
+wp_id: 11553
 ---
 
 在2025年6月10日，1Panel终于放出了V2的正式版，新版带来许多革命性的变化，也可以理解为V1版是飞致云对面板的初步摸索，而V2则是总结经验进行大刀重构。

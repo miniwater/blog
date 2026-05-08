@@ -1,18 +1,19 @@
 ---
 categories:
-- 信息技术
 - PHP
 - WordPress
-category: WordPress
+- 信息技术
+cover: ''
+date: '2025-12-05T11:23:38+08:00'
 draft: false
-published: 2025-12-05 11:23:38
 slug: wordpress-6-9-更新后-smtp-邮件发送失效解决办法
 tags:
-- WordPress
 - smtp
+- WordPress
 - 邮件
 title: WordPress 6.9 更新后 SMTP 邮件发送失效解决办法
-updated: 2025-12-07 11:09:15
+updated: '2025-12-07T11:09:15+08:00'
+wp_id: 12474
 ---
 
 在 WordPress 6.9 版本之前，简单配置SMTP服务是这样的。

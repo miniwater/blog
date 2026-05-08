@@ -1,17 +1,18 @@
 ---
 categories:
-- 信息技术
 - HTML
-category: HTML
+- 信息技术
+cover: ''
+date: '2024-09-08T13:13:24+08:00'
 draft: false
-published: 2024-09-08 13:13:24
 slug: 分享一个仿windows蓝屏的404页面
 tags:
-- windows
-- HTML
 - '404'
+- HTML
+- windows
 title: 分享一个仿Windows蓝屏的404页面
-updated: 2025-11-09 09:50:07
+updated: '2025-11-09T09:50:07+08:00'
+wp_id: 9851
 ---
 
 ## 效果

@@ -1,19 +1,20 @@
 ---
 categories:
-- 信息技术
 - HTML
-- WordPress
 - js
-category: js
+- WordPress
+- 信息技术
+cover: ''
+date: '2024-05-08T12:36:01+08:00'
 draft: false
-published: 2024-05-08 12:36:01
 slug: wordpress-使用jquery代码
 tags:
-- WordPress
 - JavaScript
 - jQuery
+- WordPress
 title: WordPress 使用jQuery代码
-updated: 2024-05-08 12:36:01
+updated: '2024-05-08T12:36:01+08:00'
+wp_id: 9055
 ---
 
 由于WordPress中默认使用了 `jQuery.noConflict()` 方法避免与其他JavaScript库冲突

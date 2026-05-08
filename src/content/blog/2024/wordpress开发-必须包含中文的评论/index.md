@@ -1,20 +1,21 @@
 ---
 categories:
-- 信息技术
 - PHP
 - WordPress
-category: WordPress
+- 信息技术
+cover: ''
+date: '2024-02-22T00:12:32+08:00'
 draft: false
-published: 2024-02-22 00:12:32
 slug: wordpress开发-必须包含中文的评论
 tags:
-- WordPress
-- 评论
-- comment
-- 中文
 - Chinese
+- comment
+- WordPress
+- 中文
+- 评论
 title: wordpress过滤评论
-updated: 2024-03-12 23:48:10
+updated: '2024-03-12T23:48:10+08:00'
+wp_id: 1295
 ---
 
 ## 必须包含中文的评论

@@ -1,15 +1,16 @@
 ---
 categories:
 - MySQl
-category: MySQl
+cover: ''
+date: '2024-01-05T11:45:08+08:00'
 draft: false
-published: 2024-01-05 11:45:08
 slug: mysql中binlog过多的正确处理方式
 tags:
-- MySQL
 - binlog
+- MySQL
 title: MySQL中binlog过多的正确处理方式
-updated: 2024-01-05 11:58:00
+updated: '2024-01-05T11:58:00+08:00'
+wp_id: 988
 ---
 
 登录MySQL

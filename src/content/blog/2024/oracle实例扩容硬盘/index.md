@@ -1,17 +1,18 @@
 ---
 categories:
-- 信息技术
 - Linux
-category: Linux
+- 信息技术
+cover: ''
+date: '2024-05-09T22:33:39+08:00'
 draft: false
-published: 2024-05-09 22:33:39
 slug: oracle实例扩容硬盘
 tags:
 - Linux
 - Oracle
 - 扩容硬盘
 title: Oracle实例扩容硬盘
-updated: 2024-05-09 22:33:40
+updated: '2024-05-09T22:33:40+08:00'
+wp_id: 9364
 ---
 
 Oracle开实例默认只有47G，如果在200G范围内增加硬盘容量，就需要手动进行扩容。

@@ -1,18 +1,19 @@
 ---
 categories:
-- 信息技术
 - HTML
+- 信息技术
 - 安全
-category: 安全
+cover: ./edge2.avif
+date: '2025-01-23T00:09:23+08:00'
 draft: false
-published: 2025-01-23 00:09:23
 slug: edge浏览器-窃取数据、劫持请求-在百度搜索带tn后缀
 tags:
 - edge
-- 百度
 - 劫持
+- 百度
 title: Edge浏览器 窃取数据、劫持请求 在百度搜索带tn后缀
-updated: 2025-01-23 00:14:35
+updated: '2025-01-23T00:14:35+08:00'
+wp_id: 10594
 ---
 
 今天刷到一条关于Edge劫持请求、强行推广的视频。

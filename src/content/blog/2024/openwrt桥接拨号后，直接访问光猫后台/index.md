@@ -1,17 +1,18 @@
 ---
 categories:
-- 信息技术
 - Linux
-category: Linux
+- 信息技术
+cover: ./微信截图_20240922131007.avif
+date: '2024-09-22T12:52:30+08:00'
 draft: false
-published: 2024-09-22 12:52:30
 slug: openwrt桥接拨号后，直接访问光猫后台
 tags:
 - OpenWrt
-- 桥接
 - 光猫
+- 桥接
 title: OpenWrt桥接拨号后，直接访问光猫后台
-updated: 2024-09-22 13:29:18
+updated: '2024-09-22T13:29:18+08:00'
+wp_id: 9876
 ---
 
 首先确认下光猫的后台IP和openwrt的后台IP必须不在同一网段

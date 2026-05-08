@@ -1,25 +1,26 @@
 ---
 categories:
-- 信息技术
+- 1Panel
 - PHP
 - WordPress
+- 信息技术
 - 安全
-- 1Panel
-category: 1Panel
+cover: ./阿里云负载.avif
+date: '2024-10-23T12:17:54+08:00'
 draft: false
-published: 2024-10-23 12:17:54
 slug: 被claude-克劳德爬虫cc的这件事
 tags:
-- 网络安全
+- CC
+- CC攻击
+- Claude
+- ClaudeBot
 - 克劳德
 - 爬虫
-- CC
-- Claude
+- 网络安全
 - 网络攻击
-- CC攻击
-- ClaudeBot
 title: 关于被Claude 克劳德爬虫CC的这件事
-updated: 2024-10-24 14:08:25
+updated: '2024-10-24T14:08:25+08:00'
+wp_id: 10145
 ---
 
 大晚上正准备睡觉，邮件收到阿里云的资源告警，5分钟内cpu占用100%

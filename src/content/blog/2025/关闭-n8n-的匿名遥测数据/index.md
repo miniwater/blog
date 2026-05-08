@@ -1,20 +1,21 @@
 ---
 categories:
-- 信息技术
-- AI
 - Agent
-category: Agent
+- AI
+- 信息技术
+cover: https://www.krjojo.com/wp-content/uploads/2025/12/n8n.png
+date: '2025-12-14T12:40:06+08:00'
 draft: false
-published: 2025-12-14 12:40:06
 slug: 关闭-n8n-的匿名遥测数据
 tags:
+- Agent
 - Docker
 - docker-compose
-- Agent
 - n8n
 - 遥测数据
 title: 关闭 n8n 的匿名遥测数据
-updated: 2025-12-15 14:22:48
+updated: '2025-12-15T14:22:48+08:00'
+wp_id: 12561
 ---
 
 最近升级了最新 n8n 2.0 版本，发现的匿名遥测数据似乎存在问题。

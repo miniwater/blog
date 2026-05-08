@@ -1,19 +1,20 @@
 ---
 categories:
-- 信息技术
 - PHP
 - WordPress
-category: WordPress
+- 信息技术
+cover: ''
+date: '2024-02-25T13:56:20+08:00'
 draft: false
-published: 2024-02-25 13:56:20
 slug: wordpress开发-为文章列表添加id列
 tags:
-- WordPress
-- PHP
-- 插件
 - id
+- PHP
+- WordPress
+- 插件
 title: Wordpress为文章列表添加id列
-updated: 2024-03-12 23:48:00
+updated: '2024-03-12T23:48:00+08:00'
+wp_id: 1310
 ---
 
 在 function.php 下添加：

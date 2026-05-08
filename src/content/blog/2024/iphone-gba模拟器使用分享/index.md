@@ -1,17 +1,18 @@
 ---
 categories:
-- 游戏
 - GBA
-category: GBA
+- 游戏
+cover: ''
+date: '2024-04-15T22:30:31+08:00'
 draft: false
-published: 2024-04-15 22:30:31
 slug: iphone-gba模拟器使用分享
 tags:
-- GBA
 - Game Boy
+- GBA
 - 模拟器
 title: iPhone GBA模拟器使用分享
-updated: 2024-04-15 22:30:31
+updated: '2024-04-15T22:30:31+08:00'
+wp_id: 9050
 ---
 
 App Store规则更改后，复古游戏模拟器登陆iPhone

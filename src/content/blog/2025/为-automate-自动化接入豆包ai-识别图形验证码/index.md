@@ -1,19 +1,20 @@
 ---
 categories:
-- 信息技术
 - AI
 - LLM
-category: LLM
+- 信息技术
+cover: https://www.krjojo.com/wp-content/uploads/2025/12/权限.png
+date: '2025-12-04T20:08:40+08:00'
 draft: false
-published: 2025-12-04 20:08:40
 slug: 为-automate-自动化接入豆包ai-识别图形验证码
 tags:
-- 图形验证码
 - Power Automate
-- 自动工作流
+- 图形验证码
 - 登录验证码
+- 自动工作流
 title: 为 Automate 自动化接入豆包ai 识别图形验证码
-updated: 2025-12-07 12:03:10
+updated: '2025-12-07T12:03:10+08:00'
+wp_id: 12466
 ---
 
 最近帮朋友研究电脑自动执行工作流，让一些电脑上枯燥重复的手工作业流程实现全自动化。

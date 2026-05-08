@@ -1,16 +1,17 @@
 ---
 categories:
 - 百度云盘
-category: 百度云盘
+cover: https://www.krjojo.com/wp-content/uploads/2024/03/效果图-1.webp
+date: '2024-03-27T23:28:08+08:00'
 draft: false
-published: 2024-03-27 23:28:08
 slug: 一个技巧解决百度云盘下载慢的问题
 tags:
 - baidu
 - 百度
 - 百度云盘
 title: 一个技巧解决百度云盘下载慢的问题
-updated: 2024-03-27 23:58:31
+updated: '2024-03-27T23:58:31+08:00'
+wp_id: 8470
 ---
 
 ## 解决办法

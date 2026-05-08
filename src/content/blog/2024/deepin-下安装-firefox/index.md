@@ -1,18 +1,19 @@
 ---
 categories:
-- 信息技术
-- Linux
 - Deepin
-category: Deepin
+- Linux
+- 信息技术
+cover: ''
+date: '2024-05-10T12:16:56+08:00'
 draft: false
-published: 2024-05-10 12:16:56
 slug: deepin-下安装-firefox
 tags:
-- Linux
 - Deepin
 - Firefox
+- Linux
 title: Deepin 下安装 Firefox
-updated: 2024-05-10 12:16:56
+updated: '2024-05-10T12:16:56+08:00'
+wp_id: 9412
 ---
 
 安装了deepin系统，应用商店里的firefox版本没有最新的，每次打开firefox浏览器就提示升级，但却又无法正常升级。这里可以自己升级官方最新的firefox。

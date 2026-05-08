@@ -1,23 +1,24 @@
 ---
 categories:
-- 信息技术
 - PHP
 - WordPress
-category: WordPress
+- 信息技术
+cover: ''
+date: '2024-03-12T13:58:46+08:00'
 draft: false
-published: 2024-03-12 13:58:46
 slug: wordpress开发-后台顶部添加显示选项和帮助选项卡
 tags:
-- WordPress
 - HTML
-- PHP
-- WordPress后台
-- 菜单
 - menu
-- 显示选项
+- PHP
+- WordPress
+- WordPress后台
 - 帮助选项
+- 显示选项
+- 菜单
 title: WordPress后台顶部添加显示选项和帮助选项卡
-updated: 2024-03-12 23:47:44
+updated: '2024-03-12T23:47:44+08:00'
+wp_id: 1424
 ---
 
 如何在后台顶部右上角添加 显示选项卡 和 帮助选项卡 。

@@ -1,23 +1,24 @@
 ---
 categories:
-- 信息技术
 - PHP
 - WordPress
-category: WordPress
+- 信息技术
+cover: ''
+date: '2024-10-23T11:46:06+08:00'
 draft: false
-published: 2024-10-23 11:46:06
 slug: wordpress-使用-rest-api-批量发布文章，提交-http-post-请求即可发布
 tags:
+- API
 - http
+- POST
 - python
+- REST API
+- 批量发布
 - 文章
 - 采集
-- REST API
-- POST
-- 批量发布
-- API
 title: Wordpress 使用 REST API 批量发布文章，提交 HTTP Post 请求即可发布
-updated: 2024-10-23 11:50:11
+updated: '2024-10-23T11:50:11+08:00'
+wp_id: 10142
 ---
 
 看了一下Wordpress远程发布文章的方式，基本围绕着 XML-RPC 。

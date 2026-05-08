@@ -1,19 +1,20 @@
 ---
 categories:
-- 信息技术
 - PHP
 - WordPress
-category: WordPress
+- 信息技术
+cover: ''
+date: '2024-01-22T21:11:55+08:00'
 draft: false
-published: 2024-01-22 21:11:55
 slug: wordpress在不安装的情况下试用插件
 tags:
-- WordPress
 - plugins
-- 插件
 - web
+- WordPress
+- 插件
 title: WordPress在不安装的情况下试用插件
-updated: 2024-01-23 11:09:24
+updated: '2024-01-23T11:09:24+08:00'
+wp_id: 1179
 ---
 
 ## tastewp

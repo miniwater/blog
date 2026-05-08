@@ -1,17 +1,18 @@
 ---
 categories:
-- 信息技术
 - Linux
-category: Linux
+- 信息技术
+cover: ''
+date: '2024-05-09T22:47:18+08:00'
 draft: false
-published: 2024-05-09 22:47:18
 slug: 删除腾讯云监控及修改hosts文件
 tags:
+- hosts
 - Linux
 - 腾讯云
-- hosts
 title: 删除腾讯云监控及修改hosts文件
-updated: 2024-05-09 22:47:19
+updated: '2024-05-09T22:47:19+08:00'
+wp_id: 9372
 ---
 
 **一、删除腾讯云自带的监控：**

@@ -1,20 +1,21 @@
 ---
 categories:
-- 信息技术
 - Windows
-category: Windows
+- 信息技术
+cover: ./闪烁.avif
+date: '2025-02-02T23:45:26+08:00'
 draft: false
-published: 2025-02-02 23:45:26
 slug: 关于nvidia显卡在windows系统下存在部分软件屏闪-闪烁问题
 tags:
-- windows
-- Win10
 - Nvidia
+- Win10
+- windows
+- 屏闪
 - 英伟达
 - 闪烁
-- 屏闪
 title: 关于Nvidia显卡在windows系统下存在部分软件屏闪/闪烁问题与解决方法
-updated: 2025-02-27 20:08:00
+updated: '2025-02-27T20:08:00+08:00'
+wp_id: 10615
 ---
 
 ### 问题描述

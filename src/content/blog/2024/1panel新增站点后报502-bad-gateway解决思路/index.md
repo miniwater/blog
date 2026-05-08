@@ -1,19 +1,20 @@
 ---
 categories:
-- 技术
+- 1Panel
 - 信息技术
 - 安全
-- 1Panel
-category: 1Panel
+- 技术
+cover: ''
+date: '2024-04-18T13:28:36+08:00'
 draft: false
-published: 2024-04-18 13:28:36
 slug: 1panel新增站点后报502-bad-gateway解决思路
 tags:
 - 1Panel
 - Docker
 - PHP运行环境
 title: 1Panel新增站点后报502 Bad Gateway解决思路
-updated: 2024-04-30 17:00:51
+updated: '2024-04-30T17:00:51+08:00'
+wp_id: 9071
 ---
 
 ## 问题

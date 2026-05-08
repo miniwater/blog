@@ -1,16 +1,17 @@
 ---
 categories:
-- 信息技术
 - Docker
-category: Docker
+- 信息技术
+cover: ''
+date: '2024-05-12T12:27:42+08:00'
 draft: false
-published: 2024-05-12 12:27:42
 slug: docker-compose-yml-version-is-obsolete-解决办法
 tags:
 - Docker
 - docker-compose
 title: 'Docker docker-compose.yml: `version` is obsolete" 解决办法'
-updated: 2024-09-18 11:16:06
+updated: '2024-09-18T11:16:06+08:00'
+wp_id: 9452
 ---
 
 这通常意味着使用的 `docker-compose` 版本不支持该文件中声明的版本号。

@@ -1,16 +1,17 @@
 ---
 categories:
-- 信息技术
 - MySQl
-category: MySQl
+- 信息技术
+cover: ''
+date: '2023-12-04T19:48:18+08:00'
 draft: false
-published: 2023-12-04 19:48:18
 slug: 1panel的mysql数据库有异常
 tags:
 - 1Panel
 - MySQL
 title: 1Panel的MySql数据库异常警告
-updated: 2023-12-05 12:31:58
+updated: '2023-12-05T12:31:58+08:00'
+wp_id: 960
 ---
 
 装上1Panel后用了一段时间，发现MySQL 8.2.0日志不停报错，内容为：

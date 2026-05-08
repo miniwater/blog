@@ -1,25 +1,26 @@
 ---
 categories:
-- 信息技术
-- HTML
-- HTTP2
 - 1Panel
+- HTML
 - HTTP/3
-category: HTTP/3
+- HTTP2
+- 信息技术
+cover: ''
+date: '2024-04-25T00:22:37+08:00'
 draft: false
-published: 2024-04-25 00:22:37
 slug: openresty-对-http-3-的一次尝试
 tags:
 - 1Panel
 - Docker
 - http
-- nginx
-- http2
 - HTTP/3
+- http2
 - http3
+- nginx
 - openresty
 title: OpenResty 对 HTTP/3 的一次尝试
-updated: 2024-04-30 16:59:20
+updated: '2024-04-30T16:59:20+08:00'
+wp_id: 9149
 ---
 
 前段时间，也就是今年一月份左右，OpenResty 1.25.3.1 正式添加了对http/3的正式支持，那时候盼星星盼月亮等待着1Panel面板对 OpenResty 容器版本的更新。

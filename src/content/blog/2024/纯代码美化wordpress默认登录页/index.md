@@ -1,23 +1,24 @@
 ---
 categories:
-- 信息技术
 - HTML
 - PHP
 - WordPress
-category: WordPress
+- 信息技术
+cover: ''
+date: '2024-01-19T13:21:49+08:00'
 draft: false
-published: 2024-01-19 13:21:49
 slug: 纯代码美化wordpress默认登录页
 tags:
-- WordPress
+- CSS
 - HTML
 - login
-- CSS
-- 美化
+- WordPress
 - 定制
 - 登录
+- 美化
 title: 2024纯代码美化WordPress登录页
-updated: 2024-01-19 13:35:58
+updated: '2024-01-19T13:35:58+08:00'
+wp_id: 1169
 ---
 
 内容来自：<https://www.iowen.cn/chundaimameihuawordpressmorendengluye/>

@@ -1,16 +1,17 @@
 ---
 categories:
-- 手机
 - iPhone
-category: iPhone
+- 手机
+cover: ''
+date: '2024-04-22T19:30:45+08:00'
 draft: false
-published: 2024-04-22 19:30:45
 slug: iphone换电池以及-ios17-4封杀移植电芯
 tags:
 - ios
 - iPhone
 title: iPhone换电池以及 iOS17.4封杀移植电芯
-updated: 2024-04-22 19:47:06
+updated: '2024-04-22T19:47:06+08:00'
+wp_id: 9123
 ---
 
 ## 原理

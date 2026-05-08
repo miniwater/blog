@@ -1,19 +1,20 @@
 ---
 categories:
-- 信息技术
 - HTML
+- 信息技术
 - 模板
-category: 模板
+cover: ''
+date: '2024-02-22T23:46:19+08:00'
 draft: false
-published: 2024-02-22 23:46:19
 slug: html5-鱼儿游动态背景特效
 tags:
+- H5
 - HTML
 - HTML5
 - 模板
-- H5
 title: Html5 鱼儿游动态背景特效
-updated: 2025-02-25 00:10:13
+updated: '2025-02-25T00:10:13+08:00'
+wp_id: 1298
 ---
 
 示例：

@@ -2,18 +2,19 @@
 categories:
 - 云服务
 - 阿里云
-category: 阿里云
+cover: ./fIKXRGRXa.avif
+date: '2026-01-13T15:35:54+08:00'
 draft: false
-published: 2026-01-13 15:35:54
 slug: 白嫖阿里云免费pg数据库
 tags:
-- 阿里云
-- 白嫖
-- 数据库
 - PostgreSQL
 - 免费
+- 数据库
+- 白嫖
+- 阿里云
 title: 白嫖阿里云免费PG数据库
-updated: 2026-01-15 11:54:21
+updated: '2026-01-15T11:54:21+08:00'
+wp_id: 12765
 ---
 
 去年年底，阿里云悄咪咪上线了一个 Supabase 平台，最吸引人的就是`阿里云原生数据仓库 AnalyticDB PostgreSQL版` 下多了免费的1核2G PostgreSQL 数据库。

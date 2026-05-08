@@ -1,17 +1,18 @@
 ---
 categories:
-- 信息技术
 - Windows
-category: Windows
+- 信息技术
+cover: ''
+date: '2024-05-10T12:08:40+08:00'
 draft: false
-published: 2024-05-10 12:08:40
 slug: 微软kms激活方法
 tags:
-- windows
 - KMS
+- windows
 - 激活
 title: 微软KMS激活方法
-updated: 2024-05-10 12:08:41
+updated: '2024-05-10T12:08:41+08:00'
+wp_id: 9404
 ---
 
 KMS激活Windows和Office，网上存在大量的教程，这里只是整理一下，做一个记录，方便日后使用调阅。KMS激活一般适用VL版本，也就说只是使用的是企业版的Windows或Office，都可以使用KMS方式进行激活。

@@ -1,21 +1,22 @@
 ---
 categories:
-- 信息技术
 - PHP
 - WordPress
+- 信息技术
 - 图片格式
-category: 图片格式
+cover: ''
+date: '2024-04-28T19:07:10+08:00'
 draft: false
-published: 2024-04-28 19:07:10
 slug: wordpress无法上传avif图片-web-服务器无法处理该图片，请在上
 tags:
-- WordPress
-- PHP
 - AVIF
 - gd
+- PHP
+- WordPress
 - 图片
 title: WordPress无法上传avif图片 Web 服务器无法处理该图片，请在上传前将其转换为 JPEG 或 PNG 格式。
-updated: 2024-04-30 16:26:46
+updated: '2024-04-30T16:26:46+08:00'
+wp_id: 9186
 ---
 
 今天突然遇到一个问题，媒体库无法上传avif格式图片。

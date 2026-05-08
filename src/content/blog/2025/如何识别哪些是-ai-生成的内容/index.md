@@ -1,19 +1,20 @@
 ---
 categories:
-- 信息技术
 - AI
 - LLM
-category: LLM
+- 信息技术
+cover: ./ai.avif
+date: '2025-12-18T10:21:30+08:00'
 draft: false
-published: 2025-12-18 10:21:30
 slug: 如何识别哪些是-ai-生成的内容
 tags:
 - AI
-- AI味
 - AIGC
+- AI味
 - AI查重
 title: 如何识别哪些是 AI 生成的内容
-updated: 2025-12-24 13:20:59
+updated: '2025-12-24T13:20:59+08:00'
+wp_id: 12613
 ---
 
 最近看到不少朋友用上了AI写作，

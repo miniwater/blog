@@ -1,18 +1,19 @@
 ---
 categories:
-- 信息技术
 - Windows
-category: Windows
+- 信息技术
+cover: ''
+date: '2024-05-09T23:30:20+08:00'
 draft: false
-published: 2024-05-09 23:30:20
 slug: windows-10-ltsc-找加图片查看器
 tags:
+- LTSC
+- Win10
 - windows
 - 图片
-- Win10
-- LTSC
 title: Windows 10 LTSC 找加图片查看器
-updated: 2024-05-09 23:30:21
+updated: '2024-05-09T23:30:21+08:00'
+wp_id: 9384
 ---
 
 今天安装了windows 10 LTSC版本的系统，发现不能直接查看图片，只能用画图查看，非常的不方便，网上搜索一番，发现处理方法很简单，就是修改一下注册表，因为LTSC版本自带有图片查看功能，只是精简后取消了这个功能，但可以通过修改注册表的方式找回这个图片查看器。

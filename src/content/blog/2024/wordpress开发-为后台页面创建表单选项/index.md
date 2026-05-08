@@ -1,20 +1,21 @@
 ---
 categories:
-- 信息技术
 - PHP
 - WordPress
-category: WordPress
+- 信息技术
+cover: ''
+date: '2024-02-09T14:21:04+08:00'
 draft: false
-published: 2024-02-09 14:21:04
 slug: wordpress开发-为后台页面创建表单选项
 tags:
-- WordPress
-- PHP
-- 插件
 - form
+- PHP
+- WordPress
+- 插件
 - 表单
 title: WordPress为后台页面创建表单选项
-updated: 2024-03-12 23:48:17
+updated: '2024-03-12T23:48:17+08:00'
+wp_id: 1286
 ---
 
 不废话，先上官方推荐做法

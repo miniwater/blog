@@ -2,21 +2,22 @@
 categories:
 - 信息技术
 - 安全
-category: 安全
+cover: ./5.avif
+date: '2024-06-20T18:07:13+08:00'
 draft: false
-published: 2024-06-20 18:07:13
 slug: windows核弹级漏洞，win7-win11全部沦陷，最新情况来了！
 tags:
-- windows
-- 漏洞
-- Win10
-- 微软
-- Win11
-- Microsoft
-- Win7
 - 0day
+- Microsoft
+- Win10
+- Win11
+- Win7
+- windows
+- 微软
+- 漏洞
 title: Windows核弹级漏洞，Win7-Win11全部沦陷，最新情况来了！
-updated: 2024-09-18 11:08:57
+updated: '2024-09-18T11:08:57+08:00'
+wp_id: 9586
 ---
 
 就在前几天，Windows又又又爆漏洞了！

@@ -2,19 +2,20 @@
 categories:
 - 云服务
 - 阿里云
-category: 阿里云
+cover: ./url-targe.avif
+date: '2025-11-03T20:38:18+08:00'
 draft: false
-published: 2025-11-03 20:38:18
 slug: 阿里云安全组无法批量添加ip组解决办法
 tags:
 - CDN
-- 阿里云
-- 安全组
 - IP段
 - IP组
+- 安全组
 - 腾讯EO
+- 阿里云
 title: 阿里云安全组无法批量添加IP组解决办法
-updated: 2025-11-04 09:59:27
+updated: '2025-11-04T09:59:27+08:00'
+wp_id: 12340
 ---
 
 今天给阿里云添加[腾讯EO回源IP段](https://api.edgeone.ai/ips)，发现了一个问题，

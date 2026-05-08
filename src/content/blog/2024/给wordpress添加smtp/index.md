@@ -1,16 +1,17 @@
 ---
 categories:
 - PHP
-category: PHP
+cover: ''
+date: '2024-01-08T23:25:23+08:00'
 draft: false
-published: 2024-01-08 23:25:23
 slug: 给wordpress添加smtp
 tags:
-- WordPress
 - smtp
+- WordPress
 - 邮件
 title: 给Wordpress添加smtp
-updated: 2024-01-08 23:37:39
+updated: '2024-01-08T23:37:39+08:00'
+wp_id: 1001
 ---
 
 SMTP邮件功能在WordPress中是很常用的功能， 虽然WordPress自带了mail函数，但用自带mail函数发送邮件很容易失败或者被拒收。

@@ -1,19 +1,20 @@
 ---
 categories:
-- 信息技术
 - HTML
 - js
-category: js
+- 信息技术
+cover: ''
+date: '2024-04-16T23:45:44+08:00'
 draft: false
-published: 2024-04-16 23:45:44
 slug: node_env-不是内部或外部命令，也不是可运行的程序，或
 tags:
-- PowerShell
 - js
 - nodejs
 - npm
+- PowerShell
 title: NODE_ENV 不是内部或外部命令，也不是可运行的程序，或者批处理文件
-updated: 2024-04-16 23:45:45
+updated: '2024-04-16T23:45:45+08:00'
+wp_id: 9056
 ---
 
 ## 环境

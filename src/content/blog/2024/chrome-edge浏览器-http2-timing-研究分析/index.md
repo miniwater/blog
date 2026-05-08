@@ -1,23 +1,24 @@
 ---
 categories:
-- 信息技术
 - HTML
 - HTTP2
-category: HTTP2
+- 信息技术
+cover: ./加速.avif
+date: '2024-03-31T00:32:38+08:00'
 draft: false
-published: 2024-03-31 00:32:38
 slug: chrome-edge浏览器-http2-timing-研究分析
 tags:
 - chrome
+- dns
 - edge
 - http2
-- timing
 - queueing
-- 队列
-- dns
+- timing
 - TTFB
+- 队列
 title: Chrome Edge浏览器 HTTP2 Timing 研究分析
-updated: 2024-03-31 00:32:39
+updated: '2024-03-31T00:32:39+08:00'
+wp_id: 8522
 ---
 
 ![](./加速.avif)

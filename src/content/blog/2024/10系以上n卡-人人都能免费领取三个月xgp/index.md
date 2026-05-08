@@ -1,18 +1,19 @@
 ---
 categories:
 - 公告
-category: 公告
+cover: ./nvidia.avif
+date: '2024-06-04T11:21:53+08:00'
 draft: false
-published: 2024-06-04 11:21:53
 slug: 10系以上n卡-人人都能免费领取三个月xgp
 tags:
 - Nvidia
-- XGP
 - Xbox
 - Xbox Game Pass
+- XGP
 - 白嫖
 title: 10系以上N卡 人人都能免费领取三个月XGP
-updated: 2024-09-18 11:11:46
+updated: '2024-09-18T11:11:46+08:00'
+wp_id: 9534
 ---
 
 官网地址：<https://www.nvidia.com/en-us/geforce/rewards/>

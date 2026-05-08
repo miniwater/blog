@@ -1,14 +1,15 @@
 ---
 categories:
-- 信息技术
 - Linux
-category: Linux
+- 信息技术
+cover: ''
+date: '2023-03-20T11:50:03+08:00'
 draft: false
-published: 2023-03-20 11:50:03
 slug: openwrt开机自启动时间校准ntpd服务
 tags: []
 title: OpenWrt开机自启动时间校准ntpd服务
-updated: 2023-04-21 23:48:06
+updated: '2023-04-21T23:48:06+08:00'
+wp_id: 792
 ---
 
 理论上，[OpenWrt](https://so.csdn.net/so/search?q=OpenWrt&spm=1001.2101.3001.7020) 自带的时钟同步服务`sysntpd`应该是开机自启的，但是在某些设备遇到了开机不自启的问题，干脆使用原生的`ntpd`服务。

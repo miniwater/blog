@@ -1,17 +1,18 @@
 ---
 categories:
-- 信息技术
 - Linux
-category: Linux
+- 信息技术
+cover: ''
+date: '2023-04-21T23:47:04+08:00'
 draft: false
-published: 2023-04-21 23:47:04
 slug: linux之常用的压缩解压缩命令
 tags:
+- Linux
 - 压缩
 - 解压
-- Linux
 title: Linux之常用的压缩解压缩命令
-updated: 2023-04-21 23:47:05
+updated: '2023-04-21T23:47:05+08:00'
+wp_id: 796
 ---
 
 # 1 解压命令

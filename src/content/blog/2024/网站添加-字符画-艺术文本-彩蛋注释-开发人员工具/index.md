@@ -1,10 +1,10 @@
 ---
 categories:
-- 信息技术
 - HTML
-category: HTML
+- 信息技术
+cover: ''
+date: '2024-10-08T13:52:37+08:00'
 draft: false
-published: 2024-10-08 13:52:37
 slug: 网站添加-字符画-艺术文本-彩蛋注释-开发人员工具
 tags:
 - HTML
@@ -12,7 +12,8 @@ tags:
 - 彩蛋
 - 注释
 title: 网站添加 字符画 艺术文本 彩蛋注释-开发人员工具
-updated: 2024-10-08 13:52:37
+updated: '2024-10-08T13:52:37+08:00'
+wp_id: 10013
 ---
 
 在HTML中，<!DOCTYPE HTML>下添加如下内容即可实现类似效果

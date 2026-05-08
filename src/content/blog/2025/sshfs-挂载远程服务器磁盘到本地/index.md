@@ -1,21 +1,22 @@
 ---
 categories:
-- 信息技术
 - Linux
-- Windows
 - VSCode
-category: VSCode
+- Windows
+- 信息技术
+cover: ./开发板.avif
+date: '2025-02-24T00:21:05+08:00'
 draft: false
-published: 2025-02-24 00:21:05
 slug: sshfs-挂载远程服务器磁盘到本地
 tags:
-- windows
 - Linux
 - VSCode
+- windows
 - 挂载磁盘
 - 远程
 title: sshfs 挂载远程服务器磁盘到本地
-updated: 2025-02-24 00:21:06
+updated: '2025-02-24T00:21:06+08:00'
+wp_id: 10765
 ---
 
 ![](./开发板.avif)

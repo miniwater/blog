@@ -1,17 +1,18 @@
 ---
 categories:
-- 信息技术
 - Docker
-category: Docker
+- 信息技术
+cover: ''
+date: '2024-07-02T14:31:15+08:00'
 draft: false
-published: 2024-07-02 14:31:15
 slug: docker通过cloudflare-workers加速代理
 tags:
-- Docker
 - Cloudflare
+- Docker
 - 镜像加速
 title: Docker通过Cloudflare workers加速代理
-updated: 2025-12-17 19:19:47
+updated: '2025-12-17T19:19:47+08:00'
+wp_id: 9706
 ---
 
 最近阿里的镜像加速也废了，只好另辟蹊径，既然有域名，有cf，那就可以实现一下骚操作

@@ -1,20 +1,21 @@
 ---
 categories:
-- 信息技术
 - Windows
+- 信息技术
 - 安全
-category: 安全
+cover: ''
+date: '2024-07-24T19:55:20+08:00'
 draft: false
-published: 2024-07-24 19:55:20
 slug: 微软系统近期大规模蓝屏原因以及解决方法
 tags:
-- 微软
-- Microsoft
-- 蓝屏
 - CrowdStrike
+- Microsoft
 - Microsoft 365
+- 微软
+- 蓝屏
 title: 微软系统近期大规模蓝屏原因以及解决方法
-updated: 2024-09-18 11:06:13
+updated: '2024-09-18T11:06:13+08:00'
+wp_id: 9750
 ---
 
 ## 蓝屏的原因

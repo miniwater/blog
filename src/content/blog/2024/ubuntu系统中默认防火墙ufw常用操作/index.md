@@ -1,10 +1,10 @@
 ---
 categories:
-- 信息技术
 - Linux
-category: Linux
+- 信息技术
+cover: ''
+date: '2024-05-09T22:52:23+08:00'
 draft: false
-published: 2024-05-09 22:52:23
 slug: ubuntu系统中默认防火墙ufw常用操作
 tags:
 - Linux
@@ -12,7 +12,8 @@ tags:
 - UFW
 - 防火墙
 title: Ubuntu系统中默认防火墙UFW常用操作
-updated: 2024-05-09 22:52:24
+updated: '2024-05-09T22:52:24+08:00'
+wp_id: 9374
 ---
 
 ubuntu系统自带了防火墙Uncomplicated Firewall，即ufw。

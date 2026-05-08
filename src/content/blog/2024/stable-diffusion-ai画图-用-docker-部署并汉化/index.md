@@ -1,18 +1,19 @@
 ---
 categories:
-- 信息技术
 - AI
 - Docker
-category: Docker
+- 信息技术
+cover: ./SD.avif
+date: '2024-05-12T16:35:54+08:00'
 draft: false
-published: 2024-05-12 16:35:54
 slug: stable-diffusion-ai画图-用-docker-部署并汉化
 tags:
 - AI
 - Docker
 - Stable Diffusion
 title: Stable Diffusion AI画图 用 Docker 部署并汉化
-updated: 2024-09-18 11:15:31
+updated: '2024-09-18T11:15:31+08:00'
+wp_id: 9459
 ---
 
 > <https://github.com/AbdBarho/stable-diffusion-webui-docker/wiki/Setup>

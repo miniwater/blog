@@ -1,18 +1,19 @@
 ---
 categories:
-- 技术
 - 信息技术
-category: 信息技术
+- 技术
+cover: ''
+date: '2024-12-22T17:43:06+08:00'
 draft: false
-published: 2024-12-22 17:43:06
 slug: 2024-web框架性能测试排行总结
 tags:
-- 性能测试
-- 后端
 - Web框架
+- 后端
+- 性能测试
 - 排行榜
 title: 2024 Web框架性能测试排行总结
-updated: 2024-12-22 17:49:35
+updated: '2024-12-22T17:49:35+08:00'
+wp_id: 10435
 ---
 
 ## Web Frameworks Benchmark

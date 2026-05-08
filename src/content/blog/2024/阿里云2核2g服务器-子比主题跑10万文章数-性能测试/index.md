@@ -1,21 +1,22 @@
 ---
 categories:
-- 信息技术
 - PHP
 - WordPress
-category: WordPress
+- 信息技术
+cover: ./adminer.avif
+date: '2024-10-27T00:39:30+08:00'
 draft: false
-published: 2024-10-27 00:39:30
 slug: 阿里云2核2g服务器-子比主题跑10万文章数-性能测试
 tags:
-- WordPress
+- 2核2G
 - MySQL
+- WordPress
+- 十万文章
 - 压力测试
 - 性能测试
-- 2核2G
-- 十万文章
 title: 阿里云2核2G服务器 子比主题跑10万文章数 性能测试
-updated: 2024-11-21 21:54:48
+updated: '2024-11-21T21:54:48+08:00'
+wp_id: 10165
 ---
 
 导入了两天数据，终于把文章数提到十万，文章都是通过WP内部函数发布，meta数据相当完整。

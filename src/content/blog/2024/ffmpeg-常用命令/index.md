@@ -1,15 +1,16 @@
 ---
 categories:
 - 信息技术
-category: 信息技术
+cover: ''
+date: '2024-05-09T23:32:49+08:00'
 draft: false
-published: 2024-05-09 23:32:49
 slug: ffmpeg-常用命令
 tags:
 - ffmpeg
 - 视频
 title: ffmpeg 常用命令
-updated: 2024-05-09 23:32:49
+updated: '2024-05-09T23:32:49+08:00'
+wp_id: 9386
 ---
 
 最近在整理一些视频，需要发布到网站，视频需要通过ffmpeg进行压缩、切片、加水印等，自学了几天，总结了自己常用的一些命令，方便日后查询。

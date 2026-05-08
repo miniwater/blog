@@ -1,14 +1,15 @@
 ---
 categories:
-- 信息技术
 - HTML
-category: HTML
+- 信息技术
+cover: ''
+date: '2021-01-19T23:13:22+08:00'
 draft: false
-published: 2021-01-19 23:13:22
 slug: wordpress页脚显示页面加载时间的方法
 tags: []
 title: WordPress页脚显示页面加载时间的方法
-updated: 2023-04-21 23:53:47
+updated: '2023-04-21T23:53:47+08:00'
+wp_id: 212
 ---
 
 将下面的代码添加到当前主题的 **函数模板**(**functions.php**) 文件：

@@ -1,19 +1,20 @@
 ---
 categories:
-- 信息技术
-- Linux
 - Debian
-category: Debian
+- Linux
+- 信息技术
+cover: ''
+date: '2024-05-09T22:30:49+08:00'
 draft: false
-published: 2024-05-09 22:30:49
 slug: winscp在debian12系统下无法使用密钥登陆的解决办法
 tags:
-- Linux
 - Debian
-- WinSCP
+- Linux
 - ssh
+- WinSCP
 title: WinSCP在Debian12系统下无法使用密钥登陆的解决办法
-updated: 2024-05-09 22:30:49
+updated: '2024-05-09T22:30:49+08:00'
+wp_id: 9360
 ---
 
 今天装了个Debian12的系统，配置了ssh登录，但使用WinSCP通过ssh密钥登录时，总提示被拒绝，但是单独使用putty通过密钥登录却正常，让人百思不得其解。

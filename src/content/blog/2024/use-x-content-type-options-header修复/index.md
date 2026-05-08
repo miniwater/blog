@@ -1,25 +1,26 @@
 ---
 categories:
-- 信息技术
+- apache
 - HTML
 - nginx
-- apache
-category: apache
+- 信息技术
+cover: ''
+date: '2024-03-30T10:31:31+08:00'
 draft: false
-published: 2024-03-30 10:31:31
 slug: use-x-content-type-options-header修复
 tags:
+- .htaccess
+- Apache
 - HTML
 - HTML5
-- js
-- xss
-- .htaccess
 - http
 - http响应头
+- js
 - nginx
-- Apache
+- xss
 title: Use X-Content-Type-Options Header修复
-updated: 2024-03-30 10:41:12
+updated: '2024-03-30T10:41:12+08:00'
+wp_id: 8514
 ---
 
 今天在看到了 `Use X-Content-Type-Options Header` 的警告

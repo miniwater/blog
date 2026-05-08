@@ -1,16 +1,17 @@
 ---
 categories:
-- 信息技术
 - Linux
-category: Linux
+- 信息技术
+cover: ''
+date: '2024-05-10T12:20:34+08:00'
 draft: false
-published: 2024-05-10 12:20:34
 slug: 关闭-selinux
 tags:
 - Linux
 - SELinux
 title: 关闭 SELinux
-updated: 2024-09-18 11:18:44
+updated: '2024-09-18T11:18:44+08:00'
+wp_id: 9414
 ---
 
 今天在修改ssh端口时，发现竟然修改不了，修改后重启sshd就会报错，网上查了很久，最后发现是SELinux启用了造成的。所以要想修改ssh端口，就要先禁用SELinux。

@@ -1,17 +1,18 @@
 ---
 categories:
-- 信息技术
 - MySQl
-category: MySQl
+- 信息技术
+cover: ''
+date: '2024-10-26T22:05:33+08:00'
 draft: false
-published: 2024-10-26 22:05:33
 slug: 1055-expression-1-of-order-by-clause-is-not-in-group-by-clause-and-contains-nonaggregated-column-stack_wordpress-wp_postmeta-meta_value-which-is-not-functionally-dependent-on-columns-in-group
 tags:
 - MySQL
 title: '#1055 - Expression #1 of ORDER BY clause is not in GROUP BY clause and contains
   nonaggregated column ''stack_wordpress.wp_postmeta.meta_value'' which is not functionally
   dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by'
-updated: 2024-10-26 22:05:34
+updated: '2024-10-26T22:05:34+08:00'
+wp_id: 10164
 ---
 
 ```

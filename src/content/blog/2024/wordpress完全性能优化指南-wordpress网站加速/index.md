@@ -1,22 +1,23 @@
 ---
 categories:
-- 信息技术
 - PHP
 - WordPress
-category: WordPress
+- 信息技术
+cover: https://www.krjojo.com/wp-content/uploads/2024/03/加速banner-1.webp
+date: '2024-03-29T17:40:34+08:00'
 draft: false
-published: 2024-03-29 17:40:34
 slug: wordpress完全性能优化指南-wordpress网站加速
 tags:
-- WordPress
+- CDN
 - opcache
-- 优化
 - redis
+- WordPress
+- 优化
 - 网站加速
 - 页面缓存
-- CDN
 title: Wordpress完全性能优化指南
-updated: 2026-01-20 18:08:07
+updated: '2026-01-20T18:08:07+08:00'
+wp_id: 8492
 ---
 
 ![Wordpress 完全性能优化指南](./加速banner-1.webp)

@@ -1,18 +1,19 @@
 ---
 categories:
-- 信息技术
 - AI
 - LLM
-category: LLM
+- 信息技术
+cover: ./截面相交.avif
+date: '2024-10-21T18:01:31+08:00'
 draft: false
-published: 2024-10-21 18:01:31
 slug: 人工智能-入门笔记
 tags:
-- 学习
 - AI
+- 学习
 - 机器学习
 title: 人工智能 入门笔记
-updated: 2025-12-17 19:20:14
+updated: '2025-12-17T19:20:14+08:00'
+wp_id: 10124
 ---
 
 ## 符号主义（symbolism）

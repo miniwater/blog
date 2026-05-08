@@ -2,18 +2,19 @@
 categories:
 - 信息技术
 - 安全
-category: 安全
+cover: ''
+date: '2024-04-09T13:45:24+08:00'
 draft: false
-published: 2024-04-09 13:45:24
 slug: 网络安全：http-2-continuation-flood漏洞
 tags:
-- http2
-- 网络安全
 - CONTINUATION
-- 漏洞
+- http2
 - python
+- 漏洞
+- 网络安全
 title: 网络安全：HTTP/2 CONTINUATION Flood漏洞
-updated: 2024-04-09 14:05:49
+updated: '2024-04-09T14:05:49+08:00'
+wp_id: 8588
 ---
 
 今天刷到一篇文章，HTTP / 2 协议被曝安全漏洞，被黑客利用可发起拒绝服务攻击。

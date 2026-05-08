@@ -1,21 +1,22 @@
 ---
 categories:
-- 信息技术
-- PHP
-- 图片格式
 - 1Panel
 - Docker
-category: Docker
+- PHP
+- 信息技术
+- 图片格式
+cover: ''
+date: '2024-04-29T11:15:50+08:00'
 draft: false
-published: 2024-04-29 11:15:50
 slug: 1panel面板修改php构建扩展，gd扩展增加avif支持
 tags:
 - 1Panel
-- Docker
 - AVIF
+- Docker
 - gd
 title: 1Panel面板修改PHP构建扩展，GD扩展增加avif支持
-updated: 2024-05-02 00:41:09
+updated: '2024-05-02T00:41:09+08:00'
+wp_id: 9203
 ---
 
 通过微调 1Panel面板PHP构建文件，可以为扩展编译增加更多的支持。

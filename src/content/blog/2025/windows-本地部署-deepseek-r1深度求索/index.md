@@ -1,21 +1,22 @@
 ---
 categories:
-- 信息技术
 - AI
 - LLM
-category: LLM
+- 信息技术
+cover: ./deepseek.avif
+date: '2025-02-03T00:44:03+08:00'
 draft: false
-published: 2025-02-03 00:44:03
 slug: windows-本地部署-deepseek-r1深度求索
 tags:
-- ollama
 - DeepSeek
-- 本地部署
-- 深度求索
 - DeepSeek R1
 - LM Studio
+- ollama
+- 本地部署
+- 深度求索
 title: Windows 本地部署 DeepSeek R1深度求索
-updated: 2026-01-04 19:17:11
+updated: '2026-01-04T19:17:11+08:00'
+wp_id: 10614
 ---
 
 ![](./deepseek.avif)

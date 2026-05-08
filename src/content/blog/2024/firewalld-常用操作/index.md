@@ -1,17 +1,18 @@
 ---
 categories:
-- 信息技术
 - Linux
-category: Linux
+- 信息技术
+cover: ''
+date: '2024-05-09T23:26:11+08:00'
 draft: false
-published: 2024-05-09 23:26:11
 slug: firewalld-常用操作
 tags:
+- Firewalld
 - Linux
 - 防火墙
-- Firewalld
 title: Firewalld 常用操作
-updated: 2024-05-09 23:26:12
+updated: '2024-05-09T23:26:12+08:00'
+wp_id: 9378
 ---
 
 Linux系统默认使用firewalld进行防火墙管理，以前一直使用iptable，使用firewalld还不太熟悉，记录一些简单的操作，方便日后使用。

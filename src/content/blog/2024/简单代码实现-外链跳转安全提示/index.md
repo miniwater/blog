@@ -1,20 +1,21 @@
 ---
 categories:
-- 信息技术
 - HTML
 - PHP
 - WordPress
-category: WordPress
+- 信息技术
+cover: ''
+date: '2024-05-08T11:41:54+08:00'
 draft: false
-published: 2024-05-08 11:41:54
 slug: 简单代码实现-外链跳转安全提示
 tags:
-- WordPress
 - HTML
 - PHP
+- WordPress
 - 外链
 title: WordPress 简单代码实现 外链跳转安全提示
-updated: 2024-05-08 12:15:40
+updated: '2024-05-08T12:15:40+08:00'
+wp_id: 9331
 ---
 
 通过代码方式实现知乎那种外链跳转提示

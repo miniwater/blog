@@ -1,20 +1,21 @@
 ---
 categories:
-- 信息技术
-- HTML
 - AI
+- HTML
 - LLM
-category: LLM
+- 信息技术
+cover: ''
+date: '2025-06-25T19:04:01+08:00'
 draft: false
-published: 2025-06-25 19:04:01
 slug: llms-txt：让ai更方便爬取你的数据
 tags:
-- HTML
 - AI
+- HTML
 - LLM
 - Markdown
 title: LLMs.txt：让AI更方便爬取你的数据
-updated: 2025-06-26 17:34:35
+updated: '2025-06-26T17:34:35+08:00'
+wp_id: 11591
 ---
 
 最近，看到各种开发工具最近在其文档中添加了 LLMs.txt 支持。

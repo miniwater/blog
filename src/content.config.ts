@@ -10,8 +10,12 @@ const blog = defineCollection({
   loader: glob({ pattern: '**/[^_]*.{md,mdx}', base: "./src/content/blog/" }),
   schema: z.object({
     title: z.string(),
-    published: z.date(),
-    // 如果你有日期、描述等，也加在这里
+    date: z.date(),
+    cover: z.string().default(''),
+    categories: z.array(z.string()).nullable().optional().default([]),
+    tags: z.array(z.string()).nullable().optional().default([]),
+    draft: z.boolean().default(false),
+    wp_id: z.number().nullable().optional().default(0),
   }),
 });
 // 导出一个单独的 `collections` 对象用以注册你的集合（们）

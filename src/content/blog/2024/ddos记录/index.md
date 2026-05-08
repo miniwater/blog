@@ -1,18 +1,19 @@
 ---
 categories:
 - 公告
-category: 公告
+cover: https://www.krjojo.com/wp-content/uploads/2024/04/小本本-1.webp
+date: '2024-04-06T11:56:59+08:00'
 draft: false
-published: 2024-04-06 11:56:59
 slug: ddos记录
 tags:
-- ddos
-- 阿里云
 - aliyun
+- ddos
 - udp
 - 小黑屋
+- 阿里云
 title: DDoS记录
-updated: 2025-12-17 19:19:02
+updated: '2025-12-17T19:19:02+08:00'
+wp_id: 8560
 ---
 
 在华为云三年从来没被打过，来到阿里云三天两夜进小黑屋，很难怀疑有人帮阿里云安全部门冲业绩。

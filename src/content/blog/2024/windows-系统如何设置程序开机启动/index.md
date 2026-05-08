@@ -1,17 +1,18 @@
 ---
 categories:
-- 信息技术
-- Windows
 - PowerShell
-category: PowerShell
+- Windows
+- 信息技术
+cover: ''
+date: '2024-05-09T22:38:26+08:00'
 draft: false
-published: 2024-05-09 22:38:26
 slug: windows-系统如何设置程序开机启动
 tags:
-- windows
 - shell
+- windows
 title: Windows 系统如何设置程序开机启动
-updated: 2024-05-09 22:38:27
+updated: '2024-05-09T22:38:27+08:00'
+wp_id: 9368
 ---
 
 Windows 系统如何设置程序开机启动？

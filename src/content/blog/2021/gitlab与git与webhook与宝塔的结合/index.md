@@ -1,14 +1,15 @@
 ---
 categories:
-- 信息技术
 - Git
-category: Git
+- 信息技术
+cover: ./宝塔hook.avif
+date: '2021-04-18T13:33:00+08:00'
 draft: false
-published: 2021-04-18 13:33:00
 slug: gitlab与git与webhook与宝塔的结合
 tags: []
 title: GitLab与Git与Webhook与宝塔的结合
-updated: 2025-12-17 19:11:58
+updated: '2025-12-17T19:11:58+08:00'
+wp_id: 330
 ---
 
 安装git

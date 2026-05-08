@@ -1,20 +1,21 @@
 ---
 categories:
-- 信息技术
 - AI
-category: AI
+- 信息技术
+cover: ./jimeng.avif
+date: '2025-12-26T22:40:23+08:00'
 draft: false
-published: 2025-12-26 22:40:23
 slug: 2025-年度ai工具推荐-包含链接地址
 tags:
+- '2025'
+- Agent
 - AI
 - LLM
-- Agent
-- '2025'
-- 年度
 - 人工智能
+- 年度
 title: 2025 年度AI工具推荐 包含链接地址
-updated: 2025-12-30 20:26:35
+updated: '2025-12-30T20:26:35+08:00'
+wp_id: 12670
 ---
 
 收集整理全网：年度最好用AI工具 - 2025年12月。

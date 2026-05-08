@@ -1,20 +1,21 @@
 ---
 categories:
-- 信息技术
-- Linux
 - Centos
-category: Centos
+- Linux
+- 信息技术
+cover: ''
+date: '2024-05-09T22:36:10+08:00'
 draft: false
-published: 2024-05-09 22:36:10
 slug: oracle-linux（centos8）在arm架构下安装lnmp失败的处理方式
 tags:
-- Linux
+- ARM
 - Centos
 - Centos8
-- ARM
+- Linux
 - LNMP
 title: Oracle Linux（Centos8）在ARM架构下安装LNMP失败的处理方式
-updated: 2024-05-09 22:36:10
+updated: '2024-05-09T22:36:10+08:00'
+wp_id: 9366
 ---
 
 **1、安装mysql时，可能会因为cmake版本过低而安装失败，先更新cmake（注意是ARM版本）:**

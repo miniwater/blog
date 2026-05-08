@@ -1,20 +1,21 @@
 ---
 categories:
-- 信息技术
 - PHP
 - WordPress
-category: WordPress
+- 信息技术
+cover: ''
+date: '2024-10-11T13:50:45+08:00'
 draft: false
-published: 2024-10-11 13:50:45
 slug: 关于-remove_actionwp_head-某些情况下不生效的问题
 tags:
-- WordPress
-- PHP
-- 开发
 - Hook
+- PHP
+- WordPress
+- 开发
 - 踩坑
 title: 关于 remove_action('wp_head','') 某些情况下不生效的问题
-updated: 2024-10-11 13:52:54
+updated: '2024-10-11T13:52:54+08:00'
+wp_id: 10030
 ---
 
 今天在WordPress中，遇到几位抽象的BUG，在某些情况下 remove\_action() 函数不能顺利移除 Hook。

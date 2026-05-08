@@ -1,17 +1,18 @@
 ---
 categories:
-- 信息技术
 - Linux
 - Ubuntu
-category: Ubuntu
+- 信息技术
+cover: ''
+date: '2024-05-10T12:12:36+08:00'
 draft: false
-published: 2024-05-10 12:12:36
 slug: ubuntu-下修改主机名
 tags:
 - Linux
 - Ubuntu
 title: Ubuntu 下修改主机名
-updated: 2024-05-10 12:12:37
+updated: '2024-05-10T12:12:37+08:00'
+wp_id: 9408
 ---
 
 ubuntu20.4下修改主机名和centos7下修改主机名大同小异，也可以说基本是一样的，也是使用同样的hostnamectl命令。

@@ -1,21 +1,22 @@
 ---
 categories:
-- 信息技术
-- HTML
 - css
-category: css
+- HTML
+- 信息技术
+cover: ./flowbite.avif
+date: '2025-06-08T17:20:36+08:00'
 draft: false
-published: 2025-06-08 17:20:36
 slug: 记录几个免费的-tailwindcss-组件库
 tags:
 - CSS
 - Tailwind CSS
-- 组件库
-- 前端
 - UI
 - UI kits
+- 前端
+- 组件库
 title: 记录几个免费的 Tailwindcss 组件库
-updated: 2025-06-20 22:09:48
+updated: '2025-06-20T22:09:48+08:00'
+wp_id: 11289
 ---
 
 在前端开发中，如果不想自己画组件，就只能使用组件库，单一组件库种类少，但是如果引用过多组件库，又会使得项目依赖繁重。

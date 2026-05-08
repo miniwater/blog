@@ -1,17 +1,18 @@
 ---
 categories:
-- 信息技术
-- Windows
 - PowerShell
-category: PowerShell
+- Windows
+- 信息技术
+cover: ''
+date: '2024-01-31T19:24:03+08:00'
 draft: false
-published: 2024-01-31 19:24:03
 slug: windows批量重命名的技巧
 tags:
-- windows
 - PowerShell
+- windows
 title: Windows批量重命名的技巧
-updated: 2024-01-31 19:28:24
+updated: '2024-01-31T19:28:24+08:00'
+wp_id: 1264
 ---
 
 在Windows自带的文件管理器里，多选文件，按 F2 键，输入新的文件名，比如 1 ，然后回车。

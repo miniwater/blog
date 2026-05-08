@@ -1,17 +1,18 @@
 ---
 categories:
 - PHP
-category: PHP
+cover: ''
+date: '2024-01-09T12:44:11+08:00'
 draft: false
-published: 2024-01-09 12:44:11
 slug: php8-jit-配置说明
 tags:
-- PHP
 - jit
 - opcache
 - opcode
+- PHP
 title: PHP8 JIT 配置说明
-updated: 2024-01-09 12:45:30
+updated: '2024-01-09T12:45:30+08:00'
+wp_id: 1004
 ---
 
 注意点:

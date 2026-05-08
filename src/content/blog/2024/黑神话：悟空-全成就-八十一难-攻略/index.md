@@ -1,21 +1,22 @@
 ---
 categories:
-- 游戏
 - 攻略
-category: 攻略
+- 游戏
+cover: ./黑神话悟空.avif
+date: '2024-09-03T12:38:36+08:00'
 draft: false
-published: 2024-09-03 12:38:36
 slug: 黑神话：悟空-全成就-八十一难-攻略
 tags:
-- 黑神话：悟空
-- 攻略
+- 'Black Myth: Wukong'
 - 全成就
 - 八十一难
-- 'Black Myth: Wukong'
 - 单机游戏
 - 国产
+- 攻略
+- 黑神话：悟空
 title: 黑神话：悟空 全成就 八十一难 攻略
-updated: 2024-10-19 11:05:47
+updated: '2024-10-19T11:05:47+08:00'
+wp_id: 9834
 ---
 
 ![](./黑神话悟空.avif)

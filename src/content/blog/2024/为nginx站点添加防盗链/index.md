@@ -1,21 +1,22 @@
 ---
 categories:
-- 信息技术
 - HTML
 - nginx
-category: nginx
+- 信息技术
+cover: ''
+date: '2024-04-02T17:40:46+08:00'
 draft: false
-published: 2024-04-02 17:40:46
 slug: 为nginx站点添加防盗链
 tags:
 - HTML
 - http
 - nginx
 - referer
-- 防盗链
 - 网络安全
+- 防盗链
 title: 为Nginx站点添加防盗链
-updated: 2024-04-02 18:53:37
+updated: '2024-04-02T18:53:37+08:00'
+wp_id: 8547
 ---
 
 如果你发现网站没什么人访问但是服务器流量却哗哗的走，有一种可能是你的静态资源被盗用了，别人网站展示的图片，却从你的服务器上加载。

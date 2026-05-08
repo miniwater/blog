@@ -1,18 +1,19 @@
 ---
 categories:
-- 信息技术
 - Linux
 - Ubuntu
-category: Ubuntu
+- 信息技术
+cover: ''
+date: '2024-05-09T22:39:58+08:00'
 draft: false
-published: 2024-05-09 22:39:58
 slug: ubuntu启用root账号登录并删除普通账号
 tags:
 - Linux
-- Ubuntu
 - root
+- Ubuntu
 title: ubuntu启用root账号登录并删除普通账号
-updated: 2024-05-09 22:39:59
+updated: '2024-05-09T22:39:59+08:00'
+wp_id: 9370
 ---
 
 **一、ubuntu启用root账号登录系统：**

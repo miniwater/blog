@@ -1,18 +1,19 @@
 ---
 categories:
-- 信息技术
-- Linux
 - Debian
-category: Debian
+- Linux
+- 信息技术
+cover: ''
+date: '2024-05-09T23:53:00+08:00'
 draft: false
-published: 2024-05-09 23:53:00
 slug: debian系统中将动态ip改为静态ip
 tags:
-- Linux
-- ip
 - Debian
+- ip
+- Linux
 title: Debian系统中将动态ip改为静态ip
-updated: 2024-05-09 23:53:00
+updated: '2024-05-09T23:53:00+08:00'
+wp_id: 9390
 ---
 
 安装debian时，在安装过程中会默认启用dhcp获取网络地址，但为了管理方便，我希望使用静态ip，这样就能保持ip固定。在debian系统中配置静态ip地址，涉及到2个文件要修改，具体操作如下。

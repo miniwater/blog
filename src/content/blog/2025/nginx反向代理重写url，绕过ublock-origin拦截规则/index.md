@@ -1,21 +1,22 @@
 ---
 categories:
-- 信息技术
 - HTML
 - nginx
-category: nginx
+- 信息技术
+cover: ''
+date: '2025-02-04T00:25:01+08:00'
 draft: false
-published: 2025-02-04 00:25:01
 slug: nginx反向代理重写url，绕过ublock-origin拦截规则
 tags:
-- nginx
-- 反向代理
-- uBlock Origin
 - matomo
+- nginx
+- uBlock Origin
+- 反向代理
 - 广告拦截
 - 拦截规则
 title: nginx反向代理重写url，绕过uBlock Origin拦截规则
-updated: 2025-02-04 00:27:44
+updated: '2025-02-04T00:27:44+08:00'
+wp_id: 10626
 ---
 
 今儿发现matomo被uBlock Origin规则拦截了，受高人指点可以通过反向代理绕过规则，在此分享方法

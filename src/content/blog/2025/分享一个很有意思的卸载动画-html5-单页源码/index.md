@@ -1,10 +1,10 @@
 ---
 categories:
-- 信息技术
 - HTML
-category: HTML
+- 信息技术
+cover: ./卸载.avif
+date: '2025-02-24T23:59:49+08:00'
 draft: false
-published: 2025-02-24 23:59:49
 slug: 分享一个很有意思的卸载动画-html5-单页源码
 tags:
 - HTML5
@@ -12,7 +12,8 @@ tags:
 - 卸载
 - 可爱
 title: 分享一个很有意思的卸载动画 Html5 单页源码
-updated: 2025-02-25 00:01:06
+updated: '2025-02-25T00:01:06+08:00'
+wp_id: 10768
 ---
 
 来自：<https://codepen.io/wheatup/pen/XLmzbe>

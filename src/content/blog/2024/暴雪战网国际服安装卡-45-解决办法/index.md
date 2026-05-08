@@ -1,19 +1,20 @@
 ---
 categories:
 - 游戏
-category: 游戏
+cover: ''
+date: '2024-06-06T00:49:01+08:00'
 draft: false
-published: 2024-06-06 00:49:01
 slug: 暴雪战网国际服安装卡-45-解决办法
 tags:
-- 暴雪
-- 战网
-- battle.net
-- 国际服
 - Battle
+- battle.net
 - Diablo
+- 国际服
+- 战网
+- 暴雪
 title: 暴雪战网国际服安装卡 45% 解决办法
-updated: 2024-09-18 11:11:20
+updated: '2024-09-18T11:11:20+08:00'
+wp_id: 9547
 ---
 
 弄了个XGP，想玩一下大菠萝4，结果战网安装卡45%

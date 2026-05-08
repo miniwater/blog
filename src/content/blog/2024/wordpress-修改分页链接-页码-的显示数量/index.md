@@ -1,17 +1,18 @@
 ---
 categories:
-- 信息技术
 - PHP
 - WordPress
-category: WordPress
+- 信息技术
+cover: ''
+date: '2024-05-10T17:37:14+08:00'
 draft: false
-published: 2024-05-10 17:37:14
 slug: wordpress-修改分页链接-页码-的显示数量
 tags:
 - WordPress
 - 分页
 title: WordPress 修改分页链接 页码 的显示数量
-updated: 2024-09-18 11:17:50
+updated: '2024-09-18T11:17:50+08:00'
+wp_id: 9441
 ---
 
 最近发现页码只向后显示一页，从2开始就省略了

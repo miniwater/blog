@@ -1,17 +1,18 @@
 ---
 categories:
 - 生活
-category: 生活
+cover: ''
+date: '2024-05-11T23:45:47+08:00'
 draft: false
-published: 2024-05-11 23:45:47
 slug: 小米回应不再发布redmi路由器
 tags:
+- AX6
+- Redmi
 - 小米
 - 红米路由器
-- Redmi
-- AX6
 title: 小米回应不再发布Redmi路由器
-updated: 2024-09-18 11:16:27
+updated: '2024-09-18T11:16:27+08:00'
+wp_id: 9449
 ---
 
 最近的一款Redmi路由器是RedmiAX6000，发布距今已有两年。

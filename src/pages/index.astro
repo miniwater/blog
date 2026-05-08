@@ -20,7 +20,7 @@ const allPosts = await getCollection("blog");
 // 2. 处理 URL 逻辑（保持和你之前的需求一致：扁平化 URL）
 // 如果你的 [...slug].astro 逻辑是取最后一段，这里生成的链接也要对应
 const posts = allPosts
-  .sort((a, b) => b.data.published.valueOf() - a.data.published.valueOf())
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, 6)
   .map((post) => {
     const slug = post.id.split("/").pop();
@@ -41,7 +41,7 @@ const posts = allPosts
             <CardHeader>
               <CardTitle>{post.data.title}</CardTitle>
               <CardDescription>
-                发布于 {post.data.published.toLocaleDateString()}
+                发布于 {post.data.date.toLocaleDateString()}
               </CardDescription>
               <CardAction>
                 <Badge variant="secondary">Featured</Badge>

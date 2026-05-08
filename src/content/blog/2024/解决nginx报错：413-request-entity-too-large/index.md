@@ -1,16 +1,17 @@
 ---
 categories:
-- 信息技术
 - HTML
 - nginx
-category: nginx
+- 信息技术
+cover: ''
+date: '2024-05-09T23:57:26+08:00'
 draft: false
-published: 2024-05-09 23:57:26
 slug: 解决nginx报错：413-request-entity-too-large
 tags:
 - nginx
 title: 解决Nginx报错：413 Request Entity Too Large
-updated: 2024-05-09 23:57:27
+updated: '2024-05-09T23:57:27+08:00'
+wp_id: 9394
 ---
 
 发现上传大文件时报错：413 Request Entity Too Large。以为单纯的是php配置问题，于是将php.ini配置中的post\_max\_size和upload\_max\_filesize进行了调整，都设置为500Mb，但上传文件不足500Mb大小时，仍然报“413 Request Entity Too Large”这个错误。

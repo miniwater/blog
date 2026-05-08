@@ -1,19 +1,20 @@
 ---
 categories:
-- 信息技术
 - HTML
+- 信息技术
 - 模板
-category: 模板
+cover: ./暗色.avif
+date: '2024-10-08T13:32:07+08:00'
 draft: false
-published: 2024-10-08 13:32:07
 slug: html5-地址发布页-单页源码
 tags:
-- 学习
 - HTML
-- 源码
 - 单页
+- 学习
+- 源码
 title: Html5 地址发布页 单页源码
-updated: 2025-02-25 00:17:38
+updated: '2025-02-25T00:17:38+08:00'
+wp_id: 10007
 ---
 
 发现一个很好看的地址发布页单页源码，做网站的应该都很熟悉了。

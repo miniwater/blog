@@ -1,17 +1,18 @@
 ---
 categories:
-- 信息技术
 - Git
-category: Git
+- 信息技术
+cover: ./git.avif
+date: '2025-11-10T22:11:08+08:00'
 draft: false
-published: 2025-11-10 22:11:08
 slug: 记录一次-git-目录过大，手动瘦身过程
 tags:
 - git
 - Github
 - 清理
 title: 记录一次.git 目录过大，手动瘦身过程
-updated: 2025-11-11 09:12:21
+updated: '2025-11-11T09:12:21+08:00'
+wp_id: 12384
 ---
 
 某次不小心把大文件推送了Git，导致.git文件非常大， 每次打开都非常吃读写速度，哪怕后面把大文件删除了也无济于事。

@@ -2,20 +2,21 @@
 categories:
 - 信息技术
 - 图片格式
-category: 图片格式
+cover: ''
+date: '2024-04-08T12:26:09+08:00'
 draft: false
-published: 2024-04-08 12:26:09
 slug: 现代图片格式：webp和avif的初步认识
 tags:
 - AVIF
-- WebP
-- WebP 2
-- HEIF
 - BPG
 - FLIF
+- HEIF
 - JPEG XL
+- WebP
+- WebP 2
 title: 现代图片格式：Webp和AVIF的初步认识
-updated: 2024-04-08 12:26:10
+updated: '2024-04-08T12:26:10+08:00'
+wp_id: 8584
 ---
 
 ## WebP

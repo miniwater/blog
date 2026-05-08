@@ -1,16 +1,17 @@
 ---
 categories:
 - 游戏
-category: 游戏
+cover: ./文明6.avif
+date: '2025-07-18T09:42:45+08:00'
 draft: false
-published: 2025-07-18 09:42:45
 slug: 文明6-关闭扫盘方法
 tags:
 - EPIC
-- 文明6
 - 扫盘
+- 文明6
 title: 文明6 关闭扫盘方法
-updated: 2025-07-18 09:42:46
+updated: '2025-07-18T09:42:46+08:00'
+wp_id: 12024
 ---
 
 ![](./文明6.avif)

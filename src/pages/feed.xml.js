@@ -17,7 +17,7 @@ export async function GET(context) {
         // 有关使用内容集合和 glob 导入的示例，请参阅“生成`items`”部分
         items: blog.map((post) => ({
             title: post.data.title,
-            pubDate: post.data.published,
+            pubDate: post.data.date,
             description: post.data.description,
             // 从 `id` 属性计算出 RSS 链接
             // 这个例子假设所有的文章都被渲染为 `/blog/[id]` 路由

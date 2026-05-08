@@ -1,18 +1,19 @@
 ---
 categories:
-- 信息技术
 - Linux
 - Ubuntu
-category: Ubuntu
+- 信息技术
+cover: ''
+date: '2024-05-10T12:14:50+08:00'
 draft: false
-published: 2024-05-10 12:14:50
 slug: ubuntu-server配置静态ip地址
 tags:
-- Linux
 - ip
+- Linux
 - Ubuntu
 title: Ubuntu server配置静态ip地址
-updated: 2024-05-10 12:14:50
+updated: '2024-05-10T12:14:50+08:00'
+wp_id: 9410
 ---
 
 安装完ubuntu server 20.04版本的服务器，发现没有设置固定ip，使用的是dhcp获取ip。要将ubuntu 20.04 server的动态ip地址修改为静态ip地址，只需要修改/etc/netplan目录下的00-installer-config.yaml文件即可，具体如下：

@@ -1,18 +1,19 @@
 ---
 categories:
+- Windows
 - 技术
 - 系统
-- Windows
-category: Windows
+cover: ./9-1.avif
+date: '2022-02-20T19:35:09+08:00'
 draft: false
-published: 2022-02-20 19:35:09
 slug: windows11-正式版-安卓子系统安装流程
 tags:
-- windows
 - Android
+- windows
 - 虚拟机
 title: Windows11 正式版 安卓子系统安装流程
-updated: 2025-12-17 19:12:39
+updated: '2025-12-17T19:12:39+08:00'
+wp_id: 590
 ---
 
 Windows 11 中最令人期待的支持安卓应用的功能正式版终于来了，在经历半年多的测试之后，首次推送正式版。以往安装安卓子系统需要加入Windows 11测试版，为了体验新功能还要当免费小白鼠，这次无需切换就能用上最新的安卓子系统。

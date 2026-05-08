@@ -1,19 +1,20 @@
 ---
 categories:
-- 信息技术
 - PHP
 - WordPress
+- 信息技术
 - 插件
-category: 插件
+cover: ''
+date: '2024-05-02T15:08:16+08:00'
 draft: false
-published: 2024-05-02 15:08:16
 slug: wordpress-插件开发-关于-get_current_screen-id-不一致的问题
 tags:
+- screen
 - WordPress
 - 插件
-- screen
 title: WordPress 插件开发 关于 get_current_screen()->id 不一致的问题
-updated: 2024-05-02 15:09:44
+updated: '2024-05-02T15:09:44+08:00'
+wp_id: 9269
 ---
 
 今天遇到一个神奇的BUG，

@@ -1,19 +1,20 @@
 ---
 categories:
-- 信息技术
 - PHP
 - WordPress
-category: WordPress
+- 信息技术
+cover: ''
+date: '2024-12-19T17:57:58+08:00'
 draft: false
-published: 2024-12-19 17:57:58
 slug: 解决-wordpress-后台仪表盘慢问题
 tags:
 - WordPress
+- 仪表盘
 - 优化
 - 后台
-- 仪表盘
 title: 解决 WordPress 后台仪表盘慢问题
-updated: 2024-12-19 17:58:00
+updated: '2024-12-19T17:58:00+08:00'
+wp_id: 10415
 ---
 
 WordPress，进入后台，会在一定时间内，调用两个函数。这两个函数，都会访问WordPress服务器，而国内大部分都访问不通，所以会导致5秒超时，两个函数，至少造成10秒卡顿。

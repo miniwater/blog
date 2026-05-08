@@ -1,17 +1,18 @@
 ---
 categories:
-- 信息技术
 - PHP
-category: PHP
+- 信息技术
+cover: ''
+date: '2024-05-09T18:09:38+08:00'
 draft: false
-published: 2024-05-09 18:09:38
 slug: php8中的match表达式让你的代码变得简约而有力
 tags:
+- match
 - PHP
 - PHP8
-- match
 title: PHP8中的match表达式让你的代码变得简约而有力
-updated: 2024-05-09 18:09:39
+updated: '2024-05-09T18:09:39+08:00'
+wp_id: 9354
 ---
 
 ## match表达式是什么？

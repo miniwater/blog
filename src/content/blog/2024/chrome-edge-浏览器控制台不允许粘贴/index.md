@@ -1,15 +1,16 @@
 ---
 categories:
 - HTML
-category: HTML
+cover: ''
+date: '2024-01-13T00:00:27+08:00'
 draft: false
-published: 2024-01-13 00:00:27
 slug: chrome-edge-浏览器控制台不允许粘贴
 tags:
 - chrome
 - edge
 title: Chrome Edge 浏览器控制台不允许粘贴
-updated: 2024-01-13 00:00:27
+updated: '2024-01-13T00:00:27+08:00'
+wp_id: 1042
 ---
 
 会弹出警告：

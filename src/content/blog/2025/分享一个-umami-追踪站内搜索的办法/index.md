@@ -1,20 +1,21 @@
 ---
 categories:
-- 信息技术
 - HTML
 - js
-category: js
+- 信息技术
+cover: ./umami.avif
+date: '2025-11-16T21:32:59+08:00'
 draft: false
-published: 2025-11-16 21:32:59
 slug: 分享一个-umami-追踪站内搜索的办法
 tags:
-- Umami
-- 统计
 - Analytics
+- Umami
 - 分析
 - 站内搜索
+- 统计
 title: 分享一个 Umami 追踪站内搜索的办法
-updated: 2025-11-17 09:03:07
+updated: '2025-11-17T09:03:07+08:00'
+wp_id: 12416
 ---
 
 想起以前用 [Matomo](https://matomo.org/) 的时候是自带站内搜索追踪的，后来换了Umami 后这功能被遗忘了。

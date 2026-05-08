@@ -1,18 +1,19 @@
 ---
 categories:
-- 信息技术
 - HTML
 - WordPress
-category: WordPress
+- 信息技术
+cover: ./1.avif
+date: '2024-08-10T16:53:25+08:00'
 draft: false
-published: 2024-08-10 16:53:25
 slug: 一秒钟，把大家网站底裤扒出来-wappalyzer
 tags:
 - HTML
 - Wappalyzer
 - 技术架构
 title: 一秒钟，把大家网站底裤扒出来 — Wappalyzer
-updated: 2024-09-18 11:04:21
+updated: '2024-09-18T11:04:21+08:00'
+wp_id: 9798
 ---
 
 对于许多人来说，深入了解一个网站背后使用的技术是非常有趣的。

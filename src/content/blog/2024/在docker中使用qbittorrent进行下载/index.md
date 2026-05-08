@@ -1,15 +1,16 @@
 ---
 categories:
 - Docker
-category: Docker
+cover: ''
+date: '2024-05-09T22:27:12+08:00'
 draft: false
-published: 2024-05-09 22:27:12
 slug: 在docker中使用qbittorrent进行下载
 tags:
 - Docker
 - 磁力链接
 title: 在Docker中使用qbittorrent进行下载
-updated: 2024-05-09 22:27:13
+updated: '2024-05-09T22:27:13+08:00'
+wp_id: 9356
 ---
 
 qBittorrent是种子和磁力链接下载使用最为广泛的形式了，它支持使用种子文件和磁力链接下载，包括了做种、tracker 编辑、下载优先级设置、RSS 订阅等功能非常丰富。如果你有一台服务器，或是家中有一台NAS，可以简单的使用Docker更行下载，非常方便。

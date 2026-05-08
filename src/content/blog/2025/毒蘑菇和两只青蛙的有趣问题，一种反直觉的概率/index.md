@@ -1,18 +1,19 @@
 ---
 categories:
-- 信息技术
 - bilibili
 - Rust
-category: Rust
+- 信息技术
+cover: ./牛蛙.avif
+date: '2025-01-03T12:35:49+08:00'
 draft: false
-published: 2025-01-03 12:35:49
 slug: 毒蘑菇和两只青蛙的有趣问题，一种反直觉的概率
 tags:
 - bilibili
 - Rust
 - 李永乐
 title: 毒蘑菇和两只青蛙的有趣问题，一种反直觉的概率
-updated: 2025-01-16 09:32:23
+updated: '2025-01-16T09:32:23+08:00'
+wp_id: 10466
 ---
 
 今天刷到李永乐老师的一条视频，觉得挺有意思
