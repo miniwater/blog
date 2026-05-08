@@ -1,0 +1,44 @@
+---
+import Layout from "../layouts/Layout.astro";
+// import { config } from "@/config";
+import { getCollection } from "astro:content";
+import { Badge } from "@/components/ui/badge"
+
+const allPosts = await getCollection("blog");
+
+// 1. 统计数量
+const counts = allPosts
+    .flatMap((p) => p.data.categories ?? [])
+    .reduce(
+        (acc, cur) => ({ ...acc, [cur]: (acc[cur] || 0) + 1 }),
+        {} as Record<string, number>,
+    );
+
+// 2. 转换为数组并按字母 A-Z 排序
+const categories = Object.keys(counts)
+    .map((name) => ({
+        name,
+        count: counts[name],
+    }))
+    .sort((a, b) => a.name.localeCompare(b.name)); // 关键：按名称字母排序
+---
+
+<Layout>
+    <div class="flex flex-wrap gap-2">
+        {
+            categories.map((cat) => (
+                <a href={`/categories/${cat.name}`}>
+                    <Badge
+                        variant="outline"
+                        className="hover:bg-primary hover:text-primary-foreground transition-colors px-3 py-1 text-sm font-normal"
+                    >
+                        {cat.name}
+                        <span class="ml-2 opacity-60 border-l pl-2">
+                            {cat.count}
+                        </span>
+                    </Badge>
+                </a>
+            ))
+        }
+    </div>
+</Layout>
