@@ -1,8 +1,8 @@
 ---
-import Layout from "../layouts/Layout.astro";
-// import { config } from "@/config";
+import Layout from "@/layouts/Layout.astro";
+import { config } from "@/config";
 import { getCollection } from "astro:content";
-import { Badge } from "@/components/ui/badge"
+import Section from "@/components/Section.astro";
 
 const allPosts = await getCollection("blog");
 
@@ -19,26 +19,55 @@ const categories = Object.keys(counts)
     .map((name) => ({
         name,
         count: counts[name],
+        slug: name.toLowerCase().replace(/\s+/g, '-'), // 用于 URL，如 "1panel", "mysql"
     }))
     .sort((a, b) => a.name.localeCompare(b.name)); // 关键：按名称字母排序
 ---
 
 <Layout>
-    <div class="flex flex-wrap gap-2">
-        {
-            categories.map((cat) => (
-                <a href={`/categories/${cat.name}`}>
-                    <Badge
-                        variant="outline"
-                        className="hover:bg-primary hover:text-primary-foreground transition-colors px-3 py-1 text-sm font-normal"
+    <Section>
+        <!-- Grid -->
+        <div
+            class="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-6"
+        >
+            {
+                categories.map((cat) => (
+                    <a
+                        class="scroll-animation group flex flex-col bg-white border border-gray-200 shadow-2xs rounded-xl hover:shadow-md focus:outline-hidden focus:shadow-md dark:bg-neutral-900 dark:border-neutral-800"
+                        href={new URL(`/category/${cat.slug}`, config.url)}
                     >
-                        {cat.name}
-                        <span class="ml-2 opacity-60 border-l pl-2">
-                            {cat.count}
-                        </span>
-                    </Badge>
-                </a>
-            ))
-        }
-    </div>
+                        <div class="p-4 md:p-5">
+                            <div class="flex justify-between items-center gap-x-3">
+                                <div class="grow">
+                                    <h3 class="group-hover:text-blue-600 font-semibold text-gray-800 dark:group-hover:text-neutral-400 dark:text-neutral-200">
+                                        {cat.name}
+                                    </h3>
+                                    <p class="text-sm text-gray-500 dark:text-neutral-500">
+                                        {cat.count} 篇文章
+                                    </p>
+                                </div>
+                                <div>
+                                    <svg
+                                        class="shrink-0 size-5 text-gray-800 dark:text-neutral-200"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+                                        <path d="m9 18 6-6-6-6" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                ))
+            }
+        </div>
+        <!-- End Grid -->
+    </Section>
 </Layout>

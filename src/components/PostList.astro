@@ -1,0 +1,39 @@
+---
+import Page from "@/components/Page.astro";
+import { Card } from "@/components/ui/card";
+import type { CollectionEntry } from "astro:content";
+import type { Page as AstroPage } from "astro"; // 导入 Astro 分页对象的内置类型
+
+interface Props {
+  posts: CollectionEntry<"blog">[]; // 明确是 blog 集合的条目数组
+  page: AstroPage<CollectionEntry<"blog">>; // 明确分页对象的类型
+}
+
+const { posts, page } = Astro.props;
+---
+
+{
+    posts.map((post) => (
+        <Card className="flex flex-row overflow-hidden">
+            <div class="flex-1 p-6">
+                <h3 class="text-xl font-bold">{post.data.title}</h3>
+                <p class="text-muted-foreground mt-2 line-clamp-2">
+                    文章摘要...
+                </p>
+            </div>
+            {/* {logoImage ? (
+          <div class="w-32 h-32 md:w-48 md:h-auto relative shrink-0">
+            <img src={logoImage.src} class="object-cover w-full h-full" />
+          </div>
+        ) : null} */}
+        </Card>
+    ))
+}
+
+{
+    posts.length === 0 && (
+        <p>暂无文章，请检查 src/content/blog 目录下是否有 Markdown 文件。</p>
+    )
+}
+
+<Page page={page} />
