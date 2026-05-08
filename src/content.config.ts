@@ -8,11 +8,11 @@ import { z } from "astro/zod";
 const blog = defineCollection({
   // 这里的 loader 会递归查找该路径下所有的 md/mdx 文件
   loader: glob({ pattern: '**/[^_]*.{md,mdx}', base: "./src/content/blog/" }),
-  schema: z.object({
+  schema: ({ image }) => z.object({
     title: z.string(),
     date: z.date(),
     updated: z.date(),
-    cover: z.string().default(''),
+    cover: image().optional(),
     categories: z.array(z.string()).nullable().optional().default([]),
     tags: z.array(z.string()).nullable().optional().default([]),
     draft: z.boolean().default(false),
