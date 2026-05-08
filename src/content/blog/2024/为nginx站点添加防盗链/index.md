@@ -4,7 +4,7 @@ categories:
 - nginx
 - 信息技术
 cover: ''
-date: '2024-04-02T17:40:46+08:00'
+date: 2024-04-02T17:40:46+08:00
 draft: false
 slug: 为nginx站点添加防盗链
 tags:
@@ -15,7 +15,7 @@ tags:
 - 网络安全
 - 防盗链
 title: 为Nginx站点添加防盗链
-updated: '2024-04-02T18:53:37+08:00'
+updated: 2024-04-02T18:53:37+08:00
 wp_id: 8547
 ---
 

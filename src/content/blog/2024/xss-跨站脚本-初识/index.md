@@ -4,7 +4,7 @@ categories:
 - js
 - 信息技术
 cover: ''
-date: '2024-05-10T23:33:56+08:00'
+date: 2024-05-10T23:33:56+08:00
 draft: false
 slug: xss-跨站脚本-初识
 tags:
@@ -13,7 +13,7 @@ tags:
 - xss
 - 跨站脚本
 title: XSS 跨站脚本 初识
-updated: '2024-09-18T11:16:48+08:00'
+updated: 2024-09-18T11:16:48+08:00
 wp_id: 9444
 ---
 

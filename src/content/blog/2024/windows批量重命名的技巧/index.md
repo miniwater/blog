@@ -4,14 +4,14 @@ categories:
 - Windows
 - 信息技术
 cover: ''
-date: '2024-01-31T19:24:03+08:00'
+date: 2024-01-31T19:24:03+08:00
 draft: false
 slug: windows批量重命名的技巧
 tags:
 - PowerShell
 - windows
 title: Windows批量重命名的技巧
-updated: '2024-01-31T19:28:24+08:00'
+updated: 2024-01-31T19:28:24+08:00
 wp_id: 1264
 ---
 
@@ -20,29 +20,52 @@ wp_id: 1264
 你会发现神奇的空格加括号加数字：
 
 ```
-1 (1).jpg
-1 (2).jpg
-1 (3).jpg
-1 (4).jpg
-1 (5).jpg
-1 (6).jpg
-1 (7).jpg
-1 (8).jpg
-1 (9).jpg
-1 (10).jpg
-1 (11).jpg
-1 (12).jpg
-1 (13).jpg
-1 (14).jpg
-1 (15).jpg
-1 (16).jpg
-1 (17).jpg
-1 (18).jpg
-1 (19).jpg
-1 (20).jpg
-1 (21).jpg
-1 (22).jpg
-1 (23).jpg
+1 (1).jpg
+
+1 (2).jpg
+
+1 (3).jpg
+
+1 (4).jpg
+
+1 (5).jpg
+
+1 (6).jpg
+
+1 (7).jpg
+
+1 (8).jpg
+
+1 (9).jpg
+
+1 (10).jpg
+
+1 (11).jpg
+
+1 (12).jpg
+
+1 (13).jpg
+
+1 (14).jpg
+
+1 (15).jpg
+
+1 (16).jpg
+
+1 (17).jpg
+
+1 (18).jpg
+
+1 (19).jpg
+
+1 (20).jpg
+
+1 (21).jpg
+
+1 (22).jpg
+
+1 (23).jpg
+
 ```
 
 EMMM.....
@@ -68,29 +91,52 @@ Get-ChildItem *.jpg | ForEach-Object {
 就可以把所有 .jpg文件批量重命名成 1.jpg 2.jpg 3.jpg 顺序了，如果需要修改其他文件只需要把上面**两个** `jpg` 替换成其他文件后缀。
 
 ```
-1.jpg
-2.jpg
-3.jpg
-4.jpg
-5.jpg
-6.jpg
-7.jpg
-8.jpg
-9.jpg
-10.jpg
-11.jpg
-12.jpg
-13.jpg
-14.jpg
-15.jpg
-16.jpg
-17.jpg
-18.jpg
-19.jpg
-20.jpg
-21.jpg
-22.jpg
-23.jpg
+1.jpg
+
+2.jpg
+
+3.jpg
+
+4.jpg
+
+5.jpg
+
+6.jpg
+
+7.jpg
+
+8.jpg
+
+9.jpg
+
+10.jpg
+
+11.jpg
+
+12.jpg
+
+13.jpg
+
+14.jpg
+
+15.jpg
+
+16.jpg
+
+17.jpg
+
+18.jpg
+
+19.jpg
+
+20.jpg
+
+21.jpg
+
+22.jpg
+
+23.jpg
+
 ```
 
 效果立竿见影

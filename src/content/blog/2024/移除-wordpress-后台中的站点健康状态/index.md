@@ -4,7 +4,7 @@ categories:
 - WordPress
 - 信息技术
 cover: ''
-date: '2024-05-09T23:29:00+08:00'
+date: 2024-05-09T23:29:00+08:00
 draft: false
 slug: 移除-wordpress-后台中的站点健康状态
 tags:
@@ -12,7 +12,7 @@ tags:
 - 后台
 - 站点健康状态
 title: 移除 Wordpress 后台中的“站点健康状态”
-updated: '2024-05-09T23:29:00+08:00'
+updated: 2024-05-09T23:29:00+08:00
 wp_id: 9382
 ---
 

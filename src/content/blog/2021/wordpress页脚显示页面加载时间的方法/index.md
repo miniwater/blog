@@ -3,12 +3,12 @@ categories:
 - HTML
 - 信息技术
 cover: ''
-date: '2021-01-19T23:13:22+08:00'
+date: 2021-01-19T23:13:22+08:00
 draft: false
 slug: wordpress页脚显示页面加载时间的方法
 tags: []
 title: WordPress页脚显示页面加载时间的方法
-updated: '2023-04-21T23:53:47+08:00'
+updated: 2023-04-21T23:53:47+08:00
 wp_id: 212
 ---
 

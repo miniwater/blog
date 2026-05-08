@@ -4,7 +4,7 @@ categories:
 - HTML
 - 信息技术
 cover: ''
-date: '2024-10-12T20:10:51+08:00'
+date: 2024-10-12T20:10:51+08:00
 draft: false
 slug: html-锚点偏移方法-防止被头部遮挡
 tags:
@@ -14,7 +14,7 @@ tags:
 - 菜单
 - 锚点
 title: HTML 锚点偏移方法 防止被头部遮挡
-updated: '2025-01-10T18:43:15+08:00'
+updated: 2025-01-10T18:43:15+08:00
 wp_id: 10037
 ---
 

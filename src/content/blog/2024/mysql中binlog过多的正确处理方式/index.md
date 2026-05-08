@@ -2,14 +2,14 @@
 categories:
 - MySQl
 cover: ''
-date: '2024-01-05T11:45:08+08:00'
+date: 2024-01-05T11:45:08+08:00
 draft: false
 slug: mysql中binlog过多的正确处理方式
 tags:
 - binlog
 - MySQL
 title: MySQL中binlog过多的正确处理方式
-updated: '2024-01-05T11:58:00+08:00'
+updated: 2024-01-05T11:58:00+08:00
 wp_id: 988
 ---
 

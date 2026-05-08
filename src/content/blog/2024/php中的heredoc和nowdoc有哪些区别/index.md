@@ -3,7 +3,7 @@ categories:
 - PHP
 - 信息技术
 cover: ''
-date: '2024-10-24T17:29:18+08:00'
+date: 2024-10-24T17:29:18+08:00
 draft: false
 slug: php中的heredoc和nowdoc有哪些区别
 tags:
@@ -13,7 +13,7 @@ tags:
 - 大段文本
 - 字符串
 title: PHP中的heredoc和nowdoc有哪些区别
-updated: '2024-10-24T17:34:56+08:00'
+updated: 2024-10-24T17:34:56+08:00
 wp_id: 10155
 ---
 

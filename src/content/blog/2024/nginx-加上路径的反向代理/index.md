@@ -4,14 +4,14 @@ categories:
 - nginx
 - 信息技术
 cover: ''
-date: '2024-05-09T23:51:40+08:00'
+date: 2024-05-09T23:51:40+08:00
 draft: false
 slug: nginx-加上路径的反向代理
 tags:
 - nginx
 - 反向代理
 title: Nginx 加上路径的反向代理
-updated: '2024-05-09T23:51:41+08:00'
+updated: 2024-05-09T23:51:41+08:00
 wp_id: 9388
 ---
 

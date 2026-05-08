@@ -5,7 +5,7 @@ categories:
 - WordPress
 - 信息技术
 cover: ''
-date: '2024-01-19T13:21:49+08:00'
+date: 2024-01-19T13:21:49+08:00
 draft: false
 slug: 纯代码美化wordpress默认登录页
 tags:
@@ -17,7 +17,7 @@ tags:
 - 登录
 - 美化
 title: 2024纯代码美化WordPress登录页
-updated: '2024-01-19T13:35:58+08:00'
+updated: 2024-01-19T13:35:58+08:00
 wp_id: 1169
 ---
 
@@ -132,14 +132,22 @@ add_action('login_footer', 'io_login_footer');
 //登录页面的LOGO链接为首页链接
 add_filter('login_headerurl',function() {return esc_url(home_url());});
 
-function getRandomColorRGB() {
-    $r = mt_rand(0, 255);
-    $g = mt_rand(0, 255);
-    $b = mt_rand(0, 255);
-    return "rgb($r, $g, $b)";
-}
-
-function custom_login_style(){
+function getRandomColorRGB() {
+
+    $r = mt_rand(0, 255);
+
+    $g = mt_rand(0, 255);
+
+    $b = mt_rand(0, 255);
+
+    return "rgb($r, $g, $b)";
+
+}
+
+
+
+function custom_login_style(){
+
     $login_color =['color-l'=>getRandomColorRGB(),'color-r'=>getRandomColorRGB()];
     $ico='/favicon.ico';
     $img='/wp-content/uploads/2024/01/课室低码率.jpg';

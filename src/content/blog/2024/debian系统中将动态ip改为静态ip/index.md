@@ -4,7 +4,7 @@ categories:
 - Linux
 - 信息技术
 cover: ''
-date: '2024-05-09T23:53:00+08:00'
+date: 2024-05-09T23:53:00+08:00
 draft: false
 slug: debian系统中将动态ip改为静态ip
 tags:
@@ -12,7 +12,7 @@ tags:
 - ip
 - Linux
 title: Debian系统中将动态ip改为静态ip
-updated: '2024-05-09T23:53:00+08:00'
+updated: 2024-05-09T23:53:00+08:00
 wp_id: 9390
 ---
 

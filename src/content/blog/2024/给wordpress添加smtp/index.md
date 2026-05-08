@@ -2,7 +2,7 @@
 categories:
 - PHP
 cover: ''
-date: '2024-01-08T23:25:23+08:00'
+date: 2024-01-08T23:25:23+08:00
 draft: false
 slug: 给wordpress添加smtp
 tags:
@@ -10,7 +10,7 @@ tags:
 - WordPress
 - 邮件
 title: 给Wordpress添加smtp
-updated: '2024-01-08T23:37:39+08:00'
+updated: 2024-01-08T23:37:39+08:00
 wp_id: 1001
 ---
 
@@ -40,18 +40,30 @@ SMTP邮件功能在WordPress中是很常用的功能， 虽然WordPress自带了
 也可以将内容添加到php扩展代码插件，如 **WPCode Lite**
 
 ```
-<?php
-function mail_smtp( $phpmailer ) {
-    $phpmailer->FromName = '我的网站名'; //发件人名称
-    $phpmailer->Host = 'smtp.qq.com'; //修改为你使用的邮箱SMTP服务器
-    $phpmailer->Port = 465; //SMTP端口
-    $phpmailer->Username = 'xxx@qq.com'; //邮箱账户
-    $phpmailer->Password = 'xxx'; //邮箱授权码（此处填写QQ邮箱生成的授权码）
-    $phpmailer->From = 'xxx@qq.com'; //邮箱账户
-    $phpmailer->SMTPAuth = true;
-    $phpmailer->SMTPSecure = 'ssl'; //tls or ssl （port=25时->留空，465时->ssl）
-    $phpmailer->IsSMTP();
-}
+<?php
+
+function mail_smtp( $phpmailer ) {
+
+    $phpmailer->FromName = '我的网站名'; //发件人名称
+
+    $phpmailer->Host = 'smtp.qq.com'; //修改为你使用的邮箱SMTP服务器
+
+    $phpmailer->Port = 465; //SMTP端口
+
+    $phpmailer->Username = 'xxx@qq.com'; //邮箱账户
+
+    $phpmailer->Password = 'xxx'; //邮箱授权码（此处填写QQ邮箱生成的授权码）
+
+    $phpmailer->From = 'xxx@qq.com'; //邮箱账户
+
+    $phpmailer->SMTPAuth = true;
+
+    $phpmailer->SMTPSecure = 'ssl'; //tls or ssl （port=25时->留空，465时->ssl）
+
+    $phpmailer->IsSMTP();
+
+}
+
 add_action('phpmailer_init', 'mail_smtp');
 ```
 

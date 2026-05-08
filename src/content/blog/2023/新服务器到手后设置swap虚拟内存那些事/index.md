@@ -3,14 +3,14 @@ categories:
 - Linux
 - 信息技术
 cover: ''
-date: '2023-11-29T20:18:25+08:00'
+date: 2023-11-29T20:18:25+08:00
 draft: false
 slug: 新服务器到手后设置swap虚拟内存那些事
 tags:
 - Linux
 - swap
 title: 新服务器到手后设置扩展内存那些事-Swap
-updated: '2023-11-29T21:17:01+08:00'
+updated: 2023-11-29T21:17:01+08:00
 wp_id: 947
 ---
 
@@ -39,21 +39,36 @@ free -m
 使用文件作为swap分区
 
 ```
-#使用dd创建swap文件/data/swapfile，大小为1G
-dd if=/dev/zero of=/data/swapfile bs=1M count=1024
-#---或---
-#使用fallocate创建swap文件/data/swapfile，大小为1G
-fallocate -l 1G /data/swapfile
-
-#交换文件格式化为swap分区
-mkswap /data/swapfile
-#设置权限
-chmod 600 /data/swapfile
-#启用swap分区
-swapon /data/swapfile
-#设置开机自动启用swap分区
-vi /etc/fstab
-#添加一行
+#使用dd创建swap文件/data/swapfile，大小为1G
+
+dd if=/dev/zero of=/data/swapfile bs=1M count=1024
+
+#---或---
+
+#使用fallocate创建swap文件/data/swapfile，大小为1G
+
+fallocate -l 1G /data/swapfile
+
+
+
+#交换文件格式化为swap分区
+
+mkswap /data/swapfile
+
+#设置权限
+
+chmod 600 /data/swapfile
+
+#启用swap分区
+
+swapon /data/swapfile
+
+#设置开机自动启用swap分区
+
+vi /etc/fstab
+
+#添加一行
+
 /data/swapfile swap swap defaults 0 0
 ```
 
@@ -72,13 +87,18 @@ rm -rf /data/swapfile
 设置swap分区使用优先级
 
 ```
-#查看优先级设置，0不使用swap分区，100尽可能使用swap分区，根据需求设置一个中间值即可
+#查看优先级设置，0不使用swap分区，100尽可能使用swap分区，根据需求设置一个中间值即可
+
 cat /proc/sys/vm/swappiness
-
-#临时设置优先级，内存占用超过70%后写如swap
+
+
+#临时设置优先级，内存占用超过70%后写如swap
+
 sysctl vm.swappiness=30
-
-#设置开机自动生效
+
+
+#设置开机自动生效
+
 echo "vm.swappiness = 30"  >>  /etc/sysctl.conf
 #加载sysctl.conf参数
 sysctl -p
@@ -88,11 +108,21 @@ sysctl -p
 
 ```
 # sync命令可以多执行几遍
-# drop_caches的值（N）可以是0-3之间的数字，代表不同的含义：
-# 0：不释放(系统默认值);默认情况下表示不释放内存，由操作系统自动管理;
-# 1：释放页缓存;
-# 2：释放dentries和inodes；
-# 3：释放所有缓存。
+# drop_caches的值（N）可以是0-3之间的数字，代表不同的含义：
+
+
+# 0：不释放(系统默认值);默认情况下表示不释放内存，由操作系统自动管理;
+
+
+# 1：释放页缓存;
+
+
+# 2：释放dentries和inodes；
+
+
+# 3：释放所有缓存。
+
+
 echo N > /proc/sys/vm/drop_caches
 ```
 
@@ -121,7 +151,8 @@ lsmod  | grep zram
 ```
 # 设置了 zram0 的大小为 512MB，能够存储 512MB 压缩后的数据。
 echo 512M > /sys/block/zram0/disksize
-# 更改 zRAM 的压缩算法
+# 更改 zRAM 的压缩算法
+
 echo lzo > /sys/block/zram0/comp_algorithm
 # 方括号扩着哪个算法就说明启用了哪个
 cat /sys/block/zram0/comp_algorithm

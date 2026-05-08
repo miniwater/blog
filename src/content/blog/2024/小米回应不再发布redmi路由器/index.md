@@ -2,7 +2,7 @@
 categories:
 - 生活
 cover: ''
-date: '2024-05-11T23:45:47+08:00'
+date: 2024-05-11T23:45:47+08:00
 draft: false
 slug: 小米回应不再发布redmi路由器
 tags:
@@ -11,7 +11,7 @@ tags:
 - 小米
 - 红米路由器
 title: 小米回应不再发布Redmi路由器
-updated: '2024-09-18T11:16:27+08:00'
+updated: 2024-09-18T11:16:27+08:00
 wp_id: 9449
 ---
 

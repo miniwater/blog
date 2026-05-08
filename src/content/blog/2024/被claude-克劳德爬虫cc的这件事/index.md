@@ -6,7 +6,7 @@ categories:
 - 信息技术
 - 安全
 cover: ./阿里云负载.avif
-date: '2024-10-23T12:17:54+08:00'
+date: 2024-10-23T12:17:54+08:00
 draft: false
 slug: 被claude-克劳德爬虫cc的这件事
 tags:
@@ -19,7 +19,7 @@ tags:
 - 网络安全
 - 网络攻击
 title: 关于被Claude 克劳德爬虫CC的这件事
-updated: '2024-10-24T14:08:25+08:00'
+updated: 2024-10-24T14:08:25+08:00
 wp_id: 10145
 ---
 

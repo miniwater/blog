@@ -4,14 +4,14 @@ categories:
 - HTML
 - 信息技术
 cover: ''
-date: '2024-01-30T22:29:06+08:00'
+date: 2024-01-30T22:29:06+08:00
 draft: false
 slug: 冷门的css属性：initial
 tags:
 - CSS
 - HTML
 title: 冷门的css属性：initial
-updated: '2024-01-30T22:29:06+08:00'
+updated: 2024-01-30T22:29:06+08:00
 wp_id: 1243
 ---
 

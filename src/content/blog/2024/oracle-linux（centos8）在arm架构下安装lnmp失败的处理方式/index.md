@@ -4,7 +4,7 @@ categories:
 - Linux
 - 信息技术
 cover: ''
-date: '2024-05-09T22:36:10+08:00'
+date: 2024-05-09T22:36:10+08:00
 draft: false
 slug: oracle-linux（centos8）在arm架构下安装lnmp失败的处理方式
 tags:
@@ -14,7 +14,7 @@ tags:
 - Linux
 - LNMP
 title: Oracle Linux（Centos8）在ARM架构下安装LNMP失败的处理方式
-updated: '2024-05-09T22:36:10+08:00'
+updated: 2024-05-09T22:36:10+08:00
 wp_id: 9366
 ---
 

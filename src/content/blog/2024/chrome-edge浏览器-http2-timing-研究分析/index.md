@@ -4,7 +4,7 @@ categories:
 - HTTP2
 - 信息技术
 cover: ./加速.avif
-date: '2024-03-31T00:32:38+08:00'
+date: 2024-03-31T00:32:38+08:00
 draft: false
 slug: chrome-edge浏览器-http2-timing-研究分析
 tags:
@@ -17,7 +17,7 @@ tags:
 - TTFB
 - 队列
 title: Chrome Edge浏览器 HTTP2 Timing 研究分析
-updated: '2024-03-31T00:32:39+08:00'
+updated: 2024-03-31T00:32:39+08:00
 wp_id: 8522
 ---
 

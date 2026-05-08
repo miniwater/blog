@@ -4,7 +4,7 @@ categories:
 - Linux
 - 信息技术
 cover: ''
-date: '2024-05-10T12:16:56+08:00'
+date: 2024-05-10T12:16:56+08:00
 draft: false
 slug: deepin-下安装-firefox
 tags:
@@ -12,7 +12,7 @@ tags:
 - Firefox
 - Linux
 title: Deepin 下安装 Firefox
-updated: '2024-05-10T12:16:56+08:00'
+updated: 2024-05-10T12:16:56+08:00
 wp_id: 9412
 ---
 

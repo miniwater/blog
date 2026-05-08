@@ -2,7 +2,7 @@
 categories:
 - 公告
 cover: ./nvidia.avif
-date: '2024-06-04T11:21:53+08:00'
+date: 2024-06-04T11:21:53+08:00
 draft: false
 slug: 10系以上n卡-人人都能免费领取三个月xgp
 tags:
@@ -12,7 +12,7 @@ tags:
 - XGP
 - 白嫖
 title: 10系以上N卡 人人都能免费领取三个月XGP
-updated: '2024-09-18T11:11:46+08:00'
+updated: 2024-09-18T11:11:46+08:00
 wp_id: 9534
 ---
 

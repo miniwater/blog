@@ -3,7 +3,7 @@ categories:
 - Linux
 - 信息技术
 cover: ''
-date: '2024-09-08T10:59:55+08:00'
+date: 2024-09-08T10:59:55+08:00
 draft: false
 slug: openclash兼容模式无法同步时间-ntp服务器
 tags:
@@ -12,7 +12,7 @@ tags:
 - OpenWrt
 - 时间服务器
 title: OpenClash兼容模式无法同步时间 NTP服务器
-updated: '2024-09-18T11:02:32+08:00'
+updated: 2024-09-18T11:02:32+08:00
 wp_id: 9846
 ---
 

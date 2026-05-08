@@ -3,7 +3,7 @@ categories:
 - HTML
 - 信息技术
 cover: ''
-date: '2024-09-08T13:13:24+08:00'
+date: 2024-09-08T13:13:24+08:00
 draft: false
 slug: 分享一个仿windows蓝屏的404页面
 tags:
@@ -11,7 +11,7 @@ tags:
 - HTML
 - windows
 title: 分享一个仿Windows蓝屏的404页面
-updated: '2025-11-09T09:50:07+08:00'
+updated: 2025-11-09T09:50:07+08:00
 wp_id: 9851
 ---
 

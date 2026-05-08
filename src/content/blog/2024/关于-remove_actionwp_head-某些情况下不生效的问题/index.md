@@ -4,7 +4,7 @@ categories:
 - WordPress
 - 信息技术
 cover: ''
-date: '2024-10-11T13:50:45+08:00'
+date: 2024-10-11T13:50:45+08:00
 draft: false
 slug: 关于-remove_actionwp_head-某些情况下不生效的问题
 tags:
@@ -14,7 +14,7 @@ tags:
 - 开发
 - 踩坑
 title: 关于 remove_action('wp_head','') 某些情况下不生效的问题
-updated: '2024-10-11T13:52:54+08:00'
+updated: 2024-10-11T13:52:54+08:00
 wp_id: 10030
 ---
 

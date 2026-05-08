@@ -3,7 +3,7 @@ categories:
 - Windows
 - 信息技术
 cover: ''
-date: '2024-05-10T12:08:40+08:00'
+date: 2024-05-10T12:08:40+08:00
 draft: false
 slug: 微软kms激活方法
 tags:
@@ -11,7 +11,7 @@ tags:
 - windows
 - 激活
 title: 微软KMS激活方法
-updated: '2024-05-10T12:08:41+08:00'
+updated: 2024-05-10T12:08:41+08:00
 wp_id: 9404
 ---
 

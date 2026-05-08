@@ -4,7 +4,7 @@ categories:
 - nginx
 - 信息技术
 cover: ''
-date: '2025-02-04T00:25:01+08:00'
+date: 2025-02-04T00:25:01+08:00
 draft: false
 slug: nginx反向代理重写url，绕过ublock-origin拦截规则
 tags:
@@ -15,7 +15,7 @@ tags:
 - 广告拦截
 - 拦截规则
 title: nginx反向代理重写url，绕过uBlock Origin拦截规则
-updated: '2025-02-04T00:27:44+08:00'
+updated: 2025-02-04T00:27:44+08:00
 wp_id: 10626
 ---
 

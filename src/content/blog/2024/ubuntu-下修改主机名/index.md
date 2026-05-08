@@ -4,14 +4,14 @@ categories:
 - Ubuntu
 - 信息技术
 cover: ''
-date: '2024-05-10T12:12:36+08:00'
+date: 2024-05-10T12:12:36+08:00
 draft: false
 slug: ubuntu-下修改主机名
 tags:
 - Linux
 - Ubuntu
 title: Ubuntu 下修改主机名
-updated: '2024-05-10T12:12:37+08:00'
+updated: 2024-05-10T12:12:37+08:00
 wp_id: 9408
 ---
 

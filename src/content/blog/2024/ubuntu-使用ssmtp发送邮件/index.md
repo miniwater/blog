@@ -4,7 +4,7 @@ categories:
 - Ubuntu
 - 信息技术
 cover: ''
-date: '2024-05-09T22:55:05+08:00'
+date: 2024-05-09T22:55:05+08:00
 draft: false
 slug: ubuntu-使用ssmtp发送邮件
 tags:
@@ -15,7 +15,7 @@ tags:
 - Ubuntu
 - 邮件
 title: Ubuntu 使用ssmtp发送邮件
-updated: '2024-05-09T22:55:05+08:00'
+updated: 2024-05-09T22:55:05+08:00
 wp_id: 9376
 ---
 

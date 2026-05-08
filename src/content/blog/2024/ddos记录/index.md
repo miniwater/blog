@@ -2,7 +2,7 @@
 categories:
 - 公告
 cover: https://www.krjojo.com/wp-content/uploads/2024/04/小本本-1.webp
-date: '2024-04-06T11:56:59+08:00'
+date: 2024-04-06T11:56:59+08:00
 draft: false
 slug: ddos记录
 tags:
@@ -12,7 +12,7 @@ tags:
 - 小黑屋
 - 阿里云
 title: DDoS记录
-updated: '2025-12-17T19:19:02+08:00'
+updated: 2025-12-17T19:19:02+08:00
 wp_id: 8560
 ---
 

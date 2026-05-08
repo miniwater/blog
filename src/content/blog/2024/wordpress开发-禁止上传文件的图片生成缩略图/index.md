@@ -4,7 +4,7 @@ categories:
 - WordPress
 - 信息技术
 cover: ''
-date: '2024-02-27T22:45:30+08:00'
+date: 2024-02-27T22:45:30+08:00
 draft: false
 slug: wordpress开发-禁止上传文件的图片生成缩略图
 tags:
@@ -14,7 +14,7 @@ tags:
 - 学习
 - 缩略图
 title: Wordpress禁止上传文件的图片生成缩略图
-updated: '2024-03-12T23:47:52+08:00'
+updated: 2024-03-12T23:47:52+08:00
 wp_id: 1314
 ---
 
@@ -80,7 +80,8 @@ function.php 最后添加以下代码：
 
 ```
 add_action('intermediate_image_sizes_advanced', function ($new_sizes) {
-  return [];
+  return [];
+
 });
 ```
 

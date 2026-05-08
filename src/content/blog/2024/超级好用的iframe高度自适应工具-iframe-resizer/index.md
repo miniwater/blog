@@ -3,7 +3,7 @@ categories:
 - HTML
 - 信息技术
 cover: ''
-date: '2024-11-08T19:43:28+08:00'
+date: 2024-11-08T19:43:28+08:00
 draft: false
 slug: 超级好用的iframe高度自适应工具-iframe-resizer
 tags:
@@ -11,7 +11,7 @@ tags:
 - iframe
 - js
 title: 超级好用的iframe高度自适应工具 iframe-resizer
-updated: '2024-11-09T11:34:31+08:00'
+updated: 2024-11-09T11:34:31+08:00
 wp_id: 10300
 ---
 

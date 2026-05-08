@@ -5,7 +5,7 @@ categories:
 - LLM
 - 信息技术
 cover: ./输出md文件.avif
-date: '2025-08-20T21:39:56+08:00'
+date: 2025-08-20T21:39:56+08:00
 draft: false
 slug: 为-hugo-添加-llms-的支持
 tags:
@@ -13,7 +13,7 @@ tags:
 - Hugo
 - LLMS
 title: 为 Hugo 添加 LLMS 的支持
-updated: '2025-08-20T23:48:59+08:00'
+updated: 2025-08-20T23:48:59+08:00
 wp_id: 12092
 ---
 

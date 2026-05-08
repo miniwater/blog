@@ -3,7 +3,7 @@ categories:
 - Linux
 - 信息技术
 cover: ''
-date: '2024-05-09T22:52:23+08:00'
+date: 2024-05-09T22:52:23+08:00
 draft: false
 slug: ubuntu系统中默认防火墙ufw常用操作
 tags:
@@ -12,7 +12,7 @@ tags:
 - UFW
 - 防火墙
 title: Ubuntu系统中默认防火墙UFW常用操作
-updated: '2024-05-09T22:52:24+08:00'
+updated: 2024-05-09T22:52:24+08:00
 wp_id: 9374
 ---
 

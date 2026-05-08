@@ -5,7 +5,7 @@ categories:
 - nginx
 - 信息技术
 cover: ''
-date: '2024-03-30T10:31:31+08:00'
+date: 2024-03-30T10:31:31+08:00
 draft: false
 slug: use-x-content-type-options-header修复
 tags:
@@ -19,7 +19,7 @@ tags:
 - nginx
 - xss
 title: Use X-Content-Type-Options Header修复
-updated: '2024-03-30T10:41:12+08:00'
+updated: 2024-03-30T10:41:12+08:00
 wp_id: 8514
 ---
 
@@ -60,8 +60,10 @@ Header set X-Content-Type-Options "nosniff"
 如你只是想在服务器配置（或 .htaccess 文件）中设置这些 HTTP 响应标头。例如，若要仅将 X-Content-Type-Options .css HTTP 响应标头应用于 .css 和 .png 之类的静态不可执行文件，请尝试以下操作：
 
 ```
-<FilesMatch "\.(css|png|woff2|webp)$">
-    Header set X-Content-Type-Options nosniff
+<FilesMatch "\.(css|png|woff2|webp)$">
+
+    Header set X-Content-Type-Options nosniff
+
 </FilesMatch>
 ```
 
@@ -76,19 +78,33 @@ Header set X-Content-Type-Options "nosniff"
 下面是一段使用了 X-Content-Type-Options 响应头的代码：
 
 ```
-HTTP/1.1 200 OK
-Content-Type: text/html;charset=utf-8
-X-Content-Type-Options: nosniff
- 
-<html>
-<head>
-<title>手里有只毛毛虫</title>
-</head>
-<body>
-<script>
-alert("nosniff warning");
-</script>
-</body>
+
+HTTP/1.1 200 OK
+
+Content-Type: text/html;charset=utf-8
+
+X-Content-Type-Options: nosniff
+
+ 
+
+<html>
+
+<head>
+
+<title>手里有只毛毛虫</title>
+
+</head>
+
+<body>
+
+<script>
+
+alert("nosniff warning");
+
+</script>
+
+</body>
+
 </html>
 ```
 

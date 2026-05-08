@@ -6,7 +6,7 @@ categories:
 - 信息技术
 - 图片格式
 cover: ''
-date: '2024-04-29T11:15:50+08:00'
+date: 2024-04-29T11:15:50+08:00
 draft: false
 slug: 1panel面板修改php构建扩展，gd扩展增加avif支持
 tags:
@@ -15,7 +15,7 @@ tags:
 - Docker
 - gd
 title: 1Panel面板修改PHP构建扩展，GD扩展增加avif支持
-updated: '2024-05-02T00:41:09+08:00'
+updated: 2024-05-02T00:41:09+08:00
 wp_id: 9203
 ---
 

@@ -3,7 +3,7 @@ categories:
 - 1Panel
 - 信息技术
 cover: ''
-date: '2025-06-23T19:25:10+08:00'
+date: 2025-06-23T19:25:10+08:00
 draft: false
 slug: 是时候更新-1panel-v2-了
 tags:
@@ -17,7 +17,7 @@ tags:
 - 迁移
 - 面板
 title: 是时候更新 1Panel V2 了
-updated: '2025-07-16T17:42:34+08:00'
+updated: 2025-07-16T17:42:34+08:00
 wp_id: 11553
 ---
 

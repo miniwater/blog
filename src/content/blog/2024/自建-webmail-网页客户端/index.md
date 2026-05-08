@@ -2,7 +2,7 @@
 categories:
 - 信息技术
 cover: ''
-date: '2024-05-10T12:22:30+08:00'
+date: 2024-05-10T12:22:30+08:00
 draft: false
 slug: 自建-webmail-网页客户端
 tags:
@@ -10,7 +10,7 @@ tags:
 - VPS
 - 邮箱
 title: 自建 webmail 网页客户端
-updated: '2024-09-18T11:18:25+08:00'
+updated: 2024-09-18T11:18:25+08:00
 wp_id: 9416
 ---
 

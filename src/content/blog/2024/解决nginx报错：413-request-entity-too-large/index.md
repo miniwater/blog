@@ -4,13 +4,13 @@ categories:
 - nginx
 - 信息技术
 cover: ''
-date: '2024-05-09T23:57:26+08:00'
+date: 2024-05-09T23:57:26+08:00
 draft: false
 slug: 解决nginx报错：413-request-entity-too-large
 tags:
 - nginx
 title: 解决Nginx报错：413 Request Entity Too Large
-updated: '2024-05-09T23:57:27+08:00'
+updated: 2024-05-09T23:57:27+08:00
 wp_id: 9394
 ---
 

@@ -3,7 +3,7 @@ categories:
 - WordPress
 - 信息技术
 cover: ''
-date: '2024-07-28T12:34:51+08:00'
+date: 2024-07-28T12:34:51+08:00
 draft: false
 slug: wordpress-禁止生成缩略图-scaled
 tags:
@@ -11,7 +11,7 @@ tags:
 - WordPress
 - 缩略图
 title: WordPress 禁止生成缩略图 scaled
-updated: '2024-09-18T11:05:03+08:00'
+updated: 2024-09-18T11:05:03+08:00
 wp_id: 9765
 ---
 

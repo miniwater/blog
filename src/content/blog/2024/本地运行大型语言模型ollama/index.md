@@ -4,7 +4,7 @@ categories:
 - LLM
 - 信息技术
 cover: ''
-date: '2024-02-04T00:16:08+08:00'
+date: 2024-02-04T00:16:08+08:00
 draft: false
 slug: 本地运行大型语言模型ollama
 tags:
@@ -16,7 +16,7 @@ tags:
 - ollama
 - 大语言模型
 title: 本地运行大型语言模型ollama
-updated: '2024-02-04T00:27:20+08:00'
+updated: 2024-02-04T00:27:20+08:00
 wp_id: 1278
 ---
 

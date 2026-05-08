@@ -2,14 +2,14 @@
 categories:
 - 信息技术
 cover: ''
-date: '2024-05-09T23:32:49+08:00'
+date: 2024-05-09T23:32:49+08:00
 draft: false
 slug: ffmpeg-常用命令
 tags:
 - ffmpeg
 - 视频
 title: ffmpeg 常用命令
-updated: '2024-05-09T23:32:49+08:00'
+updated: 2024-05-09T23:32:49+08:00
 wp_id: 9386
 ---
 

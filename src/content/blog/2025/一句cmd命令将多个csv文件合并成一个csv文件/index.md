@@ -4,7 +4,7 @@ categories:
 - Windows
 - 信息技术
 cover: ''
-date: '2025-02-18T09:20:02+08:00'
+date: 2025-02-18T09:20:02+08:00
 draft: false
 slug: 一句cmd命令将多个csv文件合并成一个csv文件
 tags:
@@ -14,7 +14,7 @@ tags:
 - windows
 - 合并
 title: 一句CMD命令将多个CSV文件合并成一个CSV文件
-updated: '2025-02-18T09:20:03+08:00'
+updated: 2025-02-18T09:20:03+08:00
 wp_id: 10674
 ---
 

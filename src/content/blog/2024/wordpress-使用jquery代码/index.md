@@ -5,7 +5,7 @@ categories:
 - WordPress
 - 信息技术
 cover: ''
-date: '2024-05-08T12:36:01+08:00'
+date: 2024-05-08T12:36:01+08:00
 draft: false
 slug: wordpress-使用jquery代码
 tags:
@@ -13,7 +13,7 @@ tags:
 - jQuery
 - WordPress
 title: WordPress 使用jQuery代码
-updated: '2024-05-08T12:36:01+08:00'
+updated: 2024-05-08T12:36:01+08:00
 wp_id: 9055
 ---
 

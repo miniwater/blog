@@ -3,7 +3,7 @@ categories:
 - AI
 - 信息技术
 cover: ./jimeng.avif
-date: '2025-12-26T22:40:23+08:00'
+date: 2025-12-26T22:40:23+08:00
 draft: false
 slug: 2025-年度ai工具推荐-包含链接地址
 tags:
@@ -14,7 +14,7 @@ tags:
 - 人工智能
 - 年度
 title: 2025 年度AI工具推荐 包含链接地址
-updated: '2025-12-30T20:26:35+08:00'
+updated: 2025-12-30T20:26:35+08:00
 wp_id: 12670
 ---
 

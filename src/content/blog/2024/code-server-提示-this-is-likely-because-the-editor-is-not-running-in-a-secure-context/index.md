@@ -3,7 +3,7 @@ categories:
 - HTML
 - 信息技术
 cover: ''
-date: '2024-03-01T13:24:54+08:00'
+date: 2024-03-01T13:24:54+08:00
 draft: false
 slug: code-server-提示-this-is-likely-because-the-editor-is-not-running-in-a-secure-context
 tags:
@@ -11,7 +11,7 @@ tags:
 - HTML
 title: Code-Server 提示 This is likely because the editor is not running in a secure
   context
-updated: '2024-03-01T18:00:48+08:00'
+updated: 2024-03-01T18:00:48+08:00
 wp_id: 1319
 ---
 

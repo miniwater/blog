@@ -3,14 +3,14 @@ categories:
 - HTML
 - 信息技术
 cover: ''
-date: '2024-05-10T13:14:39+08:00'
+date: 2024-05-10T13:14:39+08:00
 draft: false
 slug: 关闭微软的-edge-浏览器右击提示的：使用copilot重写
 tags:
 - Copilot
 - edge
 title: 关闭微软的 Edge 浏览器右击提示的：“使用Copilot重写“的提示
-updated: '2024-09-18T11:18:06+08:00'
+updated: 2024-09-18T11:18:06+08:00
 wp_id: 9434
 ---
 

@@ -4,7 +4,7 @@ categories:
 - Ubuntu
 - 信息技术
 cover: ''
-date: '2024-05-09T22:39:58+08:00'
+date: 2024-05-09T22:39:58+08:00
 draft: false
 slug: ubuntu启用root账号登录并删除普通账号
 tags:
@@ -12,7 +12,7 @@ tags:
 - root
 - Ubuntu
 title: ubuntu启用root账号登录并删除普通账号
-updated: '2024-05-09T22:39:59+08:00'
+updated: 2024-05-09T22:39:59+08:00
 wp_id: 9370
 ---
 

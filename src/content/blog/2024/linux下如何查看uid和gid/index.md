@@ -3,7 +3,7 @@ categories:
 - Linux
 - 信息技术
 cover: ''
-date: '2024-05-09T22:28:59+08:00'
+date: 2024-05-09T22:28:59+08:00
 draft: false
 slug: linux下如何查看uid和gid
 tags:
@@ -11,7 +11,7 @@ tags:
 - Linux
 - UID
 title: Linux下如何查看UID和GID
-updated: '2024-05-09T22:28:59+08:00'
+updated: 2024-05-09T22:28:59+08:00
 wp_id: 9358
 ---
 

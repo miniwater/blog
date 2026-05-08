@@ -5,7 +5,7 @@ categories:
 - 信息技术
 - 插件
 cover: ''
-date: '2024-05-02T15:08:16+08:00'
+date: 2024-05-02T15:08:16+08:00
 draft: false
 slug: wordpress-插件开发-关于-get_current_screen-id-不一致的问题
 tags:
@@ -13,7 +13,7 @@ tags:
 - WordPress
 - 插件
 title: WordPress 插件开发 关于 get_current_screen()->id 不一致的问题
-updated: '2024-05-02T15:09:44+08:00'
+updated: 2024-05-02T15:09:44+08:00
 wp_id: 9269
 ---
 

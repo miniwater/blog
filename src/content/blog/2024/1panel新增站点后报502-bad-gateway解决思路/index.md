@@ -5,7 +5,7 @@ categories:
 - 安全
 - 技术
 cover: ''
-date: '2024-04-18T13:28:36+08:00'
+date: 2024-04-18T13:28:36+08:00
 draft: false
 slug: 1panel新增站点后报502-bad-gateway解决思路
 tags:
@@ -13,7 +13,7 @@ tags:
 - Docker
 - PHP运行环境
 title: 1Panel新增站点后报502 Bad Gateway解决思路
-updated: '2024-04-30T17:00:51+08:00'
+updated: 2024-04-30T17:00:51+08:00
 wp_id: 9071
 ---
 

@@ -4,14 +4,14 @@ categories:
 - Windows
 - 信息技术
 cover: ''
-date: '2024-05-09T22:38:26+08:00'
+date: 2024-05-09T22:38:26+08:00
 draft: false
 slug: windows-系统如何设置程序开机启动
 tags:
 - shell
 - windows
 title: Windows 系统如何设置程序开机启动
-updated: '2024-05-09T22:38:27+08:00'
+updated: 2024-05-09T22:38:27+08:00
 wp_id: 9368
 ---
 

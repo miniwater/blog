@@ -5,7 +5,7 @@ categories:
 - 信息技术
 - 图片格式
 cover: ''
-date: '2024-04-28T19:07:10+08:00'
+date: 2024-04-28T19:07:10+08:00
 draft: false
 slug: wordpress无法上传avif图片-web-服务器无法处理该图片，请在上
 tags:
@@ -15,7 +15,7 @@ tags:
 - WordPress
 - 图片
 title: WordPress无法上传avif图片 Web 服务器无法处理该图片，请在上传前将其转换为 JPEG 或 PNG 格式。
-updated: '2024-04-30T16:26:46+08:00'
+updated: 2024-04-30T16:26:46+08:00
 wp_id: 9186
 ---
 

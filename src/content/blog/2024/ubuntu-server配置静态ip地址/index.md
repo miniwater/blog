@@ -4,7 +4,7 @@ categories:
 - Ubuntu
 - 信息技术
 cover: ''
-date: '2024-05-10T12:14:50+08:00'
+date: 2024-05-10T12:14:50+08:00
 draft: false
 slug: ubuntu-server配置静态ip地址
 tags:
@@ -12,7 +12,7 @@ tags:
 - Linux
 - Ubuntu
 title: Ubuntu server配置静态ip地址
-updated: '2024-05-10T12:14:50+08:00'
+updated: 2024-05-10T12:14:50+08:00
 wp_id: 9410
 ---
 

@@ -4,7 +4,7 @@ categories:
 - 信息技术
 - 模板
 cover: ./暗色.avif
-date: '2024-10-08T13:32:07+08:00'
+date: 2024-10-08T13:32:07+08:00
 draft: false
 slug: html5-地址发布页-单页源码
 tags:
@@ -13,7 +13,7 @@ tags:
 - 学习
 - 源码
 title: Html5 地址发布页 单页源码
-updated: '2025-02-25T00:17:38+08:00'
+updated: 2025-02-25T00:17:38+08:00
 wp_id: 10007
 ---
 

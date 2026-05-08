@@ -3,12 +3,12 @@ categories:
 - Linux
 - 信息技术
 cover: ''
-date: '2022-06-01T18:00:02+08:00'
+date: 2022-06-01T18:00:02+08:00
 draft: false
 slug: mac安装phphomebrew-php弃用、其他第三方tap也已经弃用或者迁移
 tags: []
 title: Mac安装PHP(Homebrew/php弃用、其他第三方tap也已经弃用或者迁移后的安装配置方案)
-updated: '2024-05-01T16:36:02+08:00'
+updated: 2024-05-01T16:36:02+08:00
 wp_id: 636
 ---
 

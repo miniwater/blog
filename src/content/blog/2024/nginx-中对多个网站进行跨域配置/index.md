@@ -4,14 +4,14 @@ categories:
 - nginx
 - 信息技术
 cover: ''
-date: '2024-05-09T23:27:42+08:00'
+date: 2024-05-09T23:27:42+08:00
 draft: false
 slug: nginx-中对多个网站进行跨域配置
 tags:
 - nginx
 - 跨域
 title: Nginx 中对多个网站进行跨域配置
-updated: '2024-05-09T23:27:42+08:00'
+updated: 2024-05-09T23:27:42+08:00
 wp_id: 9380
 ---
 

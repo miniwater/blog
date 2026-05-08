@@ -4,7 +4,7 @@ categories:
 - js
 - 信息技术
 cover: ./umami.avif
-date: '2025-11-16T21:32:59+08:00'
+date: 2025-11-16T21:32:59+08:00
 draft: false
 slug: 分享一个-umami-追踪站内搜索的办法
 tags:
@@ -14,7 +14,7 @@ tags:
 - 站内搜索
 - 统计
 title: 分享一个 Umami 追踪站内搜索的办法
-updated: '2025-11-17T09:03:07+08:00'
+updated: 2025-11-17T09:03:07+08:00
 wp_id: 12416
 ---
 

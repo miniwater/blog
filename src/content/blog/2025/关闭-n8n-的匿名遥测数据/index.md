@@ -4,7 +4,7 @@ categories:
 - AI
 - 信息技术
 cover: https://www.krjojo.com/wp-content/uploads/2025/12/n8n.png
-date: '2025-12-14T12:40:06+08:00'
+date: 2025-12-14T12:40:06+08:00
 draft: false
 slug: 关闭-n8n-的匿名遥测数据
 tags:
@@ -14,7 +14,7 @@ tags:
 - n8n
 - 遥测数据
 title: 关闭 n8n 的匿名遥测数据
-updated: '2025-12-15T14:22:48+08:00'
+updated: 2025-12-15T14:22:48+08:00
 wp_id: 12561
 ---
 

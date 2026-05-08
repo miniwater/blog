@@ -3,7 +3,7 @@ categories:
 - Git
 - 信息技术
 cover: ''
-date: '2024-10-20T22:07:19+08:00'
+date: 2024-10-20T22:07:19+08:00
 draft: false
 slug: 优雅的解决多人同时修改-git-分支所导致的无用merge信息
 tags:
@@ -13,7 +13,7 @@ tags:
 - push
 - 分支
 title: 优雅的解决多人同时修改 Git 分支所导致的无用merge信息
-updated: '2024-10-20T22:08:53+08:00'
+updated: 2024-10-20T22:08:53+08:00
 wp_id: 10121
 ---
 

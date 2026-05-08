@@ -4,7 +4,7 @@ categories:
 - WordPress
 - 信息技术
 cover: ''
-date: '2024-02-22T00:12:32+08:00'
+date: 2024-02-22T00:12:32+08:00
 draft: false
 slug: wordpress开发-必须包含中文的评论
 tags:
@@ -14,7 +14,7 @@ tags:
 - 中文
 - 评论
 title: wordpress过滤评论
-updated: '2024-03-12T23:48:10+08:00'
+updated: 2024-03-12T23:48:10+08:00
 wp_id: 1295
 ---
 
@@ -50,12 +50,18 @@ add_filter('preprocess_comment', function ($comment_data) {
 在 function.php 下添加：
 
 ```
-add_filter('pre_comment_approved', function ($approved, $commentdata) {
-  $comment = $commentdata['comment_content'];
-  if (!preg_match('/[一-龥]/u', $comment)) {
-    return 'spam';
-  }
-  return $approved;
+add_filter('pre_comment_approved', function ($approved, $commentdata) {
+
+  $comment = $commentdata['comment_content'];
+
+  if (!preg_match('/[一-龥]/u', $comment)) {
+
+    return 'spam';
+
+  }
+
+  return $approved;
+
 }, '99', 2);
 ```
 
@@ -66,22 +72,38 @@ add_filter('pre_comment_approved', function ($approved, $commentdata) {
 例如：
 
 ```
-add_filter('pre_comment_approved', function ($approved, $commentdata) {
-  $comment = $commentdata['comment_content'];
-  $keyword = [
-    '代练',
+add_filter('pre_comment_approved', function ($approved, $commentdata) {
+
+  $comment = $commentdata['comment_content'];
+
+  $keyword = [
+
+    '代练',
+
     '挂机',
-    '演员',
-    // 添加敏感词
-  ];
-  foreach ($keyword as $value) {
-    if (strpos($comment, $value) !== false) {
-      return 'spam';
-    }
-  }
-  if (!preg_match('/[一-龥]/u', $comment)) {
-    return 'spam';
-  }
-  return $approved;
+
+    '演员',
+    // 添加敏感词
+
+  ];
+
+  foreach ($keyword as $value) {
+
+    if (strpos($comment, $value) !== false) {
+
+      return 'spam';
+
+    }
+
+  }
+
+  if (!preg_match('/[一-龥]/u', $comment)) {
+
+    return 'spam';
+
+  }
+
+  return $approved;
+
 }, '99', 2);
 ```

@@ -3,7 +3,7 @@ categories:
 - Windows
 - 信息技术
 cover: ./闪烁.avif
-date: '2025-02-02T23:45:26+08:00'
+date: 2025-02-02T23:45:26+08:00
 draft: false
 slug: 关于nvidia显卡在windows系统下存在部分软件屏闪-闪烁问题
 tags:
@@ -14,7 +14,7 @@ tags:
 - 英伟达
 - 闪烁
 title: 关于Nvidia显卡在windows系统下存在部分软件屏闪/闪烁问题与解决方法
-updated: '2025-02-27T20:08:00+08:00'
+updated: 2025-02-27T20:08:00+08:00
 wp_id: 10615
 ---
 

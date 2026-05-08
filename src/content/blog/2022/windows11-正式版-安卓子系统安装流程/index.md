@@ -4,7 +4,7 @@ categories:
 - 技术
 - 系统
 cover: ./9-1.avif
-date: '2022-02-20T19:35:09+08:00'
+date: 2022-02-20T19:35:09+08:00
 draft: false
 slug: windows11-正式版-安卓子系统安装流程
 tags:
@@ -12,7 +12,7 @@ tags:
 - windows
 - 虚拟机
 title: Windows11 正式版 安卓子系统安装流程
-updated: '2025-12-17T19:12:39+08:00'
+updated: 2025-12-17T19:12:39+08:00
 wp_id: 590
 ---
 

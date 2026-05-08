@@ -3,7 +3,7 @@ categories:
 - Git
 - 信息技术
 cover: ./git.avif
-date: '2025-11-10T22:11:08+08:00'
+date: 2025-11-10T22:11:08+08:00
 draft: false
 slug: 记录一次-git-目录过大，手动瘦身过程
 tags:
@@ -11,7 +11,7 @@ tags:
 - Github
 - 清理
 title: 记录一次.git 目录过大，手动瘦身过程
-updated: '2025-11-11T09:12:21+08:00'
+updated: 2025-11-11T09:12:21+08:00
 wp_id: 12384
 ---
 

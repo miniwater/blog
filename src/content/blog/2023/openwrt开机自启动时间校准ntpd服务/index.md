@@ -3,12 +3,12 @@ categories:
 - Linux
 - 信息技术
 cover: ''
-date: '2023-03-20T11:50:03+08:00'
+date: 2023-03-20T11:50:03+08:00
 draft: false
 slug: openwrt开机自启动时间校准ntpd服务
 tags: []
 title: OpenWrt开机自启动时间校准ntpd服务
-updated: '2023-04-21T23:48:06+08:00'
+updated: 2023-04-21T23:48:06+08:00
 wp_id: 792
 ---
 

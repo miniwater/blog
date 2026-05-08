@@ -3,7 +3,7 @@ categories:
 - 云服务
 - 阿里云
 cover: ./fIKXRGRXa.avif
-date: '2026-01-13T15:35:54+08:00'
+date: 2026-01-13T15:35:54+08:00
 draft: false
 slug: 白嫖阿里云免费pg数据库
 tags:
@@ -13,7 +13,7 @@ tags:
 - 白嫖
 - 阿里云
 title: 白嫖阿里云免费PG数据库
-updated: '2026-01-15T11:54:21+08:00'
+updated: 2026-01-15T11:54:21+08:00
 wp_id: 12765
 ---
 

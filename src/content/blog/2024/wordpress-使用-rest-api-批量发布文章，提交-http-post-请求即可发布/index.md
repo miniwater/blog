@@ -4,7 +4,7 @@ categories:
 - WordPress
 - 信息技术
 cover: ''
-date: '2024-10-23T11:46:06+08:00'
+date: 2024-10-23T11:46:06+08:00
 draft: false
 slug: wordpress-使用-rest-api-批量发布文章，提交-http-post-请求即可发布
 tags:
@@ -17,7 +17,7 @@ tags:
 - 文章
 - 采集
 title: Wordpress 使用 REST API 批量发布文章，提交 HTTP Post 请求即可发布
-updated: '2024-10-23T11:50:11+08:00'
+updated: 2024-10-23T11:50:11+08:00
 wp_id: 10142
 ---
 

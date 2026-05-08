@@ -3,7 +3,7 @@ categories:
 - Linux
 - 信息技术
 cover: ''
-date: '2023-04-21T23:47:04+08:00'
+date: 2023-04-21T23:47:04+08:00
 draft: false
 slug: linux之常用的压缩解压缩命令
 tags:
@@ -11,7 +11,7 @@ tags:
 - 压缩
 - 解压
 title: Linux之常用的压缩解压缩命令
-updated: '2023-04-21T23:47:05+08:00'
+updated: 2023-04-21T23:47:05+08:00
 wp_id: 796
 ---
 

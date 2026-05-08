@@ -3,7 +3,7 @@ categories:
 - 信息技术
 - 公告
 cover: ''
-date: '2024-05-15T10:48:39+08:00'
+date: 2024-05-15T10:48:39+08:00
 draft: false
 slug: fusion-pro-和-workstation-pro-免费给个人使用了
 tags:
@@ -13,7 +13,7 @@ tags:
 - VMware Workstation Pro
 - 虚拟机
 title: Fusion Pro 和 Workstation Pro 免费给个人使用了（附下载地址）
-updated: '2024-09-18T11:14:54+08:00'
+updated: 2024-09-18T11:14:54+08:00
 wp_id: 9503
 ---
 

@@ -4,7 +4,7 @@ categories:
 - LLM
 - 信息技术
 cover: ./Cherry-Studio.avif
-date: '2025-02-04T13:21:18+08:00'
+date: 2025-02-04T13:21:18+08:00
 draft: false
 slug: lm-studio-本地部署-deepseek-r1-对接-cherry-studio-面板
 tags:
@@ -16,7 +16,7 @@ tags:
 - 沉浸式翻译
 - 翻译
 title: LM Studio本地部署DeepSeek R1对接AI客户端、翻译、VS Code
-updated: '2025-02-22T18:40:22+08:00'
+updated: 2025-02-22T18:40:22+08:00
 wp_id: 10637
 ---
 

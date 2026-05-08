@@ -5,7 +5,7 @@ categories:
 - LLM
 - 信息技术
 cover: ''
-date: '2025-06-25T19:04:01+08:00'
+date: 2025-06-25T19:04:01+08:00
 draft: false
 slug: llms-txt：让ai更方便爬取你的数据
 tags:
@@ -14,7 +14,7 @@ tags:
 - LLM
 - Markdown
 title: LLMs.txt：让AI更方便爬取你的数据
-updated: '2025-06-26T17:34:35+08:00'
+updated: 2025-06-26T17:34:35+08:00
 wp_id: 11591
 ---
 

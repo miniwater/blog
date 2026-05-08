@@ -3,13 +3,13 @@ categories:
 - VSCode
 - 信息技术
 cover: ''
-date: '2024-05-08T00:27:30+08:00'
+date: 2024-05-08T00:27:30+08:00
 draft: false
 slug: vscode快捷键总结
 tags:
 - VSCode
 title: VSCode快捷键总结
-updated: '2024-05-08T00:27:31+08:00'
+updated: 2024-05-08T00:27:31+08:00
 wp_id: 9329
 ---
 

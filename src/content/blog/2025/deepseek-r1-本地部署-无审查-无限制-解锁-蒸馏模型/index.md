@@ -4,7 +4,7 @@ categories:
 - LLM
 - 信息技术
 cover: ''
-date: '2025-02-09T10:25:08+08:00'
+date: 2025-02-09T10:25:08+08:00
 draft: false
 slug: deepseek-r1-本地部署-无审查-无限制-解锁-蒸馏模型
 tags:
@@ -13,7 +13,7 @@ tags:
 - 本地部署
 - 解锁
 title: Deepseek R1 本地部署 无审查 无限制 解锁 蒸馏模型
-updated: '2025-02-09T21:36:04+08:00'
+updated: 2025-02-09T21:36:04+08:00
 wp_id: 10665
 ---
 

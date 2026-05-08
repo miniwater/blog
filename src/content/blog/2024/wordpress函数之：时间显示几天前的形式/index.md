@@ -4,14 +4,14 @@ categories:
 - WordPress
 - 信息技术
 cover: ''
-date: '2024-05-10T00:01:56+08:00'
+date: 2024-05-10T00:01:56+08:00
 draft: false
 slug: wordpress函数之：时间显示几天前的形式
 tags:
 - WordPress
 - 时间
 title: WordPress函数之：时间显示“几天前”的形式
-updated: '2024-05-10T00:01:57+08:00'
+updated: 2024-05-10T00:01:57+08:00
 wp_id: 9396
 ---
 

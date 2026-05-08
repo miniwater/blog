@@ -4,12 +4,12 @@ categories:
 - PHP
 - 信息技术
 cover: ''
-date: '2024-01-12T21:04:09+08:00'
+date: 2024-01-12T21:04:09+08:00
 draft: false
 slug: 极简版一言php
 tags: []
 title: 极简版自建一言语句php
-updated: '2024-07-31T16:38:27+08:00'
+updated: 2024-07-31T16:38:27+08:00
 wp_id: 1037
 ---
 

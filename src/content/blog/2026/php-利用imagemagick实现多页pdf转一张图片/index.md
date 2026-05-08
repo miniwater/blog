@@ -3,7 +3,7 @@ categories:
 - PHP
 - 信息技术
 cover: ''
-date: '2026-04-24T00:00:34+08:00'
+date: 2026-04-24T00:00:34+08:00
 draft: false
 slug: php-利用imagemagick实现多页pdf转一张图片
 tags:
@@ -14,7 +14,7 @@ tags:
 - PDF转图片
 - PHP
 title: PHP 利用ImageMagick实现多页PDF转一张图片
-updated: '2026-04-24T00:00:36+08:00'
+updated: 2026-04-24T00:00:36+08:00
 wp_id: 12860
 ---
 

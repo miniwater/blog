@@ -3,7 +3,7 @@ categories:
 - 信息技术
 - 图片格式
 cover: ''
-date: '2024-04-08T12:26:09+08:00'
+date: 2024-04-08T12:26:09+08:00
 draft: false
 slug: 现代图片格式：webp和avif的初步认识
 tags:
@@ -15,7 +15,7 @@ tags:
 - WebP
 - WebP 2
 title: 现代图片格式：Webp和AVIF的初步认识
-updated: '2024-04-08T12:26:10+08:00'
+updated: 2024-04-08T12:26:10+08:00
 wp_id: 8584
 ---
 

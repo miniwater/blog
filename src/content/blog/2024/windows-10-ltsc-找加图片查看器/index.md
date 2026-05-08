@@ -3,7 +3,7 @@ categories:
 - Windows
 - 信息技术
 cover: ''
-date: '2024-05-09T23:30:20+08:00'
+date: 2024-05-09T23:30:20+08:00
 draft: false
 slug: windows-10-ltsc-找加图片查看器
 tags:
@@ -12,7 +12,7 @@ tags:
 - windows
 - 图片
 title: Windows 10 LTSC 找加图片查看器
-updated: '2024-05-09T23:30:21+08:00'
+updated: 2024-05-09T23:30:21+08:00
 wp_id: 9384
 ---
 

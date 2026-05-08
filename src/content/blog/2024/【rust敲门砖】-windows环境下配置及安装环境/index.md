@@ -3,7 +3,7 @@ categories:
 - Rust
 - 信息技术
 cover: ./rust.avif
-date: '2024-12-23T13:22:21+08:00'
+date: 2024-12-23T13:22:21+08:00
 draft: false
 slug: 【rust敲门砖】-windows环境下配置及安装环境
 tags:
@@ -12,7 +12,7 @@ tags:
 - 入门
 - 安装环境
 title: 【Rust敲门砖】 Windows环境下配置及安装环境
-updated: '2024-12-25T13:12:10+08:00'
+updated: 2024-12-25T13:12:10+08:00
 wp_id: 10440
 ---
 

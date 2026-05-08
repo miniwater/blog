@@ -5,7 +5,7 @@ categories:
 - WordPress
 - 信息技术
 cover: ''
-date: '2024-03-31T10:37:23+08:00'
+date: 2024-03-31T10:37:23+08:00
 draft: false
 slug: wordpress中修改woocommerce结算页面去掉其它表单字段
 tags:
@@ -13,7 +13,7 @@ tags:
 - WordPress
 - 表单
 title: Wordpress中修改woocommerce结算页面去掉其它表单字段
-updated: '2024-03-31T10:39:17+08:00'
+updated: 2024-03-31T10:39:17+08:00
 wp_id: 8526
 ---
 

@@ -3,7 +3,7 @@ categories:
 - PHP
 - 信息技术
 cover: ''
-date: '2024-05-09T18:09:38+08:00'
+date: 2024-05-09T18:09:38+08:00
 draft: false
 slug: php8中的match表达式让你的代码变得简约而有力
 tags:
@@ -11,7 +11,7 @@ tags:
 - PHP
 - PHP8
 title: PHP8中的match表达式让你的代码变得简约而有力
-updated: '2024-05-09T18:09:39+08:00'
+updated: 2024-05-09T18:09:39+08:00
 wp_id: 9354
 ---
 

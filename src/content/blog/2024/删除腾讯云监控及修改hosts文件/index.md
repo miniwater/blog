@@ -3,7 +3,7 @@ categories:
 - Linux
 - 信息技术
 cover: ''
-date: '2024-05-09T22:47:18+08:00'
+date: 2024-05-09T22:47:18+08:00
 draft: false
 slug: 删除腾讯云监控及修改hosts文件
 tags:
@@ -11,7 +11,7 @@ tags:
 - Linux
 - 腾讯云
 title: 删除腾讯云监控及修改hosts文件
-updated: '2024-05-09T22:47:19+08:00'
+updated: 2024-05-09T22:47:19+08:00
 wp_id: 9372
 ---
 

@@ -2,14 +2,14 @@
 categories:
 - Docker
 cover: ''
-date: '2024-05-09T22:27:12+08:00'
+date: 2024-05-09T22:27:12+08:00
 draft: false
 slug: 在docker中使用qbittorrent进行下载
 tags:
 - Docker
 - 磁力链接
 title: 在Docker中使用qbittorrent进行下载
-updated: '2024-05-09T22:27:13+08:00'
+updated: 2024-05-09T22:27:13+08:00
 wp_id: 9356
 ---
 

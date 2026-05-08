@@ -6,7 +6,7 @@ categories:
 - HTTP2
 - 信息技术
 cover: ''
-date: '2024-04-25T00:22:37+08:00'
+date: 2024-04-25T00:22:37+08:00
 draft: false
 slug: openresty-对-http-3-的一次尝试
 tags:
@@ -19,7 +19,7 @@ tags:
 - nginx
 - openresty
 title: OpenResty 对 HTTP/3 的一次尝试
-updated: '2024-04-30T16:59:20+08:00'
+updated: 2024-04-30T16:59:20+08:00
 wp_id: 9149
 ---
 

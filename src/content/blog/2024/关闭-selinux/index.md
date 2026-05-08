@@ -3,14 +3,14 @@ categories:
 - Linux
 - 信息技术
 cover: ''
-date: '2024-05-10T12:20:34+08:00'
+date: 2024-05-10T12:20:34+08:00
 draft: false
 slug: 关闭-selinux
 tags:
 - Linux
 - SELinux
 title: 关闭 SELinux
-updated: '2024-09-18T11:18:44+08:00'
+updated: 2024-09-18T11:18:44+08:00
 wp_id: 9414
 ---
 

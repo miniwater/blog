@@ -3,7 +3,7 @@ categories:
 - Linux
 - 信息技术
 cover: ''
-date: '2024-05-09T22:33:39+08:00'
+date: 2024-05-09T22:33:39+08:00
 draft: false
 slug: oracle实例扩容硬盘
 tags:
@@ -11,7 +11,7 @@ tags:
 - Oracle
 - 扩容硬盘
 title: Oracle实例扩容硬盘
-updated: '2024-05-09T22:33:40+08:00'
+updated: 2024-05-09T22:33:40+08:00
 wp_id: 9364
 ---
 

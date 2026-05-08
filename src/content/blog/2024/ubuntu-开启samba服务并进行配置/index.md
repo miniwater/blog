@@ -4,7 +4,7 @@ categories:
 - Ubuntu
 - 信息技术
 cover: ''
-date: '2024-05-09T23:55:46+08:00'
+date: 2024-05-09T23:55:46+08:00
 draft: false
 slug: ubuntu-开启samba服务并进行配置
 tags:
@@ -12,7 +12,7 @@ tags:
 - samba
 - Ubuntu
 title: Ubuntu 开启samba服务并进行配置
-updated: '2024-05-09T23:55:46+08:00'
+updated: 2024-05-09T23:55:46+08:00
 wp_id: 9392
 ---
 

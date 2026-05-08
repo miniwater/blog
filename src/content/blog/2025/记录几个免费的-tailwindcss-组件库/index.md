@@ -4,7 +4,7 @@ categories:
 - HTML
 - 信息技术
 cover: ./flowbite.avif
-date: '2025-06-08T17:20:36+08:00'
+date: 2025-06-08T17:20:36+08:00
 draft: false
 slug: 记录几个免费的-tailwindcss-组件库
 tags:
@@ -15,7 +15,7 @@ tags:
 - 前端
 - 组件库
 title: 记录几个免费的 Tailwindcss 组件库
-updated: '2025-06-20T22:09:48+08:00'
+updated: 2025-06-20T22:09:48+08:00
 wp_id: 11289
 ---
 

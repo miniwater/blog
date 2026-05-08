@@ -4,7 +4,7 @@ categories:
 - Linux
 - 信息技术
 cover: ''
-date: '2024-05-09T22:30:49+08:00'
+date: 2024-05-09T22:30:49+08:00
 draft: false
 slug: winscp在debian12系统下无法使用密钥登陆的解决办法
 tags:
@@ -13,7 +13,7 @@ tags:
 - ssh
 - WinSCP
 title: WinSCP在Debian12系统下无法使用密钥登陆的解决办法
-updated: '2024-05-09T22:30:49+08:00'
+updated: 2024-05-09T22:30:49+08:00
 wp_id: 9360
 ---
 

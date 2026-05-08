@@ -4,7 +4,7 @@ categories:
 - WordPress
 - 信息技术
 cover: https://www.krjojo.com/wp-content/uploads/2024/03/加速banner-1.webp
-date: '2024-03-29T17:40:34+08:00'
+date: 2024-03-29T17:40:34+08:00
 draft: false
 slug: wordpress完全性能优化指南-wordpress网站加速
 tags:
@@ -16,7 +16,7 @@ tags:
 - 网站加速
 - 页面缓存
 title: Wordpress完全性能优化指南
-updated: '2026-01-20T18:08:07+08:00'
+updated: 2026-01-20T18:08:07+08:00
 wp_id: 8492
 ---
 

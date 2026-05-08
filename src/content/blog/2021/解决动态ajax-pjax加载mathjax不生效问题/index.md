@@ -3,12 +3,12 @@ categories:
 - HTML
 - 信息技术
 cover: ''
-date: '2021-01-26T20:46:36+08:00'
+date: 2021-01-26T20:46:36+08:00
 draft: false
 slug: 解决动态ajax-pjax加载mathjax不生效问题
 tags: []
 title: 解决动态ajax/pjax加载mathjax不生效问题
-updated: '2023-04-21T23:53:24+08:00'
+updated: 2023-04-21T23:53:24+08:00
 wp_id: 249
 ---
 

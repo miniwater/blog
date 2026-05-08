@@ -3,7 +3,7 @@ categories:
 - Linux
 - 信息技术
 cover: ''
-date: '2024-05-09T23:26:11+08:00'
+date: 2024-05-09T23:26:11+08:00
 draft: false
 slug: firewalld-常用操作
 tags:
@@ -11,7 +11,7 @@ tags:
 - Linux
 - 防火墙
 title: Firewalld 常用操作
-updated: '2024-05-09T23:26:12+08:00'
+updated: 2024-05-09T23:26:12+08:00
 wp_id: 9378
 ---
 

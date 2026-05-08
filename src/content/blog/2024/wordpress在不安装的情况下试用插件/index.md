@@ -4,7 +4,7 @@ categories:
 - WordPress
 - 信息技术
 cover: ''
-date: '2024-01-22T21:11:55+08:00'
+date: 2024-01-22T21:11:55+08:00
 draft: false
 slug: wordpress在不安装的情况下试用插件
 tags:
@@ -13,7 +13,7 @@ tags:
 - WordPress
 - 插件
 title: WordPress在不安装的情况下试用插件
-updated: '2024-01-23T11:09:24+08:00'
+updated: 2024-01-23T11:09:24+08:00
 wp_id: 1179
 ---
 

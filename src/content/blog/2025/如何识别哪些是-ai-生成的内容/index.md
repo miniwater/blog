@@ -4,7 +4,7 @@ categories:
 - LLM
 - 信息技术
 cover: ./ai.avif
-date: '2025-12-18T10:21:30+08:00'
+date: 2025-12-18T10:21:30+08:00
 draft: false
 slug: 如何识别哪些是-ai-生成的内容
 tags:
@@ -13,7 +13,7 @@ tags:
 - AI味
 - AI查重
 title: 如何识别哪些是 AI 生成的内容
-updated: '2025-12-24T13:20:59+08:00'
+updated: 2025-12-24T13:20:59+08:00
 wp_id: 12613
 ---
 

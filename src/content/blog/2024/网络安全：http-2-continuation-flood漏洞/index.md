@@ -3,7 +3,7 @@ categories:
 - 信息技术
 - 安全
 cover: ''
-date: '2024-04-09T13:45:24+08:00'
+date: 2024-04-09T13:45:24+08:00
 draft: false
 slug: 网络安全：http-2-continuation-flood漏洞
 tags:
@@ -13,7 +13,7 @@ tags:
 - 漏洞
 - 网络安全
 title: 网络安全：HTTP/2 CONTINUATION Flood漏洞
-updated: '2024-04-09T14:05:49+08:00'
+updated: 2024-04-09T14:05:49+08:00
 wp_id: 8588
 ---
 

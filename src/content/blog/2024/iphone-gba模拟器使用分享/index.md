@@ -3,7 +3,7 @@ categories:
 - GBA
 - 游戏
 cover: ''
-date: '2024-04-15T22:30:31+08:00'
+date: 2024-04-15T22:30:31+08:00
 draft: false
 slug: iphone-gba模拟器使用分享
 tags:
@@ -11,7 +11,7 @@ tags:
 - GBA
 - 模拟器
 title: iPhone GBA模拟器使用分享
-updated: '2024-04-15T22:30:31+08:00'
+updated: 2024-04-15T22:30:31+08:00
 wp_id: 9050
 ---
 
