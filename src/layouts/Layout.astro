@@ -7,11 +7,11 @@ import "../styles/global.css";
 import { Dashboard } from "@/components/Dashboard";
 import { Toaster } from "@/components/ui/sonner";
 
-const { title = config.title } = Astro.props;
-const displayTitle = title ? `${title} - ${config.title}` : config.title;
+const { title = "" } = Astro.props;
+const displayTitle = title ? `${title} - ${config.title}` : `${config.title} - ${config.description}`;
 
 const allPosts = await getCollection("blog");
-// 获取 blog 集合中的五篇文章
+
 const posts = allPosts
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, 5)
@@ -20,9 +20,9 @@ const posts = allPosts
     customSlug: post.id.split("/").pop(),
   }));
 const favoritePosts = posts.map((post) => ({
-  name: post.data.title, // 对应文章标题
-  url: new URL(post.customSlug || "", config.url), // 对应你扁平化后的 URL 路径
-  emoji: "", // 如果 Frontmatter 有 emoji 就用，没有就给个默认的
+  name: post.data.title, 
+  url: new URL(post.customSlug || "", config.url), 
+  emoji: "", 
 }));
 ---
 
