@@ -41,9 +41,6 @@ function getSummary(body: string, length = 60) {
 
 <Layout>
   <Section>
-    <CarouselDemo client:load />
-  </Section>
-  <Section>
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 lg:gap-y-10 gap-6">
       {
         posts.map((post) => (
@@ -89,5 +86,8 @@ function getSummary(body: string, length = 60) {
         <a href={new URL("/post", config.url).href}> 更多文章 </a>
       </Button>
     </div>
+  </Section>
+  <Section>
+    <CarouselDemo client:load />
   </Section>
 </Layout>
