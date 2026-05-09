@@ -43,8 +43,10 @@ const posts = page.data.map((post) => {
 ---
 
 <Layout>
-  <Section>
-    <h1>分类：{categoryName}</h1>
+  <Section class="space-y-6">
+    <h1 class="scroll-m-24 text-3xl font-semibold tracking-tight sm:text-3xl">
+      分类：{categoryName}
+    </h1>
     <PostList posts={posts} page={page} />
   </Section>
 </Layout>

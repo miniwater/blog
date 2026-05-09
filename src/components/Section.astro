@@ -1,5 +1,17 @@
+---
+interface Props {
+    // 接收外部传入的 class
+    class?: string;
+}
+
+const { class: className, ...rest } = Astro.props;
+---
+
 <section class="w-full overflow-hidden">
-    <div class="max-w-screen-xl px-4 py-10 lg:py-14 mx-auto">
+    <div
+        class:list={["max-w-screen-xl px-4 py-10 lg:py-14 mx-auto", className]}
+        {...rest}
+    >
         <slot />
     </div>
 </section>

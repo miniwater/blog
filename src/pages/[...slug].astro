@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
+import Section from "@/components/Section.astro";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
@@ -24,14 +25,15 @@ const { Content, headings } = await render(post);
 ---
 
 <Layout>
-  <div
-    class="mx-auto grid w-full max-w-2xl grid-cols-1 gap-10 xl:max-w-5xl xl:grid-cols-[minmax(0,1fr)_var(--container-2xs)]"
-  >
-    <div class="prose dark:prose-invert">
-      <h1>{post.data.title}</h1>
-      <Content />
-    </div>
-    <div>
+  <Section>
+    <div
+      class="mx-auto grid w-full max-w-2xl grid-cols-1 gap-10 xl:max-w-5xl xl:grid-cols-[minmax(0,1fr)_var(--container-2xs)]"
+    >
+      <div class="prose dark:prose-invert">
+        <h1>{post.data.title}</h1>
+        <Content />
+      </div>
+      <div>
         <div class="no-scrollbar flex flex-col gap-8 overflow-y-auto px-8">
           <div class="flex flex-col gap-2 p-4 pt-0 text-sm">
             <p
@@ -53,7 +55,7 @@ const { Content, headings } = await render(post);
             }
           </div>
         </div>
-
+      </div>
     </div>
-  </div>
+  </Section>
 </Layout>

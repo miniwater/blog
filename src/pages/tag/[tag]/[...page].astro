@@ -10,9 +10,7 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
   const allPosts = await getCollection("blog");
 
   // 1. 拿到所有标签
-  const tags = [
-    ...new Set(allPosts.flatMap((post) => post.data.tags ?? [])),
-  ];
+  const tags = [...new Set(allPosts.flatMap((post) => post.data.tags ?? []))];
   // 2. 针对每个标签进行分页
   return tags.flatMap((tag) => {
     // 过滤出当前标签的文章
@@ -43,8 +41,10 @@ const posts = page.data.map((post) => {
 ---
 
 <Layout>
-  <Section>
-    <h1>标签：{tagName}</h1>
+  <Section class="space-y-6">
+    <h1 class="scroll-m-24 text-3xl font-semibold tracking-tight sm:text-3xl">
+      标签：{tagName}
+    </h1>
     <PostList posts={posts} page={page} />
   </Section>
 </Layout>
