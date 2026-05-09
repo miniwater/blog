@@ -1,0 +1,25 @@
+---
+// src/components/FriendLinks.astro
+import { friends } from "@/content/friends";
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout>
+    <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {
+            friends.map((friend) => (
+                <li>
+                    <a
+                        href={friend.url}
+                        class="block p-4 border rounded-lg hover:bg-muted"
+                    >
+                        <div class="font-bold">{friend.name}</div>
+                        <div class="text-sm text-muted-foreground">
+                            {friend.description}
+                        </div>
+                    </a>
+                </li>
+            ))
+        }
+    </ul>
+</Layout>
