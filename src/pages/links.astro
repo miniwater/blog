@@ -15,6 +15,10 @@ import Section from "@/components/Section.astro";
               href={friend.url}
               class="block p-4 border rounded-lg hover:bg-muted"
             >
+              <img
+                src={friend.avatar}
+                alt={friend.name}
+                class="w-12 h-12 rounded-full mb-2">
               <div class="font-bold">{friend.name}</div>
               <div class="text-sm text-muted-foreground">
                 {friend.description}

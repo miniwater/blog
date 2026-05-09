@@ -6,10 +6,9 @@ import "../styles/global.css";
 import { CarouselDemo } from "@/components/index";
 import {
   Card,
-  // CardAction,
-  // CardContent,
+  CardContent,
   CardDescription,
-  // CardFooter,
+  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -17,6 +16,8 @@ import {
 import { Button } from "@/components/ui/button";
 import { config } from "@/config";
 import Section from "@/components/Section.astro";
+import { Badge } from "@/components/ui/badge";
+// import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 // 获取 blog 集合中的所有文章
 const allPosts = await getCollection("blog");
@@ -51,12 +52,12 @@ function getSummary(body: string, length = 100) {
 <Layout>
   <Section>
     <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
-      <h2
-        class="scroll-m-24 text-3xl font-semibold tracking-tight sm:text-3xl"
-      >
+      <h2 class="scroll-m-24 text-3xl font-semibold tracking-tight sm:text-3xl">
         最近文章
       </h2>
-      <p class="mt-1 text-[1.05rem] text-muted-foreground sm:text-base sm:text-balance">
+      <p
+        class="mt-1 text-[1.05rem] text-muted-foreground sm:text-base sm:text-balance"
+      >
         用文章的方式记录生活
       </p>
     </div>
@@ -112,5 +113,32 @@ function getSummary(body: string, length = 100) {
   </Section>
   <Section>
     <CarouselDemo client:load />
+  </Section>
+  <Section>
+    <Card className="w-full max-w-sm">
+      <CardHeader>
+        <CardTitle>
+          友情链接
+          <Badge variant="secondary">123</Badge>
+        </CardTitle>
+      </CardHeader>
+      <CardContent>
+        <div class="flex flex-wrap gap-2">
+          <!-- <Avatar>
+            <AvatarImage
+              src="https://github.com/shadcn.png"
+              alt="@shadcn"
+              className="grayscale"
+            />
+            <AvatarFallback>CN</AvatarFallback>
+          </Avatar> -->
+        </div>
+      </CardContent>
+      <CardFooter className="flex-col gap-2">
+        <a href="#" class="text-sm underline underline-offset-4"
+          >+ 810 contributors</a
+        >
+      </CardFooter>
+    </Card>
   </Section>
 </Layout>
