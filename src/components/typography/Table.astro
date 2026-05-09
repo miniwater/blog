@@ -1,0 +1,38 @@
+---
+interface Props {
+    headers: string[];
+    data: string[][]; // 二维数组
+    class?: string;
+}
+
+const { headers, data, class: className } = Astro.props;
+---
+
+<div class:list={["my-6 w-full overflow-y-auto", className]}>
+    <table class="w-full">
+        <thead>
+            <tr class="m-0 border-t p-0 even:bg-muted">
+                {
+                    headers.map((h) => (
+                        <th class="border px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right">
+                            {h}
+                        </th>
+                    ))
+                }
+            </tr>
+        </thead>
+        <tbody>
+            {
+                data.map((row) => (
+                    <tr class="m-0 border-t p-0 even:bg-muted">
+                        {row.map((cell) => (
+                            <td class="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
+                                {cell}
+                            </td>
+                        ))}
+                    </tr>
+                ))
+            }
+        </tbody>
+    </table>
+</div>
