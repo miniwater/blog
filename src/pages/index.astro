@@ -50,11 +50,21 @@ function getSummary(body: string, length = 100) {
 
 <Layout>
   <Section>
+    <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
+      <h2
+        class="scroll-m-24 text-3xl font-semibold tracking-tight sm:text-3xl"
+      >
+        最近文章
+      </h2>
+      <p class="mt-1 text-[1.05rem] text-muted-foreground sm:text-base sm:text-balance">
+        用文章的方式记录生活
+      </p>
+    </div>
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 lg:gap-y-10 gap-6">
       {
         posts.map((post) => (
           <Card className="relative mx-auto w-full max-w-sm pt-0">
-            <div class="absolute inset-0 z-30 aspect-video bg-black/35" />
+            <div class="absolute inset-0 z-30 aspect-video" />
             {/* ✅ 正确写法：必须使用 Image 组件 */}
             {post.data.cover ? (
               <Image
@@ -62,7 +72,7 @@ function getSummary(body: string, length = 100) {
                 alt={post.data.title}
                 width={800}
                 height={800}
-                class="relative z-20 aspect-video w-full object-cover brightness-60 grayscale dark:brightness-40"
+                class="relative z-20 aspect-video w-full object-cover"
               />
             ) : (
               <img
@@ -72,9 +82,6 @@ function getSummary(body: string, length = 100) {
               />
             )}
             <CardHeader>
-              {/* <CardAction>
-                <Badge variant="secondary">Featured</Badge>
-              </CardAction> */}
               <CardDescription>
                 {post.data.date.toLocaleDateString()}
               </CardDescription>
