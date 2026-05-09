@@ -1,7 +1,7 @@
 ---
 categories:
 - 公告
-cover: https://www.krjojo.com/wp-content/uploads/2024/04/小本本-1.webp
+cover: ./小本本-1.webp
 date: 2024-04-06T11:56:59+08:00
 draft: false
 slug: ddos记录

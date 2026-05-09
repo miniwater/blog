@@ -1,7 +1,7 @@
 ---
 categories:
 - 百度云盘
-cover: https://www.krjojo.com/wp-content/uploads/2024/03/效果图-1.webp
+cover: ./效果图-1.webp
 date: 2024-03-27T23:28:08+08:00
 draft: false
 slug: 一个技巧解决百度云盘下载慢的问题

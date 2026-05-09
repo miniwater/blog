@@ -3,7 +3,7 @@ categories:
 - AI
 - LLM
 - 信息技术
-cover: https://www.krjojo.com/wp-content/uploads/2025/12/权限.png
+cover: ./权限.webp
 date: 2025-12-04T20:08:40+08:00
 draft: false
 slug: 为-automate-自动化接入豆包ai-识别图形验证码

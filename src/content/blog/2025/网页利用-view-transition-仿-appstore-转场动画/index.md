@@ -3,7 +3,7 @@ categories:
 - css
 - HTML
 - 信息技术
-cover: https://www.krjojo.com/wp-content/uploads/2025/10/demo2.gif
+cover: ./demo2.gif
 date: 2025-10-21T11:26:45+08:00
 draft: false
 slug: 网页利用-view-transition-仿-appstore-转场动画

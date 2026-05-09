@@ -3,7 +3,7 @@ categories:
 - Agent
 - AI
 - 信息技术
-cover: https://www.krjojo.com/wp-content/uploads/2025/12/n8n.png
+cover: ./n8n.webp
 date: 2025-12-14T12:40:06+08:00
 draft: false
 slug: 关闭-n8n-的匿名遥测数据
