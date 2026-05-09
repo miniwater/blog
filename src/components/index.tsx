@@ -10,6 +10,22 @@ import {
 export function CarouselDemo() {
     return (
         <Carousel className="w-md">
+            <div className="flex items-center justify-between w-full gap-2 mb-4">
+                <div>
+                    <h2 className="text-2xl font-bold md:text-4xl md:leading-tight">人生是场冒险</h2>
+                    <p className="mt-1 text-gray-600 dark:text-neutral-400">请不要忘记旅途本身的意义</p>
+                </div>
+
+                {/* 按钮容器 */}
+                <div className="flex items-center gap-2">
+                    <CarouselPrevious
+                        className="static translate-y-0"
+                    />
+                    <CarouselNext
+                        className="static translate-y-0"
+                    />
+                </div>
+            </div>
             <CarouselContent>
                 {Array.from({ length: 5 }).map((_, index) => (
                     <CarouselItem key={index} className="basis-1/2 lg:basis-1/3">
@@ -23,8 +39,8 @@ export function CarouselDemo() {
                     </CarouselItem>
                 ))}
             </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
+            {/* <CarouselPrevious />
+            <CarouselNext className="" /> */}
         </Carousel>
     )
 }
