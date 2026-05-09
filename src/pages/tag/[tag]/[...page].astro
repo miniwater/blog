@@ -1,0 +1,50 @@
+---
+import Layout from "@/layouts/Layout.astro";
+// import { config } from "@/config";
+import { getCollection } from "astro:content";
+import Section from "@/components/Section.astro";
+import type { GetStaticPathsOptions } from "astro"; // 导入 Astro 内置类型
+import PostList from "@/components/PostList.astro";
+
+export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
+  const allPosts = await getCollection("blog");
+
+  // 1. 拿到所有标签
+  const tags = [
+    ...new Set(allPosts.flatMap((post) => post.data.tags ?? [])),
+  ];
+  // 2. 针对每个标签进行分页
+  return tags.flatMap((tag) => {
+    // 过滤出当前标签的文章
+    const filteredPosts = allPosts
+      .filter((post) => post.data.tags?.includes(tag))
+      .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+    const tagSlug = tag.toLowerCase().replace(/\s+/g, "-");
+
+    // 使用 paginate 返回分页数据
+    return paginate(filteredPosts, {
+      params: { tag: tagSlug }, // 对应文件夹 [tag]
+      props: { tagName: tag }, // 原始标签名传给页面显示
+      pageSize: 10,
+    });
+  });
+}
+
+const { page, tagName } = Astro.props;
+// const { tag } = Astro.params;
+const posts = page.data.map((post) => {
+  const slug = post.id.split("/").pop();
+  return {
+    ...post,
+    customSlug: slug,
+  };
+});
+---
+
+<Layout>
+  <Section>
+    <h1>标签：{tagName}</h1>
+    <PostList posts={posts} page={page} />
+  </Section>
+</Layout>
