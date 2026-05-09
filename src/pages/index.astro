@@ -6,14 +6,14 @@ import "../styles/global.css";
 import { CarouselDemo } from "@/components/index";
 import {
   Card,
-  CardAction,
+  // CardAction,
   // CardContent,
   CardDescription,
   // CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+// import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { config } from "@/config";
 import Section from "@/components/Section.astro";
@@ -33,8 +33,17 @@ const posts = allPosts
   });
 
 // 文章摘要
-function getSummary(body: string, length = 60) {
-  const cleanBody = body.replace(/[#*`]/g, "");
+function getSummary(body: string, length = 100) {
+  const cleanBody = body
+    // 1. 过滤图片: ![描述](链接)
+    .replace(/!\[.*?\]\(.*?\)/g, "")
+    // 2. 过滤常规链接，只保留文本内容: [文本](链接) -> 文本
+    .replace(/\[(.*?)\]\(.*?\)/g, "$1")
+    // 3. 过滤标题、粗体、斜体、删除线、行内代码
+    .replace(/[#*`~]/g, "")
+    // 4. 过滤多余的换行符和空格，让摘要更紧凑
+    .replace(/\s+/g, " ")
+    .trim();
   return cleanBody.slice(0, length) + (cleanBody.length > length ? "..." : "");
 }
 ---
@@ -63,14 +72,21 @@ function getSummary(body: string, length = 60) {
               />
             )}
             <CardHeader>
+              {/* <CardAction>
+                <Badge variant="secondary">Featured</Badge>
+              </CardAction> */}
               <CardDescription>
                 {post.data.date.toLocaleDateString()}
               </CardDescription>
-              <CardTitle>{post.data.title}</CardTitle>
-              <CardDescription>{getSummary(post.body ?? "")}</CardDescription>
-              <CardAction>
-                <Badge variant="secondary">Featured</Badge>
-              </CardAction>
+              <CardTitle>
+                <a href={new URL(post.customSlug || "", config.url)}>
+                  <span class="absolute inset-0" />
+                  {post.data.title}
+                </a>
+              </CardTitle>
+              <CardDescription className="line-clamp-3">
+                {getSummary(post.body ?? "")}
+              </CardDescription>
             </CardHeader>
             {/* <CardContent>1123</CardContent> */}
             {/* <CardFooter>

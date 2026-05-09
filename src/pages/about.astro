@@ -1,15 +1,17 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import { config } from "@/config";
-
+import Section from "@/components/Section.astro";
 ---
 
 <Layout>
-	{new URL("rss.xml", Astro.url)}
-	<br />
-	{Astro.url}
-	<br />
-	{config.url}
-	<br />
-	{Astro.url.pathname}
+  <Section>
+    {new URL("rss.xml", Astro.url)}
+    <br />
+    {Astro.url}
+    <br />
+    {config.url}
+    <br />
+    {Astro.url.pathname}
+  </Section>
 </Layout>

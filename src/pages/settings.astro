@@ -1,8 +1,11 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import { SettingsForm } from "@/components/settings-form";
+import Section from "@/components/Section.astro";
 ---
 
 <Layout title="设置">
-  <SettingsForm client:load />
+  <Section>
+    <SettingsForm client:load />
+  </Section>
 </Layout>

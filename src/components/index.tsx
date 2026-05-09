@@ -19,8 +19,8 @@ export function CarouselDemo() {
         <Carousel>
             <div className="flex items-center justify-between w-full gap-2 mb-4">
                 <div>
-                    <h2 className="text-2xl font-bold md:text-4xl md:leading-tight">人生是场冒险</h2>
-                    <p className="mt-1 text-gray-600 dark:text-neutral-400">请不要忘记旅途本身的意义</p>
+                    <h2 className="scroll-m-24 text-3xl font-semibold tracking-tight sm:text-3xl">人生是场冒险</h2>
+                    <p className="text-[1.05rem] text-muted-foreground sm:text-base sm:text-balance">请不要忘记旅途本身的意义</p>
                 </div>
 
                 {/* 按钮容器 */}
