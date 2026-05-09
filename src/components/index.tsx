@@ -8,8 +8,15 @@ import {
 } from "@/components/ui/carousel"
 
 export function CarouselDemo() {
+    const list = [
+        "https://www.krjojo.com/wp-content/uploads/2025/12/广州大道.avif",
+        "https://www.krjojo.com/wp-content/themes/krjojo/assets/images/glide/chongqing.avif",
+        "https://www.krjojo.com/wp-content/themes/krjojo/assets/images/glide/chengdu.avif",
+        "https://www.krjojo.com/wp-content/themes/krjojo/assets/images/glide/changsha.avif",
+        "https://www.krjojo.com/wp-content/themes/krjojo/assets/images/glide/tianhuan.avif"
+    ];
     return (
-        <Carousel className="w-md">
+        <Carousel>
             <div className="flex items-center justify-between w-full gap-2 mb-4">
                 <div>
                     <h2 className="text-2xl font-bold md:text-4xl md:leading-tight">人生是场冒险</h2>
@@ -27,13 +34,17 @@ export function CarouselDemo() {
                 </div>
             </div>
             <CarouselContent>
-                {Array.from({ length: 5 }).map((_, index) => (
+                {Array.from(list).map((src, index) => (
                     <CarouselItem key={index} className="basis-1/2 lg:basis-1/3">
                         <div className="p-1">
-                            <Card>
-                                <CardContent className="flex aspect-square items-center justify-center p-6 h-48">
-                                    <span className="text-4xl font-semibold">{index + 1}</span>
-                                </CardContent>
+                            <Card className="pb-0">
+                                <img
+                                    src={src}
+                                    className="rounded w-full aspect-square object-cover"
+                                    alt="chongqing"
+                                    loading="lazy"
+                                    decoding="async"
+                                />
                             </Card>
                         </div>
                     </CarouselItem>
