@@ -18,8 +18,9 @@ import {
   SidebarMenuButton,
   SidebarSeparator,
 } from "@/components/ui/sidebar"
-import { SearchIcon, BookIcon, HomeIcon, Settings2Icon, MapIcon, RssIcon, MessageCircleQuestionIcon } from "lucide-react"
+import { SearchIcon, BookIcon, HomeIcon, Settings2Icon, MapIcon, RssIcon, MessageCircleQuestionIcon, SquareTerminal, Bot, BookOpen, Settings2 } from "lucide-react"
 import { NavUser } from "./nav-user"
+import { url } from "astro:schema";
 
 // This is sample data.
 const data = {
@@ -81,6 +82,14 @@ const data = {
       ),
     },
     {
+      title: "友情链接",
+      url: new URL("/links/", config.url).href,
+      icon: (
+        <RssIcon
+        />
+      ),
+    },
+    {
       title: "关于我们",
       url: new URL("/about/", config.url).href,
       icon: (
@@ -92,44 +101,87 @@ const data = {
   favorites: [],
   workspaces: [
     {
-      name: "Personal Life Management",
-      emoji: "🏠",
-      pages: [
+      title: "Playground",
+      url: "#",
+      icon: SquareTerminal,
+      isActive: true,
+      items: [
         {
-          name: "Daily Journal & Reflection",
+          title: "History",
           url: "#",
-          emoji: "📔",
         },
         {
-          name: "Health & Wellness Tracker",
+          title: "Starred",
           url: "#",
-          emoji: "🍏",
         },
         {
-          name: "Personal Growth & Learning Goals",
+          title: "Settings",
           url: "#",
-          emoji: "🌟",
         },
       ],
     },
     {
-      name: "Professional Development",
-      emoji: "💼",
-      pages: [
+      title: "Models",
+      url: "#",
+      icon: Bot,
+      items: [
         {
-          name: "Career Objectives & Milestones",
+          title: "Genesis",
           url: "#",
-          emoji: "🎯",
         },
         {
-          name: "Skill Acquisition & Training Log",
+          title: "Explorer",
           url: "#",
-          emoji: "🧠",
         },
         {
-          name: "Networking Contacts & Events",
+          title: "Quantum",
           url: "#",
-          emoji: "🤝",
+        },
+      ],
+    },
+    {
+      title: "Documentation",
+      url: "#",
+      icon: BookOpen,
+      items: [
+        {
+          title: "Introduction",
+          url: "#",
+        },
+        {
+          title: "Get Started",
+          url: "#",
+        },
+        {
+          title: "Tutorials",
+          url: "#",
+        },
+        {
+          title: "Changelog",
+          url: "#",
+        },
+      ],
+    },
+    {
+      title: "Settings",
+      url: "#",
+      icon: Settings2,
+      items: [
+        {
+          title: "General",
+          url: "#",
+        },
+        {
+          title: "Team",
+          url: "#",
+        },
+        {
+          title: "Billing",
+          url: "#",
+        },
+        {
+          title: "Limits",
+          url: "#",
         },
       ],
     },
@@ -169,7 +221,7 @@ export function SidebarLeft({
     },
   ];
   return (
-    <Sidebar className="border-r-0" {...props}>
+    <Sidebar className="border-r-0"  {...props}>
       <SidebarHeader className="border-b border-sidebar-border">
         <SidebarMenu>
           <SidebarMenuItem>
@@ -191,7 +243,7 @@ export function SidebarLeft({
       </SidebarHeader>
       <SidebarContent>
         <NavFavorites favorites={favoritePosts} />
-        <NavWorkspaces workspaces={data.workspaces} />
+        <NavWorkspaces items={data.workspaces} />
         <NavSecondary items={data.navSecondary} className="mt-auto" />
       </SidebarContent>
       <SidebarRail />

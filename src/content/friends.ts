@@ -1,22 +1,25 @@
-// src/data/friends.ts
+import obaby from '@/assets/friends/obaby.avif';
+
 export interface Friend {
     name: string;
     url: string;
     description: string;
     avatar: string;
+    rss?: string;
 }
 
 export const friends: Friend[] = [
     {
-        name: "Astro 官网",
-        url: "https://astro.build",
-        description: "全栈式 Web 框架",
-        avatar: "https://astro.build/favicon.ico"
+        name: "liangbm3's blog",
+        url: "https://liangbm3.site/",
+        description: "总有人间一两风，填我十万八千梦。",
+        avatar: "https://liangbm3.site/avatar.png",
     },
     {
-        name: "Shadcn UI",
-        url: "https://ui.shadcn.com",
-        description: "精美的组件库",
-        avatar: "https://ui.shadcn.com/favicon.ico"
+        name: "Obaby",
+        url: "https://zhongxiaojie.com/",
+        description: "黑客程序媛 / 逆向工程师 / 人工智能学徒 / 用爱发电的独立开发者",
+        avatar: obaby.src,
+        rss: "https://zhongxiaojie.com/feed/",
     },
 ];
