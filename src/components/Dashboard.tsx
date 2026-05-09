@@ -75,12 +75,9 @@ export function Dashboard({ children, favoritePosts, url }: { children: React.Re
                             </NavigationMenu>
                         </div>
                     </header>
-                    <div className="flex flex-1 flex-col gap-4 p-4">
+                    {/* <div className="flex flex-1 flex-col"> */}
                         {children}
-                        {/* <div className="mx-auto w-full max-w-3xl rounded-xl" > */}
-
-                        {/* </div> */}
-                    </div>
+                    {/* </div> */}
                 </SidebarInset>
             </SidebarProvider>
         </TooltipProvider>

@@ -10,9 +10,9 @@ import {
 export function CarouselDemo() {
     return (
         <Carousel className="w-md">
-            <CarouselContent className="**:data-[slot=carousel-content]:overflow-visible">
+            <CarouselContent>
                 {Array.from({ length: 5 }).map((_, index) => (
-                    <CarouselItem key={index}  className="basis-1/2 lg:basis-1/3">
+                    <CarouselItem key={index} className="basis-1/2 lg:basis-1/3">
                         <div className="p-1">
                             <Card>
                                 <CardContent className="flex aspect-square items-center justify-center p-6 h-48">
