@@ -1,0 +1,61 @@
+---
+import { getCollection, render } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import Section from "@/components/Section.astro";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+
+  // 过滤出所有拥有有效 wp_id 的文章
+  return posts
+    .filter((post) => post.data.wp_id && post.data.wp_id > 0)
+    .map((post) => {
+      return {
+        // 参数名必须与文件名中的 [id] 一致
+        params: { id: post.data.wp_id.toString() },
+        props: { post },
+      };
+    });
+}
+
+const { post } = Astro.props;
+
+// 渲染文章内容
+const { Content, headings } = await render(post);
+---
+
+<Layout>
+  <Section>
+    <div
+      class="mx-auto grid w-full max-w-2xl grid-cols-1 gap-10 xl:max-w-5xl xl:grid-cols-[minmax(0,1fr)_var(--container-2xs)]"
+    >
+      <div class="prose dark:prose-invert">
+        <h1>{post.data.title}</h1>
+        <Content />
+      </div>
+      <div>
+        <div class="no-scrollbar flex flex-col gap-8 overflow-y-auto px-8">
+          <div class="flex flex-col gap-2 p-4 pt-0 text-sm">
+            <p
+              class="sticky top-0 h-6 bg-background text-xs font-medium text-muted-foreground"
+            >
+              本页内容
+            </p>
+            {
+              headings.map((heading) => (
+                <a
+                  href={`#${heading.slug}`}
+                  class="text-[0.8rem] text-muted-foreground no-underline transition-colors hover:text-foreground data-[active=true]:font-medium data-[active=true]:text-foreground data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+                  data-active="false"
+                  data-depth={heading.depth}
+                >
+                  {heading.text}
+                </a>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </Section>
+</Layout>

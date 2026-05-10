@@ -18,9 +18,8 @@ import {
   SidebarMenuButton,
   SidebarSeparator,
 } from "@/components/ui/sidebar"
-import { SearchIcon, BookIcon, HomeIcon, Settings2Icon, MapIcon, RssIcon, MessageCircleQuestionIcon, SquareTerminal, Bot, BookOpen, Settings2 } from "lucide-react"
+import { SearchIcon, BookIcon, HomeIcon, Settings2Icon, MapIcon, RssIcon, MessageCircleQuestionIcon, SquareTerminal, Bot, BookOpen, Settings2, UsersIcon } from "lucide-react"
 import { NavUser } from "./nav-user"
-import { url } from "astro:schema";
 
 // This is sample data.
 const data = {
@@ -39,21 +38,21 @@ const data = {
       ),
     },
     {
-      title: "Ask AI",
-      url: "#",
-      icon: (
-        <BookIcon
-        />
-      ),
-    },
-    {
       title: "主页",
       url: config.url,
       icon: (
         <HomeIcon
         />
       ),
-      isActive: false,
+      isActive: true,
+    },
+    {
+      title: "文档",
+      url: new URL("/docs/", config.url).href,
+      icon: (
+        <BookIcon
+        />
+      ),
     },
   ],
   navSecondary: [
@@ -85,7 +84,7 @@ const data = {
       title: "友情链接",
       url: new URL("/links/", config.url).href,
       icon: (
-        <RssIcon
+        <UsersIcon
         />
       ),
     },
@@ -192,33 +191,6 @@ export function SidebarLeft({
   favoritePosts,
   ...props
 }: React.ComponentProps<typeof Sidebar> & { favoritePosts: any[]; }) {
-  const navMain = [
-    {
-      title: "搜索",
-      url: new URL("/search/", config.url).href,
-      icon: (
-        <SearchIcon
-        />
-      ),
-    },
-    {
-      title: "主页",
-      url: config.url,
-      icon: (
-        <HomeIcon
-        />
-      ),
-      // isActive: config.url === url.href,
-    },
-    {
-      title: "文档",
-      url: new URL("/docs/", config.url).href,
-      icon: (
-        <BookIcon
-        />
-      ),
-    },
-  ];
   return (
     <Sidebar className="border-r-0"  {...props}>
       <SidebarHeader className="border-b border-sidebar-border">
@@ -238,7 +210,7 @@ export function SidebarLeft({
           </SidebarMenuItem>
         </SidebarMenu>
         <SidebarSeparator className="mx-0" />
-        <NavMain items={navMain} />
+        <NavMain items={data.navMain} />
       </SidebarHeader>
       <SidebarContent>
         <NavFavorites favorites={favoritePosts} />
