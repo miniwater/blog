@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_风记星辰LOGO" data-name="风记星辰LOGO" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: .7;
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        stroke-width: 0px;
+      }
+
+      .cls-5 {
+        opacity: .3;
+      }
+
+      .cls-3 {
+        fill: #ee4d50;
+      }
+
+      .cls-4 {
+        fill: #ff6900;
+      }
+    </style>
+  </defs>
+  <rect id="_背景" data-name="背景" class="cls-2" x="0" width="1000" height="1000" rx="200" ry="200"/>
+  <g>
+    <g id="_右圆" data-name="右圆" class="cls-5">
+      <path class="cls-4" d="M733.33,834h0c.16,0,0,0,0,0,0,0,266.67,0,266.67-167v-334c0-167-266.67-167-266.67-167s-.46,0,0,0h0c-183.8,0-333.33,149.54-333.33,334h0c0,184.46,149.54,334,333.33,334Z"/>
+    </g>
+    <g id="_左圆" data-name="左圆" class="cls-1">
+      <path class="cls-3" d="M0,333v334C0,834,266.67,834,266.67,834h0c183.94,0,333.33-150.02,333.33-334v-.88c0-183.98-149.39-333.12-333.33-333.12h0c-.12,0,0,0,0,0-62.5,0-266.67,0-266.67,167"/>
+    </g>
+  </g>
+</svg>
