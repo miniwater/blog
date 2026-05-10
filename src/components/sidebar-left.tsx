@@ -190,9 +190,8 @@ const data = {
 
 export function SidebarLeft({
   favoritePosts,
-  url,
   ...props
-}: React.ComponentProps<typeof Sidebar> & { favoritePosts: any[]; url: URL }) {
+}: React.ComponentProps<typeof Sidebar> & { favoritePosts: any[]; }) {
   const navMain = [
     {
       title: "搜索",
@@ -209,7 +208,7 @@ export function SidebarLeft({
         <HomeIcon
         />
       ),
-      isActive: config.url === url.href,
+      // isActive: config.url === url.href,
     },
     {
       title: "文档",

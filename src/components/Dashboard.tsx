@@ -22,11 +22,11 @@ import {
 } from "@/components/ui/navigation-menu"
 import { TooltipProvider } from "./ui/tooltip"
 
-export function Dashboard({ children, favoritePosts, url }: { children: React.ReactNode; favoritePosts: any[]; url: URL }) {
+export function Dashboard({ children, favoritePosts }: { children: React.ReactNode; favoritePosts: any[]; }) {
     return (
         <TooltipProvider delayDuration={0}> {/* 包裹在最外层 */}
             <SidebarProvider>
-                <SidebarLeft favoritePosts={favoritePosts} url={url} />
+                <SidebarLeft favoritePosts={favoritePosts} />
                 <SidebarInset>
                     <header className="sticky top-0 flex h-14 shrink-0 items-center gap-2 bg-background z-10">
                         <div className="flex flex-1 items-center gap-2 px-3">
@@ -76,7 +76,7 @@ export function Dashboard({ children, favoritePosts, url }: { children: React.Re
                         </div>
                     </header>
                     {/* <div className="flex flex-1 flex-col"> */}
-                        {children}
+                    {children}
                     {/* </div> */}
                 </SidebarInset>
             </SidebarProvider>

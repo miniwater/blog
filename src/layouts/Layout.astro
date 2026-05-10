@@ -34,7 +34,7 @@ const favoritePosts = posts.map((post) => ({
   </head>
   <body>
     <main>
-      <Dashboard client:load favoritePosts={favoritePosts} url={Astro.url}>
+      <Dashboard client:load favoritePosts={favoritePosts}>
         <div transition:animate="slide">
           <slot />
         </div>

@@ -9,9 +9,7 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
   const allPosts = await getCollection("blog");
 
   // 按照日期排序
-  allPosts.sort(
-    (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
-  );
+  allPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
   // 返回分页结果，pageSize 定义每页显示多少条
   return paginate(allPosts, { pageSize: 5 });
@@ -21,7 +19,7 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
 const { page } = Astro.props;
 
 const posts = page.data.map((post) => {
-  const slug = post.id.split("/").pop();
+  const slug = post.id.split("/").pop() ?? "";
   return {
     ...post,
     customSlug: slug,
@@ -31,7 +29,13 @@ const posts = page.data.map((post) => {
 
 <Layout>
   <Section>
-    <h1>文章列表</h1>
+    <h1
+      class="scroll-m-24 text-3xl font-semibold tracking-tight sm:text-3xl text-center"
+    >
+      文章列表
+    </h1>
+  </Section>
+  <Section>
     <PostList posts={posts} page={page} />
   </Section>
 </Layout>
