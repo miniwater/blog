@@ -11,10 +11,17 @@ import { ClientRouter } from "astro:transitions";
 <meta name="description" content={config.description} />
 <meta name="generator" content={Astro.generator} />
 
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<link rel="icon" href="/favicon.ico" />
+<link rel="icon" type="image/avif" href={new URL("/krjojo.avif", config.url)} />
+<link rel="icon" href={new URL("/favicon.ico", config.url)} />
 
 <!-- 网站分析 -->
+<script
+  defer
+  src="https://um.krjojo.com/recorder.js"
+  data-website-id="d9301199-8ae6-4eab-9dd8-21bc532eac03"
+  data-sample-rate="0.15"
+  data-mask-level="moderate"
+  data-max-duration="300000"></script>
 <!-- <script
   data-goatcounter="https://my-account.goatcounter.com/count"
   async

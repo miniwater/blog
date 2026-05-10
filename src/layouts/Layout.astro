@@ -21,7 +21,7 @@ const posts = allPosts
   }));
 const favoritePosts = posts.map((post) => ({
   name: post.data.title, 
-  url: new URL(post.customSlug || "", config.url), 
+  url: new URL(post.customSlug || "", config.url).href, 
   emoji: "", 
 }));
 ---
