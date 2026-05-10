@@ -18,7 +18,7 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
       .filter((post) => post.data.tags?.includes(tag))
       .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
-    const tagSlug = tag.toLowerCase().replace(/\s+/g, "-");
+    const tagSlug = tag.toLowerCase().replace(/:/g, "").replace(/\s+/g, "-");
 
     // 使用 paginate 返回分页数据
     return paginate(filteredPosts, {
@@ -32,7 +32,7 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
 const { page, tagName } = Astro.props;
 // const { tag } = Astro.params;
 const posts = page.data.map((post) => {
-  const slug = post.id.split("/").pop();
+  const slug = post.id.split("/").pop() ?? "";
   return {
     ...post,
     customSlug: slug,
