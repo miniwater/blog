@@ -61,3 +61,9 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 ```shell
 npx @astrojs/upgrade
 ```
+
+动态打包
+
+```shell
+npx astro build --site http://wblog.krjojo.com
+```
