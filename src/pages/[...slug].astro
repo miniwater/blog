@@ -71,13 +71,13 @@ const { Content, headings } = await render(post);
       </article>
       <aside class="hidden xl:block">
         <div class="sticky top-24 self-start">
-          <nav class="no-scrollbar flex flex-col gap-8 overflow-y-auto px-8">
-            <div class="flex flex-col gap-2 p-4 pt-0 text-sm">
-              <p
-                class="sticky top-0 h-6 bg-background text-xs font-medium text-muted-foreground"
-              >
-                本页内容
-              </p>
+          <nav class="flex flex-col gap-4 border-l pl-4">
+            <p
+              class="text-xs font-bold uppercase tracking-widest text-muted-foreground/70"
+            >
+              本页内容
+            </p>
+            <div class="flex flex-col gap-3">
               {
                 headings.map((heading) => (
                   <a
