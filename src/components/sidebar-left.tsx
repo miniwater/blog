@@ -31,7 +31,7 @@ const data = {
   navMain: [
     {
       title: "搜索",
-      url: new URL("/search/", config.url).href,
+      url: new URL("search/", config.url).href,
       icon: (
         <SearchIcon
         />
@@ -48,7 +48,7 @@ const data = {
     },
     {
       title: "文档",
-      url: new URL("/docs/", config.url).href,
+      url: new URL("docs/", config.url).href,
       icon: (
         <BookIcon
         />
@@ -58,7 +58,7 @@ const data = {
   navSecondary: [
     {
       title: "设置",
-      url: new URL("/settings/", config.url).href,
+      url: new URL("settings/", config.url).href,
       icon: (
         <Settings2Icon
         />
@@ -66,7 +66,7 @@ const data = {
     },
     {
       title: "网站地图",
-      url: new URL("/sitemap-index.xml", config.url).href,
+      url: new URL("sitemap-index.xml", config.url).href,
       icon: (
         <MapIcon
         />
@@ -74,7 +74,7 @@ const data = {
     },
     {
       title: "RSS订阅",
-      url: new URL("/feed.xml", config.url).href,
+      url: new URL("feed.xml", config.url).href,
       icon: (
         <RssIcon
         />
@@ -82,7 +82,7 @@ const data = {
     },
     {
       title: "友情链接",
-      url: new URL("/links/", config.url).href,
+      url: new URL("links/", config.url).href,
       icon: (
         <UsersIcon
         />
@@ -90,7 +90,7 @@ const data = {
     },
     {
       title: "关于我们",
-      url: new URL("/about/", config.url).href,
+      url: new URL("about/", config.url).href,
       icon: (
         <MessageCircleQuestionIcon
         />

@@ -36,7 +36,7 @@ export function NavFavorites({
         ))}
         <SidebarMenuItem>
           <SidebarMenuButton className="text-sidebar-foreground/70" asChild>
-            <a href={new URL("/post", config.url).href} title="更多文章">
+            <a href={new URL("post", config.url).href} title="更多文章">
               <span>
                 <MoreHorizontalIcon />
               </span>
