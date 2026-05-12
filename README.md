@@ -53,6 +53,8 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 - Tailwind CSS
   - [typography](https://github.com/tailwindlabs/tailwindcss-typography)
 - [Shadcn-ui](https://ui.shadcn.com/)
+- [Pagefind](https://pagefind.app/)
+  - [astro-pagefind](https://github.com/shishkin/astro-pagefind)
 
 图标：<https://lucide.dev/>
 

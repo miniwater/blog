@@ -11,11 +11,18 @@ import { ClientRouter } from "astro:transitions";
 <meta name="description" content={config.description} />
 <meta name="generator" content={Astro.generator} />
 
-<link rel="icon" type="image/avif" href={new URL("krjojo.avif", config.url).href} />
+<link
+  rel="icon"
+  type="image/avif"
+  href={new URL("krjojo.avif", config.url).href}
+/>
 <link rel="icon" href={new URL("favicon.ico", config.url).href} />
 
 <!-- 网站分析 -->
-<script defer src="https://um.krjojo.com/script.js" data-website-id="d9301199-8ae6-4eab-9dd8-21bc532eac03"></script>
+<script
+  defer
+  src="https://um.krjojo.com/script.js"
+  data-website-id="d9301199-8ae6-4eab-9dd8-21bc532eac03"></script>
 <script
   defer
   src="https://um.krjojo.com/recorder.js"
@@ -31,7 +38,7 @@ import { ClientRouter } from "astro:transitions";
 <!-- 开放图谱标签 -->
 <meta property="og:title" content={config.title} />
 <meta property="og:type" content="website" />
-<meta property="og:url" content={Astro.site} />
+<meta property="og:url" content={new URL(config.url).href} />
 <meta property="og:description" content={config.description} />
 <meta property="og:image" content={config.avatar.src} />
 <meta property="og:image:alt" content="" />
@@ -41,6 +48,15 @@ import { ClientRouter } from "astro:transitions";
   rel="alternate"
   type="application/rss+xml"
   title=`${config.title} RSS Feed`
-  href={new URL("feed.xml", Astro.url)}
+  href={new URL("feed.xml", config.url).href}
 />
-<link rel="sitemap" href={new URL("sitemap-index.xml", Astro.url)} />
+<link rel="sitemap" href={new URL("sitemap-index.xml", config.url).href} />
+
+<!-- 搜索 -->
+<link
+  href={new URL("pagefind/pagefind-component-ui.css", config.url).href}
+  rel="stylesheet"
+/>
+<script
+  src={new URL("pagefind/pagefind-component-ui.js", config.url).href}
+  type="module"></script>

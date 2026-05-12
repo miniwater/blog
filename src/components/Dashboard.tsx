@@ -74,6 +74,8 @@ export function Dashboard({ children, favoritePosts }: { children: React.ReactNo
                                 </NavigationMenuList>
                             </NavigationMenu>
                         </div>
+                        <pagefind-modal-trigger></pagefind-modal-trigger>
+                        <pagefind-modal></pagefind-modal>
                     </header>
                     {/* <div className="flex flex-1 flex-col"> */}
                     {children}
