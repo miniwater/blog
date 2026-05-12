@@ -2,6 +2,8 @@
 import { getCollection, render } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
 import Section from "@/components/Section.astro";
+import { Badge } from "@/components/ui/badge";
+import { config } from "@/config";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
@@ -31,7 +33,41 @@ const { Content, headings } = await render(post);
     >
       <div class="prose dark:prose-invert">
         <h1>{post.data.title}</h1>
+        <div class="flex w-full flex-wrap gap-2">
+          {
+            post.data.categories.map((category) => {
+              const categorySlug = category.toLowerCase().replace(/\s+/g, "-");
+              return (
+                <Badge key={category}>
+                  <a
+                    class="no-underline"
+                    href={new URL(`category/${categorySlug}`, config.url)}
+                  >
+                    {category}
+                  </a>
+                </Badge>
+              );
+            })
+          }
+        </div>
         <Content />
+        <div class="flex w-full flex-wrap gap-2">
+          {
+            post.data.tags.map((tag) => {
+              const tagSlug = tag.toLowerCase().replace(/\s+/g, "-");
+              return (
+                <Badge variant="secondary">
+                  <a
+                    class="no-underline"
+                    href={new URL(`tag/${tagSlug}`, config.url)}
+                  >
+                    {tag}
+                  </a>
+                </Badge>
+              );
+            })
+          }
+        </div>
       </div>
       <div>
         <div class="no-scrollbar flex flex-col gap-8 overflow-y-auto px-8">
