@@ -1,4 +1,10 @@
-<script is:inline>
+---
+import { config } from "@/config";
+
+const pagefindUrl = new URL("pagefind/pagefind.js", config.url).href;
+---
+
+<script is:inline define:vars={{ pagefindUrl }}>
   function applySiteSettings() {
     // 1. 定义所有的设置项及其逻辑
     const settings = [
@@ -91,9 +97,10 @@
     applySiteSettings();
   });
 
+  // 搜索
   async function initPagefind() {
     try {
-      const pagefind = await import("/pagefind/pagefind.js");
+      const pagefind = await import(pagefindUrl);
       await pagefind.init();
       window.pagefind = pagefind; // 挂载到全局
     } catch (e) {
