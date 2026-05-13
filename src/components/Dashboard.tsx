@@ -162,8 +162,8 @@ export function Dashboard({ children, favoritePosts, title }: { children: React.
                                             </CommandGroup>
                                         )}
                                         <CommandGroup heading="建议">
-                                            <CommandItem>Calendar</CommandItem>
-                                            <CommandItem>Search Emoji</CommandItem>
+                                            <CommandItem>文章列表</CommandItem>
+                                            <CommandItem>文档</CommandItem>
                                             <CommandItem>Calculator</CommandItem>
                                         </CommandGroup>
                                     </CommandList>
