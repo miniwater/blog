@@ -2,7 +2,6 @@
 import Layout from "@/layouts/Layout.astro";
 import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
-import "../styles/global.css";
 import { CarouselDemo } from "@/components/index";
 import {
   Card,
@@ -12,13 +11,11 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-// import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { config } from "@/config";
 import Section from "@/components/Section.astro";
 import { Badge } from "@/components/ui/badge";
-// import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-// import { friends } from "@/content/friends";
+
 
 // 获取 blog 集合中的所有文章
 const allPosts = await getCollection("blog");

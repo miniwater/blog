@@ -1,3 +1,5 @@
+
+import React, { useState, useEffect } from "react";
 import { SidebarLeft } from "@/components/sidebar-left"
 import {
     Breadcrumb,
@@ -21,8 +23,59 @@ import {
     navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import { TooltipProvider } from "./ui/tooltip"
+import { Button } from "@/components/ui/button"
+import {
+    Command,
+    CommandDialog,
+    CommandEmpty,
+    CommandGroup,
+    CommandInput,
+    CommandItem,
+    CommandList,
+} from "@/components/ui/command"
+import { Kbd, KbdGroup } from "@/components/ui/kbd"
+import { SearchIcon } from "lucide-react"
 
-export function Dashboard({ children, favoritePosts }: { children: React.ReactNode; favoritePosts: any[]; }) {
+export function Dashboard({ children, favoritePosts, title }: { children: React.ReactNode; favoritePosts: any[]; title?: string; }) {
+    const [open, setOpen] = useState(false);
+    const [query, setQuery] = useState("");
+    const [results, setResults] = useState<any[]>([]);
+
+    // 1. 监听搜索输入
+    useEffect(() => {
+        const searchPage = async () => {
+            if (query.trim() === "") {
+                setResults([]);
+                return;
+            }
+
+            try {
+                // 动态导入构建后的 pagefind
+                // 注意：如果你用了 astro-pagefind 插件，这个路径通常是自动工作的
+                // const pagefind = await import(/* @vite-ignore */"/pagefind/pagefind.js" as any);
+                const customWindow = window as any;
+
+                if (customWindow.pagefind) {
+                    // 执行搜索
+                    const search = await customWindow.pagefind.search(query);
+                    // ...
+                    // 获取前 5 条结果的数据内容
+                    const dataResults = await Promise.all(
+                        search.results.slice(0, 5).map((r: any) => r.data())
+                    );
+                    setResults(dataResults);
+
+                }
+
+
+            } catch (e) {
+                console.error("Pagefind search error:", e);
+            }
+        };
+
+        const debounceTimer = setTimeout(searchPage, 200); // 防抖，避免频繁触发
+        return () => clearTimeout(debounceTimer);
+    }, [query]);
     return (
         <TooltipProvider delayDuration={0}> {/* 包裹在最外层 */}
             <SidebarProvider>
@@ -39,7 +92,7 @@ export function Dashboard({ children, favoritePosts }: { children: React.ReactNo
                                 <BreadcrumbList>
                                     <BreadcrumbItem>
                                         <BreadcrumbPage className="line-clamp-1">
-                                            Project Management & Task Tracking
+                                            {title}
                                         </BreadcrumbPage>
                                     </BreadcrumbItem>
                                 </BreadcrumbList>
@@ -74,8 +127,53 @@ export function Dashboard({ children, favoritePosts }: { children: React.ReactNo
                                 </NavigationMenuList>
                             </NavigationMenu>
                         </div>
-                        <pagefind-modal-trigger></pagefind-modal-trigger>
-                        <pagefind-modal></pagefind-modal>
+                        <div className="flex flex-1 items-center justify-center">
+                            <Button onClick={() => setOpen(true)} variant="outline" className="w-full flex items-center justify-between px-3">
+                                <SearchIcon />
+                                {title}
+                                <KbdGroup>
+                                    <Kbd>Ctrl + K</Kbd>
+                                </KbdGroup>
+                            </Button>
+                            <CommandDialog open={open} onOpenChange={setOpen}>
+                                <Command shouldFilter={false}>
+                                    <CommandInput placeholder="搜索文章" value={query} onValueChange={setQuery} />
+                                    <CommandList>
+                                        {query && results.length === 0 && <CommandEmpty>没有找到相关文章。</CommandEmpty>}
+                                        {/* <CommandEmpty>没有找到结果。</CommandEmpty> */}
+                                        {results.length > 0 && (
+                                            <CommandGroup heading="文章结果">
+                                                {results.map((result) => (
+                                                    <CommandItem
+                                                        key={result.url}
+                                                        onSelect={() => window.location.href = result.url}
+                                                        className="cursor-pointer"
+                                                    >
+                                                        <div className="flex flex-col gap-1">
+                                                            <div className="font-medium">{result.meta.title}</div>
+                                                            {/* 渲染搜索摘要，dangerouslySetInnerHTML 用于显示 Pagefind 的高亮标签 */}
+                                                            <div
+                                                                className="text-xs text-muted-foreground line-clamp-1"
+                                                                dangerouslySetInnerHTML={{ __html: result.excerpt }}
+                                                            />
+                                                        </div>
+                                                    </CommandItem>
+                                                ))}
+                                            </CommandGroup>
+                                        )}
+                                        <CommandGroup heading="建议">
+                                            <CommandItem>Calendar</CommandItem>
+                                            <CommandItem>Search Emoji</CommandItem>
+                                            <CommandItem>Calculator</CommandItem>
+                                        </CommandGroup>
+                                    </CommandList>
+                                </Command>
+                            </CommandDialog>
+                        </div>
+                        <div className="flex flex-1 items-center justify-end gap-2">
+                            {/* 这里放社交图标、主题切换按钮等 */}
+                            <div className="h-6 w-6 bg-muted rounded-full" /> {/* 示例占位 */}
+                        </div>
                     </header>
                     {/* <div className="flex flex-1 flex-col"> */}
                     {children}

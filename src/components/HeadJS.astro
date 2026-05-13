@@ -90,4 +90,15 @@
     // 这里建议重新运行 applySiteSettings 或者保留你原有的 find 逻辑
     applySiteSettings();
   });
+
+  async function initPagefind() {
+    try {
+      const pagefind = await import("/pagefind/pagefind.js");
+      await pagefind.init();
+      window.pagefind = pagefind; // 挂载到全局
+    } catch (e) {
+      console.log("Pagefind not found, which is normal in dev mode.");
+    }
+  }
+  initPagefind();
 </script>

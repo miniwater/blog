@@ -34,7 +34,7 @@ const favoritePosts = posts.map((post) => ({
   </head>
   <body>
     <main>
-      <Dashboard client:load favoritePosts={favoritePosts}>
+      <Dashboard client:load favoritePosts={favoritePosts} title={title}>
         <div transition:animate="slide">
           <slot />
         </div>
