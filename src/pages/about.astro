@@ -2,6 +2,7 @@
 import Layout from "@/layouts/Layout.astro";
 import { config } from "@/config";
 import Section from "@/components/Section.astro";
+import { Content, frontmatter } from "@/content/about.md";
 ---
 
 <Layout title="关于我">
@@ -29,6 +30,14 @@ import Section from "@/components/Section.astro";
       <p class="text-secondary-foreground">text-secondary-foreground</p>
       <p class="text-destructive">text-destructive</p>
       <p class="text-accent-foreground">text-accent-foreground</p>
+    </div>
+  </Section>
+  <Section>
+    <h1>{frontmatter.title}</h1>
+
+    <!-- 渲染 Markdown 的 HTML 内容 -->
+     <div class="prose dark:prose-invert">
+      <Content />
     </div>
   </Section>
 </Layout>

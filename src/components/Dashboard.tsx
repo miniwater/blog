@@ -94,7 +94,7 @@ export function Dashboard({ children, favoritePosts, title }: { children: React.
                             <SidebarTrigger />
                             <Separator
                                 orientation="vertical"
-                                className="mr-2 data-[orientation=vertical]:h-4"
+                                className="mr-2"
                             />
                             <NavigationMenu className="hidden lg:flex">
                                 <NavigationMenuList>
@@ -135,7 +135,7 @@ export function Dashboard({ children, favoritePosts, title }: { children: React.
                                     <ArrowRightIcon />
                                 </Button>
                             </ButtonGroup>
-                            <Button onClick={() => setOpen(true)} variant="outline" className="flex flex-1 items-center justify-between px-3 text-muted-foreground">
+                            <Button onClick={() => setOpen(true)} variant="outline" className="flex flex-1 items-center justify-between text-muted-foreground">
                                 <SearchIcon />
                                 {title || "搜索文章"}
                                 <KbdGroup>
@@ -178,11 +178,13 @@ export function Dashboard({ children, favoritePosts, title }: { children: React.
                                 </Command>
                             </CommandDialog>
                         </div>
-                        <div className="hidden lg:flex items-center justify-end gap-2">
-                            <ButtonGroup>
-                                <Button variant="outline">Archive</Button>
-                                <Button variant="outline">Report</Button>
-                            </ButtonGroup>
+                        <div>
+                            <div className="hidden lg:flex items-center justify-end gap-2">
+                                <ButtonGroup>
+                                    <Button variant="outline">Archive</Button>
+                                    <Button variant="outline">Report</Button>
+                                </ButtonGroup>
+                            </div>
                         </div>
                     </header>
                     {/* <div className="flex flex-1 flex-col"> */}
