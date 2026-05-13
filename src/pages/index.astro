@@ -15,7 +15,7 @@ import { Button } from "@/components/ui/button";
 import { config } from "@/config";
 import Section from "@/components/Section.astro";
 import { Badge } from "@/components/ui/badge";
-
+import { friends } from "@/content/friends";
 
 // 获取 blog 集合中的所有文章
 const allPosts = await getCollection("blog");
@@ -45,6 +45,8 @@ function getSummary(body: string, length = 100) {
     .trim();
   return cleanBody.slice(0, length) + (cleanBody.length > length ? "..." : "");
 }
+
+const friendCount = Object.keys(friends).length;
 ---
 
 <Layout>
@@ -115,7 +117,7 @@ function getSummary(body: string, length = 100) {
       <CardHeader>
         <CardTitle>
           友情链接
-          <Badge variant="secondary">123</Badge>
+          <Badge variant="secondary">{friendCount}</Badge>
         </CardTitle>
       </CardHeader>
       <CardContent>
@@ -132,7 +134,7 @@ function getSummary(body: string, length = 100) {
       </CardContent>
       <CardFooter className="flex-col gap-2">
         <a href="#" class="text-sm underline underline-offset-4"
-          >+ 810 contributors</a
+          >+ {friendCount} contributors</a
         >
       </CardFooter>
     </Card>

@@ -4,6 +4,7 @@ import { glob } from "astro/loaders";
 import { defineCollection } from "astro:content";
 // 导入 Zod
 import { z } from "astro/zod";
+
 // 为每个集合定义一个 `loader` 和 `schema`
 const blog = defineCollection({
   // 这里的 loader 会递归查找该路径下所有的 md/mdx 文件
@@ -26,5 +27,10 @@ const blog = defineCollection({
     wp_id: z.number().optional().default(0),
   }),
 });
+
+const docs = defineCollection({
+  // 这里的 loader 会递归查找该路径下所有的 md/mdx 文件
+  loader: glob({ pattern: '**/[^_]*.{md,mdx}', base: "./src/content/docs/" }),
+});
 // 导出一个单独的 `collections` 对象用以注册你的集合（们）
-export const collections = { blog };
+export const collections = { blog, docs };

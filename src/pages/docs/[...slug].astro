@@ -1,0 +1,56 @@
+---
+import { getCollection, render } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import Section from "@/components/Section.astro";
+
+export async function getStaticPaths() {
+  const allDocs = await getCollection("docs");
+
+  return allDocs.map((entry) => {
+    const path = entry.id; // 例如: "运维/Linux"
+    const parts = path.split("/");
+
+    // 1. 确保 fileName 至少是一个空字符串，避免 undefined
+    const fileName = parts.length > 0 ? parts[parts.length - 1] : "";
+    const folderName = parts.length >= 2 ? parts[parts.length - 2] : "";
+
+    let finalSlug = path;
+
+    // 2. 只有当 fileName 存在且有效时才进行逻辑判断
+    if (fileName) {
+      const isIndexFile = fileName.toLowerCase() === "index";
+      const isSameAsFolder =
+        folderName && fileName.toLowerCase() === folderName.toLowerCase();
+
+      if (isIndexFile || isSameAsFolder) {
+        // 缩短路径：将 "运维/运维" 或 "运维/index" 变为 "运维"
+        finalSlug = parts.slice(0, -1).join("/");
+      }
+    }
+
+    // 3. 处理根目录 index 的特殊情况 (params.slug 为 undefined 匹配根路径)
+    const slugParam =
+      finalSlug === "" || finalSlug === "index" ? undefined : finalSlug;
+
+    return {
+      params: { slug: slugParam },
+      props: { entry },
+    };
+  });
+}
+
+const { entry } = Astro.props;
+// 使用 render 函数渲染内容
+const { Content } = await render(entry);
+
+// 提取文件名作为标题
+const displayTitle = entry.id.split("/").pop();
+---
+
+<Layout title={displayTitle}>
+  <Section>
+    <div class="prose dark:prose-invert">
+      <Content />
+    </div>
+  </Section>
+</Layout>
