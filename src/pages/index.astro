@@ -97,10 +97,6 @@ function getSummary(body: string, length = 100) {
                 {getSummary(post.body ?? "")}
               </CardDescription>
             </CardHeader>
-            {/* <CardContent>1123</CardContent> */}
-            {/* <CardFooter>
-              <Button className="w-full">View Event</Button>
-            </CardFooter> */}
           </Card>
         ))
       }
@@ -112,9 +108,11 @@ function getSummary(body: string, length = 100) {
       </Button>
     </div>
   </Section>
-  <Section>
-    <CarouselDemo client:load />
-  </Section>
+  <section class="w-full overflow-hidden">
+    <div class="max-w-screen-xl px-4 py-10 lg:py-14 mx-auto">
+      <CarouselDemo client:load />
+    </div>
+  </section>
   <Section>
     <Card className="w-full max-w-sm">
       <CardHeader>

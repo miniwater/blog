@@ -1,23 +1,41 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { friends } from "@/content/friends";
-
+import {
+    Item,
+    ItemActions,
+    ItemContent,
+    ItemDescription,
+    ItemGroup,
+    ItemMedia,
+    ItemTitle,
+} from "@/components/ui/item"
+import { Button } from "@/components/ui/button"
+import { SquareArrowOutUpRightIcon } from "lucide-react"
 
 export function FriendLinks() {
     return (
-        friends.map((friend) => (
-            < Card className="hover:shadow-md transition-shadow" >
-                <CardHeader className="flex flex-row items-center gap-4 space-y-0">
-                    <Avatar className="h-12 w-12">
-                        <AvatarImage src={friend.avatar} alt={friend.name} />
-                        <AvatarFallback>{friend.name[0]}</AvatarFallback>
-                    </Avatar>
-                    <div className="flex flex-col">
-                        <CardTitle className="text-lg">{friend.name}</CardTitle>
-                        <CardDescription className="line-clamp-1">{friend.description}{friend.avatar}</CardDescription>
-                    </div>
-                </CardHeader>
-            </Card >
-        ))
+        <ItemGroup className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {friends.map((friend, index) => (
+                <Item key={friend.name} variant="outline">
+                    <ItemMedia>
+                        <Avatar>
+                            <AvatarImage src={friend.avatar.src} />
+                            <AvatarFallback>{friend.name.charAt(0)}</AvatarFallback>
+                        </Avatar>
+                    </ItemMedia>
+                    <ItemContent className="gap-1">
+                        <ItemTitle>{friend.name}</ItemTitle>
+                        <ItemDescription>{friend.description}</ItemDescription>
+                    </ItemContent>
+                    <ItemActions>
+                        <Button variant="ghost" size="icon" className="rounded-full">
+                            <a href={friend.url} target="_blank" rel="noopener noreferrer">
+                                <SquareArrowOutUpRightIcon />
+                            </a>
+                        </Button>
+                    </ItemActions>
+                </Item>
+            ))}
+        </ItemGroup>
     )
 }
