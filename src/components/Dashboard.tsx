@@ -1,12 +1,6 @@
 
 import React, { useState, useEffect } from "react";
 import { SidebarLeft } from "@/components/sidebar-left"
-import {
-    Breadcrumb,
-    BreadcrumbItem,
-    BreadcrumbList,
-    BreadcrumbPage,
-} from "@/components/ui/breadcrumb"
 import { Separator } from "@/components/ui/separator"
 import {
     SidebarInset,
@@ -95,23 +89,14 @@ export function Dashboard({ children, favoritePosts, title }: { children: React.
             <SidebarProvider>
                 <SidebarLeft favoritePosts={favoritePosts} />
                 <SidebarInset>
-                    <header className="sticky top-0 flex h-14 shrink-0 items-center gap-2 bg-background z-10">
-                        <div className="flex flex-1 items-center gap-2 px-3">
+                    <header className="sticky top-0 flex h-14 shrink-0 items-center justify-between gap-2 bg-background z-10 border-b px-4">
+                        <div className="flex items-center gap-2">
                             <SidebarTrigger />
                             <Separator
                                 orientation="vertical"
                                 className="mr-2 data-[orientation=vertical]:h-4"
                             />
-                            {/* <Breadcrumb>
-                                <BreadcrumbList>
-                                    <BreadcrumbItem>
-                                        <BreadcrumbPage className="line-clamp-1">
-                                            {title}
-                                        </BreadcrumbPage>
-                                    </BreadcrumbItem>
-                                </BreadcrumbList>
-                            </Breadcrumb> */}
-                            <NavigationMenu>
+                            <NavigationMenu className="hidden lg:flex">
                                 <NavigationMenuList>
                                     <NavigationMenuItem>
                                         <NavigationMenuTrigger>足迹</NavigationMenuTrigger>
@@ -141,14 +126,16 @@ export function Dashboard({ children, favoritePosts, title }: { children: React.
                                 </NavigationMenuList>
                             </NavigationMenu>
                         </div>
-                        <div className="flex flex-1 items-center justify-center gap-2">
-                            <Button variant="outline" size="icon" aria-label="Go Back">
-                                <ArrowLeftIcon />
-                            </Button>
-                            <Button variant="outline" size="icon" aria-label="Go Forward">
-                                <ArrowRightIcon />
-                            </Button>
-                            <Button onClick={() => setOpen(true)} variant="outline" className="w-full flex items-center justify-between px-3 text-muted-foreground">
+                        <div className="flex flex-1 max-w-md items-center justify-center gap-2">
+                            <ButtonGroup>
+                                <Button variant="ghost" size="icon" aria-label="Go Back">
+                                    <ArrowLeftIcon />
+                                </Button>
+                                <Button variant="ghost" size="icon" aria-label="Go Forward">
+                                    <ArrowRightIcon />
+                                </Button>
+                            </ButtonGroup>
+                            <Button onClick={() => setOpen(true)} variant="outline" className="flex flex-1 items-center justify-between px-3 text-muted-foreground">
                                 <SearchIcon />
                                 {title || "搜索文章"}
                                 <KbdGroup>
@@ -191,7 +178,7 @@ export function Dashboard({ children, favoritePosts, title }: { children: React.
                                 </Command>
                             </CommandDialog>
                         </div>
-                        <div className="flex flex-1 items-center justify-end gap-2 px-3">
+                        <div className="hidden lg:flex items-center justify-end gap-2">
                             <ButtonGroup>
                                 <Button variant="outline">Archive</Button>
                                 <Button variant="outline">Report</Button>

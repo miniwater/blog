@@ -24,6 +24,13 @@ const { post } = Astro.props;
 
 // 新版渲染方式：使用导出的 render(post)
 const { Content, headings } = await render(post);
+
+// 简单的字数统计逻辑
+const content = post.body||"";
+// 统计中文字符 + 英文单词
+const wordCount = content.replace(/[^\w\s\u4e00-\u9fa5]/g, "").length;
+// 假设阅读速度为每分钟 300 字
+const readingTime = Math.ceil(wordCount / 300);
 ---
 
 <Layout title={post.data.title}>
@@ -31,8 +38,28 @@ const { Content, headings } = await render(post);
     <div
       class="mx-auto grid w-full max-w-2xl grid-cols-1 gap-10 xl:max-w-5xl xl:grid-cols-[minmax(0,1fr)_var(--container-2xs)]"
     >
-      <article class="prose dark:prose-invert">
-        <h1>{post.data.title}</h1>
+      <article class="w-full flex flex-col gap-4 lg:gap-6">
+        <h1
+          class="scroll-m-20 text-3xl font-extrabold tracking-tight text-balance"
+        >
+          {post.data.title}
+        </h1>
+        <div class="flex items-center gap-4 text-sm text-muted-foreground">
+          <time datetime={post.data.date.toISOString()}>
+            {
+              post.data.date.toLocaleDateString("zh-CN", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })
+            }
+          </time>
+          <span>•</span>
+          <span>约 {wordCount} 字</span>
+          <span>•</span>
+          <span>预计阅读 {readingTime} 分钟</span>
+        </div>
+
         <div class="flex w-full flex-wrap gap-2">
           {
             post.data.categories.map((category) => {
@@ -50,7 +77,9 @@ const { Content, headings } = await render(post);
             })
           }
         </div>
-        <Content />
+        <div class="prose dark:prose-invert">
+          <Content />
+        </div>
         <div class="flex w-full flex-wrap gap-2">
           {
             post.data.tags.map((tag) => {
