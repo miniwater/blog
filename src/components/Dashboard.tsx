@@ -23,6 +23,7 @@ import {
     navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import { TooltipProvider } from "./ui/tooltip"
+import { ButtonGroup } from "@/components/ui/button-group"
 import { Button } from "@/components/ui/button"
 import {
     Command,
@@ -34,12 +35,28 @@ import {
     CommandList,
 } from "@/components/ui/command"
 import { Kbd, KbdGroup } from "@/components/ui/kbd"
-import { SearchIcon } from "lucide-react"
+import { SearchIcon, ArrowLeftIcon, ArrowRightIcon } from "lucide-react"
 
 export function Dashboard({ children, favoritePosts, title }: { children: React.ReactNode; favoritePosts: any[]; title?: string; }) {
     const [open, setOpen] = useState(false);
     const [query, setQuery] = useState("");
     const [results, setResults] = useState<any[]>([]);
+    const [isMac, setIsMac] = useState(false);
+
+    useEffect(() => {
+        // 仅在客户端运行时检测
+        setIsMac(navigator.userAgent.toUpperCase().indexOf('MAC') >= 0);
+    }, []);
+    useEffect(() => {
+        const down = (e: KeyboardEvent) => {
+            if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
+                e.preventDefault();
+                setOpen((open) => !open);
+            }
+        };
+        document.addEventListener("keydown", down);
+        return () => document.removeEventListener("keydown", down);
+    }, []); // 仅挂载时执行
 
     // 1. 监听搜索输入
     useEffect(() => {
@@ -50,9 +67,6 @@ export function Dashboard({ children, favoritePosts, title }: { children: React.
             }
 
             try {
-                // 动态导入构建后的 pagefind
-                // 注意：如果你用了 astro-pagefind 插件，这个路径通常是自动工作的
-                // const pagefind = await import(/* @vite-ignore */"/pagefind/pagefind.js" as any);
                 const customWindow = window as any;
 
                 if (customWindow.pagefind) {
@@ -88,7 +102,7 @@ export function Dashboard({ children, favoritePosts, title }: { children: React.
                                 orientation="vertical"
                                 className="mr-2 data-[orientation=vertical]:h-4"
                             />
-                            <Breadcrumb>
+                            {/* <Breadcrumb>
                                 <BreadcrumbList>
                                     <BreadcrumbItem>
                                         <BreadcrumbPage className="line-clamp-1">
@@ -96,7 +110,7 @@ export function Dashboard({ children, favoritePosts, title }: { children: React.
                                         </BreadcrumbPage>
                                     </BreadcrumbItem>
                                 </BreadcrumbList>
-                            </Breadcrumb>
+                            </Breadcrumb> */}
                             <NavigationMenu>
                                 <NavigationMenuList>
                                     <NavigationMenuItem>
@@ -127,12 +141,19 @@ export function Dashboard({ children, favoritePosts, title }: { children: React.
                                 </NavigationMenuList>
                             </NavigationMenu>
                         </div>
-                        <div className="flex flex-1 items-center justify-center">
-                            <Button onClick={() => setOpen(true)} variant="outline" className="w-full flex items-center justify-between px-3">
+                        <div className="flex flex-1 items-center justify-center gap-2">
+                            <Button variant="outline" size="icon" aria-label="Go Back">
+                                <ArrowLeftIcon />
+                            </Button>
+                            <Button variant="outline" size="icon" aria-label="Go Forward">
+                                <ArrowRightIcon />
+                            </Button>
+                            <Button onClick={() => setOpen(true)} variant="outline" className="w-full flex items-center justify-between px-3 text-muted-foreground">
                                 <SearchIcon />
-                                {title}
+                                {title || "搜索文章"}
                                 <KbdGroup>
-                                    <Kbd>Ctrl + K</Kbd>
+                                    <Kbd>{isMac ? '⌘' : 'Ctrl'}</Kbd>
+                                    <Kbd>K</Kbd>
                                 </KbdGroup>
                             </Button>
                             <CommandDialog open={open} onOpenChange={setOpen}>
@@ -170,9 +191,11 @@ export function Dashboard({ children, favoritePosts, title }: { children: React.
                                 </Command>
                             </CommandDialog>
                         </div>
-                        <div className="flex flex-1 items-center justify-end gap-2">
-                            {/* 这里放社交图标、主题切换按钮等 */}
-                            <div className="h-6 w-6 bg-muted rounded-full" /> {/* 示例占位 */}
+                        <div className="flex flex-1 items-center justify-end gap-2 px-3">
+                            <ButtonGroup>
+                                <Button variant="outline">Archive</Button>
+                                <Button variant="outline">Report</Button>
+                            </ButtonGroup>
                         </div>
                     </header>
                     {/* <div className="flex flex-1 flex-col"> */}

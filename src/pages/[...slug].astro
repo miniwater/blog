@@ -26,7 +26,7 @@ const { post } = Astro.props;
 const { Content, headings } = await render(post);
 ---
 
-<Layout>
+<Layout title={post.data.title}>
   <Section>
     <div
       class="mx-auto grid w-full max-w-2xl grid-cols-1 gap-10 xl:max-w-5xl xl:grid-cols-[minmax(0,1fr)_var(--container-2xs)]"
