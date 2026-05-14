@@ -85,3 +85,10 @@ location / {
     proxy_set_header X-Forwarded-Proto $scheme;
 }
 ```
+
+docker
+
+```
+docker build -t krjojo-astro .
+docker run -p 8080:80 krjojo-astro
+```
