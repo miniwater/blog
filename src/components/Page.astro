@@ -1,13 +1,14 @@
 ---
 import {
-    Pagination,
-    PaginationContent,
-    PaginationEllipsis,
-    PaginationItem,
-    PaginationLink,
-    PaginationNext,
-    PaginationPrevious,
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
 } from "@/components/ui/pagination";
+import { config } from "@/config";
 
 const { page } = Astro.props;
 
@@ -17,70 +18,68 @@ const end_page =
 ---
 
 <Pagination>
-    <PaginationContent>
+  <PaginationContent>
+    <PaginationItem>
+      <PaginationPrevious
+        href={page.url.prev}
+        text="上一页"
+        className={!page.url.prev ? "pointer-events-none opacity-50" : ""}
+      />
+    </PaginationItem>
+    <!-- 动态页码生成 -->
+    {
+      start_page > 1 && (
         <PaginationItem>
-            <PaginationPrevious
-                href={page.url.prev}
-                text="上一页"
-                className={!page.url.prev
-                    ? "pointer-events-none opacity-50"
-                    : ""}
-            />
+          <PaginationLink href={new URL("post", config.url).href}>
+            1
+          </PaginationLink>
         </PaginationItem>
-        <!-- 动态页码生成 -->
-        {
-            start_page > 1 && (
-                <PaginationItem>
-                    <PaginationLink href="/post">1</PaginationLink>
-                </PaginationItem>
-            )
-        }
-        {
-            start_page > 2 && (
-                <PaginationItem>
-                    <PaginationEllipsis />
-                </PaginationItem>
-            )
-        }
-        {
-            Array.from(
-                { length: end_page - start_page + 1 },
-                (_, i) => i + start_page,
-            ).map((num) => (
-                <PaginationItem>
-                    <PaginationLink
-                        href={num === 1 ? "/post" : `/post/${num}`}
-                        isActive={page.currentPage === num}
-                    >
-                        {num}
-                    </PaginationLink>
-                </PaginationItem>
-            ))
-        }
-        {
-            end_page < page.lastPage - 1 && (
-                <PaginationItem>
-                    <PaginationEllipsis />
-                </PaginationItem>
-            )
-        }
-        {
-            end_page < page.lastPage && (
-                <PaginationItem>
-                    <PaginationLink href={`/post/${page.lastPage}`}>
-                        {page.lastPage}
-                    </PaginationLink>
-                </PaginationItem>
-            )
-        }
+      )
+    }
+    {
+      start_page > 2 && (
         <PaginationItem>
-            <PaginationNext
-                href={page.url.next}
-                text="下一页"
-                className={!page.url.next
-                    ? "pointer-events-none opacity-50"
-                    : ""}
-            />
+          <PaginationEllipsis />
         </PaginationItem>
-    </PaginationContent>
+      )
+    }
+    {
+      Array.from(
+        { length: end_page - start_page + 1 },
+        (_, i) => i + start_page,
+      ).map((num) => (
+        <PaginationItem>
+          <PaginationLink
+            href={new URL(num === 1 ? "post" : `post/${num}`, config.url).href}
+            isActive={page.currentPage === num}
+          >
+            {num}
+          </PaginationLink>
+        </PaginationItem>
+      ))
+    }
+    {
+      end_page < page.lastPage - 1 && (
+        <PaginationItem>
+          <PaginationEllipsis />
+        </PaginationItem>
+      )
+    }
+    {
+      end_page < page.lastPage && (
+        <PaginationItem>
+          <PaginationLink href={new URL(`post/${page.lastPage}`, config.url).href}>
+            {page.lastPage}
+          </PaginationLink>
+        </PaginationItem>
+      )
+    }
+    <PaginationItem>
+      <PaginationNext
+        href={page.url.next}
+        text="下一页"
+        className={!page.url.next ? "pointer-events-none opacity-50" : ""}
+      />
+    </PaginationItem>
+  </PaginationContent>
 </Pagination>

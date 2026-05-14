@@ -169,11 +169,13 @@ export function Dashboard({ children, favoritePosts, title }: { children: React.
                                                 ))}
                                             </CommandGroup>
                                         )}
-                                        <CommandGroup heading="建议">
-                                            <CommandItem>文章列表</CommandItem>
-                                            <CommandItem>文档</CommandItem>
-                                            <CommandItem>Calculator</CommandItem>
-                                        </CommandGroup>
+                                        {!query && (
+                                            <CommandGroup heading="建议">
+                                                <CommandItem>文章列表</CommandItem>
+                                                <CommandItem>文档</CommandItem>
+                                                <CommandItem>Calculator</CommandItem>
+                                            </CommandGroup>
+                                        )}
                                     </CommandList>
                                 </Command>
                             </CommandDialog>

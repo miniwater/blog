@@ -4,6 +4,7 @@ import Layout from "@/layouts/Layout.astro";
 import Section from "@/components/Section.astro";
 import { Badge } from "@/components/ui/badge";
 import { config } from "@/config";
+import TOC from "@/components/TOC.astro";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
@@ -26,7 +27,7 @@ const { post } = Astro.props;
 const { Content, headings } = await render(post);
 
 // 简单的字数统计逻辑
-const content = post.body||"";
+const content = post.body || "";
 // 统计中文字符 + 英文单词
 const wordCount = content.replace(/[^\w\s\u4e00-\u9fa5]/g, "").length;
 // 假设阅读速度为每分钟 300 字
@@ -99,28 +100,8 @@ const readingTime = Math.ceil(wordCount / 300);
         </div>
       </article>
       <aside class="hidden xl:block">
-        <div class="sticky top-24 self-start">
-          <nav class="flex flex-col gap-4 border-l pl-4">
-            <p
-              class="text-xs font-bold uppercase tracking-widest text-muted-foreground/70"
-            >
-              本页内容
-            </p>
-            <div class="flex flex-col gap-3">
-              {
-                headings.map((heading) => (
-                  <a
-                    href={`#${heading.slug}`}
-                    class="text-[0.8rem] text-muted-foreground no-underline transition-colors hover:text-foreground data-[active=true]:font-medium data-[active=true]:text-foreground data-[depth=3]:pl-4 data-[depth=4]:pl-6"
-                    data-active="false"
-                    data-depth={heading.depth}
-                  >
-                    {heading.text}
-                  </a>
-                ))
-              }
-            </div>
-          </nav>
+        <div class="sticky top-28 self-start">
+          <TOC headings={headings} />
         </div>
       </aside>
     </div>

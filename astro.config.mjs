@@ -26,8 +26,8 @@ export default defineConfig({
     enabled: false
   },
 
-  redirects: {
-    '/rss.xml': '/feed.xml',
-    '/feed': '/feed.xml',
-  },
+  // redirects: {
+  //   '/rss.xml': '/feed.xml',
+  //   '/feed': '/feed.xml',
+  // },
 });

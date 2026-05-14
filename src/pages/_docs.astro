@@ -1,0 +1,31 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import { getDocTree } from "@/util/tree";
+import Section from "@/components/Section.astro";
+
+const allDocs = await getCollection("docs");
+const docTree = getDocTree(allDocs);
+console.log(docTree);
+---
+
+<Layout>
+  <Section>
+    {
+      docTree.map((node) => (
+        <div>
+          <h2>{node.name}</h2>
+          <span class="text-sm text-gray-500">{node.slug}</span>
+          {node.children && (
+            <ul>
+              {node.children.map((child) => (
+                <li>{child.name}</li>
+                <span class="text-sm text-gray-500">{child.slug}</span>
+              ))}
+            </ul>
+          )}
+        </div>
+      ))
+    }
+  </Section>
+</Layout>

@@ -7,8 +7,10 @@ import "../styles/global.css";
 import { Dashboard } from "@/components/Dashboard";
 import { Toaster } from "@/components/ui/sonner";
 
-const { title = "" } = Astro.props;
-const displayTitle = title ? `${title} - ${config.title}` : `${config.title} - ${config.description}`;
+const { title = "", animate = "slide" } = Astro.props;
+const displayTitle = title
+  ? `${title} - ${config.title}`
+  : `${config.title} - ${config.description}`;
 
 const allPosts = await getCollection("blog");
 
@@ -20,9 +22,9 @@ const posts = allPosts
     customSlug: post.id.split("/").pop(),
   }));
 const favoritePosts = posts.map((post) => ({
-  name: post.data.title, 
-  url: new URL(post.customSlug || "", config.url).href, 
-  emoji: "", 
+  name: post.data.title,
+  url: new URL(post.customSlug || "", config.url).href,
+  emoji: "",
 }));
 ---
 
@@ -35,7 +37,7 @@ const favoritePosts = posts.map((post) => ({
   <body>
     <main>
       <Dashboard client:load favoritePosts={favoritePosts} title={title}>
-        <div transition:animate="slide">
+        <div transition:animate={animate}>
           <slot />
         </div>
       </Dashboard>
