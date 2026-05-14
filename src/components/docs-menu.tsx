@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react"
 import { ChevronRightIcon, FileIcon, FolderIcon } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import {
@@ -6,9 +7,24 @@ import {
     CollapsibleTrigger,
 } from "@/components/ui/collapsible"
 import type { TreeNode } from "@/util/tree";
+import { cn } from "@/lib/utils"
 
 export function CollapsibleFileTree({ docTree }: { docTree: TreeNode[] }) {
+
+    const [activeSlug, setActiveSlug] = useState<string>("")
+
+    useEffect(() => {
+        // 只有在 activeSlug 为空时（初次加载）才去匹配 URL
+        if (!activeSlug) {
+            const currentPath = window.location.href;
+            setActiveSlug(currentPath);
+        }
+    }, []);
+
     const renderItem = (fileItem: TreeNode) => {
+        const itemSlug = fileItem.slug?.startsWith('/') ? fileItem.slug : `/${fileItem.slug}`;
+        const isActive = activeSlug === itemSlug || activeSlug === itemSlug.replace(/\/$/, "");
+
         if (fileItem.children && fileItem.children.length > 0) {
             return (
                 <Collapsible key={fileItem.name}>
@@ -36,8 +52,14 @@ export function CollapsibleFileTree({ docTree }: { docTree: TreeNode[] }) {
                 key={fileItem.name}
                 variant="ghost"
                 size="sm"
-                className="w-full justify-start gap-2 text-foreground"
+                className={cn(
+                    "w-full justify-start gap-2 text-foreground",
+                    isActive 
+                        ? "bg-muted" 
+                        : ""
+                )}
                 asChild
+                onClick={() => setActiveSlug(itemSlug)}
             >
                 <a href={fileItem.slug}>
                     <FileIcon />
