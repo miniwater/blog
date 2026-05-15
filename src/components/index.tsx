@@ -1,4 +1,12 @@
-import { Card, CardContent } from "@/components/ui/card"
+import { useState, useEffect } from 'react';
+import {
+    Card,
+    CardContent,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+    CardDescription,
+} from "@/components/ui/card";
 import {
     Carousel,
     CarouselContent,
@@ -6,6 +14,18 @@ import {
     CarouselNext,
     CarouselPrevious,
 } from "@/components/ui/carousel"
+import { Badge } from "@/components/ui/badge";
+import { Avatar, AvatarImage, AvatarFallback, AvatarGroup, AvatarGroupCount } from "./ui/avatar";
+import { friends } from "@/content/friends";
+import {
+    Tooltip,
+    TooltipContent,
+    TooltipTrigger,
+    TooltipProvider,
+} from "@/components/ui/tooltip";
+import { CircleQuestionMarkIcon } from "lucide-react"
+
+const friendCount = Object.keys(friends).length;
 
 export function CarouselDemo() {
     const list = [
@@ -53,5 +73,110 @@ export function CarouselDemo() {
             {/* <CarouselPrevious />
             <CarouselNext className="" /> */}
         </Carousel>
+    )
+}
+
+
+export function FriendLinkCard() {
+    return (
+        <Card className="w-full max-w-sm">
+            <CardHeader>
+                <CardTitle>
+                    友情链接
+                    <Badge variant="secondary">{friendCount}</Badge>
+                </CardTitle>
+            </CardHeader>
+            <CardContent>
+                <AvatarGroup className="grayscale">
+                    {friends.slice(0, 5).map((friend) => (
+                        <Avatar key={friend.name}>
+                            <AvatarImage src={friend.avatar.src} alt={friend.name} />
+                            <AvatarFallback>{friend.name.charAt(0)}</AvatarFallback>
+                        </Avatar>
+                    ))}
+                    <AvatarGroupCount>+{friendCount - 5}</AvatarGroupCount>
+                </AvatarGroup>
+
+            </CardContent>
+            <CardFooter className="flex-col gap-2">
+                <a href="#" className="text-sm underline underline-offset-4" >
+                    + {friendCount} contributors
+                </a >
+            </CardFooter>
+        </Card>
+    )
+}
+
+export function StatisticCard({ totalPosts, totalWords, latestUpdate }: { totalPosts: number; totalWords: number; latestUpdate: string }) {
+    // 1. 定义状态，默认为占位符
+    const [timeAgo, setTimeAgo] = useState("计算中...");
+
+    // 2. 在客户端挂载后计算时间差
+    useEffect(() => {
+        const calculateTime = () => {
+            const now = new Date();
+            const past = new Date(latestUpdate);
+            const diffMs = now.getTime() - past.getTime();
+
+            const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+            const diffWeeks = Math.floor(diffDays / 7);
+            const diffMonths = Math.floor(diffDays / 30);
+
+            if (diffDays < 1) return "今天";
+            if (diffDays < 7) return `${diffDays} 天前`;
+            if (diffWeeks < 4) return `${diffWeeks} 周前`;
+            if (diffMonths < 12) return `${diffMonths} 个月前`;
+            return "很久以前";
+        };
+
+        setTimeAgo(calculateTime());
+    }, [latestUpdate]);
+    const data = [
+        {
+            title: "总文章数",
+            desc: "仅包含博客文章",
+            content: totalPosts
+        },
+        {
+            title: "总字数",
+            desc: "全站字数统计",
+            content: totalWords
+        },
+        {
+            title: "距离上次更新",
+            desc: "",
+            content: timeAgo
+        },
+        {
+            title: "总访问量", desc: "", content: "敬请期待"
+        }
+    ];
+    return (
+        <TooltipProvider>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mt-8">
+                {data.map((item, index) => (
+                    <Card className="w-full" key={index}>
+                        <CardHeader>
+                            <CardDescription className="flex items-center gap-1">
+                                {item.title}
+                                {item.desc && (
+                                    <Tooltip>
+                                        <TooltipTrigger asChild>
+                                            <CircleQuestionMarkIcon className="h-4 w-4" />
+                                        </TooltipTrigger>
+                                        <TooltipContent>
+                                            <p>{item.desc}</p>
+                                        </TooltipContent>
+                                    </Tooltip>
+                                )}
+                            </CardDescription>
+                            <CardTitle>
+                                {item.content}
+                            </CardTitle>
+                        </CardHeader>
+                    </Card>
+                ))}
+            </div>
+        </TooltipProvider>
     )
 }
