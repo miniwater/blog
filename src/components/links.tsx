@@ -18,7 +18,7 @@ export function FriendLinks() {
             {friends
                 .sort((a, b) => a.name.localeCompare(b.name, 'zh-CN'))
                 .map((friend, index) => (
-                    <Item key={friend.name} variant="outline">
+                    <Item key={index} variant="outline">
                         <ItemMedia>
                             <Avatar>
                                 <AvatarImage src={friend.avatar.src} />

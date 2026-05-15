@@ -1,0 +1,17 @@
+---
+import Layout from "@/layouts/Layout.astro";
+
+import Section from "@/components/Section.astro";
+import { Content, frontmatter } from "@/content/privacy.md";
+---
+
+<Layout title="隐私政策">
+  <Section>
+    <h1>{frontmatter.title}</h1>
+
+    <!-- 渲染 Markdown 的 HTML 内容 -->
+     <div class="prose dark:prose-invert wrap-break-word">
+      <Content />
+    </div>
+  </Section>
+</Layout>

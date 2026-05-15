@@ -31,6 +31,7 @@ import {
 import { Kbd, KbdGroup } from "@/components/ui/kbd"
 import { SearchIcon, ArrowLeftIcon, ArrowRightIcon } from "lucide-react"
 import type { TreeNode } from "@/util/tree";
+import { config } from "@/config";
 
 export function Dashboard({ children, favoritePosts, title, docTree }:
     { children: React.ReactNode; favoritePosts: any[]; title?: string; docTree: TreeNode[]; }) {
@@ -86,6 +87,20 @@ export function Dashboard({ children, favoritePosts, title, docTree }:
         const debounceTimer = setTimeout(searchPage, 200); // 防抖，避免频繁触发
         return () => clearTimeout(debounceTimer);
     }, [query]);
+
+    const menu = {
+        featured: [
+            { name: "最新文章", description: "查看我的最新文章", href: new URL("post", config.url).href },
+            { name: "分类", description: "查看我的分类", href: new URL("category", config.url).href },
+            { name: "标签云", description: "查看我的标签云", href: new URL("tag", config.url).href },
+            { name: "游戏库", description: "什么都玩 什么都爱 什么都懂", href: new URL("games", config.url).href },
+        ],
+        about: [
+            { name: "关于我", description: "我的足迹", href: new URL("about", config.url).href },
+            { name: "隐私政策", description: "我的隐私政策", href: new URL("privacy", config.url).href },
+            { name: "友情链接", description: "我的友情链接", href: new URL("links", config.url).href },
+        ]
+    }
     return (
         <TooltipProvider delayDuration={0}> {/* 包裹在最外层 */}
             <SidebarProvider>
@@ -101,22 +116,26 @@ export function Dashboard({ children, favoritePosts, title, docTree }:
                             <NavigationMenu className="hidden lg:flex">
                                 <NavigationMenuList>
                                     <NavigationMenuItem>
-                                        <NavigationMenuTrigger>足迹</NavigationMenuTrigger>
-                                        <NavigationMenuContent>
-                                            <ul className="w-96">
-                                                <li>Re-usable components built with Tailwind CSS.</li>
-                                                <li>How to install dependencies and structure your app.</li>
-                                                <li>Styles for headings, paragraphs, lists...etc</li>
-                                            </ul>
-                                        </NavigationMenuContent>
-                                    </NavigationMenuItem>
-                                    <NavigationMenuItem className="hidden md:flex">
                                         <NavigationMenuTrigger>专区</NavigationMenuTrigger>
                                         <NavigationMenuContent>
                                             <ul className="grid w-100 gap-2 md:w-125 md:grid-cols-2 lg:w-150">
-                                                <li>Re-usable components built with Tailwind CSS.</li>
-                                                <li>How to install dependencies and structure your app.</li>
-                                                <li>Styles for headings, paragraphs, lists...etc</li>
+                                                {menu.featured.map((item) => (
+                                                    <ListItem key={item.href} href={item.href} title={item.name}>
+                                                        {item.description}
+                                                    </ListItem>
+                                                ))}
+                                            </ul>
+                                        </NavigationMenuContent>
+                                    </NavigationMenuItem>
+                                    <NavigationMenuItem>
+                                        <NavigationMenuTrigger>关于</NavigationMenuTrigger>
+                                        <NavigationMenuContent>
+                                            <ul className="w-96">
+                                                {menu.about.map((item) => (
+                                                    <ListItem key={item.href} href={item.href} title={item.name}>
+                                                        {item.description}
+                                                    </ListItem>
+                                                ))}
                                             </ul>
                                         </NavigationMenuContent>
                                     </NavigationMenuItem>
@@ -199,5 +218,26 @@ export function Dashboard({ children, favoritePosts, title, docTree }:
                 </SidebarInset>
             </SidebarProvider>
         </TooltipProvider>
+    )
+}
+
+
+function ListItem({
+    title,
+    children,
+    href,
+    ...props
+}: React.ComponentPropsWithoutRef<"li"> & { href: string }) {
+    return (
+        <li {...props}>
+            <NavigationMenuLink asChild>
+                <a href={href}>
+                    <div className="flex flex-col gap-1 text-sm">
+                        <div className="leading-none font-medium">{title}</div>
+                        <div className="line-clamp-2 text-muted-foreground">{children}</div>
+                    </div>
+                </a>
+            </NavigationMenuLink>
+        </li>
     )
 }
