@@ -1,4 +1,4 @@
-import type { ImageMetadata } from 'astro';
+// import type { ImageMetadata } from 'astro';
 import obaby from '@/assets/friends/obaby.avif';
 import yysuni from '@/assets/friends/yysuni.avif';
 import bufan from '@/assets/friends/bufan.avif';
