@@ -18,7 +18,7 @@ import {
   SidebarMenuButton,
   SidebarSeparator,
 } from "@/components/ui/sidebar"
-import { SearchIcon, BookIcon, HomeIcon, Settings2Icon, MapIcon, RssIcon, MessageCircleQuestionIcon, SquareTerminal, Bot, BookOpen, Settings2, UsersIcon } from "lucide-react"
+import { BookIcon, HomeIcon, Settings2Icon, MapIcon, RssIcon, MessageCircleQuestionIcon, SquareTerminal, Bot, BookOpen, Settings2, UsersIcon } from "lucide-react"
 import { NavUser } from "./nav-user"
 import type { TreeNode } from "@/util/tree";
 
@@ -30,14 +30,6 @@ const data = {
     avatar: config.avatar.src,
   },
   navMain: [
-    {
-      title: "搜索",
-      url: new URL("search/", config.url).href,
-      icon: (
-        <SearchIcon
-        />
-      ),
-    },
     {
       title: "主页",
       url: config.url,
@@ -96,75 +88,6 @@ const data = {
         <MessageCircleQuestionIcon
         />
       ),
-    },
-  ],
-  favorites: [],
-  workspaces: [
-    {
-      title: "Playground",
-      url: "#",
-      icon: SquareTerminal,
-      isActive: true,
-      items: [
-        {
-          title: "History",
-          url: "#",
-        },
-        {
-          title: "Starred",
-          url: "#",
-        },
-        {
-          title: "Settings",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Documentation",
-      url: "#",
-      icon: BookOpen,
-      items: [
-        {
-          title: "Introduction",
-          url: "#",
-        },
-        {
-          title: "Get Started",
-          url: "#",
-        },
-        {
-          title: "Tutorials",
-          url: "#",
-        },
-        {
-          title: "Changelog",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Settings",
-      url: "#",
-      icon: Settings2,
-      items: [
-        {
-          title: "General",
-          url: "#",
-        },
-        {
-          title: "Team",
-          url: "#",
-        },
-        {
-          title: "Billing",
-          url: "#",
-        },
-        {
-          title: "Limits",
-          url: "#",
-        },
-      ],
     },
   ],
 }
