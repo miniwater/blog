@@ -153,6 +153,36 @@ export function StatisticCard({ totalPosts, totalWords, latestUpdate }: { totalP
     ];
     return (
         <TooltipProvider>
+            <div
+                className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3"
+            >
+                <Card>
+                    <CardHeader>
+                        <CardTitle>WordPress</CardTitle>
+                        <CardDescription>
+                            This card uses the small size variant.
+                        </CardDescription>
+                    </CardHeader>
+                </Card>
+                <Card>
+                    <CardHeader>
+                        <CardTitle>Hugo</CardTitle>
+                        <CardDescription>
+                            This card uses the small size variant.
+                        </CardDescription>
+                    </CardHeader>
+                </Card>
+                <Card>
+                    <CardHeader>
+                        <CardTitle>Astro</CardTitle>
+                        <CardDescription>
+                            This card uses the small size variant.
+                        </CardDescription>
+                    </CardHeader>
+                </Card>
+
+                
+            </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mt-8">
                 {data.map((item, index) => (
                     <Card className="w-full" key={index}>
