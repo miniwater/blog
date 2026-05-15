@@ -1,3 +1,6 @@
+---
+layout: "@/layouts/MarkdownPostLayout.astro"
+---
 # 隐私政策
 
 ## 我们是谁

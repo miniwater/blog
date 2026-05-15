@@ -1,0 +1,32 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Section from "@/components/Section.astro";
+import TOC from "@/components/TOC.astro";
+
+const { frontmatter, headings } = Astro.props;
+---
+
+<Layout title={frontmatter.title}>
+  <Section>
+    <div
+      class="mx-auto grid w-full max-w-2xl grid-cols-1 gap-10 xl:max-w-5xl xl:grid-cols-[minmax(0,1fr)_var(--container-2xs)]"
+    >
+      <article class="w-full flex flex-col gap-4 lg:gap-6">
+        <h1
+          class="scroll-m-20 text-3xl font-extrabold tracking-tight text-balance"
+        >
+          {frontmatter.title}
+        </h1>
+
+        <div class="prose dark:prose-invert wrap-break-word">
+          <slot />
+        </div>
+      </article>
+      <aside class="hidden xl:block">
+        <div class="sticky top-28 self-start">
+          <TOC headings={headings} />
+        </div>
+      </aside>
+    </div>
+  </Section>
+</Layout>
