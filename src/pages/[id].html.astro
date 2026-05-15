@@ -29,7 +29,7 @@ const { Content, headings } = await render(post);
     <div
       class="mx-auto grid w-full max-w-2xl grid-cols-1 gap-10 xl:max-w-5xl xl:grid-cols-[minmax(0,1fr)_var(--container-2xs)]"
     >
-      <div class="prose dark:prose-invert">
+      <div class="prose dark:prose-invert wrap-break-word">
         <h1>{post.data.title}</h1>
         <Content />
       </div>

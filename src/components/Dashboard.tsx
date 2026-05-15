@@ -126,8 +126,8 @@ export function Dashboard({ children, favoritePosts, title }: { children: React.
                                 </NavigationMenuList>
                             </NavigationMenu>
                         </div>
-                        <div className="flex flex-1 max-w-md items-center justify-center gap-2">
-                            <ButtonGroup>
+                        <div className="flex flex-1 max-w-md min-w-0 items-center justify-center gap-2">
+                            <ButtonGroup className="hidden lg:flex">
                                 <Button variant="ghost" size="icon" aria-label="Go Back">
                                     <ArrowLeftIcon />
                                 </Button>
@@ -135,10 +135,12 @@ export function Dashboard({ children, favoritePosts, title }: { children: React.
                                     <ArrowRightIcon />
                                 </Button>
                             </ButtonGroup>
-                            <Button onClick={() => setOpen(true)} variant="outline" className="flex flex-1 items-center justify-between text-muted-foreground">
-                                <SearchIcon />
-                                {title || "搜索文章"}
-                                <KbdGroup>
+                            <Button onClick={() => setOpen(true)} variant="outline" className="flex flex-1 min-w-0 items-center justify-between text-muted-foreground">
+                                <SearchIcon className="shrink-0 mr-2"/>
+                                <span className="flex-1 text-left truncate mx-2">
+                                    {title || "搜索文章"}
+                                </span>
+                                <KbdGroup className="hidden sm:flex shrink-0">
                                     <Kbd>{isMac ? '⌘' : 'Ctrl'}</Kbd>
                                     <Kbd>K</Kbd>
                                 </KbdGroup>
