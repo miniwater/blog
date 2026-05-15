@@ -13,58 +13,53 @@ import {
   SidebarMenuSubButton,
   SidebarMenuSubItem,
 } from "@/components/ui/sidebar"
-import { ChevronRight, type LucideIcon } from "lucide-react"
-
+import { ChevronRight, FolderIcon } from "lucide-react"
+import type { TreeNode } from "@/util/tree";
 
 export function NavWorkspaces({
-  items,
+  docTree,
 }: {
-  items: {
-    title: string
-    url: string
-    icon?: LucideIcon
-    isActive?: boolean
-    items?: {
-      title: string
-      url: string
-    }[]
-  }[]
+  docTree: TreeNode[];
 }) {
+  const renderItem = (fileItem: TreeNode) => {
+
+    if (fileItem.children && fileItem.children.length > 0) {
+      return (
+        <Collapsible key={fileItem.name}>
+          <SidebarMenuItem>
+            <CollapsibleTrigger asChild>
+              <SidebarMenuButton tooltip={fileItem.name} className="group/menu-button">
+                {/* <FolderIcon /> */}
+                <span>{fileItem.name}</span>
+                <ChevronRight className={`ml-auto transition-transform duration-200 group-data-[state=open]/menu-button:rotate-90`} />
+              </SidebarMenuButton>
+            </CollapsibleTrigger>
+            <CollapsibleContent>
+              <SidebarMenuSub className="mr-0 pr-0">
+                {fileItem.children.map((child) => renderItem(child))}
+              </SidebarMenuSub>
+            </CollapsibleContent>
+          </SidebarMenuItem>
+        </Collapsible>
+      )
+    }
+    return (
+      <SidebarMenuSubItem key={fileItem.name}>
+        <SidebarMenuSubButton asChild>
+          <a href={fileItem.slug}>
+            {/* <FileIcon /> */}
+            <span>{fileItem.name}</span>
+          </a>
+        </SidebarMenuSubButton>
+      </SidebarMenuSubItem>
+    )
+  };
+
   return (
     <SidebarGroup>
-      <SidebarGroupLabel>Platform</SidebarGroupLabel>
+      <SidebarGroupLabel>文档</SidebarGroupLabel>
       <SidebarMenu>
-        {items.map((item) => (
-          <Collapsible
-            key={item.title}
-            asChild
-            defaultOpen={item.isActive ?? false}
-            className="group/collapsible"
-          >
-            <SidebarMenuItem>
-              <CollapsibleTrigger asChild>
-                <SidebarMenuButton tooltip={item.title}>
-                  {item.icon && <item.icon />}
-                  <span>{item.title}</span>
-                  <ChevronRight className="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
-                </SidebarMenuButton>
-              </CollapsibleTrigger>
-              <CollapsibleContent>
-                <SidebarMenuSub>
-                  {item.items?.map((subItem) => (
-                    <SidebarMenuSubItem key={subItem.title}>
-                      <SidebarMenuSubButton asChild>
-                        <a href={subItem.url}>
-                          <span>{subItem.title}</span>
-                        </a>
-                      </SidebarMenuSubButton>
-                    </SidebarMenuSubItem>
-                  ))}
-                </SidebarMenuSub>
-              </CollapsibleContent>
-            </SidebarMenuItem>
-          </Collapsible>
-        ))}
+        {docTree.map((item) => renderItem(item))}
       </SidebarMenu>
     </SidebarGroup>
   )

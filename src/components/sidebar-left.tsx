@@ -20,6 +20,7 @@ import {
 } from "@/components/ui/sidebar"
 import { SearchIcon, BookIcon, HomeIcon, Settings2Icon, MapIcon, RssIcon, MessageCircleQuestionIcon, SquareTerminal, Bot, BookOpen, Settings2, UsersIcon } from "lucide-react"
 import { NavUser } from "./nav-user"
+import type { TreeNode } from "@/util/tree";
 
 // This is sample data.
 const data = {
@@ -120,25 +121,6 @@ const data = {
       ],
     },
     {
-      title: "Models",
-      url: "#",
-      icon: Bot,
-      items: [
-        {
-          title: "Genesis",
-          url: "#",
-        },
-        {
-          title: "Explorer",
-          url: "#",
-        },
-        {
-          title: "Quantum",
-          url: "#",
-        },
-      ],
-    },
-    {
       title: "Documentation",
       url: "#",
       icon: BookOpen,
@@ -189,8 +171,9 @@ const data = {
 
 export function SidebarLeft({
   favoritePosts,
+  docTree,
   ...props
-}: React.ComponentProps<typeof Sidebar> & { favoritePosts: any[]; }) {
+}: React.ComponentProps<typeof Sidebar> & { favoritePosts: any[]; docTree: TreeNode[]; }) {
   return (
     <Sidebar className="border-r-0"  {...props}>
       <SidebarHeader className="border-b border-sidebar-border">
@@ -214,7 +197,7 @@ export function SidebarLeft({
       </SidebarHeader>
       <SidebarContent>
         <NavFavorites favorites={favoritePosts} />
-        <NavWorkspaces items={data.workspaces} />
+        <NavWorkspaces docTree={docTree} />
         <NavSecondary items={data.navSecondary} className="mt-auto" />
       </SidebarContent>
       <SidebarRail />

@@ -30,8 +30,10 @@ import {
 } from "@/components/ui/command"
 import { Kbd, KbdGroup } from "@/components/ui/kbd"
 import { SearchIcon, ArrowLeftIcon, ArrowRightIcon } from "lucide-react"
+import type { TreeNode } from "@/util/tree";
 
-export function Dashboard({ children, favoritePosts, title }: { children: React.ReactNode; favoritePosts: any[]; title?: string; }) {
+export function Dashboard({ children, favoritePosts, title, docTree }:
+    { children: React.ReactNode; favoritePosts: any[]; title?: string; docTree: TreeNode[]; }) {
     const [open, setOpen] = useState(false);
     const [query, setQuery] = useState("");
     const [results, setResults] = useState<any[]>([]);
@@ -87,7 +89,7 @@ export function Dashboard({ children, favoritePosts, title }: { children: React.
     return (
         <TooltipProvider delayDuration={0}> {/* 包裹在最外层 */}
             <SidebarProvider>
-                <SidebarLeft favoritePosts={favoritePosts} />
+                <SidebarLeft favoritePosts={favoritePosts} docTree={docTree} />
                 <SidebarInset>
                     <header className="sticky top-0 flex h-14 shrink-0 items-center justify-between gap-2 bg-background z-10 border-b px-4">
                         <div className="flex items-center gap-2">
@@ -136,7 +138,7 @@ export function Dashboard({ children, favoritePosts, title }: { children: React.
                                 </Button>
                             </ButtonGroup>
                             <Button onClick={() => setOpen(true)} variant="outline" className="flex flex-1 min-w-0 items-center justify-between text-muted-foreground">
-                                <SearchIcon className="shrink-0 mr-2"/>
+                                <SearchIcon className="shrink-0 mr-2" />
                                 <span className="flex-1 text-left truncate mx-2">
                                     {title || "搜索文章"}
                                 </span>
