@@ -13,7 +13,7 @@ import {
   SidebarMenuSubButton,
   SidebarMenuSubItem,
 } from "@/components/ui/sidebar"
-import { ChevronRight, FolderIcon } from "lucide-react"
+import { ChevronRight } from "lucide-react"
 import type { TreeNode } from "@/util/tree";
 
 export function NavWorkspaces({

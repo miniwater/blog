@@ -18,7 +18,7 @@ import {
   SidebarMenuButton,
   SidebarSeparator,
 } from "@/components/ui/sidebar"
-import { BookIcon, HomeIcon, Settings2Icon, MapIcon, RssIcon, MessageCircleQuestionIcon, SquareTerminal, Bot, BookOpen, Settings2, UsersIcon } from "lucide-react"
+import { BookIcon, HomeIcon, Settings2Icon, MapIcon, RssIcon, MessageCircleQuestionIcon, UsersIcon } from "lucide-react"
 import { NavUser } from "./nav-user"
 import type { TreeNode } from "@/util/tree";
 

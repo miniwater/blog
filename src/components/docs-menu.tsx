@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { ChevronRightIcon, FileIcon, FolderIcon } from "lucide-react"
+import { ChevronRightIcon, FileIcon } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import {
     Collapsible,
@@ -54,8 +54,8 @@ export function CollapsibleFileTree({ docTree }: { docTree: TreeNode[] }) {
                 size="sm"
                 className={cn(
                     "w-full justify-start gap-2 text-foreground",
-                    isActive 
-                        ? "bg-muted" 
+                    isActive
+                        ? "bg-muted"
                         : ""
                 )}
                 asChild
