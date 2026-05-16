@@ -42,7 +42,7 @@ const docTree = getDocTree(allDocs);
   </head>
   <body>
     <main>
-      <Dashboard client:load favoritePosts={favoritePosts} title={title} docTree={docTree}>
+      <Dashboard client:load favoritePosts={favoritePosts} title={title} docTree={docTree} currentPath={Astro.url.toString()}>
         <div transition:animate={animate}>
           <slot />
         </div>

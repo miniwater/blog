@@ -29,12 +29,12 @@ import {
     CommandList,
 } from "@/components/ui/command"
 import { Kbd, KbdGroup } from "@/components/ui/kbd"
-import { SearchIcon, ArrowLeftIcon, ArrowRightIcon } from "lucide-react"
+import { SearchIcon } from "lucide-react"
 import type { TreeNode } from "@/util/tree";
 import { config } from "@/config";
 
-export function Dashboard({ children, favoritePosts, title, docTree }:
-    { children: React.ReactNode; favoritePosts: any[]; title?: string; docTree: TreeNode[]; }) {
+export function Dashboard({ children, favoritePosts, title, docTree, currentPath }:
+    { children: React.ReactNode; favoritePosts: any[]; title?: string; docTree: TreeNode[]; currentPath: string }) {
     const [open, setOpen] = useState(false);
     const [query, setQuery] = useState("");
     const [results, setResults] = useState<any[]>([]);
@@ -104,7 +104,7 @@ export function Dashboard({ children, favoritePosts, title, docTree }:
     return (
         <TooltipProvider delayDuration={0}> {/* 包裹在最外层 */}
             <SidebarProvider>
-                <SidebarLeft favoritePosts={favoritePosts} docTree={docTree} />
+                <SidebarLeft favoritePosts={favoritePosts} docTree={docTree} currentPath={currentPath} />
                 <SidebarInset>
                     <header className="sticky top-0 flex h-14 shrink-0 items-center justify-between gap-2 bg-background z-10 border-b px-4">
                         <div className="flex items-center gap-2">
@@ -148,14 +148,6 @@ export function Dashboard({ children, favoritePosts, title, docTree }:
                             </NavigationMenu>
                         </div>
                         <div className="flex flex-1 max-w-md min-w-0 items-center justify-center gap-2">
-                            <ButtonGroup className="hidden lg:flex">
-                                <Button variant="ghost" size="icon" aria-label="Go Back">
-                                    <ArrowLeftIcon />
-                                </Button>
-                                <Button variant="ghost" size="icon" aria-label="Go Forward">
-                                    <ArrowRightIcon />
-                                </Button>
-                            </ButtonGroup>
                             <Button onClick={() => setOpen(true)} variant="outline" className="flex flex-1 min-w-0 items-center justify-between text-muted-foreground">
                                 <SearchIcon className="shrink-0 mr-2" />
                                 <span className="flex-1 text-left truncate mx-2">

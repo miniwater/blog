@@ -37,7 +37,6 @@ const data = {
         <HomeIcon
         />
       ),
-      isActive: true,
     },
     {
       title: "文档",
@@ -95,8 +94,9 @@ const data = {
 export function SidebarLeft({
   favoritePosts,
   docTree,
+  currentPath,
   ...props
-}: React.ComponentProps<typeof Sidebar> & { favoritePosts: any[]; docTree: TreeNode[]; }) {
+}: React.ComponentProps<typeof Sidebar> & { favoritePosts: any[]; docTree: TreeNode[]; currentPath: string }) {
   return (
     <Sidebar className="border-r-0"  {...props}>
       <SidebarHeader className="border-b border-sidebar-border">
@@ -116,12 +116,12 @@ export function SidebarLeft({
           </SidebarMenuItem>
         </SidebarMenu>
         <SidebarSeparator className="mx-0" />
-        <NavMain items={data.navMain} />
+        <NavMain items={data.navMain} currentPath={currentPath} />
       </SidebarHeader>
       <SidebarContent>
-        <NavFavorites favorites={favoritePosts} />
+        <NavFavorites favorites={favoritePosts} currentPath={currentPath} />
         <NavWorkspaces docTree={docTree} />
-        <NavSecondary items={data.navSecondary} className="mt-auto" />
+        <NavSecondary items={data.navSecondary} className="mt-auto" currentPath={currentPath} />
       </SidebarContent>
       <SidebarRail />
       <SidebarFooter>

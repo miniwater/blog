@@ -1,0 +1,72 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Section from "@/components/Section.astro";
+
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+
+const invoices = [
+  {
+    key: "Astro.url.toString()",
+    value: Astro.url.toString(),
+  },
+  {
+    key: "Astro.url.pathname",
+    value: Astro.url.pathname,
+  },
+  {
+    key: "Astro.request.url",
+    value: Astro.request.url,
+  },
+  {
+    key: 'new URL("rss.xml", Astro.url)',
+    value: new URL("rss.xml", Astro.url).href,
+  },
+  {
+    key: 'new URL("/rss.xml", Astro.url)',
+    value: new URL("/rss.xml", Astro.url).href,
+  },
+];
+---
+
+<Layout title="参考文档">
+  <Section>
+    <Table>
+      <TableCaption>变量名参照</TableCaption>
+      <TableHeader>
+        <TableRow>
+          <TableHead className="w-25">KEY</TableHead>
+          <TableHead className="text-right">Value</TableHead>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        {
+          invoices.map((invoice, index) => (
+            <TableRow key={index}>
+              <TableCell className="font-medium">{invoice.key}</TableCell>
+              <TableCell className="text-right">{invoice.value}</TableCell>
+            </TableRow>
+          ))
+        }
+      </TableBody>
+    </Table>
+  </Section>
+  <Section>
+    <div class="space-y-2">
+      <p class="text-muted-foreground">text-muted-foreground</p>
+      <p class="text-foreground">text-foreground</p>
+      <p class="text-primary">text-primary</p>
+      <p class="text-primary-foreground">text-primary-foreground</p>
+      <p class="text-secondary-foreground">text-secondary-foreground</p>
+      <p class="text-destructive">text-destructive</p>
+      <p class="text-accent-foreground">text-accent-foreground</p>
+    </div>
+  </Section>
+</Layout>

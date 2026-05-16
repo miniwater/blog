@@ -11,6 +11,7 @@ import {
 
 export function NavSecondary({
   items,
+  currentPath,
   ...props
 }: {
   items: {
@@ -19,22 +20,26 @@ export function NavSecondary({
     icon: React.ReactNode
     badge?: React.ReactNode
   }[]
+  currentPath: string
 } & React.ComponentPropsWithoutRef<typeof SidebarGroup>) {
   return (
     <SidebarGroup {...props}>
       <SidebarGroupContent>
         <SidebarMenu>
-          {items.map((item) => (
-            <SidebarMenuItem key={item.title}>
-              <SidebarMenuButton asChild>
-                <a href={item.url}>
-                  {item.icon}
-                  <span>{item.title}</span>
-                </a>
-              </SidebarMenuButton>
-              {item.badge && <SidebarMenuBadge>{item.badge}</SidebarMenuBadge>}
-            </SidebarMenuItem>
-          ))}
+          {items.map((item) => {
+            const isCurrentActive = currentPath === item.url || currentPath.startsWith(item.url + "/");
+            return (
+              <SidebarMenuItem key={item.title}>
+                <SidebarMenuButton asChild isActive={isCurrentActive}>
+                  <a href={item.url}>
+                    {item.icon}
+                    <span>{item.title}</span>
+                  </a>
+                </SidebarMenuButton>
+                {item.badge && <SidebarMenuBadge>{item.badge}</SidebarMenuBadge>}
+              </SidebarMenuItem>
+            )
+          })}
         </SidebarMenu>
       </SidebarGroupContent>
     </SidebarGroup>
