@@ -4,7 +4,11 @@ import { getCollection } from "astro:content";
 import Head from "@/components/Head.astro";
 import HeadJS from "@/components/HeadJS.astro";
 import "../styles/global.css";
-import { Dashboard } from "@/components/Dashboard";
+import {
+  Dashboard,
+  SidebarInset2,
+  SidebarInset1,
+} from "@/components/Dashboard";
 import { Toaster } from "@/components/ui/sonner";
 import { getDocTree } from "@/util/tree";
 
@@ -42,10 +46,19 @@ const docTree = getDocTree(allDocs);
   </head>
   <body>
     <main>
-      <Dashboard client:load favoritePosts={favoritePosts} title={title} docTree={docTree} currentPath={Astro.url.toString()}>
-        <div transition:animate={animate}>
-          <slot />
-        </div>
+      <Dashboard>
+        <SidebarInset1
+          favoritePosts={favoritePosts}
+          docTree={docTree}
+          currentPath={Astro.url.toString()}
+          transition:persist
+          client:load
+        />
+        <SidebarInset2 title="aaa" client:load>
+          <div transition:animate={animate}>
+            <slot />
+          </div>
+        </SidebarInset2>
       </Dashboard>
     </main>
     <Toaster client:load />

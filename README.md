@@ -55,6 +55,7 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 - [Shadcn-ui](https://ui.shadcn.com/)
 - [Pagefind](https://pagefind.app/)
   - [astro-pagefind](https://github.com/shishkin/astro-pagefind)
+- [nanostores](https://github.com/nanostores/nanostores)
 
 图标：<https://lucide.dev/>
 
@@ -88,7 +89,7 @@ location / {
 
 docker
 
-```
+```shell
 docker build -t krjojo-astro .
 docker run -p 8080:80 krjojo-astro
 ```

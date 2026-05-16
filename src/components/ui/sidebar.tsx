@@ -21,6 +21,8 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip"
 import { PanelLeftIcon } from "lucide-react"
+import { useStore } from "@nanostores/react"
+import { isSidebarOpen, setSidebarOpen, toggleSidebar } from "@/stores/sidebarStore"
 
 const SIDEBAR_COOKIE_NAME = "sidebar_state"
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7
@@ -42,12 +44,24 @@ type SidebarContextProps = {
 const SidebarContext = React.createContext<SidebarContextProps | null>(null)
 
 function useSidebar() {
-  const context = React.useContext(SidebarContext)
-  if (!context) {
-    throw new Error("useSidebar must be used within a SidebarProvider.")
-  }
+  // const context = React.useContext(SidebarContext)
+  // if (!context) {
+  //   throw new Error("useSidebar must be used within a SidebarProvider.")
+  // }
 
-  return context
+  // return context
+  const open = useStore(isSidebarOpen)
+  
+  // 模拟原先 shadcn 的上下文返回结构
+  return {
+    open,
+    setOpen: setSidebarOpen,
+    openMobile: false, // 如果不需要移动端可以先写死，或者再建一个 mobileAtom
+    setOpenMobile: () => {},
+    isMobile: false,   // 可以根据实际情况做媒体查询，或者写死
+    toggleSidebar: toggleSidebar,
+    state: open ? ("open" as const) : ("collapsed" as const),
+  }
 }
 
 function SidebarProvider({

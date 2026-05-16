@@ -2,8 +2,6 @@
 import { getCollection, render } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
 // import Section from "@/components/Section.astro";
-import { CollapsibleFileTree } from "@/components/docs-menu";
-import { getDocTree } from "@/util/tree";
 import TOC from "@/components/TOC.astro";
 
 export async function getStaticPaths() {
@@ -41,8 +39,6 @@ export async function getStaticPaths() {
     };
   });
 }
-const allDocs = await getCollection("docs");
-const docTree = getDocTree(allDocs);
 const { entry } = Astro.props;
 // 使用 render 函数渲染内容
 const { Content, headings } = await render(entry);
@@ -54,17 +50,10 @@ const displayTitle = entry.id.split("/").pop();
 <Layout title={displayTitle} animate="fade">
   <!-- <Section class="py-0"> -->
   <div
-    class="mx-auto w-full max-w-7xl flex-1 items-start md:grid md:grid-cols-[220px_minmax(0,1fr)_200px] lg:grid-cols-[240px_minmax(0,1fr)_260px] gap-6 px-4"
+    class="mx-auto grid w-full max-w-2xl grid-cols-1 gap-10 xl:max-w-5xl xl:grid-cols-[minmax(0,1fr)_var(--container-2xs)]"
   >
-    <!-- 左侧：全站文档目录 (固定在左侧) -->
-    <aside
-      class="fixed top-14 z-30 hidden h-[calc(100vh-3.5rem)] w-full shrink-0 md:sticky md:block overflow-y-auto py-6"
-    >
-      <CollapsibleFileTree client:load docTree={docTree} transition:persist />
-    </aside>
-
     <!-- 中间：文章正文 -->
-    <main class="relative py-6 lg:gap-10" transition:animate="slide">
+    <article class="relative py-6 lg:gap-10" transition:animate="slide">
       <div class="mx-auto w-full min-w-0">
         <!-- 面包屑 (Breadcrumb) 建议放在这里 -->
         <div class="mb-4 text-sm text-muted-foreground">
@@ -75,7 +64,7 @@ const displayTitle = entry.id.split("/").pop();
           <Content />
         </div>
       </div>
-    </main>
+    </article>
 
     <!-- 右侧：当前文章 TOC (On This Page) -->
     <aside

@@ -33,8 +33,24 @@ import { SearchIcon } from "lucide-react"
 import type { TreeNode } from "@/util/tree";
 import { config } from "@/config";
 
-export function Dashboard({ children, favoritePosts, title, docTree, currentPath }:
-    { children: React.ReactNode; favoritePosts: any[]; title?: string; docTree: TreeNode[]; currentPath: string }) {
+export function Dashboard({ children }:
+    { children: React.ReactNode; }) {
+    return (
+        <SidebarProvider>
+            {children}
+        </SidebarProvider>
+    )
+}
+
+export function SidebarInset1({ favoritePosts, docTree, currentPath }: { favoritePosts: any[]; docTree: TreeNode[]; currentPath: string }) {
+    return (
+        <TooltipProvider delayDuration={0}>
+            <SidebarLeft favoritePosts={favoritePosts} docTree={docTree} currentPath={currentPath} />
+        </TooltipProvider>
+    )
+}
+
+export function SidebarInset2({ children, title }: { children: React.ReactNode; title?: string }) {
     const [open, setOpen] = useState(false);
     const [query, setQuery] = useState("");
     const [results, setResults] = useState<any[]>([]);
@@ -87,7 +103,6 @@ export function Dashboard({ children, favoritePosts, title, docTree, currentPath
         const debounceTimer = setTimeout(searchPage, 200); // 防抖，避免频繁触发
         return () => clearTimeout(debounceTimer);
     }, [query]);
-
     const menu = {
         featured: [
             { name: "最新文章", description: "查看我的最新文章", href: new URL("post", config.url).href },
@@ -102,114 +117,107 @@ export function Dashboard({ children, favoritePosts, title, docTree, currentPath
         ]
     }
     return (
-        <TooltipProvider delayDuration={0}> {/* 包裹在最外层 */}
-            <SidebarProvider>
-                <SidebarLeft favoritePosts={favoritePosts} docTree={docTree} currentPath={currentPath} />
-                <SidebarInset>
-                    <header className="sticky top-0 flex h-14 shrink-0 items-center justify-between gap-2 bg-background z-10 border-b px-4">
-                        <div className="flex items-center gap-2">
-                            <SidebarTrigger />
-                            <Separator
-                                orientation="vertical"
-                                className="mr-2"
-                            />
-                            <NavigationMenu className="hidden lg:flex">
-                                <NavigationMenuList>
-                                    <NavigationMenuItem>
-                                        <NavigationMenuTrigger>专区</NavigationMenuTrigger>
-                                        <NavigationMenuContent>
-                                            <ul className="grid w-100 gap-2 md:w-125 md:grid-cols-2 lg:w-150">
-                                                {menu.featured.map((item) => (
-                                                    <ListItem key={item.href} href={item.href} title={item.name}>
-                                                        {item.description}
-                                                    </ListItem>
-                                                ))}
-                                            </ul>
-                                        </NavigationMenuContent>
-                                    </NavigationMenuItem>
-                                    <NavigationMenuItem>
-                                        <NavigationMenuTrigger>关于</NavigationMenuTrigger>
-                                        <NavigationMenuContent>
-                                            <ul className="w-96">
-                                                {menu.about.map((item) => (
-                                                    <ListItem key={item.href} href={item.href} title={item.name}>
-                                                        {item.description}
-                                                    </ListItem>
-                                                ))}
-                                            </ul>
-                                        </NavigationMenuContent>
-                                    </NavigationMenuItem>
-                                    <NavigationMenuItem>
-                                        <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                                            Docs
-                                        </NavigationMenuLink>
-                                    </NavigationMenuItem>
-                                </NavigationMenuList>
-                            </NavigationMenu>
-                        </div>
-                        <div className="flex flex-1 max-w-md min-w-0 items-center justify-center gap-2">
-                            <Button onClick={() => setOpen(true)} variant="outline" className="flex flex-1 min-w-0 items-center justify-between text-muted-foreground">
-                                <SearchIcon className="shrink-0 mr-2" />
-                                <span className="flex-1 text-left truncate mx-2">
-                                    {title || "搜索文章"}
-                                </span>
-                                <KbdGroup className="hidden sm:flex shrink-0">
-                                    <Kbd>{isMac ? '⌘' : 'Ctrl'}</Kbd>
-                                    <Kbd>K</Kbd>
-                                </KbdGroup>
-                            </Button>
-                            <CommandDialog open={open} onOpenChange={setOpen}>
-                                <Command shouldFilter={false}>
-                                    <CommandInput placeholder="搜索文章" value={query} onValueChange={setQuery} />
-                                    <CommandList>
-                                        {query && results.length === 0 && <CommandEmpty>没有找到相关文章。</CommandEmpty>}
-                                        {/* <CommandEmpty>没有找到结果。</CommandEmpty> */}
-                                        {results.length > 0 && (
-                                            <CommandGroup heading="文章结果">
-                                                {results.map((result) => (
-                                                    <CommandItem
-                                                        key={result.url}
-                                                        onSelect={() => window.location.href = result.url}
-                                                        className="cursor-pointer"
-                                                    >
-                                                        <div className="flex flex-col gap-1">
-                                                            <div className="font-medium">{result.meta.title}</div>
-                                                            {/* 渲染搜索摘要，dangerouslySetInnerHTML 用于显示 Pagefind 的高亮标签 */}
-                                                            <div
-                                                                className="text-xs text-muted-foreground line-clamp-1"
-                                                                dangerouslySetInnerHTML={{ __html: result.excerpt }}
-                                                            />
-                                                        </div>
-                                                    </CommandItem>
-                                                ))}
-                                            </CommandGroup>
-                                        )}
-                                        {!query && (
-                                            <CommandGroup heading="建议">
-                                                <CommandItem>文章列表</CommandItem>
-                                                <CommandItem>文档</CommandItem>
-                                                <CommandItem>Calculator</CommandItem>
-                                            </CommandGroup>
-                                        )}
-                                    </CommandList>
-                                </Command>
-                            </CommandDialog>
-                        </div>
-                        <div>
-                            <div className="hidden lg:flex items-center justify-end gap-2">
-                                <ButtonGroup>
-                                    <Button variant="outline">Archive</Button>
-                                    <Button variant="outline">Report</Button>
-                                </ButtonGroup>
-                            </div>
-                        </div>
-                    </header>
-                    {/* <div className="flex flex-1 flex-col"> */}
-                    {children}
-                    {/* </div> */}
-                </SidebarInset>
-            </SidebarProvider>
-        </TooltipProvider>
+        <SidebarInset>
+            <header className="sticky top-0 flex h-14 shrink-0 items-center justify-between gap-2 bg-background z-10 border-b px-4">
+                <div className="flex items-center gap-2">
+                    <SidebarTrigger />
+                    <Separator
+                        orientation="vertical"
+                        className="mr-2"
+                    />
+                    <NavigationMenu className="hidden lg:flex">
+                        <NavigationMenuList>
+                            <NavigationMenuItem>
+                                <NavigationMenuTrigger>专区</NavigationMenuTrigger>
+                                <NavigationMenuContent>
+                                    <ul className="grid w-100 gap-2 md:w-125 md:grid-cols-2 lg:w-150">
+                                        {menu.featured.map((item) => (
+                                            <ListItem key={item.href} href={item.href} title={item.name}>
+                                                {item.description}
+                                            </ListItem>
+                                        ))}
+                                    </ul>
+                                </NavigationMenuContent>
+                            </NavigationMenuItem>
+                            <NavigationMenuItem>
+                                <NavigationMenuTrigger>关于</NavigationMenuTrigger>
+                                <NavigationMenuContent>
+                                    <ul className="w-96">
+                                        {menu.about.map((item) => (
+                                            <ListItem key={item.href} href={item.href} title={item.name}>
+                                                {item.description}
+                                            </ListItem>
+                                        ))}
+                                    </ul>
+                                </NavigationMenuContent>
+                            </NavigationMenuItem>
+                            <NavigationMenuItem>
+                                <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                                    Docs
+                                </NavigationMenuLink>
+                            </NavigationMenuItem>
+                        </NavigationMenuList>
+                    </NavigationMenu>
+                </div>
+                <div className="flex flex-1 max-w-md min-w-0 items-center justify-center gap-2">
+                    <Button onClick={() => setOpen(true)} variant="outline" className="flex flex-1 min-w-0 items-center justify-between text-muted-foreground">
+                        <SearchIcon className="shrink-0 mr-2" />
+                        <span className="flex-1 text-left truncate mx-2">
+                            {title || "搜索文章"}
+                        </span>
+                        <KbdGroup className="hidden sm:flex shrink-0">
+                            <Kbd>{isMac ? '⌘' : 'Ctrl'}</Kbd>
+                            <Kbd>K</Kbd>
+                        </KbdGroup>
+                    </Button>
+                    <CommandDialog open={open} onOpenChange={setOpen}>
+                        <Command shouldFilter={false}>
+                            <CommandInput placeholder="搜索文章" value={query} onValueChange={setQuery} />
+                            <CommandList>
+                                {query && results.length === 0 && <CommandEmpty>没有找到相关文章。</CommandEmpty>}
+                                {/* <CommandEmpty>没有找到结果。</CommandEmpty> */}
+                                {results.length > 0 && (
+                                    <CommandGroup heading="文章结果">
+                                        {results.map((result) => (
+                                            <CommandItem
+                                                key={result.url}
+                                                onSelect={() => window.location.href = result.url}
+                                                className="cursor-pointer"
+                                            >
+                                                <div className="flex flex-col gap-1">
+                                                    <div className="font-medium">{result.meta.title}</div>
+                                                    {/* 渲染搜索摘要，dangerouslySetInnerHTML 用于显示 Pagefind 的高亮标签 */}
+                                                    <div
+                                                        className="text-xs text-muted-foreground line-clamp-1"
+                                                        dangerouslySetInnerHTML={{ __html: result.excerpt }}
+                                                    />
+                                                </div>
+                                            </CommandItem>
+                                        ))}
+                                    </CommandGroup>
+                                )}
+                                {!query && (
+                                    <CommandGroup heading="建议">
+                                        <CommandItem>文章列表</CommandItem>
+                                        <CommandItem>文档</CommandItem>
+                                        <CommandItem>Calculator</CommandItem>
+                                    </CommandGroup>
+                                )}
+                            </CommandList>
+                        </Command>
+                    </CommandDialog>
+                </div>
+                <div>
+                    <div className="hidden lg:flex items-center justify-end gap-2">
+                        <ButtonGroup>
+                            <Button variant="outline">Archive</Button>
+                            <Button variant="outline">Report</Button>
+                        </ButtonGroup>
+                    </div>
+                </div>
+            </header>
+            {children}
+        </SidebarInset>
     )
 }
 
