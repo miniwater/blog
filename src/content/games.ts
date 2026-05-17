@@ -27,6 +27,11 @@ import Call_of_Duty_Black_Ops_6 from '@/assets/games/Call_of_Duty_Black_Ops_6.av
 import Dying_Light_The_Beast from '@/assets/games/Dying_Light_The_Beast.avif';
 import Cronos_The_New_Dawn from '@/assets/games/Cronos_The_New_Dawn.avif';
 import battlefield_6 from '@/assets/games/battlefield_6.avif';
+import Forza_Horizon_6 from '@/assets/games/Forza_Horizon_6.avif';
+import Stellar_Blade from '@/assets/games/Stellar_Blade.avif';
+import PRAGMATA from '@/assets/games/PRAGMATA.avif';
+import yh from '@/assets/games/yh.avif';
+import Resident_Evil_Requiem from '@/assets/games/Resident_Evil_Requiem.avif';
 
 export interface Game {
     name: string;
@@ -37,6 +42,41 @@ export interface Game {
 }
 
 export const games: Game[] = [
+    {
+        "name": "极限竞速：地平线 6",
+        "time": "2026/5",
+        "description": "尽管只是地图换到了日本，但它依然是最好玩的赛车游戏。",
+        "image": Forza_Horizon_6,
+        "url": "https://store.steampowered.com/app/2483190/_6/"
+    },
+    {
+        "name": "识质存在",
+        "time": "2026/4",
+        "description": "从22年跳票到26年，唯一出圈点就是赛博养女儿。",
+        "image": PRAGMATA,
+        "url": "https://store.steampowered.com/app/3357650/PRAGMATA/"
+    },
+    {
+        "name": "异环",
+        "time": "2026/4",
+        "description": "说实话，原神那套真的玩吐了，你以为换个皮肤我就会喜欢抽命座刷圣遗物吗",
+        "image": yh,
+        "url": "https://yh.wanmei.com/"
+    },
+    {
+        "name": "生化危机9",
+        "time": "2026/3",
+        "description": "一边是格蕾丝的小心翼翼，一边是李三光的无双割草。",
+        "image": Resident_Evil_Requiem,
+        "url": "https://store.steampowered.com/app/3764200/Resident_Evil_Requiem/"
+    },
+    {
+        "name": "剑星",
+        "time": "2026/2",
+        "description": "涩的没她好玩，好玩的没她涩。",
+        "image": Stellar_Blade,
+        "url": "https://store.steampowered.com/app/3489700/_/"
+    },
     {
         "name": "猴子打气球6",
         "time": "2026/1",
