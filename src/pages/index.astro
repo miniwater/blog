@@ -14,7 +14,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { config } from "@/config";
+import { config, getSummary } from "@/config";
 import Section from "@/components/Section.astro";
 
 // 获取 blog 集合中的所有文章
@@ -33,21 +33,6 @@ const posts = allPosts
     };
   });
 
-// 文章摘要
-function getSummary(body: string, length = 100) {
-  const cleanBody = body
-    // 1. 过滤图片: ![描述](链接)
-    .replace(/!\[.*?\]\(.*?\)/g, "")
-    // 2. 过滤常规链接，只保留文本内容: [文本](链接) -> 文本
-    .replace(/\[(.*?)\]\(.*?\)/g, "$1")
-    // 3. 过滤标题、粗体、斜体、删除线、行内代码
-    .replace(/[#*`~]/g, "")
-    // 4. 过滤多余的换行符和空格，让摘要更紧凑
-    .replace(/\s+/g, " ")
-    .trim();
-  return cleanBody.slice(0, length) + (cleanBody.length > length ? "..." : "");
-}
-
 // 文章总数
 const totalPosts = allPosts.length;
 // 全站字数
@@ -59,7 +44,9 @@ const totalWords =
     return acc + (doc.body || "").length;
   }, 0);
 // 最近更新时间
-const latestUpdate = (posts[0]||{ data: { date: new Date() } }).data.date.toISOString();
+const latestUpdate = (
+  posts[0] || { data: { date: new Date() } }
+).data.date.toISOString();
 ---
 
 <Layout>
@@ -129,6 +116,11 @@ const latestUpdate = (posts[0]||{ data: { date: new Date() } }).data.date.toISOS
     <FriendLinkCard client:load />
   </Section>
   <Section>
-    <StatisticCard client:load totalPosts={totalPosts} totalWords={totalWords} latestUpdate={latestUpdate} />
+    <StatisticCard
+      client:load
+      totalPosts={totalPosts}
+      totalWords={totalWords}
+      latestUpdate={latestUpdate}
+    />
   </Section>
 </Layout>
