@@ -1,0 +1,107 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Section from "@/components/Section.astro";
+import { Badge } from "@/components/ui/badge";
+import {
+    Table,
+    TableBody,
+    TableCaption,
+    TableCell,
+    TableHead,
+    TableHeader,
+    TableRow,
+    TableFooter,
+} from "@/components/ui/table";
+
+const track = [
+    {
+        city: "广州",
+        comment: "生活在这，老牌一线城市，可惜老城区改造不动。",
+        tags: ["咩啊", "商都"],
+        rating: 4,
+    },
+    {
+        city: "深圳",
+        comment:
+            "这里楼好新，新晋的一线城市就是不一样，清一色玻璃外墙，道路也宽敞。",
+        tags: ["保安", "厕所有纸"],
+        rating: 5,
+    },
+    {
+        city: "香港",
+        comment:
+            "如果想在国内体验“出国”的感觉，香港是最像的，办通行证、签证、过关、漫游、语言、货币、当地法律....",
+        tags: ["手扶梯靠右", "英语", "贵"],
+        rating: 5,
+    },
+    {
+        city: "上海",
+        comment: "上海外滩是真漂亮，有幸坐船游玩过一次，到现在还难忘。",
+        tags: ["沪✌", "魔都"],
+        rating: 4,
+    },
+    {
+        city: "东莞",
+        comment: "在此生活过一段时间，主打悠闲。",
+        tags: ["打天打鸭"],
+        rating: 3,
+    },
+];
+const color = [
+    "bg-blue-50 text-blue-700 dark:bg-blue-950 dark:text-blue-300",
+    "bg-green-50 text-green-700 dark:bg-green-950 dark:text-green-300",
+    "bg-sky-50 text-sky-700 dark:bg-sky-950 dark:text-sky-300",
+    "bg-purple-50 text-purple-700 dark:bg-purple-950 dark:text-purple-300",
+    "bg-red-50 text-red-700 dark:bg-red-950 dark:text-red-300",
+];
+---
+
+<Layout title="我的足迹">
+    <Section>
+        <Table>
+            <TableCaption>变量名参照</TableCaption>
+            <TableHeader>
+                <TableRow>
+                    <TableHead className="w-25">城市</TableHead>
+                    <TableHead>感想</TableHead>
+                    <TableHead>标签</TableHead>
+                    <TableHead className="text-right">评分</TableHead>
+                </TableRow>
+            </TableHeader>
+            <TableBody>
+                {
+                    track.map((data, index) => (
+                        <TableRow key={index}>
+                            <TableCell className="font-medium">
+                                {data.city}
+                            </TableCell>
+                            <TableCell>{data.comment}</TableCell>
+                            <TableCell className="flex flex-wrap gap-2">
+                                {data.tags.map((tag) => {
+                                    const randomIndex = Math.floor(
+                                        Math.random() * color.length,
+                                    );
+                                    const randomColor = color[randomIndex];
+                                    return (
+                                        <Badge className={randomColor}>
+                                            {tag}
+                                        </Badge>
+                                    );
+                                })}
+                            </TableCell>
+                            <TableCell className="text-right">
+                                {data.rating}
+                            </TableCell>
+                        </TableRow>
+                    ))
+                }
+            </TableBody>
+            <TableFooter>
+                <TableRow>
+                    <TableCell colSpan={4}>{track.length} 座城市</TableCell>
+                    <!-- <TableCell className="text-right">$2,500.00</TableCell> -->
+                </TableRow>
+            </TableFooter>
+        </Table>
+    </Section>
+</Layout>
