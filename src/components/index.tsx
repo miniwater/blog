@@ -137,7 +137,7 @@ export function StatisticCard({ totalPosts, totalWords, latestUpdate }: { totalP
                 </Card>
                 <Card>
                     <CardHeader>
-                        <CardTitle>Hugo</CardTitle>
+                        <CardTitle>游戏库</CardTitle>
                         <CardDescription>
                             This card uses the small size variant.
                         </CardDescription>
