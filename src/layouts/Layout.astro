@@ -54,7 +54,7 @@ const docTree = getDocTree(allDocs);
           transition:persist
           client:only="react"
         />
-        <SidebarInset2 title="aaa" client:load>
+        <SidebarInset2 title={title} client:load>
           <div transition:animate={animate}>
             <slot />
           </div>

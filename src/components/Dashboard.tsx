@@ -32,6 +32,22 @@ import { Kbd, KbdGroup } from "@/components/ui/kbd"
 import { SearchIcon } from "lucide-react"
 import type { TreeNode } from "@/util/tree";
 import { config } from "@/config";
+import {
+    Menubar,
+    MenubarCheckboxItem,
+    MenubarContent,
+    MenubarGroup,
+    MenubarItem,
+    MenubarMenu,
+    MenubarRadioGroup,
+    MenubarRadioItem,
+    MenubarSeparator,
+    MenubarShortcut,
+    MenubarSub,
+    MenubarSubContent,
+    MenubarSubTrigger,
+    MenubarTrigger,
+} from "@/components/ui/menubar"
 
 export function Dashboard({ children }:
     { children: React.ReactNode; }) {
@@ -158,6 +174,108 @@ export function SidebarInset2({ children, title }: { children: React.ReactNode; 
                             </NavigationMenuItem>
                         </NavigationMenuList>
                     </NavigationMenu>
+                    <Menubar className="w-72">
+                        <MenubarMenu>
+                            <MenubarTrigger>文件</MenubarTrigger>
+                            <MenubarContent>
+                                <MenubarGroup>
+                                    <MenubarItem>
+                                        文章列表
+                                    </MenubarItem>
+                                    <MenubarSub>
+                                        <MenubarSubTrigger>分类</MenubarSubTrigger>
+                                        <MenubarSubContent>
+                                            <MenubarGroup>
+                                                <MenubarItem>文章分类</MenubarItem>
+                                                <MenubarItem>文章标签</MenubarItem>
+                                            </MenubarGroup>
+                                        </MenubarSubContent>
+                                    </MenubarSub>
+                                </MenubarGroup>
+                                <MenubarSeparator />
+                                <MenubarGroup>
+                                    <MenubarItem>
+                                        文档列表
+                                    </MenubarItem>
+                                </MenubarGroup>
+                            </MenubarContent>
+                        </MenubarMenu>
+                        <MenubarMenu>
+                            <MenubarTrigger>导航</MenubarTrigger>
+                            <MenubarContent>
+                                <MenubarGroup>
+                                    <MenubarItem>
+                                        Undo <MenubarShortcut>⌘Z</MenubarShortcut>
+                                    </MenubarItem>
+                                    <MenubarItem>
+                                        Redo <MenubarShortcut>⇧⌘Z</MenubarShortcut>
+                                    </MenubarItem>
+                                </MenubarGroup>
+                                <MenubarSeparator />
+                                <MenubarGroup>
+                                    <MenubarSub>
+                                        <MenubarSubTrigger>Find</MenubarSubTrigger>
+                                        <MenubarSubContent>
+                                            <MenubarGroup>
+                                                <MenubarItem>Search the web</MenubarItem>
+                                            </MenubarGroup>
+                                            <MenubarSeparator />
+                                            <MenubarGroup>
+                                                <MenubarItem>Find...</MenubarItem>
+                                                <MenubarItem>Find Next</MenubarItem>
+                                                <MenubarItem>Find Previous</MenubarItem>
+                                            </MenubarGroup>
+                                        </MenubarSubContent>
+                                    </MenubarSub>
+                                </MenubarGroup>
+                                <MenubarSeparator />
+                                <MenubarGroup>
+                                    <MenubarItem>Cut</MenubarItem>
+                                    <MenubarItem>Copy</MenubarItem>
+                                    <MenubarItem>Paste</MenubarItem>
+                                </MenubarGroup>
+                            </MenubarContent>
+                        </MenubarMenu>
+                        <MenubarMenu>
+                            <MenubarTrigger>帮助</MenubarTrigger>
+                            <MenubarContent className="w-44">
+                                <MenubarGroup>
+                                    <MenubarItem disabled>
+                                        报告问题 <MenubarShortcut>⌘R</MenubarShortcut>
+                                    </MenubarItem>
+                                    <MenubarItem >
+                                        联系我
+                                    </MenubarItem>
+                                </MenubarGroup>
+                                <MenubarSeparator />
+                                <MenubarGroup>
+                                    <MenubarItem disabled>检查更新</MenubarItem>
+                                </MenubarGroup>
+                                <MenubarSeparator />
+                                <MenubarGroup>
+                                    <MenubarItem>关于</MenubarItem>
+                                </MenubarGroup>
+                            </MenubarContent>
+                        </MenubarMenu>
+                        <MenubarMenu>
+                            <MenubarTrigger>设置</MenubarTrigger>
+                            <MenubarContent>
+                                <MenubarRadioGroup value="system">
+                                    <MenubarRadioItem value="light">白天</MenubarRadioItem>
+                                    <MenubarRadioItem value="dark">夜间</MenubarRadioItem>
+                                    <MenubarRadioItem value="system">跟随系统</MenubarRadioItem>
+                                </MenubarRadioGroup>
+                                <MenubarSeparator />
+                                <MenubarGroup>
+                                    <MenubarItem inset>Edit...</MenubarItem>
+                                </MenubarGroup>
+                                <MenubarSeparator />
+                                <MenubarGroup>
+                                    <MenubarItem inset>Add Profile...</MenubarItem>
+                                </MenubarGroup>
+                            </MenubarContent>
+                        </MenubarMenu>
+                    </Menubar>
                 </div>
                 <div className="flex flex-1 max-w-md min-w-0 items-center justify-center gap-2">
                     <Button onClick={() => setOpen(true)} variant="outline" className="flex flex-1 min-w-0 items-center justify-between text-muted-foreground">

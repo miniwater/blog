@@ -58,7 +58,7 @@ updated: 2026-05-17T21:27:14+08:00
 - `/category/*`
 - `/tag/*`
 
-网站地图链接发生变化
+网站地图发生变化
 
 原本`/sitemap.xml`、`/sitemap_index.xml`，现在`/sitemap-index.xml`
 
