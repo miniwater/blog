@@ -27,7 +27,7 @@ export default defineConfig({
   },
 
   redirects: {
-    '/rss': `${import.meta.env.BASE_URL}feed.xml`,
-    '/feed': `${import.meta.env.BASE_URL}feed.xml`,
+    '/rss': `./feed.xml`,
+    '/feed': `./feed.xml`,
   },
 });

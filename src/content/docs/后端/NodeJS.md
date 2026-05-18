@@ -4,7 +4,7 @@
 
 ### 项目启动
 
-```Shell
+```shell
 npm start
 
 node production.js
@@ -14,7 +14,7 @@ node production.js
 
 当访问服务没问题后，可以通过 `nohup node production.js &` 启动服务，通过 `nohup` 和 `&` 将服务在后台运行，执行后会看到类似下面的日志：
 
-```Shell
+```shell
 nohup node production.js &
 [2] 1114
 appending output to nohup.out
@@ -117,7 +117,7 @@ pm2 sendSignal SIGUSR2 pm2.json
 
 #### 查看列表
 
-```Shell
+```shell
 pm2 l
 ```
 
@@ -125,13 +125,13 @@ pm2 l
 
 `pm2 show app_name|app_id`或者`pm2 describe app_name|app_id`
 
-```Shell
+```shell
 pm2 show 21
 ```
 
 #### 重启
 
-```Shell
+```shell
 pm2 restart app.js
 
 pm2 restart app_name|app_name
@@ -143,13 +143,13 @@ pm2 restart 21
 
 停止特定的应用。可以先通过`pm2 list`获取应用的名字（--name指定的）或者进程id。
 
-```Shell
+```shell
 pm2 stop app_name|app_id
 ```
 
 停止所有应用
 
-```Shell
+```shell
 pm2 stop all
 ```
 
@@ -157,7 +157,7 @@ pm2 stop all
 
 类似`pm2 stop`
 
-```Shell
+```shell
 pm2 delete app_name|app_id
 pm2 delete all
 ```
@@ -166,7 +166,7 @@ pm2 delete all
 
 命令如下，表示开启三个进程。如果`-i 0`，则会根据机器当前核数自动开启尽可能多的进程。
 
-```Shell
+```shell
 pm2 start app.js -i 3 # 开启三个进程
 pm2 start app.js -i max # 根据机器CPU核数，开启对应数目的进程
 ```
@@ -177,19 +177,19 @@ pm2 start app.js -i max # 根据机器CPU核数，开启对应数目的进程
 
 查看指定应用程序日志：
 
-```Shell
+```shell
 pm2 logs app_name|app_id
 ```
 
 例如：
 
-```Shell
+```shell
 pm2 logs 21
 ```
 
 显示所有应用程序的日志：
 
-```Shell
+```shell
 pm2 logs
 ```
 
@@ -197,20 +197,20 @@ pm2 logs
 
 ##### 以特殊日期格式查看日志
 
-```Shell
+```shell
 pm2 logs server --format
 ```
 
 结果如下：
 
-```Shell
+```shell
 timestamp=2019-04-10-23:13:25+0800 app=server id=0 type=out message=dev 
 timestamp=2019-04-10-23:13:26+0800 app=server id=0 type=out message=Server started at 8080
 ```
 
 ##### 以JSON格式查看日志
 
-```Shell
+```shell
 pm2 logs server --json
 ```
 
@@ -226,19 +226,19 @@ pm2 logs server --json
 
 ##### 查看近3行日志
 
-```Shell
+```shell
 pm2 logs server --lines --raw  
 ```
 
 例如：  
 
-```Shell
+```shell
 pm2 logs server --lines 3
 ```
 
 结果如下：
 
-```Shell
+```shell
 [TAILING] Tailing last 3 lines for [server] process (change the value with --lines option)
 C:\xxx\.pm2\logs\server-error.log last 3 lines:
 0|server   |   code: 'ETIMEDOUT',

@@ -42,7 +42,7 @@ windows环境变量
 
 ### 删除环境
 
-```Shell
+```shell
 conda remove --name oldName --all
 
 conda remove -n base --all
