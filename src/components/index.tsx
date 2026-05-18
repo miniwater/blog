@@ -24,6 +24,7 @@ import {
     TooltipProvider,
 } from "@/components/ui/tooltip";
 import { CircleQuestionMarkIcon } from "lucide-react"
+import { config } from "@/config";
 
 const friendCount = Object.keys(friends).length;
 
@@ -77,36 +78,6 @@ export function CarouselDemo() {
 }
 
 
-export function FriendLinkCard() {
-    return (
-        <Card className="w-full max-w-sm">
-            <CardHeader>
-                <CardTitle>
-                    友情链接
-                    <Badge variant="secondary">{friendCount}</Badge>
-                </CardTitle>
-            </CardHeader>
-            <CardContent>
-                <AvatarGroup className="grayscale">
-                    {friends.slice(0, 5).map((friend) => (
-                        <Avatar key={friend.name}>
-                            <AvatarImage src={friend.avatar.src} alt={friend.name} />
-                            <AvatarFallback>{friend.name.charAt(0)}</AvatarFallback>
-                        </Avatar>
-                    ))}
-                    <AvatarGroupCount>+{friendCount - 5}</AvatarGroupCount>
-                </AvatarGroup>
-
-            </CardContent>
-            <CardFooter className="flex-col gap-2">
-                <a href="#" className="text-sm underline underline-offset-4" >
-                    + {friendCount} contributors
-                </a >
-            </CardFooter>
-        </Card>
-    )
-}
-
 export function StatisticCard({ totalPosts, totalWords, latestUpdate }: { totalPosts: number; totalWords: number; latestUpdate: string }) {
     // 1. 定义状态，默认为占位符
     const [timeAgo, setTimeAgo] = useState("计算中...");
@@ -158,7 +129,7 @@ export function StatisticCard({ totalPosts, totalWords, latestUpdate }: { totalP
             >
                 <Card>
                     <CardHeader>
-                        <CardTitle>WordPress</CardTitle>
+                        <CardTitle>艰难运行</CardTitle>
                         <CardDescription>
                             This card uses the small size variant.
                         </CardDescription>
@@ -172,18 +143,33 @@ export function StatisticCard({ totalPosts, totalWords, latestUpdate }: { totalP
                         </CardDescription>
                     </CardHeader>
                 </Card>
-                <Card>
+                <Card className="w-full">
                     <CardHeader>
-                        <CardTitle>Astro</CardTitle>
-                        <CardDescription>
-                            This card uses the small size variant.
-                        </CardDescription>
+                        <CardTitle>
+                            友情链接
+                            <Badge variant="secondary">{friendCount}</Badge>
+                        </CardTitle>
                     </CardHeader>
-                </Card>
+                    <CardContent>
+                        <AvatarGroup className='justify-center'>
+                            {friends.slice(0, 10).map((friend) => (
+                                <Avatar key={friend.name}>
+                                    <AvatarImage src={friend.avatar.src} alt={friend.name} />
+                                    <AvatarFallback>{friend.name.charAt(0)}</AvatarFallback>
+                                </Avatar>
+                            ))}
+                            <AvatarGroupCount>+{friendCount - 10}</AvatarGroupCount>
+                        </AvatarGroup>
 
-                
+                    </CardContent>
+                    <CardFooter className="flex-col gap-2">
+                        <a href={new URL("links", config.url).href} className="text-sm underline underline-offset-4" >
+                            + {friendCount} contributors
+                        </a >
+                    </CardFooter>
+                </Card>
             </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mt-8">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mt-8 sm">
                 {data.map((item, index) => (
                     <Card className="w-full" key={index}>
                         <CardHeader>

@@ -4,7 +4,6 @@ import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 import {
   CarouselDemo,
-  FriendLinkCard,
   StatisticCard,
 } from "@/components/index";
 import {
@@ -112,9 +111,6 @@ const latestUpdate = (
       <CarouselDemo client:load />
     </div>
   </section>
-  <Section>
-    <FriendLinkCard client:load />
-  </Section>
   <Section>
     <StatisticCard
       client:load
