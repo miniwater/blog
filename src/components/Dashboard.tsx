@@ -7,15 +7,6 @@ import {
     SidebarProvider,
     SidebarTrigger,
 } from "@/components/ui/sidebar"
-import {
-    NavigationMenu,
-    NavigationMenuContent,
-    NavigationMenuItem,
-    NavigationMenuLink,
-    NavigationMenuList,
-    NavigationMenuTrigger,
-    navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu"
 import { TooltipProvider } from "./ui/tooltip"
 import { ButtonGroup } from "@/components/ui/button-group"
 import { Button } from "@/components/ui/button"
@@ -118,20 +109,7 @@ export function SidebarInset2({ children, title }: { children: React.ReactNode; 
 
         const debounceTimer = setTimeout(searchPage, 200); // 防抖，避免频繁触发
         return () => clearTimeout(debounceTimer);
-    }, [query]);
-    const menu = {
-        featured: [
-            { name: "最新文章", description: "查看我的最新文章", href: new URL("post", config.url).href },
-            { name: "分类", description: "查看我的分类", href: new URL("category", config.url).href },
-            { name: "标签云", description: "查看我的标签云", href: new URL("tag", config.url).href },
-            { name: "游戏库", description: "什么都玩 什么都爱 什么都懂", href: new URL("games", config.url).href },
-        ],
-        about: [
-            { name: "关于我", description: "我的足迹", href: new URL("about", config.url).href },
-            { name: "隐私政策", description: "我的隐私政策", href: new URL("privacy", config.url).href },
-            { name: "友情链接", description: "我的友情链接", href: new URL("links", config.url).href },
-        ]
-    }
+    }, [query]); 
     return (
         <SidebarInset>
             <header className="sticky top-0 flex h-14 shrink-0 items-center justify-between gap-2 bg-background z-10 border-b px-4">
@@ -141,61 +119,54 @@ export function SidebarInset2({ children, title }: { children: React.ReactNode; 
                         orientation="vertical"
                         className="mr-2"
                     />
-                    <NavigationMenu className="hidden lg:flex">
-                        <NavigationMenuList>
-                            <NavigationMenuItem>
-                                <NavigationMenuTrigger>专区</NavigationMenuTrigger>
-                                <NavigationMenuContent>
-                                    <ul className="grid w-100 gap-2 md:w-125 md:grid-cols-2 lg:w-150">
-                                        {menu.featured.map((item) => (
-                                            <ListItem key={item.href} href={item.href} title={item.name}>
-                                                {item.description}
-                                            </ListItem>
-                                        ))}
-                                    </ul>
-                                </NavigationMenuContent>
-                            </NavigationMenuItem>
-                            <NavigationMenuItem>
-                                <NavigationMenuTrigger>关于</NavigationMenuTrigger>
-                                <NavigationMenuContent>
-                                    <ul className="w-96">
-                                        {menu.about.map((item) => (
-                                            <ListItem key={item.href} href={item.href} title={item.name}>
-                                                {item.description}
-                                            </ListItem>
-                                        ))}
-                                    </ul>
-                                </NavigationMenuContent>
-                            </NavigationMenuItem>
-                            <NavigationMenuItem>
-                                <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                                    Docs
-                                </NavigationMenuLink>
-                            </NavigationMenuItem>
-                        </NavigationMenuList>
-                    </NavigationMenu>
-                    <Menubar className="w-72">
+                    <Menubar className="hidden lg:flex border-0">
                         <MenubarMenu>
                             <MenubarTrigger>文件</MenubarTrigger>
                             <MenubarContent>
                                 <MenubarGroup>
-                                    <MenubarItem>
-                                        文章列表
+                                    <MenubarItem asChild>
+                                        <a href={config.url} target="_blank" className="cursor-pointer">
+                                            新建窗口
+                                        </a>
+                                    </MenubarItem>
+                                </MenubarGroup>
+                                <MenubarSeparator />
+                                <MenubarGroup>
+                                    <MenubarItem asChild>
+                                        <a href={new URL("post", config.url).href} className="cursor-pointer">
+                                            文章列表
+                                        </a>
                                     </MenubarItem>
                                     <MenubarSub>
                                         <MenubarSubTrigger>分类</MenubarSubTrigger>
                                         <MenubarSubContent>
                                             <MenubarGroup>
-                                                <MenubarItem>文章分类</MenubarItem>
-                                                <MenubarItem>文章标签</MenubarItem>
+                                                <MenubarItem asChild>
+                                                    <a href={new URL("category", config.url).href} className="cursor-pointer">
+                                                        文章分类
+                                                    </a>
+                                                </MenubarItem>
+                                                <MenubarItem asChild>
+                                                    <a href={new URL("tag", config.url).href} className="cursor-pointer">
+                                                        文章标签
+                                                    </a>
+                                                </MenubarItem>
                                             </MenubarGroup>
                                         </MenubarSubContent>
                                     </MenubarSub>
                                 </MenubarGroup>
                                 <MenubarSeparator />
                                 <MenubarGroup>
-                                    <MenubarItem>
-                                        文档列表
+                                    <MenubarItem asChild>
+                                        <a href={new URL("docs", config.url).href} className="cursor-pointer">
+                                            文档列表
+                                        </a>
+                                    </MenubarItem>
+                                </MenubarGroup>
+                                <MenubarSeparator />
+                                <MenubarGroup>
+                                    <MenubarItem disabled>
+                                        退出
                                     </MenubarItem>
                                 </MenubarGroup>
                             </MenubarContent>
@@ -204,11 +175,23 @@ export function SidebarInset2({ children, title }: { children: React.ReactNode; 
                             <MenubarTrigger>导航</MenubarTrigger>
                             <MenubarContent>
                                 <MenubarGroup>
-                                    <MenubarItem>
-                                        Undo <MenubarShortcut>⌘Z</MenubarShortcut>
+                                    <MenubarItem asChild>
+                                        <a href={config.url} className="cursor-pointer">
+                                            首页
+                                        </a>
+                                    </MenubarItem>
+                                </MenubarGroup>
+                                <MenubarSeparator />
+                                <MenubarGroup>
+                                    <MenubarItem asChild>
+                                        <a href={new URL("links", config.url).href} className="cursor-pointer">
+                                            友情链接
+                                        </a>
                                     </MenubarItem>
                                     <MenubarItem>
-                                        Redo <MenubarShortcut>⇧⌘Z</MenubarShortcut>
+                                        <a href={new URL("games", config.url).href} className="cursor-pointer">
+                                            游戏库
+                                        </a>
                                     </MenubarItem>
                                 </MenubarGroup>
                                 <MenubarSeparator />
@@ -228,23 +211,24 @@ export function SidebarInset2({ children, title }: { children: React.ReactNode; 
                                         </MenubarSubContent>
                                     </MenubarSub>
                                 </MenubarGroup>
-                                <MenubarSeparator />
-                                <MenubarGroup>
-                                    <MenubarItem>Cut</MenubarItem>
-                                    <MenubarItem>Copy</MenubarItem>
-                                    <MenubarItem>Paste</MenubarItem>
-                                </MenubarGroup>
                             </MenubarContent>
                         </MenubarMenu>
                         <MenubarMenu>
                             <MenubarTrigger>帮助</MenubarTrigger>
                             <MenubarContent className="w-44">
                                 <MenubarGroup>
+                                    <MenubarItem asChild>
+                                        <a href={new URL("privacy", config.url).href} className="cursor-pointer">
+                                            隐私政策
+                                        </a>
+                                    </MenubarItem>
                                     <MenubarItem disabled>
                                         报告问题 <MenubarShortcut>⌘R</MenubarShortcut>
                                     </MenubarItem>
-                                    <MenubarItem >
-                                        联系我
+                                    <MenubarItem asChild>
+                                        <a href={new URL("contact", config.url).href} className="cursor-pointer">
+                                            联系我
+                                        </a>
                                     </MenubarItem>
                                 </MenubarGroup>
                                 <MenubarSeparator />
@@ -253,7 +237,11 @@ export function SidebarInset2({ children, title }: { children: React.ReactNode; 
                                 </MenubarGroup>
                                 <MenubarSeparator />
                                 <MenubarGroup>
-                                    <MenubarItem>关于</MenubarItem>
+                                    <MenubarItem asChild>
+                                        <a href={new URL("about", config.url).href} className="cursor-pointer">
+                                            关于
+                                        </a>
+                                    </MenubarItem>
                                 </MenubarGroup>
                             </MenubarContent>
                         </MenubarMenu>
@@ -267,11 +255,11 @@ export function SidebarInset2({ children, title }: { children: React.ReactNode; 
                                 </MenubarRadioGroup>
                                 <MenubarSeparator />
                                 <MenubarGroup>
-                                    <MenubarItem inset>Edit...</MenubarItem>
-                                </MenubarGroup>
-                                <MenubarSeparator />
-                                <MenubarGroup>
-                                    <MenubarItem inset>Add Profile...</MenubarItem>
+                                    <MenubarItem asChild>
+                                        <a href={new URL("settings", config.url).href} className="cursor-pointer">
+                                            首选项
+                                        </a>
+                                    </MenubarItem>
                                 </MenubarGroup>
                             </MenubarContent>
                         </MenubarMenu>
@@ -336,26 +324,5 @@ export function SidebarInset2({ children, title }: { children: React.ReactNode; 
             </header>
             {children}
         </SidebarInset>
-    )
-}
-
-
-function ListItem({
-    title,
-    children,
-    href,
-    ...props
-}: React.ComponentPropsWithoutRef<"li"> & { href: string }) {
-    return (
-        <li {...props}>
-            <NavigationMenuLink asChild>
-                <a href={href}>
-                    <div className="flex flex-col gap-1 text-sm">
-                        <div className="leading-none font-medium">{title}</div>
-                        <div className="line-clamp-2 text-muted-foreground">{children}</div>
-                    </div>
-                </a>
-            </NavigationMenuLink>
-        </li>
     )
 }
