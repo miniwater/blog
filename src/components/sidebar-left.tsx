@@ -1,6 +1,6 @@
 "use client"
 
-import * as React from "react"
+import React, { useEffect } from "react";
 
 import { config } from "@/config";
 import { NavFavorites } from "@/components/nav-favorites"
@@ -17,10 +17,12 @@ import {
   SidebarMenuItem,
   SidebarMenuButton,
   SidebarSeparator,
+  useSidebar,
 } from "@/components/ui/sidebar"
 import { BookIcon, HomeIcon, Settings2Icon, MapIcon, RssIcon, MessageCircleQuestionIcon, UsersIcon } from "lucide-react"
 import { NavUser } from "./nav-user"
 import type { TreeNode } from "@/util/tree";
+import { setMobileSidebarOpen } from "@/stores/sidebarStore";
 
 // This is sample data.
 const data = {
@@ -97,6 +99,26 @@ export function SidebarLeft({
   currentPath,
   ...props
 }: React.ComponentProps<typeof Sidebar> & { favoritePosts: any[]; docTree: TreeNode[]; currentPath: string }) {
+  const { isMobile, openMobile } = useSidebar();
+
+  // 监听浏览器路由变化（适用于 Astro View Transitions）
+  useEffect(() => {
+    // 定义一个关闭抽屉的函数
+    const handleRouteChange = () => {
+      if (isMobile) {
+        setMobileSidebarOpen(false); // 核心：路由一变，立马关闭移动端抽屉
+      }
+    };
+
+    // 监听 Astro 特有的视图过渡完成事件
+    document.addEventListener("astro:after-swap", handleRouteChange);
+    document.addEventListener("astro:page-load", handleRouteChange);
+
+    return () => {
+      document.removeEventListener("astro:after-swap", handleRouteChange);
+      document.removeEventListener("astro:page-load", handleRouteChange);
+    };
+  }, [isMobile]);
   return (
     <Sidebar className="border-r-0"  {...props}>
       <SidebarHeader className="border-b border-sidebar-border">

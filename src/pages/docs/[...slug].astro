@@ -3,6 +3,7 @@ import { getCollection, render } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
 // import Section from "@/components/Section.astro";
 import TOC from "@/components/TOC.astro";
+import Section from "@/components/Section.astro";
 
 export async function getStaticPaths() {
   const allDocs = await getCollection("docs");
@@ -48,30 +49,30 @@ const displayTitle = entry.id.split("/").pop();
 ---
 
 <Layout title={displayTitle} animate="fade">
-  <!-- <Section class="py-0"> -->
-  <div
-    class="mx-auto grid w-full max-w-2xl grid-cols-1 gap-10 xl:max-w-5xl xl:grid-cols-[minmax(0,1fr)_var(--container-2xs)]"
-  >
-    <!-- 中间：文章正文 -->
-    <article class="relative py-6 lg:gap-10" transition:animate="slide">
-      <div class="mx-auto w-full min-w-0">
-        <!-- 面包屑 (Breadcrumb) 建议放在这里 -->
-        <div class="mb-4 text-sm text-muted-foreground">
-          文档 / {entry.id.replace(/\//g, " / ")}
-        </div>
-
-        <div class="prose dark:prose-invert wrap-break-word">
-          <Content />
-        </div>
-      </div>
-    </article>
-
-    <!-- 右侧：当前文章 TOC (On This Page) -->
-    <aside
-      class="sticky top-14 hidden h-[calc(100vh-3.5rem)] shrink-0 md:block overflow-y-auto py-6"
+  <Section>
+    <div
+      class="mx-auto grid w-full max-w-2xl grid-cols-1 gap-10 xl:max-w-5xl xl:grid-cols-[minmax(0,1fr)_var(--container-2xs)]"
     >
-      <TOC headings={headings} />
-    </aside>
-  </div>
-  <!-- </Section> -->
+      <!-- 中间：文章正文 -->
+      <article class="relative py-6 lg:gap-10" transition:animate="slide">
+        <div class="mx-auto w-full min-w-0">
+          <!-- 面包屑 (Breadcrumb) 建议放在这里 -->
+          <div class="mb-4 text-sm text-muted-foreground">
+            文档 / {entry.id.replace(/\//g, " / ")}
+          </div>
+
+          <div class="prose dark:prose-invert wrap-break-word">
+            <Content />
+          </div>
+        </div>
+      </article>
+
+      <!-- 右侧：当前文章 TOC (On This Page) -->
+      <aside
+        class="sticky top-14 hidden h-[calc(100vh-3.5rem)] shrink-0 md:block overflow-y-auto py-6"
+      >
+        <TOC headings={headings} />
+      </aside>
+    </div>
+  </Section>
 </Layout>
