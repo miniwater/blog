@@ -1,5 +1,6 @@
 ---
 layout: "@/layouts/MarkdownPostLayout.astro"
+title: 隐私政策
 ---
 # 隐私政策
 
