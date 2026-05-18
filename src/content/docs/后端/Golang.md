@@ -2,12 +2,6 @@
 
 ## 安装
 
-> 屎一样的包管理
->
-> 垃圾
->
-> 每个版本都改
-
 ### GoPath 目录
 
 * bin
@@ -25,13 +19,13 @@
 
 ### 全局变量修改（永久）
 
-```go
+```bash
 go env -w GO111MODULE="on"
 ```
 
 国内代理
 
-```go
+```bash
 go env -w GOPROXY=https://goproxy.cn,direct
 ```
 
@@ -59,7 +53,7 @@ go mod init
 * 下载新的依赖包
 * 更新go.sum
 
-```
+```shell
 go mod tidy
 ```
 
