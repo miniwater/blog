@@ -52,7 +52,7 @@ const docTree = getDocTree(allDocs);
           docTree={docTree}
           currentPath={Astro.url.toString()}
           transition:persist
-          client:load
+          client:only="react"
         />
         <SidebarInset2 title="aaa" client:load>
           <div transition:animate={animate}>

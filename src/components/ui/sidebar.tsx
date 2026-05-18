@@ -22,7 +22,14 @@ import {
 } from "@/components/ui/tooltip"
 import { PanelLeftIcon } from "lucide-react"
 import { useStore } from "@nanostores/react"
-import { isSidebarOpen, setSidebarOpen, toggleSidebar } from "@/stores/sidebarStore"
+import { 
+  isSidebarOpen, 
+  isMobileSidebarOpen, 
+  setSidebarOpen, 
+  setMobileSidebarOpen, 
+  toggleSidebar 
+} from "@/stores/sidebarStore"
+const MOBILE_BREAKPOINT = 768 // shadcn 默认的移动端断点宽度
 
 const SIDEBAR_COOKIE_NAME = "sidebar_state"
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7
@@ -49,17 +56,30 @@ function useSidebar() {
   //   throw new Error("useSidebar must be used within a SidebarProvider.")
   // }
 
-  // return context
+  // 1. 订阅 Nanostores 的桌面端和移动端状态
   const open = useStore(isSidebarOpen)
+  const openMobile = useStore(isMobileSidebarOpen)
   
-  // 模拟原先 shadcn 的上下文返回结构
+  // 2. 动态监听窗口大小，计算 isMobile
+  const [isMobile, setIsMobile] = React.useState(false)
+
+  React.useEffect(() => {
+    const mql = window.matchMedia(`(max-width: ${MOBILE_BREAKPOINT - 1}px)`)
+    const onChange = () => setIsMobile(mql.matches)
+    mql.addEventListener("change", onChange)
+    setIsMobile(mql.matches) // 初始赋值
+    return () => mql.removeEventListener("change", onChange)
+  }, [])
+
+  // 3. 返回兼容 shadcn 期待的完整结构
   return {
     open,
     setOpen: setSidebarOpen,
-    openMobile: false, // 如果不需要移动端可以先写死，或者再建一个 mobileAtom
-    setOpenMobile: () => {},
-    isMobile: false,   // 可以根据实际情况做媒体查询，或者写死
-    toggleSidebar: toggleSidebar,
+    openMobile,
+    setOpenMobile: setMobileSidebarOpen,
+    isMobile,
+    // 关键：触发器点击时，传入当前的 isMobile 状态
+    toggleSidebar: () => toggleSidebar(isMobile), 
     state: open ? ("open" as const) : ("collapsed" as const),
   }
 }
