@@ -29,8 +29,8 @@ updated: 2026-05-17T21:27:14+08:00
   - [x] `tag`标签页
   - [x] `category`分类页
   - [x] `docs`文档页
-    - [ ] 数据同步
-  - [ ] ~~`sentences`一言~~
+    - [x] 数据同步
+  - ~~[ ] `sentences`一言~~
   - [x] `games`游戏库
   - [x] `about`关于我
   - [x] `links`友情链接
