@@ -149,8 +149,8 @@ export function StatisticCard({ totalPosts, totalWords, latestUpdate }: { totalP
                         </CardTitle>
                     </CardHeader>
                     <CardContent>
-                        {games.slice(0, 1).map((game) => (
-                            <span>{game.name}</span>
+                        {games.slice(0, 1).map((game, index) => (
+                            <span key={index}>{game.name}</span>
                         ))}
                     </CardContent>
                     <CardFooter className="flex-col gap-2">
@@ -168,8 +168,8 @@ export function StatisticCard({ totalPosts, totalWords, latestUpdate }: { totalP
                     </CardHeader>
                     <CardContent>
                         <AvatarGroup className='justify-center'>
-                            {friends.slice(0, 10).map((friend) => (
-                                <Avatar key={friend.name}>
+                            {friends.slice(0, 10).map((friend, index) => (
+                                <Avatar key={index}>
                                     <AvatarImage src={friend.avatar.src} alt={friend.name} />
                                     <AvatarFallback>{friend.name.charAt(0)}</AvatarFallback>
                                 </Avatar>

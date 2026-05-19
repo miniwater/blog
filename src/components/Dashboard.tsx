@@ -8,7 +8,6 @@ import {
     SidebarTrigger,
 } from "@/components/ui/sidebar"
 import { TooltipProvider } from "./ui/tooltip"
-import { ButtonGroup } from "@/components/ui/button-group"
 import { Button } from "@/components/ui/button"
 import {
     Command,
@@ -20,7 +19,7 @@ import {
     CommandList,
 } from "@/components/ui/command"
 import { Kbd, KbdGroup } from "@/components/ui/kbd"
-import { SearchIcon, SettingsIcon } from "lucide-react"
+import { SearchIcon, SettingsIcon, GitPullRequestArrowIcon } from "lucide-react"
 import type { TreeNode } from "@/util/tree";
 import { config } from "@/config";
 import {
@@ -39,6 +38,14 @@ import {
     MenubarSubTrigger,
     MenubarTrigger,
 } from "@/components/ui/menubar"
+import {
+    HoverCard,
+    HoverCardContent,
+    HoverCardTrigger,
+} from "@/components/ui/hover-card"
+
+// 构建时间
+const date = new Date();
 
 export function Dashboard({ children }:
     { children: React.ReactNode; }) {
@@ -315,8 +322,24 @@ export function SidebarInset2({ children, title }: { children: React.ReactNode; 
                 </div>
                 <div>
                     <div className="hidden lg:flex items-center justify-end gap-2">
-                        <Button variant="ghost" size="icon" aria-label="Submit">
-                            <SettingsIcon />
+                        <HoverCard openDelay={10} closeDelay={100}>
+                            <HoverCardTrigger asChild>
+                                <Button variant="outline" size="sm">
+                                    <GitPullRequestArrowIcon /> v 1.00
+                                </Button>
+                            </HoverCardTrigger>
+                            <HoverCardContent className="flex w-64 flex-col gap-0.5">
+                                <div className="font-semibold">@GitHub Action</div>
+                                <div>构建时间</div>
+                                <div className="mt-1 text-xs text-muted-foreground">
+                                    {date.toLocaleString()}
+                                </div>
+                            </HoverCardContent>
+                        </HoverCard>
+                        <Button variant="ghost" size="icon" aria-label="Submit" asChild>
+                            <a href={new URL('settings', config.url).href}>
+                                <SettingsIcon />
+                            </a>
                         </Button>
                     </div>
                 </div>
