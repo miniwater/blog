@@ -20,7 +20,7 @@ import {
     CommandList,
 } from "@/components/ui/command"
 import { Kbd, KbdGroup } from "@/components/ui/kbd"
-import { SearchIcon } from "lucide-react"
+import { SearchIcon, SettingsIcon } from "lucide-react"
 import type { TreeNode } from "@/util/tree";
 import { config } from "@/config";
 import {
@@ -109,7 +109,7 @@ export function SidebarInset2({ children, title }: { children: React.ReactNode; 
 
         const debounceTimer = setTimeout(searchPage, 200); // 防抖，避免频繁触发
         return () => clearTimeout(debounceTimer);
-    }, [query]); 
+    }, [query]);
     return (
         <SidebarInset>
             <header className="sticky top-0 flex h-14 shrink-0 items-center justify-between gap-2 bg-background z-10 border-b px-4">
@@ -315,10 +315,9 @@ export function SidebarInset2({ children, title }: { children: React.ReactNode; 
                 </div>
                 <div>
                     <div className="hidden lg:flex items-center justify-end gap-2">
-                        <ButtonGroup>
-                            <Button variant="outline">Archive</Button>
-                            <Button variant="outline">Report</Button>
-                        </ButtonGroup>
+                        <Button variant="ghost" size="icon" aria-label="Submit">
+                            <SettingsIcon />
+                        </Button>
                     </div>
                 </div>
             </header>
