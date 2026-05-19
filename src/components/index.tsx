@@ -25,6 +25,7 @@ import {
 } from "@/components/ui/tooltip";
 import { CircleQuestionMarkIcon } from "lucide-react"
 import { config } from "@/config";
+import { games } from "@/content/games";
 
 const friendCount = Object.keys(friends).length;
 
@@ -134,14 +135,29 @@ export function StatisticCard({ totalPosts, totalWords, latestUpdate }: { totalP
                             This card uses the small size variant.
                         </CardDescription>
                     </CardHeader>
+                    <CardFooter className="flex-col gap-2">
+                        <a href={new URL("games", config.url).href} className="text-sm underline underline-offset-4" >
+                            + {games.length} games
+                        </a >
+                    </CardFooter>
                 </Card>
                 <Card>
                     <CardHeader>
-                        <CardTitle>游戏库</CardTitle>
-                        <CardDescription>
-                            This card uses the small size variant.
-                        </CardDescription>
+                        <CardTitle>
+                            最近游戏
+                            <Badge variant="secondary">{games.length}</Badge>
+                        </CardTitle>
                     </CardHeader>
+                    <CardContent>
+                        {games.slice(0, 1).map((game) => (
+                            <span>{game.name}</span>
+                        ))}
+                    </CardContent>
+                    <CardFooter className="flex-col gap-2">
+                        <a href={new URL("games", config.url).href} className="text-sm underline underline-offset-4" >
+                            + {games.length} games
+                        </a >
+                    </CardFooter>
                 </Card>
                 <Card className="w-full">
                     <CardHeader>
@@ -164,7 +180,7 @@ export function StatisticCard({ totalPosts, totalWords, latestUpdate }: { totalP
                     </CardContent>
                     <CardFooter className="flex-col gap-2">
                         <a href={new URL("links", config.url).href} className="text-sm underline underline-offset-4" >
-                            + {friendCount} contributors
+                            + {friendCount} friends
                         </a >
                     </CardFooter>
                 </Card>
