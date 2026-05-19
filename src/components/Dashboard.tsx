@@ -44,9 +44,6 @@ import {
     HoverCardTrigger,
 } from "@/components/ui/hover-card"
 
-// 构建时间
-const date = new Date();
-
 export function Dashboard({ children }:
     { children: React.ReactNode; }) {
     return (
@@ -64,7 +61,7 @@ export function SidebarInset1({ favoritePosts, docTree, currentPath }: { favorit
     )
 }
 
-export function SidebarInset2({ children, title }: { children: React.ReactNode; title?: string }) {
+export function SidebarInset2({ children, title, buildDate }: { children: React.ReactNode; title?: string; buildDate: Date }) {
     const [open, setOpen] = useState(false);
     const [query, setQuery] = useState("");
     const [results, setResults] = useState<any[]>([]);
@@ -332,7 +329,7 @@ export function SidebarInset2({ children, title }: { children: React.ReactNode; 
                                 <div className="font-semibold">@GitHub Action</div>
                                 <div>构建时间</div>
                                 <div className="mt-1 text-xs text-muted-foreground">
-                                    {date.toLocaleString()}
+                                    {buildDate.toLocaleString()}
                                 </div>
                             </HoverCardContent>
                         </HoverCard>

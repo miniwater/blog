@@ -36,6 +36,9 @@ const favoritePosts = posts.map((post) => ({
 // 获取文档树数据
 const allDocs = await getCollection("docs");
 const docTree = getDocTree(allDocs);
+
+// 构建时间
+const buildDate = new Date();
 ---
 
 <!doctype html>
@@ -54,7 +57,7 @@ const docTree = getDocTree(allDocs);
           transition:persist
           client:only="react"
         />
-        <SidebarInset2 title={title} client:load>
+        <SidebarInset2 title={title} buildDate={buildDate} client:load>
           <div transition:animate={animate}>
             <slot />
           </div>
