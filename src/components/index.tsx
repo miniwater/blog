@@ -79,7 +79,7 @@ export function CarouselDemo() {
 }
 
 
-export function StatisticCard({ totalPosts, totalWords, latestUpdate }: { totalPosts: number; totalWords: number; latestUpdate: string }) {
+export function StatisticCard({ totalPosts, totalWords, latestUpdate, buildDate }: { totalPosts: number; totalWords: number; latestUpdate: string; buildDate: Date }) {
     // 1. 定义状态，默认为占位符
     const [timeAgo, setTimeAgo] = useState("计算中...");
 
@@ -123,21 +123,32 @@ export function StatisticCard({ totalPosts, totalWords, latestUpdate }: { totalP
             title: "总访问量", desc: "", content: "敬请期待"
         }
     ];
+    const color = [
+        "bg-blue-50 text-blue-700 dark:bg-blue-950 dark:text-blue-300",
+        "bg-green-50 text-green-700 dark:bg-green-950 dark:text-green-300",
+        "bg-sky-50 text-sky-700 dark:bg-sky-950 dark:text-sky-300",
+        "bg-purple-50 text-purple-700 dark:bg-purple-950 dark:text-purple-300",
+        "bg-red-50 text-red-700 dark:bg-red-950 dark:text-red-300",
+        "bg-amber-50 text-amber-700 dark:bg-amber-950 dark:text-amber-300",
+    ];
     return (
         <TooltipProvider>
             <div
-                className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3"
+                className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-6 md:grid-cols-2 xl:grid-cols-3"
             >
                 <Card>
                     <CardHeader>
-                        <CardTitle>艰难运行</CardTitle>
+                        <CardTitle>
+                            运行版本
+                        </CardTitle>
                     </CardHeader>
                     <CardContent className="flex-1">
-                            <span> </span>
+                        <p>版本号：v{config.version}</p>
+                        <p>构建时间：{buildDate.toLocaleString()}</p>
                     </CardContent>
                     <CardFooter className="flex-col gap-2">
-                        <a href={new URL("games", config.url).href} className="text-sm underline underline-offset-4" >
-                            + {games.length} games
+                        <a href={new URL("games", config.url).href} className="text-sm " >
+                            更新日志
                         </a >
                     </CardFooter>
                 </Card>
@@ -148,13 +159,16 @@ export function StatisticCard({ totalPosts, totalWords, latestUpdate }: { totalP
                             <Badge variant="secondary">{games.length}</Badge>
                         </CardTitle>
                     </CardHeader>
-                    <CardContent className="flex-1">
-                        {games.slice(0, 1).map((game, index) => (
-                            <span key={index}>{game.name}</span>
+                    <CardContent className="flex flex-1 justify-center gap-3 flex-wrap">
+                        {games.slice(0, 6).map((game, index) => (
+                            <Badge key={index} className={color[index]}>
+                                {game.name}
+                            </Badge>
+                            // <span key={index}>{game.name}</span>
                         ))}
                     </CardContent>
                     <CardFooter className="flex-col gap-2">
-                        <a href={new URL("games", config.url).href} className="text-sm underline underline-offset-4" >
+                        <a href={new URL("games", config.url).href} className="text-sm" >
                             + {games.length} games
                         </a >
                     </CardFooter>
@@ -178,7 +192,7 @@ export function StatisticCard({ totalPosts, totalWords, latestUpdate }: { totalP
                         </AvatarGroup>
                     </CardContent>
                     <CardFooter className="flex-col gap-2">
-                        <a href={new URL("links", config.url).href} className="text-sm underline underline-offset-4" >
+                        <a href={new URL("links", config.url).href} className="text-sm" >
                             + {friendCount} friends
                         </a >
                     </CardFooter>

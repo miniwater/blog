@@ -2,10 +2,7 @@
 import Layout from "@/layouts/Layout.astro";
 import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
-import {
-  CarouselDemo,
-  StatisticCard,
-} from "@/components/index";
+import { CarouselDemo, StatisticCard } from "@/components/index";
 import {
   Card,
   CardDescription,
@@ -46,6 +43,8 @@ const totalWords =
 const latestUpdate = (
   posts[0] || { data: { date: new Date() } }
 ).data.date.toISOString();
+// 构建时间
+const buildDate = new Date();
 ---
 
 <Layout>
@@ -106,8 +105,8 @@ const latestUpdate = (
       </Button>
     </div>
   </Section>
-  <section class="w-full overflow-hidden">
-    <div class="max-w-7xl px-4 py-10 lg:py-14 mx-auto">
+  <section class="w-full overflow-hidden my-10 lg:my-14">
+    <div class="max-w-7xl px-4 mx-auto">
       <CarouselDemo client:load />
     </div>
   </section>
@@ -117,6 +116,7 @@ const latestUpdate = (
       totalPosts={totalPosts}
       totalWords={totalWords}
       latestUpdate={latestUpdate}
+      buildDate={buildDate}
     />
   </Section>
 </Layout>

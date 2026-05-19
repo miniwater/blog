@@ -1,5 +1,6 @@
 import logoImage from "@/assets/毛毛虫.avif";
 import avatarImage from "@/assets/avatar.avif";
+import packageInfo from '../package.json';
 
 export const config = {
     url: import.meta.env.DEV
@@ -8,6 +9,7 @@ export const config = {
     title: "手里有只毛毛虫",
     description: "号角声起 - 等你启航",
     logo: logoImage,
+    version: packageInfo.version,
 
     author: "Miniwater",
     email: "admin@krjojo.com",
