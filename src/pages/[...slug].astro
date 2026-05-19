@@ -5,6 +5,7 @@ import Section from "@/components/Section.astro";
 import { Badge } from "@/components/ui/badge";
 import { config } from "@/config";
 import TOC from "@/components/TOC.astro";
+import { Comment } from "@/components/comment";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
@@ -98,6 +99,7 @@ const readingTime = Math.ceil(wordCount / 300);
             })
           }
         </div>
+        <Comment client:load/>
       </article>
       <aside class="hidden xl:block">
         <div class="sticky top-28 self-start">
