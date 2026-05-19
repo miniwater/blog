@@ -131,10 +131,10 @@ export function StatisticCard({ totalPosts, totalWords, latestUpdate }: { totalP
                 <Card>
                     <CardHeader>
                         <CardTitle>艰难运行</CardTitle>
-                        <CardDescription>
-                            This card uses the small size variant.
-                        </CardDescription>
                     </CardHeader>
+                    <CardContent className="flex-1">
+                            <span> </span>
+                    </CardContent>
                     <CardFooter className="flex-col gap-2">
                         <a href={new URL("games", config.url).href} className="text-sm underline underline-offset-4" >
                             + {games.length} games
@@ -148,7 +148,7 @@ export function StatisticCard({ totalPosts, totalWords, latestUpdate }: { totalP
                             <Badge variant="secondary">{games.length}</Badge>
                         </CardTitle>
                     </CardHeader>
-                    <CardContent>
+                    <CardContent className="flex-1">
                         {games.slice(0, 1).map((game, index) => (
                             <span key={index}>{game.name}</span>
                         ))}
@@ -166,7 +166,7 @@ export function StatisticCard({ totalPosts, totalWords, latestUpdate }: { totalP
                             <Badge variant="secondary">{friendCount}</Badge>
                         </CardTitle>
                     </CardHeader>
-                    <CardContent>
+                    <CardContent className="flex-1">
                         <AvatarGroup className='justify-center'>
                             {friends.slice(0, 10).map((friend, index) => (
                                 <Avatar key={index}>
@@ -176,7 +176,6 @@ export function StatisticCard({ totalPosts, totalWords, latestUpdate }: { totalP
                             ))}
                             <AvatarGroupCount>+{friendCount - 10}</AvatarGroupCount>
                         </AvatarGroup>
-
                     </CardContent>
                     <CardFooter className="flex-col gap-2">
                         <a href={new URL("links", config.url).href} className="text-sm underline underline-offset-4" >

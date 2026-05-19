@@ -188,6 +188,11 @@ export function SidebarInset2({ children, title, buildDate }: { children: React.
                                 <MenubarSeparator />
                                 <MenubarGroup>
                                     <MenubarItem asChild>
+                                        <a href={new URL("track", config.url).href} className="cursor-pointer">
+                                            足迹
+                                        </a>
+                                    </MenubarItem>
+                                    <MenubarItem asChild>
                                         <a href={new URL("links", config.url).href} className="cursor-pointer">
                                             友情链接
                                         </a>

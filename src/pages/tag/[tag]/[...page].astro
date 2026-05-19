@@ -42,14 +42,6 @@ const posts = page.data.map((post) => {
 
 <Layout title={tagName + " - 标签"}>
   <Section>
-    <h1
-      class="scroll-m-24 text-3xl font-semibold tracking-tight sm:text-3xl text-center"
-    >
-      标签
-    </h1>
-    <p class="mt-4 md:text-lg text-center">{tagName}</p>
-  </Section>
-  <Section>
     <PostList posts={posts} page={page} />
   </Section>
 </Layout>
