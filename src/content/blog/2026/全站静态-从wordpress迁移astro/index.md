@@ -36,10 +36,10 @@ updated: 2026-05-17T21:27:14+08:00
   - [x] `links`友情链接
     - [ ] 友情申请
   - [ ] `rss-aggregator`RSS 聚合
-  - [ ] `track`我的足迹
+  - [x] `track`我的足迹
   - ~~[ ] `archives`时间归档~~
-  - [ ] `monitor`服务监控
-  - [ ] `nav`网址导航
+  - ~~[ ] `monitor`服务监控~~
+  - ~~[ ] `nav`网址导航~~
   - [x] `contact`联系我们
   - [x] `privacy`隐私政策
   - ~~[ ] `music`音乐~~
